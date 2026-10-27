@@ -1,0 +1,111 @@
+# Local Airflow for the ARMOR D1 pipeline. Development only.
+#
+# LocalExecutor + Postgres. No Celery, Redis or Flower: this orchestrates one
+# CPU pipeline on one machine, so the extra moving parts would be noise.
+#
+# Airflow is not supported natively on Windows, so Docker is the supported route
+# here, not a convenience.
+#
+#   docker compose up -d        start
+#   docker compose logs -f      follow
+#   docker compose down         stop
+#   docker compose down -v      stop and delete the metadata database
+#
+# The whole repository is mounted read-write at /opt/airflow/repo because the
+# pipeline writes its artifacts back into armor-system/data/. Tasks run as the
+# host user (see AIRFLOW_UID in .env) so generated files are not owned by root.
+
+x-airflow-common: &airflow-common
+  build:
+    context: .
+    dockerfile: Dockerfile
+  environment: &airflow-common-env
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
+    # Parse DAGs less often; this DAG set is small and static.
+    AIRFLOW__SCHEDULER__MIN_FILE_PROCESS_INTERVAL: "60"
+    # Surface task failures. Set the SMTP vars in .env to actually deliver them;
+    # without SMTP configured, failures still show in the UI and the logs.
+    AIRFLOW__EMAIL__EMAIL_BACKEND: airflow.utils.email.send_email_smtp
+    AIRFLOW__SMTP__SMTP_HOST: ${SMTP_HOST:-localhost}
+    AIRFLOW__SMTP__SMTP_PORT: ${SMTP_PORT:-25}
+    AIRFLOW__SMTP__SMTP_MAIL_FROM: ${SMTP_FROM:-airflow@localhost}
+  volumes:
+    - ./dags:/opt/airflow/dags
+    - ./plugins:/opt/airflow/plugins
+    - ./logs:/opt/airflow/logs
+    # The repository itself: pipeline code, committed artifacts, and the
+    # Git-ignored data/raw + data/processed directories the pipeline needs.
+    - ../..:/opt/airflow/repo
+  user: "${AIRFLOW_UID:-50000}:0"
+  depends_on:
+    postgres:
+      condition: service_healthy
+
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+    restart: always
+
+  airflow-init:
+    <<: *airflow-common
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        airflow db migrate
+        airflow users create \
+          --username "${AIRFLOW_ADMIN_USER:-airflow}" \
+          --password "${AIRFLOW_ADMIN_PASSWORD:-airflow}" \
+          --firstname Admin --lastname User --role Admin \
+          --email "${AIRFLOW_ADMIN_EMAIL:-admin@localhost}" || true
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: on-failure
+
+  airflow-webserver:
+    <<: *airflow-common
+    command: webserver
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    restart: always
+
+  airflow-scheduler:
+    <<: *airflow-common
+    command: scheduler
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8974/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    restart: always
+
+volumes:
+  postgres-db-volume:

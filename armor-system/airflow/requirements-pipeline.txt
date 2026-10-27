@@ -1,0 +1,14 @@
+# Dependencies for armor-system/data/pipeline.py, installed into /opt/pipeline-venv.
+#
+# Mirrors armor-system/dashboard/requirements.txt, minus streamlit and plotly,
+# which the pipeline does not import. Keep the shared versions in step with that
+# file so a DAG run and a dashboard run see the same numbers.
+#
+# The project tested these on Python 3.14; the image is Python 3.12, which is the
+# newest Airflow 2.10.5 supports. If a pin here has no 3.12 wheel, pin the nearest
+# version that does and record the difference in this file rather than silently
+# letting pip resolve something else.
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+matplotlib==3.11.2
