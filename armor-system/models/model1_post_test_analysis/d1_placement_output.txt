@@ -1,0 +1,100 @@
+nodes: 46 VMs: ['node-1', 'node-2', 'node-3', 'node-4', 'node-5', 'node-6']
+
+edge set 2fdd958e42: edges=268 unique_pairs=268 selfloops=46 symmetric=False samples={'train': 88, 'test': 45} span=2022-04-30 16:00..2022-04-30 18:12 UTC
+  edge categories: {'vm->svc': 40, 'svc->vm': 40, 'svc->svc': 182, 'vm->vm': 6}
+  #VM neighbours per service instance -> #services: {1: 40}
+
+edge set 121407bf1b: edges=268 unique_pairs=268 selfloops=46 symmetric=False samples={'train': 1411, 'test': 1334} span=2022-04-30 18:13..2022-05-09 15:59 UTC
+  edge categories: {'vm->svc': 40, 'svc->vm': 40, 'svc->svc': 182, 'vm->vm': 6}
+  #VM neighbours per service instance -> #services: {1: 40}
+
+edge set a9187e34c9: edges=256 unique_pairs=256 selfloops=46 symmetric=False samples={'test': 1} span=2022-05-01 02:55..2022-05-01 02:55 UTC
+  edge categories: {'vm->svc': 34, 'svc->vm': 34, 'svc->svc': 182, 'vm->vm': 6}
+  #VM neighbours per service instance -> #services: {0: 6, 1: 34}
+  services without exactly one VM neighbour: {'adservice-2': [], 'cartservice2-0': [], 'checkoutservice-2': [], 'frontend-1': [], 'frontend-2': [], 'shippingservice-2': []}
+
+edge set d1c3bd5761: edges=268 unique_pairs=268 selfloops=46 symmetric=False samples={'train': 1474, 'test': 1404} span=2022-05-02 16:00..2022-05-05 15:59 UTC
+  edge categories: {'vm->svc': 40, 'svc->svc': 182, 'svc->vm': 40, 'vm->vm': 6}
+  #VM neighbours per service instance -> #services: {1: 40}
+
+edge set 7e768a8134: edges=262 unique_pairs=262 selfloops=46 symmetric=False samples={'test': 1} span=2022-05-02 17:30..2022-05-02 17:30 UTC
+  edge categories: {'vm->svc': 37, 'svc->svc': 182, 'svc->vm': 37, 'vm->vm': 6}
+  #VM neighbours per service instance -> #services: {0: 3, 1: 37}
+  services without exactly one VM neighbour: {'frontend2-0': [], 'paymentservice2-0': [], 'recommendationservice2-0': []}
+
+edge set ed365892a0: edges=202 unique_pairs=202 selfloops=46 symmetric=False samples={'test': 1} span=2022-05-02 20:20..2022-05-02 20:20 UTC
+  edge categories: {'svc->svc': 182, 'vm->svc': 7, 'svc->vm': 7, 'vm->vm': 6}
+  #VM neighbours per service instance -> #services: {0: 33, 1: 7}
+  services without exactly one VM neighbour: {'adservice-0': [], 'adservice-1': [], 'adservice-2': [], 'cartservice-0': [], 'cartservice-1': [], 'cartservice-2': [], 'checkoutservice-0': [], 'checkoutservice-1': [], 'checkoutservice-2': [], 'checkoutservice2-0': [], 'currencyservice-0': [], 'currencyservice-1': [], 'currencyservice-2': [], 'emailservice-0': [], 'emailservice-1': [], 'emailservice-2': [], 'emailservice2-0': [], 'frontend-0': [], 'frontend-1': [], 'frontend-2': [], 'paymentservice-0': [], 'paymentservice-1': [], 'paymentservice-2': [], 'productcatalogservice-0': [], 'productcatalogservice-1': [], 'productcatalogservice-2': [], 'recommendationservice-0': [], 'recommendationservice-1': [], 'recommendationservice-2': [], 'shippingservice-0': [], 'shippingservice-1': [], 'shippingservice-2': [], 'shippingservice2-0': []}
+
+edge set df516b3896: edges=268 unique_pairs=268 selfloops=46 symmetric=False samples={'train': 741, 'test': 695} span=2022-05-06 16:00..2022-05-07 15:59 UTC
+  edge categories: {'vm->svc': 40, 'svc->svc': 182, 'svc->vm': 40, 'vm->vm': 6}
+  #VM neighbours per service instance -> #services: {1: 40}
+
+edge set f7e632b816: edges=268 unique_pairs=268 selfloops=46 symmetric=False samples={'test': 2} span=2022-05-06 20:04..2022-05-06 20:07 UTC
+  edge categories: {'vm->svc': 40, 'svc->svc': 182, 'svc->vm': 40, 'vm->vm': 6}
+  #VM neighbours per service instance -> #services: {1: 40}
+
+edge set ed0441124e: edges=266 unique_pairs=266 selfloops=46 symmetric=False samples={'test': 1} span=2022-05-06 22:18..2022-05-06 22:18 UTC
+  edge categories: {'vm->svc': 39, 'svc->svc': 182, 'svc->vm': 39, 'vm->vm': 6}
+  #VM neighbours per service instance -> #services: {0: 1, 1: 39}
+  services without exactly one VM neighbour: {'emailservice2-0': []}
+
+edge set a1320e96d8: edges=266 unique_pairs=266 selfloops=46 symmetric=False samples={'test': 1} span=2022-05-07 11:23..2022-05-07 11:23 UTC
+  edge categories: {'vm->svc': 39, 'svc->svc': 182, 'svc->vm': 39, 'vm->vm': 6}
+  #VM neighbours per service instance -> #services: {0: 1, 1: 39}
+  services without exactly one VM neighbour: {'emailservice2-0': []}
+
+edge set 371c802c12: edges=200 unique_pairs=200 selfloops=46 symmetric=False samples={'test': 1} span=2022-05-08 23:42..2022-05-08 23:42 UTC
+  edge categories: {'svc->svc': 182, 'svc->vm': 6, 'vm->svc': 6, 'vm->vm': 6}
+  #VM neighbours per service instance -> #services: {0: 34, 1: 6}
+  services without exactly one VM neighbour: {'adservice-0': [], 'adservice-1': [], 'adservice2-0': [], 'cartservice-0': [], 'cartservice-1': [], 'cartservice-2': [], 'checkoutservice-0': [], 'checkoutservice-1': [], 'checkoutservice2-0': [], 'currencyservice-0': [], 'currencyservice-1': [], 'currencyservice-2': [], 'currencyservice2-0': [], 'emailservice-0': [], 'emailservice-1': [], 'emailservice-2': [], 'emailservice2-0': [], 'frontend-0': [], 'frontend2-0': [], 'paymentservice-0': [], 'paymentservice-1': [], 'paymentservice-2': [], 'paymentservice2-0': [], 'productcatalogservice-0': [], 'productcatalogservice-1': [], 'productcatalogservice-2': [], 'productcatalogservice2-0': [], 'recommendationservice-0': [], 'recommendationservice-1': [], 'recommendationservice-2': [], 'recommendationservice2-0': [], 'shippingservice-0': [], 'shippingservice-1': [], 'shippingservice2-0': []}
+
+placement map (first edge set):
+  ('node-5',) <- ['adservice-2', 'cartservice2-0', 'checkoutservice-2', 'frontend-1', 'frontend-2', 'shippingservice-2']
+  ('node-6',) <- ['adservice-0', 'adservice-1', 'adservice2-0', 'cartservice-0', 'cartservice-1', 'cartservice-2', 'checkoutservice-0', 'checkoutservice-1', 'checkoutservice2-0', 'currencyservice-0', 'currencyservice-1', 'currencyservice-2', 'currencyservice2-0', 'emailservice-0', 'emailservice-1', 'emailservice-2', 'emailservice2-0', 'frontend-0', 'frontend2-0', 'paymentservice-0', 'paymentservice-1', 'paymentservice-2', 'paymentservice2-0', 'productcatalogservice-0', 'productcatalogservice-1', 'productcatalogservice-2', 'productcatalogservice2-0', 'recommendationservice-0', 'recommendationservice-1', 'recommendationservice-2', 'recommendationservice2-0', 'shippingservice-0', 'shippingservice-1', 'shippingservice2-0']
+
+per edge set: VM -> hosted service instances (UTC+8 day counts):
+  2fdd958e42 days(UTC+8)={'05-01': 133}
+     node-5 (6): ['adservice-2', 'cartservice2-0', 'checkoutservice-2', 'frontend-1', 'frontend-2', 'shippingservice-2']
+     node-6 (34): ['adservice-0', 'adservice-1', 'adservice2-0', 'cartservice-0', 'cartservice-1', 'cartservice-2', 'checkoutservice-0', 'checkoutservice-1', 'checkoutservice2-0', 'currencyservice-0', 'currencyservice-1', 'currencyservice-2', 'currencyservice2-0', 'emailservice-0', 'emailservice-1', 'emailservice-2', 'emailservice2-0', 'frontend-0', 'frontend2-0', 'paymentservice-0', 'paymentservice-1', 'paymentservice-2', 'paymentservice2-0', 'productcatalogservice-0', 'productcatalogservice-1', 'productcatalogservice-2', 'productcatalogservice2-0', 'recommendationservice-0', 'recommendationservice-1', 'recommendationservice-2', 'recommendationservice2-0', 'shippingservice-0', 'shippingservice-1', 'shippingservice2-0']
+  121407bf1b days(UTC+8)={'05-01': 1306, '05-09': 1439}
+     node-5 (6): ['adservice-2', 'cartservice2-0', 'checkoutservice-2', 'frontend-1', 'frontend-2', 'shippingservice-2']
+     node-6 (34): ['adservice-0', 'adservice-1', 'adservice2-0', 'cartservice-0', 'cartservice-1', 'cartservice-2', 'checkoutservice-0', 'checkoutservice-1', 'checkoutservice2-0', 'currencyservice-0', 'currencyservice-1', 'currencyservice-2', 'currencyservice2-0', 'emailservice-0', 'emailservice-1', 'emailservice-2', 'emailservice2-0', 'frontend-0', 'frontend2-0', 'paymentservice-0', 'paymentservice-1', 'paymentservice-2', 'paymentservice2-0', 'productcatalogservice-0', 'productcatalogservice-1', 'productcatalogservice-2', 'productcatalogservice2-0', 'recommendationservice-0', 'recommendationservice-1', 'recommendationservice-2', 'recommendationservice2-0', 'shippingservice-0', 'shippingservice-1', 'shippingservice2-0']
+  a9187e34c9 days(UTC+8)={'05-01': 1}
+     NONE (6): ['adservice-2', 'cartservice2-0', 'checkoutservice-2', 'frontend-1', 'frontend-2', 'shippingservice-2']
+     node-6 (34): ['adservice-0', 'adservice-1', 'adservice2-0', 'cartservice-0', 'cartservice-1', 'cartservice-2', 'checkoutservice-0', 'checkoutservice-1', 'checkoutservice2-0', 'currencyservice-0', 'currencyservice-1', 'currencyservice-2', 'currencyservice2-0', 'emailservice-0', 'emailservice-1', 'emailservice-2', 'emailservice2-0', 'frontend-0', 'frontend2-0', 'paymentservice-0', 'paymentservice-1', 'paymentservice-2', 'paymentservice2-0', 'productcatalogservice-0', 'productcatalogservice-1', 'productcatalogservice-2', 'productcatalogservice2-0', 'recommendationservice-0', 'recommendationservice-1', 'recommendationservice-2', 'recommendationservice2-0', 'shippingservice-0', 'shippingservice-1', 'shippingservice2-0']
+  d1c3bd5761 days(UTC+8)={'05-03': 1438, '05-05': 1440}
+     node-5 (33): ['adservice-0', 'adservice-1', 'adservice-2', 'cartservice-0', 'cartservice-1', 'cartservice-2', 'checkoutservice-0', 'checkoutservice-1', 'checkoutservice-2', 'checkoutservice2-0', 'currencyservice-0', 'currencyservice-1', 'currencyservice-2', 'emailservice-0', 'emailservice-1', 'emailservice-2', 'emailservice2-0', 'frontend-0', 'frontend-1', 'frontend-2', 'paymentservice-0', 'paymentservice-1', 'paymentservice-2', 'productcatalogservice-0', 'productcatalogservice-1', 'productcatalogservice-2', 'recommendationservice-0', 'recommendationservice-1', 'recommendationservice-2', 'shippingservice-0', 'shippingservice-1', 'shippingservice-2', 'shippingservice2-0']
+     node-6 (7): ['adservice2-0', 'cartservice2-0', 'currencyservice2-0', 'frontend2-0', 'paymentservice2-0', 'productcatalogservice2-0', 'recommendationservice2-0']
+  7e768a8134 days(UTC+8)={'05-03': 1}
+     NONE (3): ['frontend2-0', 'paymentservice2-0', 'recommendationservice2-0']
+     node-5 (33): ['adservice-0', 'adservice-1', 'adservice-2', 'cartservice-0', 'cartservice-1', 'cartservice-2', 'checkoutservice-0', 'checkoutservice-1', 'checkoutservice-2', 'checkoutservice2-0', 'currencyservice-0', 'currencyservice-1', 'currencyservice-2', 'emailservice-0', 'emailservice-1', 'emailservice-2', 'emailservice2-0', 'frontend-0', 'frontend-1', 'frontend-2', 'paymentservice-0', 'paymentservice-1', 'paymentservice-2', 'productcatalogservice-0', 'productcatalogservice-1', 'productcatalogservice-2', 'recommendationservice-0', 'recommendationservice-1', 'recommendationservice-2', 'shippingservice-0', 'shippingservice-1', 'shippingservice-2', 'shippingservice2-0']
+     node-6 (4): ['adservice2-0', 'cartservice2-0', 'currencyservice2-0', 'productcatalogservice2-0']
+  ed365892a0 days(UTC+8)={'05-03': 1}
+     NONE (33): ['adservice-0', 'adservice-1', 'adservice-2', 'cartservice-0', 'cartservice-1', 'cartservice-2', 'checkoutservice-0', 'checkoutservice-1', 'checkoutservice-2', 'checkoutservice2-0', 'currencyservice-0', 'currencyservice-1', 'currencyservice-2', 'emailservice-0', 'emailservice-1', 'emailservice-2', 'emailservice2-0', 'frontend-0', 'frontend-1', 'frontend-2', 'paymentservice-0', 'paymentservice-1', 'paymentservice-2', 'productcatalogservice-0', 'productcatalogservice-1', 'productcatalogservice-2', 'recommendationservice-0', 'recommendationservice-1', 'recommendationservice-2', 'shippingservice-0', 'shippingservice-1', 'shippingservice-2', 'shippingservice2-0']
+     node-6 (7): ['adservice2-0', 'cartservice2-0', 'currencyservice2-0', 'frontend2-0', 'paymentservice2-0', 'productcatalogservice2-0', 'recommendationservice2-0']
+  df516b3896 days(UTC+8)={'05-07': 1436}
+     node-3 (11): ['adservice-2', 'cartservice-2', 'cartservice2-0', 'currencyservice2-0', 'frontend-2', 'frontend2-0', 'paymentservice-2', 'paymentservice2-0', 'productcatalogservice-0', 'shippingservice-2', 'shippingservice2-0']
+     node-4 (1): ['emailservice2-0']
+     node-5 (28): ['adservice-0', 'adservice-1', 'adservice2-0', 'cartservice-0', 'cartservice-1', 'checkoutservice-0', 'checkoutservice-1', 'checkoutservice-2', 'checkoutservice2-0', 'currencyservice-0', 'currencyservice-1', 'currencyservice-2', 'emailservice-0', 'emailservice-1', 'emailservice-2', 'frontend-0', 'frontend-1', 'paymentservice-0', 'paymentservice-1', 'productcatalogservice-1', 'productcatalogservice-2', 'productcatalogservice2-0', 'recommendationservice-0', 'recommendationservice-1', 'recommendationservice-2', 'recommendationservice2-0', 'shippingservice-0', 'shippingservice-1']
+  f7e632b816 days(UTC+8)={'05-07': 2}
+     node-3 (11): ['adservice-2', 'cartservice-2', 'cartservice2-0', 'currencyservice2-0', 'frontend-2', 'frontend2-0', 'paymentservice-2', 'paymentservice2-0', 'productcatalogservice-0', 'shippingservice-2', 'shippingservice2-0']
+     node-4 (1): ['emailservice2-0']
+     node-5 (28): ['adservice-0', 'adservice-1', 'adservice2-0', 'cartservice-0', 'cartservice-1', 'checkoutservice-0', 'checkoutservice-1', 'checkoutservice-2', 'checkoutservice2-0', 'currencyservice-0', 'currencyservice-1', 'currencyservice-2', 'emailservice-0', 'emailservice-1', 'emailservice-2', 'frontend-0', 'frontend-1', 'paymentservice-0', 'paymentservice-1', 'productcatalogservice-1', 'productcatalogservice-2', 'productcatalogservice2-0', 'recommendationservice-0', 'recommendationservice-1', 'recommendationservice-2', 'recommendationservice2-0', 'shippingservice-0', 'shippingservice-1']
+  ed0441124e days(UTC+8)={'05-07': 1}
+     NONE (1): ['emailservice2-0']
+     node-3 (11): ['adservice-2', 'cartservice-2', 'cartservice2-0', 'currencyservice2-0', 'frontend-2', 'frontend2-0', 'paymentservice-2', 'paymentservice2-0', 'productcatalogservice-0', 'shippingservice-2', 'shippingservice2-0']
+     node-5 (28): ['adservice-0', 'adservice-1', 'adservice2-0', 'cartservice-0', 'cartservice-1', 'checkoutservice-0', 'checkoutservice-1', 'checkoutservice-2', 'checkoutservice2-0', 'currencyservice-0', 'currencyservice-1', 'currencyservice-2', 'emailservice-0', 'emailservice-1', 'emailservice-2', 'frontend-0', 'frontend-1', 'paymentservice-0', 'paymentservice-1', 'productcatalogservice-1', 'productcatalogservice-2', 'productcatalogservice2-0', 'recommendationservice-0', 'recommendationservice-1', 'recommendationservice-2', 'recommendationservice2-0', 'shippingservice-0', 'shippingservice-1']
+  a1320e96d8 days(UTC+8)={'05-07': 1}
+     NONE (1): ['emailservice2-0']
+     node-3 (11): ['adservice-2', 'cartservice-2', 'cartservice2-0', 'currencyservice2-0', 'frontend-2', 'frontend2-0', 'paymentservice-2', 'paymentservice2-0', 'productcatalogservice-0', 'shippingservice-2', 'shippingservice2-0']
+     node-5 (28): ['adservice-0', 'adservice-1', 'adservice2-0', 'cartservice-0', 'cartservice-1', 'checkoutservice-0', 'checkoutservice-1', 'checkoutservice-2', 'checkoutservice2-0', 'currencyservice-0', 'currencyservice-1', 'currencyservice-2', 'emailservice-0', 'emailservice-1', 'emailservice-2', 'frontend-0', 'frontend-1', 'paymentservice-0', 'paymentservice-1', 'productcatalogservice-1', 'productcatalogservice-2', 'productcatalogservice2-0', 'recommendationservice-0', 'recommendationservice-1', 'recommendationservice-2', 'recommendationservice2-0', 'shippingservice-0', 'shippingservice-1']
+  371c802c12 days(UTC+8)={'05-09': 1}
+     NONE (34): ['adservice-0', 'adservice-1', 'adservice2-0', 'cartservice-0', 'cartservice-1', 'cartservice-2', 'checkoutservice-0', 'checkoutservice-1', 'checkoutservice2-0', 'currencyservice-0', 'currencyservice-1', 'currencyservice-2', 'currencyservice2-0', 'emailservice-0', 'emailservice-1', 'emailservice-2', 'emailservice2-0', 'frontend-0', 'frontend2-0', 'paymentservice-0', 'paymentservice-1', 'paymentservice-2', 'paymentservice2-0', 'productcatalogservice-0', 'productcatalogservice-1', 'productcatalogservice-2', 'productcatalogservice2-0', 'recommendationservice-0', 'recommendationservice-1', 'recommendationservice-2', 'recommendationservice2-0', 'shippingservice-0', 'shippingservice-1', 'shippingservice2-0']
+     node-5 (6): ['adservice-2', 'cartservice2-0', 'checkoutservice-2', 'frontend-1', 'frontend-2', 'shippingservice-2']
+
+distinct complete (all 40 have one VM) placement maps: 3
+
+svc->svc non-self call edges per set: {'2fdd958e42': 142, '121407bf1b': 142, 'd1c3bd5761': 142, 'df516b3896': 142, 'a9187e34c9': 142, '7e768a8134': 142, 'ed365892a0': 142, 'f7e632b816': 142, 'ed0441124e': 142, 'a1320e96d8': 142, '371c802c12': 142} identical across all sets: True
+vm->vm edges are self-loops only: True

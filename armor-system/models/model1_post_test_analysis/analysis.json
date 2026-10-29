@@ -1,0 +1,7285 @@
+{
+ "reproduction": {
+  "0": {
+   "rows": true,
+   "thresholds": true,
+   "missing": true
+  },
+  "1": {
+   "rows": true,
+   "thresholds": true,
+   "missing": true
+  },
+  "2": {
+   "rows": true,
+   "thresholds": true,
+   "missing": true
+  },
+  "3": {
+   "rows": true,
+   "thresholds": true,
+   "missing": true
+  },
+  "4": {
+   "rows": true,
+   "thresholds": true,
+   "missing": true
+  }
+ },
+ "fault": {
+  "v1": {
+   "across": {
+    "units": 18,
+    "observations": 48,
+    "unit_pct_of_84_cases": 21.428571428571427,
+    "obs_pct_of_case_predictions": 11.428571428571429,
+    "seed_pattern": {
+     "all": 3,
+     "some": 9,
+     "one": 6
+    },
+    "cases": {
+     "139": {
+      "n_seeds": 5,
+      "true": "Node Disk",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-6",
+      "level": "node"
+     },
+     "143": {
+      "n_seeds": 5,
+      "true": "Node CPU",
+      "preds": [
+       "Container Hardware"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "180": {
+      "n_seeds": 5,
+      "true": "Container Network",
+      "preds": [
+       "Node CPU",
+       "Node Memory"
+      ],
+      "root_cause": "shippingservice-0",
+      "level": "pod"
+     },
+     "138": {
+      "n_seeds": 4,
+      "true": "Container Network",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "emailservice-1",
+      "level": "pod"
+     },
+     "182": {
+      "n_seeds": 4,
+      "true": "Node Disk",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-1",
+      "level": "node"
+     },
+     "203": {
+      "n_seeds": 4,
+      "true": "Node CPU",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "190": {
+      "n_seeds": 3,
+      "true": "Container Network",
+      "preds": [
+       "Node CPU",
+       "Node Disk"
+      ],
+      "root_cause": "checkoutservice2-0",
+      "level": "pod"
+     },
+     "205": {
+      "n_seeds": 3,
+      "true": "Node CPU",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-2",
+      "level": "node"
+     },
+     "197": {
+      "n_seeds": 3,
+      "true": "Container Hardware",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "adservice-1",
+      "level": "pod"
+     },
+     "162": {
+      "n_seeds": 2,
+      "true": "Node CPU",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-1",
+      "level": "node"
+     },
+     "201": {
+      "n_seeds": 2,
+      "true": "Container Network",
+      "preds": [
+       "Node CPU"
+      ],
+      "root_cause": "emailservice-2",
+      "level": "pod"
+     },
+     "160": {
+      "n_seeds": 2,
+      "true": "Node Memory",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "207": {
+      "n_seeds": 1,
+      "true": "Node Disk",
+      "preds": [
+       "Container Hardware"
+      ],
+      "root_cause": "node-6",
+      "level": "node"
+     },
+     "161": {
+      "n_seeds": 1,
+      "true": "Node Disk",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "130": {
+      "n_seeds": 1,
+      "true": "Node Disk",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-6",
+      "level": "node"
+     },
+     "147": {
+      "n_seeds": 1,
+      "true": "Node Memory",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "181": {
+      "n_seeds": 1,
+      "true": "Node CPU",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-3",
+      "level": "node"
+     },
+     "194": {
+      "n_seeds": 1,
+      "true": "Node CPU",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     }
+    }
+   },
+   "within": {
+    "units": 11,
+    "observations": 22,
+    "unit_pct_of_84_cases": 13.095238095238095,
+    "obs_pct_of_case_predictions": 5.238095238095238,
+    "seed_pattern": {
+     "all": 0,
+     "some": 5,
+     "one": 6
+    },
+    "cases": {
+     "133": {
+      "n_seeds": 4,
+      "true": "Node Memory",
+      "preds": [
+       "Node CPU",
+       "Node Disk"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "172": {
+      "n_seeds": 4,
+      "true": "Node CPU",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "130": {
+      "n_seeds": 3,
+      "true": "Node Disk",
+      "preds": [
+       "Node Memory"
+      ],
+      "root_cause": "node-6",
+      "level": "node"
+     },
+     "131": {
+      "n_seeds": 3,
+      "true": "Node Disk",
+      "preds": [
+       "Node CPU",
+       "Node Memory"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "160": {
+      "n_seeds": 2,
+      "true": "Node Memory",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "128": {
+      "n_seeds": 1,
+      "true": "Node Disk",
+      "preds": [
+       "Node Memory"
+      ],
+      "root_cause": "node-2",
+      "level": "node"
+     },
+     "162": {
+      "n_seeds": 1,
+      "true": "Node CPU",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "node-1",
+      "level": "node"
+     },
+     "203": {
+      "n_seeds": 1,
+      "true": "Node CPU",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "205": {
+      "n_seeds": 1,
+      "true": "Node CPU",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "node-2",
+      "level": "node"
+     },
+     "164": {
+      "n_seeds": 1,
+      "true": "Container Network",
+      "preds": [
+       "Container Hardware"
+      ],
+      "root_cause": "adservice",
+      "level": "service"
+     },
+     "188": {
+      "n_seeds": 1,
+      "true": "Container Hardware",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "adservice-1",
+      "level": "pod"
+     }
+    }
+   },
+   "confusion_pairs": {
+    "Node Disk -> Container Network": 11,
+    "Node CPU -> Container Network": 11,
+    "Node CPU -> Node Disk": 7,
+    "Container Network -> Node Disk": 6,
+    "Container Network -> Node CPU": 6,
+    "Node Disk -> Node Memory": 5,
+    "Node Memory -> Node Disk": 5,
+    "Node CPU -> Container Hardware": 5,
+    "Node Memory -> Container Network": 3,
+    "Container Hardware -> Node Disk": 3,
+    "Node Disk -> Node CPU": 2,
+    "Container Network -> Node Memory": 2,
+    "Node Disk -> Container Hardware": 1,
+    "Node Memory -> Node CPU": 1,
+    "Container Network -> Container Hardware": 1,
+    "Container Hardware -> Container Network": 1
+   }
+  },
+  "v0": {
+   "across": {
+    "units": 18,
+    "observations": 42,
+    "unit_pct_of_84_cases": 21.428571428571427,
+    "obs_pct_of_case_predictions": 10.0,
+    "seed_pattern": {
+     "all": 2,
+     "some": 11,
+     "one": 5
+    },
+    "cases": {
+     "139": {
+      "n_seeds": 5,
+      "true": "Node Disk",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-6",
+      "level": "node"
+     },
+     "143": {
+      "n_seeds": 5,
+      "true": "Node CPU",
+      "preds": [
+       "Container Hardware"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "203": {
+      "n_seeds": 4,
+      "true": "Node CPU",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "138": {
+      "n_seeds": 3,
+      "true": "Container Network",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "emailservice-1",
+      "level": "pod"
+     },
+     "162": {
+      "n_seeds": 3,
+      "true": "Node CPU",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-1",
+      "level": "node"
+     },
+     "201": {
+      "n_seeds": 3,
+      "true": "Container Network",
+      "preds": [
+       "Node CPU"
+      ],
+      "root_cause": "emailservice-2",
+      "level": "pod"
+     },
+     "168": {
+      "n_seeds": 2,
+      "true": "Container Network",
+      "preds": [
+       "Node CPU"
+      ],
+      "root_cause": "frontend-2",
+      "level": "pod"
+     },
+     "180": {
+      "n_seeds": 2,
+      "true": "Container Network",
+      "preds": [
+       "Node CPU"
+      ],
+      "root_cause": "shippingservice-0",
+      "level": "pod"
+     },
+     "205": {
+      "n_seeds": 2,
+      "true": "Node CPU",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-2",
+      "level": "node"
+     },
+     "160": {
+      "n_seeds": 2,
+      "true": "Node Memory",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "182": {
+      "n_seeds": 2,
+      "true": "Node Disk",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-1",
+      "level": "node"
+     },
+     "190": {
+      "n_seeds": 2,
+      "true": "Container Network",
+      "preds": [
+       "Node CPU",
+       "Node Disk"
+      ],
+      "root_cause": "checkoutservice2-0",
+      "level": "pod"
+     },
+     "148": {
+      "n_seeds": 2,
+      "true": "Node CPU",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-3",
+      "level": "node"
+     },
+     "131": {
+      "n_seeds": 1,
+      "true": "Node Disk",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "181": {
+      "n_seeds": 1,
+      "true": "Node CPU",
+      "preds": [
+       "Container Hardware"
+      ],
+      "root_cause": "node-3",
+      "level": "node"
+     },
+     "144": {
+      "n_seeds": 1,
+      "true": "Node Disk",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-6",
+      "level": "node"
+     },
+     "161": {
+      "n_seeds": 1,
+      "true": "Node Disk",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "197": {
+      "n_seeds": 1,
+      "true": "Container Hardware",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "adservice-1",
+      "level": "pod"
+     }
+    }
+   },
+   "within": {
+    "units": 12,
+    "observations": 22,
+    "unit_pct_of_84_cases": 14.285714285714286,
+    "obs_pct_of_case_predictions": 5.238095238095238,
+    "seed_pattern": {
+     "all": 0,
+     "some": 6,
+     "one": 6
+    },
+    "cases": {
+     "133": {
+      "n_seeds": 4,
+      "true": "Node Memory",
+      "preds": [
+       "Node CPU",
+       "Node Disk"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "164": {
+      "n_seeds": 3,
+      "true": "Container Network",
+      "preds": [
+       "Container Hardware"
+      ],
+      "root_cause": "adservice",
+      "level": "service"
+     },
+     "172": {
+      "n_seeds": 3,
+      "true": "Node CPU",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "131": {
+      "n_seeds": 2,
+      "true": "Node Disk",
+      "preds": [
+       "Node CPU",
+       "Node Memory"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "188": {
+      "n_seeds": 2,
+      "true": "Container Hardware",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "adservice-1",
+      "level": "pod"
+     },
+     "207": {
+      "n_seeds": 2,
+      "true": "Node Disk",
+      "preds": [
+       "Node CPU"
+      ],
+      "root_cause": "node-6",
+      "level": "node"
+     },
+     "130": {
+      "n_seeds": 1,
+      "true": "Node Disk",
+      "preds": [
+       "Node Memory"
+      ],
+      "root_cause": "node-6",
+      "level": "node"
+     },
+     "160": {
+      "n_seeds": 1,
+      "true": "Node Memory",
+      "preds": [
+       "Node CPU"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "186": {
+      "n_seeds": 1,
+      "true": "Node Memory",
+      "preds": [
+       "Node CPU"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "162": {
+      "n_seeds": 1,
+      "true": "Node CPU",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "node-1",
+      "level": "node"
+     },
+     "203": {
+      "n_seeds": 1,
+      "true": "Node CPU",
+      "preds": [
+       "Node Memory"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "205": {
+      "n_seeds": 1,
+      "true": "Node CPU",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "node-2",
+      "level": "node"
+     }
+    }
+   },
+   "confusion_pairs": {
+    "Node CPU -> Container Network": 11,
+    "Node Disk -> Container Network": 10,
+    "Container Network -> Node CPU": 8,
+    "Node CPU -> Container Hardware": 6,
+    "Node CPU -> Node Disk": 5,
+    "Node Memory -> Node CPU": 4,
+    "Container Network -> Node Disk": 4,
+    "Node Disk -> Node CPU": 3,
+    "Container Network -> Container Hardware": 3,
+    "Node Disk -> Node Memory": 2,
+    "Container Hardware -> Container Network": 2,
+    "Node Memory -> Node Disk": 2,
+    "Node Memory -> Container Network": 2,
+    "Node CPU -> Node Memory": 1,
+    "Container Hardware -> Node Disk": 1
+   }
+  },
+  "xgboost": {
+   "across": {
+    "units": 13,
+    "observations": 40,
+    "unit_pct_of_84_cases": 15.476190476190476,
+    "obs_pct_of_case_predictions": 9.523809523809524,
+    "seed_pattern": {
+     "all": 4,
+     "some": 6,
+     "one": 3
+    },
+    "cases": {
+     "133": {
+      "n_seeds": 5,
+      "true": "Node Memory",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "143": {
+      "n_seeds": 5,
+      "true": "Node CPU",
+      "preds": [
+       "Container Hardware"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "147": {
+      "n_seeds": 5,
+      "true": "Node Memory",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "162": {
+      "n_seeds": 5,
+      "true": "Node CPU",
+      "preds": [
+       "Container Hardware"
+      ],
+      "root_cause": "node-1",
+      "level": "node"
+     },
+     "161": {
+      "n_seeds": 4,
+      "true": "Node Disk",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "203": {
+      "n_seeds": 4,
+      "true": "Node CPU",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "139": {
+      "n_seeds": 3,
+      "true": "Node Disk",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-6",
+      "level": "node"
+     },
+     "148": {
+      "n_seeds": 2,
+      "true": "Node CPU",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-3",
+      "level": "node"
+     },
+     "182": {
+      "n_seeds": 2,
+      "true": "Node Disk",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-1",
+      "level": "node"
+     },
+     "180": {
+      "n_seeds": 2,
+      "true": "Container Network",
+      "preds": [
+       "Node CPU"
+      ],
+      "root_cause": "shippingservice-0",
+      "level": "pod"
+     },
+     "156": {
+      "n_seeds": 1,
+      "true": "Node Disk",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-1",
+      "level": "node"
+     },
+     "168": {
+      "n_seeds": 1,
+      "true": "Container Network",
+      "preds": [
+       "Node CPU"
+      ],
+      "root_cause": "frontend-2",
+      "level": "pod"
+     },
+     "172": {
+      "n_seeds": 1,
+      "true": "Node CPU",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     }
+    }
+   },
+   "within": {
+    "units": 5,
+    "observations": 20,
+    "unit_pct_of_84_cases": 5.9523809523809526,
+    "obs_pct_of_case_predictions": 4.761904761904762,
+    "seed_pattern": {
+     "all": 3,
+     "some": 1,
+     "one": 1
+    },
+    "cases": {
+     "130": {
+      "n_seeds": 5,
+      "true": "Node Disk",
+      "preds": [
+       "Node Memory"
+      ],
+      "root_cause": "node-6",
+      "level": "node"
+     },
+     "146": {
+      "n_seeds": 5,
+      "true": "Container Hardware",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "recommendationservice-1",
+      "level": "pod"
+     },
+     "160": {
+      "n_seeds": 5,
+      "true": "Node Memory",
+      "preds": [
+       "Node CPU"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "172": {
+      "n_seeds": 4,
+      "true": "Node CPU",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "156": {
+      "n_seeds": 1,
+      "true": "Node Disk",
+      "preds": [
+       "Node Memory"
+      ],
+      "root_cause": "node-1",
+      "level": "node"
+     }
+    }
+   },
+   "confusion_pairs": {
+    "Node Memory -> Container Network": 10,
+    "Node CPU -> Container Hardware": 10,
+    "Node Disk -> Container Network": 10,
+    "Node CPU -> Container Network": 7,
+    "Node Disk -> Node Memory": 6,
+    "Container Hardware -> Container Network": 5,
+    "Node Memory -> Node CPU": 5,
+    "Node CPU -> Node Disk": 4,
+    "Container Network -> Node CPU": 3
+   }
+  },
+  "ensemble": {
+   "across": {
+    "units": 9,
+    "observations": 9,
+    "unit_pct_of_84_cases": 10.714285714285714,
+    "obs_pct_of_case_predictions": 10.714285714285714,
+    "seed_pattern": null,
+    "cases": {
+     "138": {
+      "n_seeds": 1,
+      "true": "Container Network",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "emailservice-1",
+      "level": "pod"
+     },
+     "139": {
+      "n_seeds": 1,
+      "true": "Node Disk",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-6",
+      "level": "node"
+     },
+     "143": {
+      "n_seeds": 1,
+      "true": "Node CPU",
+      "preds": [
+       "Container Hardware"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "162": {
+      "n_seeds": 1,
+      "true": "Node CPU",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-1",
+      "level": "node"
+     },
+     "180": {
+      "n_seeds": 1,
+      "true": "Container Network",
+      "preds": [
+       "Node Memory"
+      ],
+      "root_cause": "shippingservice-0",
+      "level": "pod"
+     },
+     "182": {
+      "n_seeds": 1,
+      "true": "Node Disk",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-1",
+      "level": "node"
+     },
+     "197": {
+      "n_seeds": 1,
+      "true": "Container Hardware",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "adservice-1",
+      "level": "pod"
+     },
+     "203": {
+      "n_seeds": 1,
+      "true": "Node CPU",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "205": {
+      "n_seeds": 1,
+      "true": "Node CPU",
+      "preds": [
+       "Container Network"
+      ],
+      "root_cause": "node-2",
+      "level": "node"
+     }
+    }
+   },
+   "within": {
+    "units": 5,
+    "observations": 5,
+    "unit_pct_of_84_cases": 5.9523809523809526,
+    "obs_pct_of_case_predictions": 5.9523809523809526,
+    "seed_pattern": null,
+    "cases": {
+     "130": {
+      "n_seeds": 1,
+      "true": "Node Disk",
+      "preds": [
+       "Node Memory"
+      ],
+      "root_cause": "node-6",
+      "level": "node"
+     },
+     "131": {
+      "n_seeds": 1,
+      "true": "Node Disk",
+      "preds": [
+       "Node CPU"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "133": {
+      "n_seeds": 1,
+      "true": "Node Memory",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     },
+     "160": {
+      "n_seeds": 1,
+      "true": "Node Memory",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "node-4",
+      "level": "node"
+     },
+     "172": {
+      "n_seeds": 1,
+      "true": "Node CPU",
+      "preds": [
+       "Node Disk"
+      ],
+      "root_cause": "node-5",
+      "level": "node"
+     }
+    }
+   },
+   "confusion_pairs": {
+    "Node CPU -> Container Network": 3,
+    "Node Memory -> Node Disk": 2,
+    "Node Disk -> Container Network": 2,
+    "Node Disk -> Node Memory": 1,
+    "Node Disk -> Node CPU": 1,
+    "Container Network -> Node Disk": 1,
+    "Node CPU -> Container Hardware": 1,
+    "Node CPU -> Node Disk": 1,
+    "Container Network -> Node Memory": 1,
+    "Container Hardware -> Node Disk": 1
+   }
+  },
+  "wrong_in_every_model_and_seed": [
+   {
+    "case": 143,
+    "true": "Node CPU",
+    "root_cause": "node-4"
+   }
+  ]
+ },
+ "detection_ours": {
+  "primary": {
+   "missed": {
+    "units": 51,
+    "observations": 129,
+    "unit_pct_of_84": 60.714285714285715,
+    "obs_pct_of_420": 30.714285714285715,
+    "seed_pattern": {
+     "all": 6,
+     "some": 29,
+     "one": 16
+    },
+    "by_class_units": {
+     "Node Disk": {
+      "units": 10,
+      "obs": 21
+     },
+     "Container Network": {
+      "units": 12,
+      "obs": 28
+     },
+     "Node Memory": {
+      "units": 3,
+      "obs": 8
+     },
+     "Container Hardware": {
+      "units": 20,
+      "obs": 48
+     },
+     "Node CPU": {
+      "units": 6,
+      "obs": 24
+     }
+    },
+    "labels": {
+     "1651885771": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 140,
+        "class": "Container Network",
+        "root_cause": "cartservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651900839": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 147,
+        "class": "Node Memory",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1652035716": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 172,
+        "class": "Node CPU",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1652060333": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 183,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice2-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652069584": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 188,
+        "class": "Container Hardware",
+        "root_cause": "adservice-1",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652103411": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 205,
+        "class": "Node CPU",
+        "root_cause": "node-2",
+        "level": "node"
+       }
+      ]
+     },
+     "1651908253": {
+      "seeds": [
+       0,
+       1,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 151,
+        "class": "Container Hardware",
+        "root_cause": "adservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651919818": {
+      "seeds": [
+       0,
+       1,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 157,
+        "class": "Container Network",
+        "root_cause": "frontend",
+        "level": "service"
+       }
+      ]
+     },
+     "1652055279": {
+      "seeds": [
+       0,
+       1,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 180,
+        "class": "Container Network",
+        "root_cause": "shippingservice-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652083866": {
+      "seeds": [
+       0,
+       1,
+       2,
+       4
+      ],
+      "cases": [
+       {
+        "case": 194,
+        "class": "Node CPU",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1652101150": {
+      "seeds": [
+       0,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 203,
+        "class": "Node CPU",
+        "root_cause": "node-4",
+        "level": "node"
+       }
+      ]
+     },
+     "1652102061": {
+      "seeds": [
+       0,
+       1,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 204,
+        "class": "Container Network",
+        "root_cause": "cartservice-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1651877333": {
+      "seeds": [
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 136,
+        "class": "Container Hardware",
+        "root_cause": "currencyservice-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1651929878": {
+      "seeds": [
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 162,
+        "class": "Node CPU",
+        "root_cause": "node-1",
+        "level": "node"
+       }
+      ]
+     },
+     "1651863857": {
+      "seeds": [
+       0,
+       1,
+       4
+      ],
+      "cases": [
+       {
+        "case": 130,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1651884469": {
+      "seeds": [
+       0,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 138,
+        "class": "Container Network",
+        "root_cause": "emailservice-1",
+        "level": "pod"
+       }
+      ]
+     },
+     "1651896807": {
+      "seeds": [
+       0,
+       2,
+       4
+      ],
+      "cases": [
+       {
+        "case": 144,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1651897275": {
+      "seeds": [
+       0,
+       2,
+       4
+      ],
+      "cases": [
+       {
+        "case": 145,
+        "class": "Container Hardware",
+        "root_cause": "currencyservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651918114": {
+      "seeds": [
+       0,
+       2,
+       4
+      ],
+      "cases": [
+       {
+        "case": 156,
+        "class": "Node Disk",
+        "root_cause": "node-1",
+        "level": "node"
+       }
+      ]
+     },
+     "1651928188": {
+      "seeds": [
+       0,
+       2,
+       4
+      ],
+      "cases": [
+       {
+        "case": 161,
+        "class": "Node Disk",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1652058023": {
+      "seeds": [
+       0,
+       2,
+       4
+      ],
+      "cases": [
+       {
+        "case": 182,
+        "class": "Node Disk",
+        "root_cause": "node-1",
+        "level": "node"
+       }
+      ]
+     },
+     "1652104717": {
+      "seeds": [
+       0,
+       2,
+       3
+      ],
+      "cases": [
+       {
+        "case": 206,
+        "class": "Container Hardware",
+        "root_cause": "currencyservice-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652047629": {
+      "seeds": [
+       1,
+       2,
+       4
+      ],
+      "cases": [
+       {
+        "case": 175,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651870394": {
+      "seeds": [
+       0,
+       1
+      ],
+      "cases": [
+       {
+        "case": 132,
+        "class": "Container Network",
+        "root_cause": "productcatalogservice-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1651872135": {
+      "seeds": [
+       0,
+       4
+      ],
+      "cases": [
+       {
+        "case": 133,
+        "class": "Node Memory",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1652032391": {
+      "seeds": [
+       0,
+       3
+      ],
+      "cases": [
+       {
+        "case": 170,
+        "class": "Container Hardware",
+        "root_cause": "shippingservice-1",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652056357": {
+      "seeds": [
+       0,
+       1
+      ],
+      "cases": [
+       {
+        "case": 181,
+        "class": "Node CPU",
+        "root_cause": "node-3",
+        "level": "node"
+       }
+      ]
+     },
+     "1652061480": {
+      "seeds": [
+       0,
+       2
+      ],
+      "cases": [
+       {
+        "case": 184,
+        "class": "Container Hardware",
+        "root_cause": "currencyservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652110645": {
+      "seeds": [
+       0,
+       4
+      ],
+      "cases": [
+       {
+        "case": 209,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1651889566": {
+      "seeds": [
+       2,
+       4
+      ],
+      "cases": [
+       {
+        "case": 141,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651899367": {
+      "seeds": [
+       2,
+       4
+      ],
+      "cases": [
+       {
+        "case": 146,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice-1",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652026980": {
+      "seeds": [
+       2,
+       4
+      ],
+      "cases": [
+       {
+        "case": 165,
+        "class": "Container Hardware",
+        "root_cause": "emailservice-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652027890": {
+      "seeds": [
+       2,
+       3
+      ],
+      "cases": [
+       {
+        "case": 166,
+        "class": "Container Hardware",
+        "root_cause": "emailservice-1",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652052222": {
+      "seeds": [
+       2,
+       4
+      ],
+      "cases": [
+       {
+        "case": 178,
+        "class": "Container Hardware",
+        "root_cause": "emailservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652105625": {
+      "seeds": [
+       2,
+       4
+      ],
+      "cases": [
+       {
+        "case": 207,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1651913210": {
+      "seeds": [
+       0
+      ],
+      "cases": [
+       {
+        "case": 154,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1652029802": {
+      "seeds": [
+       0
+      ],
+      "cases": [
+       {
+        "case": 168,
+        "class": "Container Network",
+        "root_cause": "frontend-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652064977": {
+      "seeds": [
+       0
+      ],
+      "cases": [
+       {
+        "case": 186,
+        "class": "Node Memory",
+        "root_cause": "node-4",
+        "level": "node"
+       }
+      ]
+     },
+     "1652072251": {
+      "seeds": [
+       0
+      ],
+      "cases": [
+       {
+        "case": 189,
+        "class": "Container Hardware",
+        "root_cause": "adservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652090619": {
+      "seeds": [
+       0
+      ],
+      "cases": [
+       {
+        "case": 198,
+        "class": "Container Network",
+        "root_cause": "frontend-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652093544": {
+      "seeds": [
+       0
+      ],
+      "cases": [
+       {
+        "case": 200,
+        "class": "Container Hardware",
+        "root_cause": "paymentservice-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652097055": {
+      "seeds": [
+       0
+      ],
+      "cases": [
+       {
+        "case": 201,
+        "class": "Container Network",
+        "root_cause": "emailservice-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1651880837": {
+      "seeds": [
+       1
+      ],
+      "cases": [
+       {
+        "case": 137,
+        "class": "Container Network",
+        "root_cause": "productcatalogservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651875390": {
+      "seeds": [
+       2
+      ],
+      "cases": [
+       {
+        "case": 134,
+        "class": "Node Disk",
+        "root_cause": "node-1",
+        "level": "node"
+       }
+      ]
+     },
+     "1651885258": {
+      "seeds": [
+       2
+      ],
+      "cases": [
+       {
+        "case": 139,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1652028651": {
+      "seeds": [
+       2
+      ],
+      "cases": [
+       {
+        "case": 167,
+        "class": "Container Hardware",
+        "root_cause": "checkoutservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652075078": {
+      "seeds": [
+       3
+      ],
+      "cases": [
+       {
+        "case": 190,
+        "class": "Container Network",
+        "root_cause": "checkoutservice2-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1651863211": {
+      "seeds": [
+       4
+      ],
+      "cases": [
+       {
+        "case": 129,
+        "class": "Container Network",
+        "root_cause": "emailservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651867434": {
+      "seeds": [
+       4
+      ],
+      "cases": [
+       {
+        "case": 131,
+        "class": "Node Disk",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1651915992": {
+      "seeds": [
+       4
+      ],
+      "cases": [
+       {
+        "case": 155,
+        "class": "Container Hardware",
+        "root_cause": "adservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652066468": {
+      "seeds": [
+       4
+      ],
+      "cases": [
+       {
+        "case": 187,
+        "class": "Container Hardware",
+        "root_cause": "paymentservice",
+        "level": "service"
+       }
+      ]
+     }
+    }
+   },
+   "late": {
+    "units": 27,
+    "observations": 45,
+    "hits_total_obs": 291,
+    "seed_pattern": {
+     "all": 0,
+     "some": 13,
+     "one": 14
+    },
+    "by_class_units": {
+     "Node Disk": 6,
+     "Container Network": 8,
+     "Container Hardware": 9,
+     "Node Memory": 2,
+     "Node CPU": 2
+    },
+    "labels": {
+     "1651867434": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3
+      ],
+      "delays_s": [
+       246,
+       246,
+       246,
+       246
+      ],
+      "cases": [
+       {
+        "case": 131,
+        "class": "Node Disk",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1651875390": {
+      "seeds": [
+       0,
+       1,
+       4
+      ],
+      "delays_s": [
+       150,
+       210,
+       90,
+       150
+      ],
+      "cases": [
+       {
+        "case": 134,
+        "class": "Node Disk",
+        "root_cause": "node-1",
+        "level": "node"
+       }
+      ]
+     },
+     "1652075078": {
+      "seeds": [
+       0,
+       1,
+       2
+      ],
+      "delays_s": [
+       262,
+       202,
+       262,
+       82
+      ],
+      "cases": [
+       {
+        "case": 190,
+        "class": "Container Network",
+        "root_cause": "checkoutservice2-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1651872135": {
+      "seeds": [
+       1,
+       2,
+       3
+      ],
+      "delays_s": [
+       165,
+       285,
+       285
+      ],
+      "cases": [
+       {
+        "case": 133,
+        "class": "Node Memory",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1651880837": {
+      "seeds": [
+       0,
+       4
+      ],
+      "delays_s": [
+       223,
+       103,
+       103,
+       283
+      ],
+      "cases": [
+       {
+        "case": 137,
+        "class": "Container Network",
+        "root_cause": "productcatalogservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651885258": {
+      "seeds": [
+       0,
+       3
+      ],
+      "delays_s": [
+       122,
+       62,
+       122,
+       62
+      ],
+      "cases": [
+       {
+        "case": 139,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1651884469": {
+      "seeds": [
+       1,
+       2
+      ],
+      "delays_s": [
+       131,
+       131
+      ],
+      "cases": [
+       {
+        "case": 138,
+        "class": "Container Network",
+        "root_cause": "emailservice-1",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652027890": {
+      "seeds": [
+       1,
+       4
+      ],
+      "delays_s": [
+       50,
+       170,
+       170
+      ],
+      "cases": [
+       {
+        "case": 166,
+        "class": "Container Hardware",
+        "root_cause": "emailservice-1",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652061480": {
+      "seeds": [
+       1,
+       3
+      ],
+      "delays_s": [
+       180,
+       180,
+       60
+      ],
+      "cases": [
+       {
+        "case": 184,
+        "class": "Container Hardware",
+        "root_cause": "currencyservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652064977": {
+      "seeds": [
+       1,
+       3
+      ],
+      "delays_s": [
+       163,
+       -1697,
+       163,
+       -317
+      ],
+      "cases": [
+       {
+        "case": 186,
+        "class": "Node Memory",
+        "root_cause": "node-4",
+        "level": "node"
+       }
+      ]
+     },
+     "1652072251": {
+      "seeds": [
+       1,
+       4
+      ],
+      "delays_s": [
+       269,
+       29,
+       29,
+       269
+      ],
+      "cases": [
+       {
+        "case": 189,
+        "class": "Container Hardware",
+        "root_cause": "adservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652097055": {
+      "seeds": [
+       1,
+       2
+      ],
+      "delays_s": [
+       125,
+       125,
+       -655,
+       -1015
+      ],
+      "cases": [
+       {
+        "case": 201,
+        "class": "Container Network",
+        "root_cause": "emailservice-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652104717": {
+      "seeds": [
+       1,
+       4
+      ],
+      "delays_s": [
+       203,
+       203
+      ],
+      "cases": [
+       {
+        "case": 206,
+        "class": "Container Hardware",
+        "root_cause": "currencyservice-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1651909424": {
+      "seeds": [
+       0
+      ],
+      "delays_s": [
+       136,
+       76,
+       16,
+       16,
+       16
+      ],
+      "cases": [
+       {
+        "case": 152,
+        "class": "Container Hardware",
+        "root_cause": "adservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651935446": {
+      "seeds": [
+       0
+      ],
+      "delays_s": [
+       154,
+       34,
+       34,
+       -1646,
+       -1166
+      ],
+      "cases": [
+       {
+        "case": 164,
+        "class": "Container Network",
+        "root_cause": "adservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652047629": {
+      "seeds": [
+       0
+      ],
+      "delays_s": [
+       291,
+       51
+      ],
+      "cases": [
+       {
+        "case": 175,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652105625": {
+      "seeds": [
+       0
+      ],
+      "delays_s": [
+       135,
+       75,
+       75
+      ],
+      "cases": [
+       {
+        "case": 207,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1651896807": {
+      "seeds": [
+       1
+      ],
+      "delays_s": [
+       153,
+       93
+      ],
+      "cases": [
+       {
+        "case": 144,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1651899367": {
+      "seeds": [
+       1
+      ],
+      "delays_s": [
+       113,
+       173,
+       53
+      ],
+      "cases": [
+       {
+        "case": 146,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice-1",
+        "level": "pod"
+       }
+      ]
+     },
+     "1651908253": {
+      "seeds": [
+       2
+      ],
+      "delays_s": [
+       227
+      ],
+      "cases": [
+       {
+        "case": 151,
+        "class": "Container Hardware",
+        "root_cause": "adservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651919818": {
+      "seeds": [
+       2
+      ],
+      "delays_s": [
+       182
+      ],
+      "cases": [
+       {
+        "case": 157,
+        "class": "Container Network",
+        "root_cause": "frontend",
+        "level": "service"
+       }
+      ]
+     },
+     "1651922476": {
+      "seeds": [
+       2
+      ],
+      "delays_s": [
+       104,
+       104,
+       284,
+       44,
+       44
+      ],
+      "cases": [
+       {
+        "case": 159,
+        "class": "Node Disk",
+        "root_cause": "node-2",
+        "level": "node"
+       }
+      ]
+     },
+     "1652083866": {
+      "seeds": [
+       3
+      ],
+      "delays_s": [
+       174
+      ],
+      "cases": [
+       {
+        "case": 194,
+        "class": "Node CPU",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1652110645": {
+      "seeds": [
+       3
+      ],
+      "delays_s": [
+       35,
+       35,
+       275
+      ],
+      "cases": [
+       {
+        "case": 209,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652056357": {
+      "seeds": [
+       4
+      ],
+      "delays_s": [
+       -1057,
+       -457,
+       263
+      ],
+      "cases": [
+       {
+        "case": 181,
+        "class": "Node CPU",
+        "root_cause": "node-3",
+        "level": "node"
+       }
+      ]
+     },
+     "1652092703": {
+      "seeds": [
+       4
+      ],
+      "delays_s": [
+       37,
+       37,
+       37,
+       37,
+       217
+      ],
+      "cases": [
+       {
+        "case": 199,
+        "class": "Container Network",
+        "root_cause": "productcatalogservice-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652108177": {
+      "seeds": [
+       4
+      ],
+      "delays_s": [
+       103,
+       43,
+       43,
+       43,
+       223
+      ],
+      "cases": [
+       {
+        "case": 208,
+        "class": "Container Network",
+        "root_cause": "productcatalogservice",
+        "level": "service"
+       }
+      ]
+     }
+    }
+   },
+   "fp": {
+    "interval_observations": 87,
+    "by_interval_class": {
+     "normal_only": 67,
+     "ignore_overlap": 20
+    },
+    "episodes": 46,
+    "episodes_by_class": {
+     "normal_only": 30,
+     "ignore_overlap": 15,
+     "mixed": 1
+    },
+    "episode_seed_pattern": {
+     "all": 2,
+     "some": 19,
+     "one": 25
+    },
+    "episodes_list": [
+     {
+      "start": 1651855440,
+      "end": 1651855500,
+      "class": "normal_only",
+      "seeds": [
+       2,
+       4
+      ],
+      "n_intervals": 2,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 4,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651861500,
+      "end": 1651861860,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       4
+      ],
+      "n_intervals": 2,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 10,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651862700,
+      "end": 1651862760,
+      "class": "normal_only",
+      "seeds": [
+       4
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 2,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651865640,
+      "end": 1651865940,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       3,
+       4
+      ],
+      "n_intervals": 4,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 18,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651867740,
+      "end": 1651868040,
+      "class": "ignore_overlap",
+      "seeds": [
+       4
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 1,
+       "normal_reference": 0,
+       "ignore": 5
+      }
+     },
+     {
+      "start": 1651869060,
+      "end": 1651869120,
+      "class": "normal_only",
+      "seeds": [
+       1,
+       2,
+       3
+      ],
+      "n_intervals": 3,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 6,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651869540,
+      "end": 1651869600,
+      "class": "normal_only",
+      "seeds": [
+       0
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 2,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651870920,
+      "end": 1651871220,
+      "class": "ignore_overlap",
+      "seeds": [
+       1
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 0,
+       "ignore": 6
+      }
+     },
+     {
+      "start": 1651873080,
+      "end": 1651873140,
+      "class": "ignore_overlap",
+      "seeds": [
+       2
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 1,
+       "ignore": 1
+      }
+     },
+     {
+      "start": 1651873980,
+      "end": 1651874340,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3
+      ],
+      "n_intervals": 4,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 17,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651875780,
+      "end": 1651875840,
+      "class": "ignore_overlap",
+      "seeds": [
+       2
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 0,
+       "ignore": 2
+      }
+     },
+     {
+      "start": 1651878600,
+      "end": 1651878780,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 15,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651881960,
+      "end": 1651882800,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       3,
+       4
+      ],
+      "n_intervals": 4,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 29,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651887960,
+      "end": 1651888080,
+      "class": "normal_only",
+      "seeds": [
+       3,
+       4
+      ],
+      "n_intervals": 2,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 5,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651890000,
+      "end": 1651890060,
+      "class": "ignore_overlap",
+      "seeds": [
+       4
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 0,
+       "ignore": 2
+      }
+     },
+     {
+      "start": 1651894440,
+      "end": 1651894500,
+      "class": "normal_only",
+      "seeds": [
+       4
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 2,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651894860,
+      "end": 1651895340,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       2,
+       3
+      ],
+      "n_intervals": 3,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 15,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651895400,
+      "end": 1651895460,
+      "class": "normal_only",
+      "seeds": [
+       4
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 2,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651897680,
+      "end": 1651897800,
+      "class": "ignore_overlap",
+      "seeds": [
+       0,
+       1
+      ],
+      "n_intervals": 2,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 0,
+       "ignore": 4
+      }
+     },
+     {
+      "start": 1651915140,
+      "end": 1651915200,
+      "class": "normal_only",
+      "seeds": [
+       3
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 2,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651916340,
+      "end": 1651916520,
+      "class": "ignore_overlap",
+      "seeds": [
+       4
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 1,
+       "normal_reference": 0,
+       "ignore": 3
+      }
+     },
+     {
+      "start": 1651917480,
+      "end": 1651917540,
+      "class": "normal_only",
+      "seeds": [
+       0
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 2,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651923960,
+      "end": 1651924080,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3
+      ],
+      "n_intervals": 4,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 9,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651925100,
+      "end": 1651925160,
+      "class": "normal_only",
+      "seeds": [
+       2
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 2,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651929240,
+      "end": 1651929300,
+      "class": "normal_only",
+      "seeds": [
+       3
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 2,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651936920,
+      "end": 1651936980,
+      "class": "normal_only",
+      "seeds": [
+       3
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 2,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651937880,
+      "end": 1651937940,
+      "class": "normal_only",
+      "seeds": [
+       1
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 2,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651938420,
+      "end": 1651938480,
+      "class": "normal_only",
+      "seeds": [
+       3
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 2,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652029080,
+      "end": 1652029260,
+      "class": "ignore_overlap",
+      "seeds": [
+       0,
+       1
+      ],
+      "n_intervals": 2,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 0,
+       "ignore": 6
+      }
+     },
+     {
+      "start": 1652032860,
+      "end": 1652034300,
+      "class": "mixed",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 6,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 27,
+       "ignore": 16
+      }
+     },
+     {
+      "start": 1652036460,
+      "end": 1652036520,
+      "class": "ignore_overlap",
+      "seeds": [
+       1,
+       3
+      ],
+      "n_intervals": 2,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 0,
+       "ignore": 4
+      }
+     },
+     {
+      "start": 1652042280,
+      "end": 1652042700,
+      "class": "normal_only",
+      "seeds": [
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 4,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 16,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652043420,
+      "end": 1652043840,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1
+      ],
+      "n_intervals": 2,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 14,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652047200,
+      "end": 1652047260,
+      "class": "normal_only",
+      "seeds": [
+       4
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 2,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652059440,
+      "end": 1652059500,
+      "class": "normal_only",
+      "seeds": [
+       4
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 2,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652060640,
+      "end": 1652060760,
+      "class": "ignore_overlap",
+      "seeds": [
+       4
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 1,
+       "normal_reference": 0,
+       "ignore": 2
+      }
+     },
+     {
+      "start": 1652070300,
+      "end": 1652070360,
+      "class": "ignore_overlap",
+      "seeds": [
+       3
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 0,
+       "ignore": 2
+      }
+     },
+     {
+      "start": 1652073000,
+      "end": 1652073540,
+      "class": "ignore_overlap",
+      "seeds": [
+       0
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 6,
+       "ignore": 4
+      }
+     },
+     {
+      "start": 1652073900,
+      "end": 1652074560,
+      "class": "normal_only",
+      "seeds": [
+       2,
+       3
+      ],
+      "n_intervals": 2,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 21,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652075400,
+      "end": 1652075760,
+      "class": "ignore_overlap",
+      "seeds": [
+       3
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 1,
+       "normal_reference": 0,
+       "ignore": 6
+      }
+     },
+     {
+      "start": 1652082840,
+      "end": 1652082900,
+      "class": "normal_only",
+      "seeds": [
+       3,
+       4
+      ],
+      "n_intervals": 2,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 4,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652084520,
+      "end": 1652084580,
+      "class": "ignore_overlap",
+      "seeds": [
+       2
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 0,
+       "ignore": 2
+      }
+     },
+     {
+      "start": 1652086200,
+      "end": 1652086740,
+      "class": "normal_only",
+      "seeds": [
+       1,
+       2,
+       3
+      ],
+      "n_intervals": 3,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 14,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652090940,
+      "end": 1652091000,
+      "class": "ignore_overlap",
+      "seeds": [
+       0
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 1,
+       "normal_reference": 0,
+       "ignore": 1
+      }
+     },
+     {
+      "start": 1652096400,
+      "end": 1652096580,
+      "class": "normal_only",
+      "seeds": [
+       1,
+       2
+      ],
+      "n_intervals": 2,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 6,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652111760,
+      "end": 1652111820,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       3
+      ],
+      "n_intervals": 2,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 4,
+       "ignore": 0
+      }
+     }
+    ]
+   }
+  },
+  "d3_m2_p90": {
+   "missed": {
+    "units": 16,
+    "observations": 79,
+    "unit_pct_of_84": 19.047619047619047,
+    "obs_pct_of_420": 18.80952380952381,
+    "seed_pattern": {
+     "all": 15,
+     "some": 1,
+     "one": 0
+    },
+    "by_class_units": {
+     "Node Disk": {
+      "units": 7,
+      "obs": 35
+     },
+     "Container Network": {
+      "units": 3,
+      "obs": 14
+     },
+     "Node Memory": {
+      "units": 3,
+      "obs": 15
+     },
+     "Node CPU": {
+      "units": 3,
+      "obs": 15
+     }
+    },
+    "labels": {
+     "1651863857": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 130,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1651872135": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 133,
+        "class": "Node Memory",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1651875390": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 134,
+        "class": "Node Disk",
+        "root_cause": "node-1",
+        "level": "node"
+       }
+      ]
+     },
+     "1651880837": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 137,
+        "class": "Container Network",
+        "root_cause": "productcatalogservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651900839": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 147,
+        "class": "Node Memory",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1651904204": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 148,
+        "class": "Node CPU",
+        "root_cause": "node-3",
+        "level": "node"
+       }
+      ]
+     },
+     "1651913210": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 154,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1651922476": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 159,
+        "class": "Node Disk",
+        "root_cause": "node-2",
+        "level": "node"
+       }
+      ]
+     },
+     "1652035716": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 172,
+        "class": "Node CPU",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1652053117": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 179,
+        "class": "Node Disk",
+        "root_cause": "node-3",
+        "level": "node"
+       }
+      ]
+     },
+     "1652055279": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 180,
+        "class": "Container Network",
+        "root_cause": "shippingservice-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652056357": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 181,
+        "class": "Node CPU",
+        "root_cause": "node-3",
+        "level": "node"
+       }
+      ]
+     },
+     "1652064977": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 186,
+        "class": "Node Memory",
+        "root_cause": "node-4",
+        "level": "node"
+       }
+      ]
+     },
+     "1652087378": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 195,
+        "class": "Node Disk",
+        "root_cause": "node-3",
+        "level": "node"
+       }
+      ]
+     },
+     "1652105625": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 207,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1651870394": {
+      "seeds": [
+       0,
+       1,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 132,
+        "class": "Container Network",
+        "root_cause": "productcatalogservice-2",
+        "level": "pod"
+       }
+      ]
+     }
+    }
+   },
+   "late": {
+    "units": 2,
+    "observations": 10,
+    "hits_total_obs": 341,
+    "seed_pattern": {
+     "all": 2,
+     "some": 0,
+     "one": 0
+    },
+    "by_class_units": {
+     "Node Disk": 1,
+     "Container Network": 1
+    },
+    "labels": {
+     "1651867434": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "delays_s": [
+       186,
+       186,
+       186,
+       186,
+       186
+      ],
+      "cases": [
+       {
+        "case": 131,
+        "class": "Node Disk",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1651919818": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "delays_s": [
+       242,
+       242,
+       242,
+       242,
+       242
+      ],
+      "cases": [
+       {
+        "case": 157,
+        "class": "Container Network",
+        "root_cause": "frontend",
+        "level": "service"
+       }
+      ]
+     }
+    }
+   },
+   "fp": {
+    "interval_observations": 104,
+    "by_interval_class": {
+     "normal_only": 89,
+     "ignore_overlap": 15
+    },
+    "episodes": 22,
+    "episodes_by_class": {
+     "normal_only": 19,
+     "ignore_overlap": 3,
+     "mixed": 0
+    },
+    "episode_seed_pattern": {
+     "all": 19,
+     "some": 2,
+     "one": 1
+    },
+    "episodes_list": [
+     {
+      "start": 1651854360,
+      "end": 1651854720,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 35,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651855380,
+      "end": 1651855440,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 10,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651865160,
+      "end": 1651866180,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 90,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651868460,
+      "end": 1651869480,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       3,
+       4
+      ],
+      "n_intervals": 4,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 51,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651878540,
+      "end": 1651878600,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 10,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651881900,
+      "end": 1651883340,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 110,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651887360,
+      "end": 1651888140,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 32,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651894380,
+      "end": 1651895280,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 80,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651902780,
+      "end": 1651903200,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 40,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651923900,
+      "end": 1651923960,
+      "class": "normal_only",
+      "seeds": [
+       0
+      ],
+      "n_intervals": 1,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 2,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651924680,
+      "end": 1651925040,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 35,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1651930260,
+      "end": 1651932120,
+      "class": "ignore_overlap",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 104,
+       "ignore": 50
+      }
+     },
+     {
+      "start": 1652036220,
+      "end": 1652036400,
+      "class": "ignore_overlap",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 0,
+       "ignore": 20
+      }
+     },
+     {
+      "start": 1652038740,
+      "end": 1652039220,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 45,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652042220,
+      "end": 1652042280,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 10,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652059260,
+      "end": 1652059380,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3
+      ],
+      "n_intervals": 4,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 12,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652065440,
+      "end": 1652065800,
+      "class": "ignore_overlap",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 0,
+       "ignore": 35
+      }
+     },
+     {
+      "start": 1652082000,
+      "end": 1652082060,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 10,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652086140,
+      "end": 1652086620,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 45,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652098140,
+      "end": 1652098620,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 45,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652107320,
+      "end": 1652107380,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 10,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652111700,
+      "end": 1652111940,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 13,
+       "ignore": 0
+      }
+     }
+    ]
+   }
+  },
+  "d3_m2_p99": {
+   "missed": {
+    "units": 69,
+    "observations": 334,
+    "unit_pct_of_84": 82.14285714285714,
+    "obs_pct_of_420": 79.52380952380952,
+    "seed_pattern": {
+     "all": 64,
+     "some": 5,
+     "one": 0
+    },
+    "by_class_units": {
+     "Container Hardware": {
+      "units": 28,
+      "obs": 131
+     },
+     "Node Disk": {
+      "units": 14,
+      "obs": 70
+     },
+     "Container Network": {
+      "units": 15,
+      "obs": 73
+     },
+     "Node Memory": {
+      "units": 4,
+      "obs": 20
+     },
+     "Node CPU": {
+      "units": 8,
+      "obs": 40
+     }
+    },
+    "labels": {
+     "1651859583": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 127,
+        "class": "Container Hardware",
+        "root_cause": "frontend-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1651860249": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 128,
+        "class": "Node Disk",
+        "root_cause": "node-2",
+        "level": "node"
+       }
+      ]
+     },
+     "1651863857": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 130,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1651867434": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 131,
+        "class": "Node Disk",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1651870394": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 132,
+        "class": "Container Network",
+        "root_cause": "productcatalogservice-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1651872135": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 133,
+        "class": "Node Memory",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1651875390": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 134,
+        "class": "Node Disk",
+        "root_cause": "node-1",
+        "level": "node"
+       }
+      ]
+     },
+     "1651876445": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 135,
+        "class": "Container Hardware",
+        "root_cause": "frontend",
+        "level": "service"
+       }
+      ]
+     },
+     "1651877333": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 136,
+        "class": "Container Hardware",
+        "root_cause": "currencyservice-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1651880837": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 137,
+        "class": "Container Network",
+        "root_cause": "productcatalogservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651884469": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 138,
+        "class": "Container Network",
+        "root_cause": "emailservice-1",
+        "level": "pod"
+       }
+      ]
+     },
+     "1651885258": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 139,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1651885771": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 140,
+        "class": "Container Network",
+        "root_cause": "cartservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651889566": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 141,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651891523": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 142,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651891895": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 143,
+        "class": "Node CPU",
+        "root_cause": "node-4",
+        "level": "node"
+       }
+      ]
+     },
+     "1651896807": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 144,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1651897275": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 145,
+        "class": "Container Hardware",
+        "root_cause": "currencyservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651899367": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 146,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice-1",
+        "level": "pod"
+       }
+      ]
+     },
+     "1651900839": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 147,
+        "class": "Node Memory",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1651904204": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 148,
+        "class": "Node CPU",
+        "root_cause": "node-3",
+        "level": "node"
+       }
+      ]
+     },
+     "1651908253": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 151,
+        "class": "Container Hardware",
+        "root_cause": "adservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651909424": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 152,
+        "class": "Container Hardware",
+        "root_cause": "adservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651910133": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 153,
+        "class": "Container Network",
+        "root_cause": "frontend",
+        "level": "service"
+       }
+      ]
+     },
+     "1651913210": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 154,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1651915992": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 155,
+        "class": "Container Hardware",
+        "root_cause": "adservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1651918114": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 156,
+        "class": "Node Disk",
+        "root_cause": "node-1",
+        "level": "node"
+       }
+      ]
+     },
+     "1651919818": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 157,
+        "class": "Container Network",
+        "root_cause": "frontend",
+        "level": "service"
+       }
+      ]
+     },
+     "1651922476": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 159,
+        "class": "Node Disk",
+        "root_cause": "node-2",
+        "level": "node"
+       }
+      ]
+     },
+     "1651926867": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 160,
+        "class": "Node Memory",
+        "root_cause": "node-4",
+        "level": "node"
+       }
+      ]
+     },
+     "1651928188": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 161,
+        "class": "Node Disk",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1651929878": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 162,
+        "class": "Node CPU",
+        "root_cause": "node-1",
+        "level": "node"
+       }
+      ]
+     },
+     "1651935446": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 164,
+        "class": "Container Network",
+        "root_cause": "adservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652026980": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 165,
+        "class": "Container Hardware",
+        "root_cause": "emailservice-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652027890": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 166,
+        "class": "Container Hardware",
+        "root_cause": "emailservice-1",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652028651": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 167,
+        "class": "Container Hardware",
+        "root_cause": "checkoutservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652029802": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 168,
+        "class": "Container Network",
+        "root_cause": "frontend-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652032391": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 170,
+        "class": "Container Hardware",
+        "root_cause": "shippingservice-1",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652034858": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 171,
+        "class": "Container Network",
+        "root_cause": "frontend",
+        "level": "service"
+       }
+      ]
+     },
+     "1652035716": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 172,
+        "class": "Node CPU",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1652044466": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 173,
+        "class": "Container Hardware",
+        "root_cause": "shippingservice-1",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652046023": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 174,
+        "class": "Container Hardware",
+        "root_cause": "emailservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652053117": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 179,
+        "class": "Node Disk",
+        "root_cause": "node-3",
+        "level": "node"
+       }
+      ]
+     },
+     "1652055279": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 180,
+        "class": "Container Network",
+        "root_cause": "shippingservice-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652056357": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 181,
+        "class": "Node CPU",
+        "root_cause": "node-3",
+        "level": "node"
+       }
+      ]
+     },
+     "1652058023": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 182,
+        "class": "Node Disk",
+        "root_cause": "node-1",
+        "level": "node"
+       }
+      ]
+     },
+     "1652060333": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 183,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice2-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652061480": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 184,
+        "class": "Container Hardware",
+        "root_cause": "currencyservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652064977": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 186,
+        "class": "Node Memory",
+        "root_cause": "node-4",
+        "level": "node"
+       }
+      ]
+     },
+     "1652066468": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 187,
+        "class": "Container Hardware",
+        "root_cause": "paymentservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652075078": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 190,
+        "class": "Container Network",
+        "root_cause": "checkoutservice2-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652083866": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 194,
+        "class": "Node CPU",
+        "root_cause": "node-5",
+        "level": "node"
+       }
+      ]
+     },
+     "1652087378": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 195,
+        "class": "Node Disk",
+        "root_cause": "node-3",
+        "level": "node"
+       }
+      ]
+     },
+     "1652088630": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 196,
+        "class": "Container Hardware",
+        "root_cause": "frontend-1",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652090619": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 198,
+        "class": "Container Network",
+        "root_cause": "frontend-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652092703": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 199,
+        "class": "Container Network",
+        "root_cause": "productcatalogservice-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652093544": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 200,
+        "class": "Container Hardware",
+        "root_cause": "paymentservice-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652097055": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 201,
+        "class": "Container Network",
+        "root_cause": "emailservice-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652099503": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 202,
+        "class": "Container Hardware",
+        "root_cause": "emailservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652101150": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 203,
+        "class": "Node CPU",
+        "root_cause": "node-4",
+        "level": "node"
+       }
+      ]
+     },
+     "1652103411": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 205,
+        "class": "Node CPU",
+        "root_cause": "node-2",
+        "level": "node"
+       }
+      ]
+     },
+     "1652104717": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 206,
+        "class": "Container Hardware",
+        "root_cause": "currencyservice-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652105625": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 207,
+        "class": "Node Disk",
+        "root_cause": "node-6",
+        "level": "node"
+       }
+      ]
+     },
+     "1652110645": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 209,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice-0",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652031460": {
+      "seeds": [
+       1,
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 169,
+        "class": "Container Hardware",
+        "root_cause": "shippingservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652063842": {
+      "seeds": [
+       0,
+       1,
+       3
+      ],
+      "cases": [
+       {
+        "case": 185,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652102061": {
+      "seeds": [
+       2,
+       3,
+       4
+      ],
+      "cases": [
+       {
+        "case": 204,
+        "class": "Container Network",
+        "root_cause": "cartservice-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652051200": {
+      "seeds": [
+       2,
+       4
+      ],
+      "cases": [
+       {
+        "case": 177,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652089514": {
+      "seeds": [
+       2,
+       4
+      ],
+      "cases": [
+       {
+        "case": 197,
+        "class": "Container Hardware",
+        "root_cause": "adservice-1",
+        "level": "pod"
+       }
+      ]
+     }
+    }
+   },
+   "late": {
+    "units": 4,
+    "observations": 15,
+    "hits_total_obs": 86,
+    "seed_pattern": {
+     "all": 2,
+     "some": 2,
+     "one": 0
+    },
+    "by_class_units": {
+     "Container Hardware": 2,
+     "Container Network": 2
+    },
+    "labels": {
+     "1652072251": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "delays_s": [
+       269,
+       269,
+       269,
+       269,
+       269
+      ],
+      "cases": [
+       {
+        "case": 189,
+        "class": "Container Hardware",
+        "root_cause": "adservice",
+        "level": "service"
+       }
+      ]
+     },
+     "1652080322": {
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "delays_s": [
+       298,
+       298,
+       298,
+       298,
+       298
+      ],
+      "cases": [
+       {
+        "case": 193,
+        "class": "Container Network",
+        "root_cause": "frontend",
+        "level": "service"
+       }
+      ]
+     },
+     "1652051200": {
+      "seeds": [
+       0,
+       1,
+       3
+      ],
+      "delays_s": [
+       200,
+       200,
+       200
+      ],
+      "cases": [
+       {
+        "case": 177,
+        "class": "Container Hardware",
+        "root_cause": "recommendationservice-2",
+        "level": "pod"
+       }
+      ]
+     },
+     "1652102061": {
+      "seeds": [
+       0,
+       1
+      ],
+      "delays_s": [
+       159,
+       159
+      ],
+      "cases": [
+       {
+        "case": 204,
+        "class": "Container Network",
+        "root_cause": "cartservice-2",
+        "level": "pod"
+       }
+      ]
+     }
+    }
+   },
+   "fp": {
+    "interval_observations": 8,
+    "by_interval_class": {
+     "normal_only": 8
+    },
+    "episodes": 2,
+    "episodes_by_class": {
+     "normal_only": 2,
+     "ignore_overlap": 0,
+     "mixed": 0
+    },
+    "episode_seed_pattern": {
+     "all": 1,
+     "some": 1,
+     "one": 0
+    },
+    "episodes_list": [
+     {
+      "start": 1651857300,
+      "end": 1651857360,
+      "class": "normal_only",
+      "seeds": [
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 3,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 6,
+       "ignore": 0
+      }
+     },
+     {
+      "start": 1652086140,
+      "end": 1652086620,
+      "class": "normal_only",
+      "seeds": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "n_intervals": 5,
+      "minutes": {
+       "event_associated": 0,
+       "normal_reference": 38,
+       "ignore": 0
+      }
+     }
+    ]
+   }
+  }
+ },
+ "vm_hiding_only": {
+  "units": 49,
+  "observations": 364,
+  "seed_pattern": {
+   "all": 15,
+   "some": 23,
+   "one": 11
+  },
+  "by_class_level_units": {
+   "Container Hardware / service": 18,
+   "Node CPU / node": 3,
+   "Node Disk / node": 9,
+   "Node Memory / node": 2,
+   "Container Hardware / pod": 13,
+   "Container Network / pod": 1,
+   "Container Network / service": 3
+  },
+  "labels": {
+   "1651876445": {
+    "n_obs": 15,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 135,
+      "class": "Container Hardware",
+      "root_cause": "frontend",
+      "level": "service"
+     }
+    ]
+   },
+   "1652046023": {
+    "n_obs": 15,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 174,
+      "class": "Container Hardware",
+      "root_cause": "emailservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1652051200": {
+    "n_obs": 15,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 177,
+      "class": "Container Hardware",
+      "root_cause": "recommendationservice-2",
+      "level": "pod"
+     }
+    ]
+   },
+   "1652087378": {
+    "n_obs": 15,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 195,
+      "class": "Node Disk",
+      "root_cause": "node-3",
+      "level": "node"
+     }
+    ]
+   },
+   "1652089514": {
+    "n_obs": 15,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 197,
+      "class": "Container Hardware",
+      "root_cause": "adservice-1",
+      "level": "pod"
+     }
+    ]
+   },
+   "1651904204": {
+    "n_obs": 14,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 148,
+      "class": "Node CPU",
+      "root_cause": "node-3",
+      "level": "node"
+     }
+    ]
+   },
+   "1652088630": {
+    "n_obs": 14,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 196,
+      "class": "Container Hardware",
+      "root_cause": "frontend-1",
+      "level": "pod"
+     }
+    ]
+   },
+   "1652099503": {
+    "n_obs": 13,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 202,
+      "class": "Container Hardware",
+      "root_cause": "emailservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1651859583": {
+    "n_obs": 13,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 127,
+      "class": "Container Hardware",
+      "root_cause": "frontend-2",
+      "level": "pod"
+     }
+    ]
+   },
+   "1651860249": {
+    "n_obs": 13,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 128,
+      "class": "Node Disk",
+      "root_cause": "node-2",
+      "level": "node"
+     }
+    ]
+   },
+   "1651909424": {
+    "n_obs": 12,
+    "seeds": [
+     0,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 152,
+      "class": "Container Hardware",
+      "root_cause": "adservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1651926867": {
+    "n_obs": 12,
+    "seeds": [
+     0,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 160,
+      "class": "Node Memory",
+      "root_cause": "node-4",
+      "level": "node"
+     }
+    ]
+   },
+   "1652053117": {
+    "n_obs": 12,
+    "seeds": [
+     0,
+     1,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 179,
+      "class": "Node Disk",
+      "root_cause": "node-3",
+      "level": "node"
+     }
+    ]
+   },
+   "1652066468": {
+    "n_obs": 11,
+    "seeds": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 187,
+      "class": "Container Hardware",
+      "root_cause": "paymentservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1652063842": {
+    "n_obs": 10,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 185,
+      "class": "Container Hardware",
+      "root_cause": "recommendationservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1652026980": {
+    "n_obs": 9,
+    "seeds": [
+     0,
+     1,
+     3
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 165,
+      "class": "Container Hardware",
+      "root_cause": "emailservice-0",
+      "level": "pod"
+     }
+    ]
+   },
+   "1652027890": {
+    "n_obs": 9,
+    "seeds": [
+     0,
+     1,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 166,
+      "class": "Container Hardware",
+      "root_cause": "emailservice-1",
+      "level": "pod"
+     }
+    ]
+   },
+   "1652052222": {
+    "n_obs": 9,
+    "seeds": [
+     0,
+     1,
+     3
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 178,
+      "class": "Container Hardware",
+      "root_cause": "emailservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1651913210": {
+    "n_obs": 9,
+    "seeds": [
+     1,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 154,
+      "class": "Node Disk",
+      "root_cause": "node-6",
+      "level": "node"
+     }
+    ]
+   },
+   "1652072251": {
+    "n_obs": 9,
+    "seeds": [
+     1,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 189,
+      "class": "Container Hardware",
+      "root_cause": "adservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1651934221": {
+    "n_obs": 8,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 163,
+      "class": "Container Hardware",
+      "root_cause": "adservice2-0",
+      "level": "pod"
+     }
+    ]
+   },
+   "1651906320": {
+    "n_obs": 8,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 150,
+      "class": "Container Hardware",
+      "root_cause": "recommendationservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1652064977": {
+    "n_obs": 8,
+    "seeds": [
+     1,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 186,
+      "class": "Node Memory",
+      "root_cause": "node-4",
+      "level": "node"
+     }
+    ]
+   },
+   "1651889566": {
+    "n_obs": 7,
+    "seeds": [
+     0,
+     1,
+     3
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 141,
+      "class": "Container Hardware",
+      "root_cause": "recommendationservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1651922476": {
+    "n_obs": 7,
+    "seeds": [
+     0,
+     1,
+     3
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 159,
+      "class": "Node Disk",
+      "root_cause": "node-2",
+      "level": "node"
+     }
+    ]
+   },
+   "1652105625": {
+    "n_obs": 6,
+    "seeds": [
+     0,
+     3
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 207,
+      "class": "Node Disk",
+      "root_cause": "node-6",
+      "level": "node"
+     }
+    ]
+   },
+   "1652031460": {
+    "n_obs": 6,
+    "seeds": [
+     0,
+     1,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 169,
+      "class": "Container Hardware",
+      "root_cause": "shippingservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1652110645": {
+    "n_obs": 6,
+    "seeds": [
+     1,
+     2,
+     3
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 209,
+      "class": "Container Hardware",
+      "root_cause": "recommendationservice-0",
+      "level": "pod"
+     }
+    ]
+   },
+   "1651891523": {
+    "n_obs": 6,
+    "seeds": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 142,
+      "class": "Container Hardware",
+      "root_cause": "recommendationservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1651891895": {
+    "n_obs": 6,
+    "seeds": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 143,
+      "class": "Node CPU",
+      "root_cause": "node-4",
+      "level": "node"
+     }
+    ]
+   },
+   "1652047629": {
+    "n_obs": 5,
+    "seeds": [
+     0,
+     3
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 175,
+      "class": "Container Hardware",
+      "root_cause": "recommendationservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1651904895": {
+    "n_obs": 5,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 149,
+      "class": "Container Hardware",
+      "root_cause": "productcatalogservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1652044466": {
+    "n_obs": 5,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 173,
+      "class": "Container Hardware",
+      "root_cause": "shippingservice-1",
+      "level": "pod"
+     }
+    ]
+   },
+   "1651867434": {
+    "n_obs": 5,
+    "seeds": [
+     1,
+     3
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 131,
+      "class": "Node Disk",
+      "root_cause": "node-5",
+      "level": "node"
+     }
+    ]
+   },
+   "1651915992": {
+    "n_obs": 4,
+    "seeds": [
+     0,
+     1,
+     2
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 155,
+      "class": "Container Hardware",
+      "root_cause": "adservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1652028651": {
+    "n_obs": 4,
+    "seeds": [
+     0,
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 167,
+      "class": "Container Hardware",
+      "root_cause": "checkoutservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1651875390": {
+    "n_obs": 3,
+    "seeds": [
+     3
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 134,
+      "class": "Node Disk",
+      "root_cause": "node-1",
+      "level": "node"
+     }
+    ]
+   },
+   "1652056357": {
+    "n_obs": 3,
+    "seeds": [
+     3
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 181,
+      "class": "Node CPU",
+      "root_cause": "node-3",
+      "level": "node"
+     }
+    ]
+   },
+   "1652032391": {
+    "n_obs": 3,
+    "seeds": [
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 170,
+      "class": "Container Hardware",
+      "root_cause": "shippingservice-1",
+      "level": "pod"
+     }
+    ]
+   },
+   "1652104717": {
+    "n_obs": 3,
+    "seeds": [
+     4
+    ],
+    "scenarios": [
+     "drop_log+metric",
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 206,
+      "class": "Container Hardware",
+      "root_cause": "currencyservice-2",
+      "level": "pod"
+     }
+    ]
+   },
+   "1651899367": {
+    "n_obs": 2,
+    "seeds": [
+     0,
+     3
+    ],
+    "scenarios": [
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 146,
+      "class": "Container Hardware",
+      "root_cause": "recommendationservice-1",
+      "level": "pod"
+     }
+    ]
+   },
+   "1651897275": {
+    "n_obs": 2,
+    "seeds": [
+     3
+    ],
+    "scenarios": [
+     "drop_metric",
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 145,
+      "class": "Container Hardware",
+      "root_cause": "currencyservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1652061480": {
+    "n_obs": 2,
+    "seeds": [
+     3,
+     4
+    ],
+    "scenarios": [
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 184,
+      "class": "Container Hardware",
+      "root_cause": "currencyservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1651877333": {
+    "n_obs": 1,
+    "seeds": [
+     0
+    ],
+    "scenarios": [
+     "drop_log+metric"
+    ],
+    "cases": [
+     {
+      "case": 136,
+      "class": "Container Hardware",
+      "root_cause": "currencyservice-0",
+      "level": "pod"
+     }
+    ]
+   },
+   "1651870394": {
+    "n_obs": 1,
+    "seeds": [
+     2
+    ],
+    "scenarios": [
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 132,
+      "class": "Container Network",
+      "root_cause": "productcatalogservice-2",
+      "level": "pod"
+     }
+    ]
+   },
+   "1651928188": {
+    "n_obs": 1,
+    "seeds": [
+     3
+    ],
+    "scenarios": [
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 161,
+      "class": "Node Disk",
+      "root_cause": "node-5",
+      "level": "node"
+     }
+    ]
+   },
+   "1651858208": {
+    "n_obs": 1,
+    "seeds": [
+     4
+    ],
+    "scenarios": [
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 126,
+      "class": "Container Network",
+      "root_cause": "productcatalogservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1651935446": {
+    "n_obs": 1,
+    "seeds": [
+     4
+    ],
+    "scenarios": [
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 164,
+      "class": "Container Network",
+      "root_cause": "adservice",
+      "level": "service"
+     }
+    ]
+   },
+   "1652078717": {
+    "n_obs": 1,
+    "seeds": [
+     4
+    ],
+    "scenarios": [
+     "drop_metric+trace"
+    ],
+    "cases": [
+     {
+      "case": 192,
+      "class": "Container Network",
+      "root_cause": "productcatalogservice",
+      "level": "service"
+     }
+    ]
+   }
+  }
+ },
+ "ranking": {
+  "validation": {
+   "v1_logit": {
+    "auc_pr": {
+     "mean": 0.7148145843177427,
+     "sd": 0.04258727262440795,
+     "values": [
+      0.6531,
+      0.6972,
+      0.7486,
+      0.7594,
+      0.7157
+     ]
+    },
+    "auc_roc": {
+     "mean": 0.8292749391727494,
+     "sd": 0.02266646898667147,
+     "values": [
+      0.7992,
+      0.8201,
+      0.847,
+      0.8562,
+      0.8238
+     ]
+    },
+    "n_event": 150,
+    "n_normal": 411,
+    "prevalence": 0.26737967914438504,
+    "n_nonfinite": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "v1_logit_rolled": {
+    "auc_pr": {
+     "mean": 0.7184033568180139,
+     "sd": 0.04616207114501979,
+     "values": [
+      0.6608,
+      0.6938,
+      0.7651,
+      0.766,
+      0.7063
+     ]
+    },
+    "auc_roc": {
+     "mean": 0.8351370640713707,
+     "sd": 0.02728816590773663,
+     "values": [
+      0.7998,
+      0.8261,
+      0.8639,
+      0.8616,
+      0.8242
+     ]
+    },
+    "n_event": 150,
+    "n_normal": 411,
+    "prevalence": 0.26737967914438504,
+    "n_nonfinite": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "d3_m2": {
+    "auc_pr": {
+     "mean": 0.5511008316063862,
+     "sd": 0.004688710043309688,
+     "values": [
+      0.5496,
+      0.5486,
+      0.5515,
+      0.5589,
+      0.5468
+     ]
+    },
+    "auc_roc": {
+     "mean": 0.7088207623682077,
+     "sd": 0.0036011266708505115,
+     "values": [
+      0.7039,
+      0.7071,
+      0.7094,
+      0.7135,
+      0.7102
+     ]
+    },
+    "n_event": 150,
+    "n_normal": 411,
+    "prevalence": 0.26737967914438504,
+    "n_nonfinite": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "test": {
+   "v1_logit": {
+    "auc_pr": {
+     "mean": 0.6765891678911332,
+     "sd": 0.038980651649974704,
+     "values": [
+      0.6662,
+      0.7054,
+      0.6967,
+      0.702,
+      0.6127
+     ]
+    },
+    "auc_roc": {
+     "mean": 0.8349150270886799,
+     "sd": 0.012745552298033045,
+     "values": [
+      0.8229,
+      0.8387,
+      0.8393,
+      0.8521,
+      0.8216
+     ]
+    },
+    "n_event": 501,
+    "n_normal": 1400,
+    "prevalence": 0.26354550236717517,
+    "n_nonfinite": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "v1_logit_rolled": {
+    "auc_pr": {
+     "mean": 0.6756462872393589,
+     "sd": 0.047988783984362904,
+     "values": [
+      0.6701,
+      0.7192,
+      0.6946,
+      0.6986,
+      0.5957
+     ]
+    },
+    "auc_roc": {
+     "mean": 0.8379187339606501,
+     "sd": 0.014387407221373664,
+     "values": [
+      0.8279,
+      0.8483,
+      0.8393,
+      0.8546,
+      0.8195
+     ]
+    },
+    "n_event": 501,
+    "n_normal": 1400,
+    "prevalence": 0.26354550236717517,
+    "n_nonfinite": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "d3_m2": {
+    "auc_pr": {
+     "mean": 0.5521083200602774,
+     "sd": 0.0022540979712999767,
+     "values": [
+      0.554,
+      0.5501,
+      0.5493,
+      0.5539,
+      0.5534
+     ]
+    },
+    "auc_roc": {
+     "mean": 0.73701625320787,
+     "sd": 0.0022441270567670267,
+     "values": [
+      0.7368,
+      0.7348,
+      0.7363,
+      0.7408,
+      0.7364
+     ]
+    },
+    "n_event": 501,
+    "n_normal": 1400,
+    "prevalence": 0.26354550236717517,
+    "n_nonfinite": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "detection_gap": {
+  "primary_and_d3_m2_p99": {
+   "armor_hits": 98,
+   "n_official": 98,
+   "missed_by_both_in_any_seed": 54,
+   "missed_by_both_in_all_5_seeds": 9,
+   "observations": 147,
+   "by_class_any_seed": {
+    "no case record": 15,
+    "Node Disk": 10,
+    "Container Network": 9,
+    "Container Hardware": 15,
+    "Node CPU": 5
+   },
+   "by_class_all_seeds": {
+    "Container Network": 1,
+    "no case record": 5,
+    "Node CPU": 2,
+    "Container Hardware": 1
+   },
+   "labels": {
+    "1651857360": {
+     "seeds": [
+      0,
+      1
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 848,
+     "nearest_case_class": "Container Network"
+    },
+    "1651863857": {
+     "seeds": [
+      0,
+      1,
+      4
+     ],
+     "cases": [
+      130
+     ],
+     "class": "Node Disk",
+     "nearest_s": 0,
+     "root_cause": "node-6"
+    },
+    "1651865640": {
+     "seeds": [
+      2
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 1783,
+     "nearest_case_class": "Node Disk"
+    },
+    "1651867434": {
+     "seeds": [
+      4
+     ],
+     "cases": [
+      131
+     ],
+     "class": "Node Disk",
+     "nearest_s": 0,
+     "root_cause": "node-5"
+    },
+    "1651870394": {
+     "seeds": [
+      0,
+      1
+     ],
+     "cases": [
+      132
+     ],
+     "class": "Container Network",
+     "nearest_s": 0,
+     "root_cause": "productcatalogservice-2"
+    },
+    "1651875390": {
+     "seeds": [
+      2
+     ],
+     "cases": [
+      134
+     ],
+     "class": "Node Disk",
+     "nearest_s": 0,
+     "root_cause": "node-1"
+    },
+    "1651877333": {
+     "seeds": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "cases": [
+      136
+     ],
+     "class": "Container Hardware",
+     "nearest_s": 0,
+     "root_cause": "currencyservice-0"
+    },
+    "1651880837": {
+     "seeds": [
+      1
+     ],
+     "cases": [
+      137
+     ],
+     "class": "Container Network",
+     "nearest_s": 0,
+     "root_cause": "productcatalogservice"
+    },
+    "1651884469": {
+     "seeds": [
+      0,
+      3,
+      4
+     ],
+     "cases": [
+      138
+     ],
+     "class": "Container Network",
+     "nearest_s": 0,
+     "root_cause": "emailservice-1"
+    },
+    "1651885258": {
+     "seeds": [
+      2
+     ],
+     "cases": [
+      139
+     ],
+     "class": "Node Disk",
+     "nearest_s": 0,
+     "root_cause": "node-6"
+    },
+    "1651885771": {
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "cases": [
+      140
+     ],
+     "class": "Container Network",
+     "nearest_s": 0,
+     "root_cause": "cartservice"
+    },
+    "1651887960": {
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 1606,
+     "nearest_case_class": "Container Hardware"
+    },
+    "1651889566": {
+     "seeds": [
+      2,
+      4
+     ],
+     "cases": [
+      141
+     ],
+     "class": "Container Hardware",
+     "nearest_s": 0,
+     "root_cause": "recommendationservice"
+    },
+    "1651896807": {
+     "seeds": [
+      0,
+      2,
+      4
+     ],
+     "cases": [
+      144
+     ],
+     "class": "Node Disk",
+     "nearest_s": 0,
+     "root_cause": "node-6"
+    },
+    "1651897275": {
+     "seeds": [
+      0,
+      2,
+      4
+     ],
+     "cases": [
+      145
+     ],
+     "class": "Container Hardware",
+     "nearest_s": 0,
+     "root_cause": "currencyservice"
+    },
+    "1651899367": {
+     "seeds": [
+      2,
+      4
+     ],
+     "cases": [
+      146
+     ],
+     "class": "Container Hardware",
+     "nearest_s": 0,
+     "root_cause": "recommendationservice-1"
+    },
+    "1651908253": {
+     "seeds": [
+      0,
+      1,
+      3,
+      4
+     ],
+     "cases": [
+      151
+     ],
+     "class": "Container Hardware",
+     "nearest_s": 0,
+     "root_cause": "adservice"
+    },
+    "1651911660": {
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 1527,
+     "nearest_case_class": "Container Network"
+    },
+    "1651913210": {
+     "seeds": [
+      0
+     ],
+     "cases": [
+      154
+     ],
+     "class": "Node Disk",
+     "nearest_s": 0,
+     "root_cause": "node-6"
+    },
+    "1651914243": {
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 1033,
+     "nearest_case_class": "Node Disk"
+    },
+    "1651915992": {
+     "seeds": [
+      4
+     ],
+     "cases": [
+      155
+     ],
+     "class": "Container Hardware",
+     "nearest_s": 0,
+     "root_cause": "adservice"
+    },
+    "1651918114": {
+     "seeds": [
+      0,
+      2,
+      4
+     ],
+     "cases": [
+      156
+     ],
+     "class": "Node Disk",
+     "nearest_s": 0,
+     "root_cause": "node-1"
+    },
+    "1651919818": {
+     "seeds": [
+      0,
+      1,
+      3,
+      4
+     ],
+     "cases": [
+      157
+     ],
+     "class": "Container Network",
+     "nearest_s": 0,
+     "root_cause": "frontend"
+    },
+    "1651924745": {
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 2122,
+     "nearest_case_class": "Node Memory"
+    },
+    "1651928188": {
+     "seeds": [
+      0,
+      2,
+      4
+     ],
+     "cases": [
+      161
+     ],
+     "class": "Node Disk",
+     "nearest_s": 0,
+     "root_cause": "node-5"
+    },
+    "1651929878": {
+     "seeds": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "cases": [
+      162
+     ],
+     "class": "Node CPU",
+     "nearest_s": 0,
+     "root_cause": "node-1"
+    },
+    "1652026980": {
+     "seeds": [
+      2,
+      4
+     ],
+     "cases": [
+      165
+     ],
+     "class": "Container Hardware",
+     "nearest_s": 0,
+     "root_cause": "emailservice-0"
+    },
+    "1652027890": {
+     "seeds": [
+      2,
+      3
+     ],
+     "cases": [
+      166
+     ],
+     "class": "Container Hardware",
+     "nearest_s": 0,
+     "root_cause": "emailservice-1"
+    },
+    "1652028651": {
+     "seeds": [
+      2
+     ],
+     "cases": [
+      167
+     ],
+     "class": "Container Hardware",
+     "nearest_s": 0,
+     "root_cause": "checkoutservice"
+    },
+    "1652032391": {
+     "seeds": [
+      0,
+      3
+     ],
+     "cases": [
+      170
+     ],
+     "class": "Container Hardware",
+     "nearest_s": 0,
+     "root_cause": "shippingservice-1"
+    },
+    "1652035716": {
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "cases": [
+      172
+     ],
+     "class": "Node CPU",
+     "nearest_s": 0,
+     "root_cause": "node-5"
+    },
+    "1652036370": {
+     "seeds": [
+      0,
+      2,
+      4
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 654,
+     "nearest_case_class": "Node CPU"
+    },
+    "1652042220": {
+     "seeds": [
+      0
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 2246,
+     "nearest_case_class": "Container Hardware"
+    },
+    "1652047140": {
+     "seeds": [
+      1,
+      2,
+      3
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 489,
+     "nearest_case_class": "Container Hardware"
+    },
+    "1652058023": {
+     "seeds": [
+      0,
+      2,
+      4
+     ],
+     "cases": [
+      182
+     ],
+     "class": "Node Disk",
+     "nearest_s": 0,
+     "root_cause": "node-1"
+    },
+    "1652059192": {
+     "seeds": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 1141,
+     "nearest_case_class": "Container Hardware"
+    },
+    "1652060333": {
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "cases": [
+      183
+     ],
+     "class": "Container Hardware",
+     "nearest_s": 0,
+     "root_cause": "recommendationservice2-0"
+    },
+    "1652061480": {
+     "seeds": [
+      0,
+      2
+     ],
+     "cases": [
+      184
+     ],
+     "class": "Container Hardware",
+     "nearest_s": 0,
+     "root_cause": "currencyservice"
+    },
+    "1652065440": {
+     "seeds": [
+      0
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 463,
+     "nearest_case_class": "Node Memory"
+    },
+    "1652066468": {
+     "seeds": [
+      4
+     ],
+     "cases": [
+      187
+     ],
+     "class": "Container Hardware",
+     "nearest_s": 0,
+     "root_cause": "paymentservice"
+    },
+    "1652075078": {
+     "seeds": [
+      3
+     ],
+     "cases": [
+      190
+     ],
+     "class": "Container Network",
+     "nearest_s": 0,
+     "root_cause": "checkoutservice2-0"
+    },
+    "1652081960": {
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 1638,
+     "nearest_case_class": "Container Network"
+    },
+    "1652082760": {
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 1106,
+     "nearest_case_class": "Node CPU"
+    },
+    "1652083200": {
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 666,
+     "nearest_case_class": "Node CPU"
+    },
+    "1652083866": {
+     "seeds": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "cases": [
+      194
+     ],
+     "class": "Node CPU",
+     "nearest_s": 0,
+     "root_cause": "node-5"
+    },
+    "1652090619": {
+     "seeds": [
+      0
+     ],
+     "cases": [
+      198
+     ],
+     "class": "Container Network",
+     "nearest_s": 0,
+     "root_cause": "frontend-2"
+    },
+    "1652093544": {
+     "seeds": [
+      0
+     ],
+     "cases": [
+      200
+     ],
+     "class": "Container Hardware",
+     "nearest_s": 0,
+     "root_cause": "paymentservice-2"
+    },
+    "1652097055": {
+     "seeds": [
+      0
+     ],
+     "cases": [
+      201
+     ],
+     "class": "Container Network",
+     "nearest_s": 0,
+     "root_cause": "emailservice-2"
+    },
+    "1652101150": {
+     "seeds": [
+      0,
+      2,
+      3,
+      4
+     ],
+     "cases": [
+      203
+     ],
+     "class": "Node CPU",
+     "nearest_s": 0,
+     "root_cause": "node-4"
+    },
+    "1652102061": {
+     "seeds": [
+      3,
+      4
+     ],
+     "cases": [
+      204
+     ],
+     "class": "Container Network",
+     "nearest_s": 0,
+     "root_cause": "cartservice-2"
+    },
+    "1652103411": {
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "cases": [
+      205
+     ],
+     "class": "Node CPU",
+     "nearest_s": 0,
+     "root_cause": "node-2"
+    },
+    "1652104020": {
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 609,
+     "nearest_case_class": "Node CPU"
+    },
+    "1652104717": {
+     "seeds": [
+      0,
+      2,
+      3
+     ],
+     "cases": [
+      206
+     ],
+     "class": "Container Hardware",
+     "nearest_s": 0,
+     "root_cause": "currencyservice-2"
+    },
+    "1652105625": {
+     "seeds": [
+      2,
+      4
+     ],
+     "cases": [
+      207
+     ],
+     "class": "Node Disk",
+     "nearest_s": 0,
+     "root_cause": "node-6"
+    }
+   }
+  },
+  "primary_and_d3_m2_p90": {
+   "armor_hits": 98,
+   "n_official": 98,
+   "missed_by_both_in_any_seed": 10,
+   "missed_by_both_in_all_5_seeds": 4,
+   "observations": 30,
+   "by_class_any_seed": {
+    "Node Disk": 4,
+    "Container Network": 2,
+    "no case record": 3,
+    "Node CPU": 1
+   },
+   "by_class_all_seeds": {
+    "no case record": 3,
+    "Node CPU": 1
+   },
+   "labels": {
+    "1651863857": {
+     "seeds": [
+      0,
+      1,
+      4
+     ],
+     "cases": [
+      130
+     ],
+     "class": "Node Disk",
+     "nearest_s": 0,
+     "root_cause": "node-6"
+    },
+    "1651870394": {
+     "seeds": [
+      0,
+      1
+     ],
+     "cases": [
+      132
+     ],
+     "class": "Container Network",
+     "nearest_s": 0,
+     "root_cause": "productcatalogservice-2"
+    },
+    "1651875390": {
+     "seeds": [
+      2
+     ],
+     "cases": [
+      134
+     ],
+     "class": "Node Disk",
+     "nearest_s": 0,
+     "root_cause": "node-1"
+    },
+    "1651880837": {
+     "seeds": [
+      1
+     ],
+     "cases": [
+      137
+     ],
+     "class": "Container Network",
+     "nearest_s": 0,
+     "root_cause": "productcatalogservice"
+    },
+    "1651911660": {
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 1527,
+     "nearest_case_class": "Container Network"
+    },
+    "1651913210": {
+     "seeds": [
+      0
+     ],
+     "cases": [
+      154
+     ],
+     "class": "Node Disk",
+     "nearest_s": 0,
+     "root_cause": "node-6"
+    },
+    "1651914243": {
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 1033,
+     "nearest_case_class": "Node Disk"
+    },
+    "1652035716": {
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "cases": [
+      172
+     ],
+     "class": "Node CPU",
+     "nearest_s": 0,
+     "root_cause": "node-5"
+    },
+    "1652104020": {
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "cases": [],
+     "class": "no case record",
+     "nearest_s": 609,
+     "nearest_case_class": "Node CPU"
+    },
+    "1652105625": {
+     "seeds": [
+      2,
+      4
+     ],
+     "cases": [
+      207
+     ],
+     "class": "Node Disk",
+     "nearest_s": 0,
+     "root_cause": "node-6"
+    }
+   }
+  },
+  "official_labels_by_class": {
+   "no case record": 21,
+   "Container Network": 20,
+   "Container Hardware": 35,
+   "Node Disk": 14,
+   "Node CPU": 7,
+   "Node Memory": 1
+  }
+ },
+ "calibration": {
+  "model1_supervised_windows": 329,
+  "model1_d3_windows": 329,
+  "order_statistics": {
+   "90.0": {
+    "position": 295.2,
+    "upper_rank_from_top": 33,
+    "windows_above_or_at_upper": 34
+   },
+   "95.0": {
+    "position": 311.6,
+    "upper_rank_from_top": 17,
+    "windows_above_or_at_upper": 18
+   },
+   "97.0": {
+    "position": 318.16,
+    "upper_rank_from_top": 10,
+    "windows_above_or_at_upper": 11
+   },
+   "99.0": {
+    "position": 324.72,
+    "upper_rank_from_top": 4,
+    "windows_above_or_at_upper": 5
+   },
+   "99.5": {
+    "position": 326.36,
+    "upper_rank_from_top": 2,
+    "windows_above_or_at_upper": 3
+   }
+  },
+  "armor_init_samples_train_file_le_split": 2269,
+  "armor_split_ts": 1651852800,
+  "all_samples_le_split": 4321
+ }
+}
