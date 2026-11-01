@@ -229,8 +229,11 @@ Reading the results plainly:
 |---|---|
 | Inference API | `model1_v2/inference.py`: `Model1V2.load()` hash-checks the five frozen checkpoints; `predict_windows`, `alert_flags`, `case_fault`. Tested equal to the evaluation path. |
 | Cost (Apple M4, one CPU thread) | Checkpoint load 0.5 s; **9.9 ms per window** for the 5-model ensemble; 550 ms per 64-window batch. |
-| Inputs | Windows built and scaled by the frozen Model 1 data layer (`prep/m1_dataset.py`) from D1-format tensors (46 × 130 per minute). There is **no adapter yet for live telemetry** from a testbed. |
-| Serving / deployment | `armor-system/backend/`, `deployment/` and `airflow/dags/` are empty placeholders: no service, container or scheduler exists for any model. |
+| Inference service | `model1_v2/serving/` (`SERVING.md`): a standard-library HTTP server with `/healthz`, `/v1/metadata` and `/v1/predict` (`model1.telemetry.v1` → `model1.prediction.v1`). It validates input (stable error codes), builds windows exactly as the data layer, alerts with the frozen threshold, builds incidents with ARMOR's rule and returns a fault type per incident. 11 tests. |
+| End-to-end demo | **Replay only:** the D1 validation period through HTTP reproduces the committed v2 validation result exactly (22 incidents, TP 18, FP 6, F1 0.7347). No live telemetry source exists. |
+| Service latency | 10 ms per 1-window request; about 8.3 ms per window for larger segments (1 thread). Service start 0.35 s. |
+| Inputs | D1 layout only (46 × 130, ARMOR feature units). There is **no adapter for live testbed telemetry**, and a testbed that differs from D1 would need retraining. |
+| Deployment | No container image (Docker daemon unavailable), no cloud deployment, no Airflow DAG, no authentication. These belong to the teammates' `deployment/` and `airflow/`, which are still placeholders. |
 | Artefacts | Checkpoints live outside Git (`~/298A_project/checkpoints/`) with hashes in the freeze record. They are not yet published to shared storage. |
 | Not merged | The branch is unmerged and the post-test, v2 and report commits are unpushed. |
 
