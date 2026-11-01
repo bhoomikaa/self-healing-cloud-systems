@@ -211,6 +211,8 @@ class HttpTests(unittest.TestCase):
         s = summary["scoring_against_documented_validation_incidents"]
         self.assertEqual((s["TP"], s["FP"], s["f1"]), (18, 6, 0.7347))
         self.assertEqual(len(inc), 22)
+        agree = summary["incident_fault_type_vs_documented_class"]
+        self.assertEqual((agree["incidents_hitting_a_documented_case"], agree["pred_equals_documented_class"]), (16, 16))
         self.assertTrue(summary["replay"] and all(i["source"]["kind"] == "replay" for i in inc))
 
 

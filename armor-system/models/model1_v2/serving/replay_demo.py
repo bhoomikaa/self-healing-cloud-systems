@@ -62,6 +62,25 @@ def validation_replay():
     return ts[sel], X[sel], labels
 
 
+def validation_case_classes():
+    from prep.common import read_json
+    man = read_json(os.path.join(ARMOR, "data", "artifacts", "d1", "splits", "model1_calibration_split_v1.json"))
+    return {int(a["timestamp"]): a["class_name"] for a in man["cases"]["assignments"] if a["role"] == "validation"}
+
+
+def incident_fault_agreement(inc, impact=300):
+    """Serving-path fault type (mean over the incident's alert windows) vs the documented class of the case(s) the incident hits."""
+    cls = validation_case_classes()
+    rows = []
+    for i in inc:
+        hit = [t for t in cls if not (t - impact > i["end_ts"] or t + impact < i["start_ts"])]
+        if hit:
+            rows.append({"start_ts": i["start_ts"], "true": sorted({cls[t] for t in hit}), "pred": i["fault_type"]["pred"]})
+    correct = sum(r["pred"] in r["true"] for r in rows)
+    return {"basis": "mean ensemble window probabilities over each incident's windows (serving path); differs from the evaluated case-window basis",
+            "incidents_hitting_a_documented_case": len(rows), "pred_equals_documented_class": correct, "rows": rows}
+
+
 def segments(ts):
     """Start/stop indices of overlapping request segments: each holds 6 context minutes + up to 60 target minutes."""
     out, k = [], 0
@@ -108,7 +127,8 @@ def run(url, out_dir=OUT, log=print):
     summary = {"replay": True, "not_live_telemetry": True, "source": SOURCE, "model": meta["model"], "minutes": int(len(ts)), "windows": len(windows),
                "requests": len(lat), "alert_minutes": sum(w["alert"] for w in windows), "incidents": len(inc),
                "scoring_against_documented_validation_incidents": {k: (float(v) if not isinstance(v, int) else v) for k, v in score.items()},
-               "expected_from_committed_v2_validation": {"TP": 18, "FP": 6, "f1": 0.7347}, "latency": lat}
+               "expected_from_committed_v2_validation": {"TP": 18, "FP": 6, "f1": 0.7347},
+               "incident_fault_type_vs_documented_class": incident_fault_agreement(inc), "latency": lat}
     os.makedirs(out_dir, exist_ok=True)
     with open(os.path.join(out_dir, "replay_summary.json"), "w") as fh:
         json.dump(summary, fh, indent=1)

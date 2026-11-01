@@ -1,0 +1,33 @@
+{
+ "service_load_s": 0.35,
+ "segments": {
+  "7": {
+   "windows": 1,
+   "request_bytes": 555103,
+   "round_trip_ms_median": 21.7,
+   "server_ms_median": 10.4,
+   "server_ms_per_window": 10.4
+  },
+  "66": {
+   "windows": 60,
+   "request_bytes": 5232609,
+   "round_trip_ms_median": 605.9,
+   "server_ms_median": 499.7,
+   "server_ms_per_window": 8.33
+  },
+  "240": {
+   "windows": 234,
+   "request_bytes": 19026687,
+   "round_trip_ms_median": 2348.1,
+   "server_ms_median": 1961.0,
+   "server_ms_per_window": 8.38
+  }
+ },
+ "torch_threads": 1,
+ "machine": {
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "processor": "arm",
+  "python": "3.14.4"
+ },
+ "note": "synthetic values; single process, requests scored one at a time"
+}
