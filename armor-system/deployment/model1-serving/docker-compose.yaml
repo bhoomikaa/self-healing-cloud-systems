@@ -1,0 +1,38 @@
+# Model 1 v2 inference service, containerised.
+#
+#   cd armor-system/deployment/model1-serving
+#   cp .env.example .env            # then point MODEL1_CHECKPOINT_DIR at the checkpoints
+#   docker compose up -d --build
+#   curl localhost:8081/healthz
+#
+# The checkpoints are mounted read-only from the host. They are not in Git and
+# not in the image; see the Dockerfile for why.
+#
+# Build context is the repository root, three levels up, because the image needs
+# the whole armor-system tree.
+
+services:
+  model1-serving:
+    build:
+      context: ../../..
+      dockerfile: armor-system/deployment/model1-serving/Dockerfile
+    image: model1-serving:v2
+    ports:
+      - "${MODEL1_PUBLISHED_PORT:-8081}:8081"
+    volumes:
+      # Ten files, 3.5 MB. Read-only: the service only hashes and loads them.
+      - "${MODEL1_CHECKPOINT_DIR:?set MODEL1_CHECKPOINT_DIR in .env}:/checkpoints:ro"
+    environment:
+      MODEL1_CHECKPOINT_ROOT: /checkpoints
+      MODEL1_HOST: 0.0.0.0
+      MODEL1_PORT: 8081
+      MODEL1_TORCH_THREADS: "${MODEL1_TORCH_THREADS:-1}"
+    restart: unless-stopped
+    networks:
+      - model1
+
+networks:
+  model1:
+    # Named so the Airflow stack can join it and reach the service by hostname
+    # rather than through the host's published port.
+    name: model1-net
