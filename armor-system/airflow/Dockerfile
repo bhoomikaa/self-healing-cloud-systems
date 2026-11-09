@@ -12,6 +12,10 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends build-essential \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
+# /opt is root-owned, so the venv directory has to be created and handed over
+# before dropping privileges. Building it as root instead would leave root-owned
+# files that the airflow user cannot update.
+RUN mkdir -p /opt/pipeline-venv && chown -R airflow:0 /opt/pipeline-venv
 
 USER airflow
 
