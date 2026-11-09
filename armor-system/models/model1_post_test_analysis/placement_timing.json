@@ -1,0 +1,331 @@
+{
+ "n_samples": 7200,
+ "first": "2022-04-30 16:00:00 UTC",
+ "last": "2022-05-09 15:59:00 UTC",
+ "step_60s_except_gaps": [
+  [
+   "2022-05-01 15:59:00 UTC",
+   "2022-05-02 16:00:00 UTC",
+   86460
+  ],
+  [
+   "2022-05-03 15:59:00 UTC",
+   "2022-05-04 16:00:00 UTC",
+   86460
+  ],
+  [
+   "2022-05-05 15:59:00 UTC",
+   "2022-05-06 16:00:00 UTC",
+   86460
+  ],
+  [
+   "2022-05-07 15:59:00 UTC",
+   "2022-05-08 16:00:00 UTC",
+   86460
+  ]
+ ],
+ "placement_changes": [
+  {
+   "last_before": "2022-05-01 15:59:00 UTC",
+   "first_after": "2022-05-02 16:00:00 UTC",
+   "bracket_s": 86460,
+   "from": "41f7e4e7b7",
+   "to": "2b1e248414",
+   "in_data_gap": true,
+   "moved_pods": [
+    "adservice-0",
+    "adservice-1",
+    "cartservice-0",
+    "cartservice-1",
+    "cartservice-2",
+    "cartservice2-0",
+    "checkoutservice-0",
+    "checkoutservice-1",
+    "checkoutservice2-0",
+    "currencyservice-0",
+    "currencyservice-1",
+    "currencyservice-2",
+    "emailservice-0",
+    "emailservice-1",
+    "emailservice-2",
+    "emailservice2-0",
+    "frontend-0",
+    "paymentservice-0",
+    "paymentservice-1",
+    "paymentservice-2",
+    "productcatalogservice-0",
+    "productcatalogservice-1",
+    "productcatalogservice-2",
+    "recommendationservice-0",
+    "recommendationservice-1",
+    "recommendationservice-2",
+    "shippingservice-0",
+    "shippingservice-1",
+    "shippingservice2-0"
+   ],
+   "cases_csv": {
+    "min_s": 1135,
+    "median_s": 213540.5,
+    "nearest_before_s": 1135,
+    "injections_within_30min_before_change": 1,
+    "injections_inside_bracket": 0
+   },
+   "ad_cases": {
+    "min_s": 1135,
+    "median_s": 231550.0,
+    "nearest_before_s": 1135,
+    "injections_within_30min_before_change": 1,
+    "injections_inside_bracket": 0
+   }
+  },
+  {
+   "last_before": "2022-05-05 15:59:00 UTC",
+   "first_after": "2022-05-06 16:00:00 UTC",
+   "bracket_s": 86460,
+   "from": "2b1e248414",
+   "to": "e134f661b3",
+   "in_data_gap": true,
+   "moved_pods": [
+    "adservice-2",
+    "adservice2-0",
+    "cartservice-2",
+    "cartservice2-0",
+    "currencyservice2-0",
+    "emailservice2-0",
+    "frontend-2",
+    "frontend2-0",
+    "paymentservice-2",
+    "paymentservice2-0",
+    "productcatalogservice-0",
+    "productcatalogservice2-0",
+    "recommendationservice2-0",
+    "shippingservice-2",
+    "shippingservice2-0"
+   ],
+   "cases_csv": {
+    "min_s": 3823,
+    "median_s": 199869.5,
+    "nearest_before_s": 3823,
+    "injections_within_30min_before_change": 0,
+    "injections_inside_bracket": 0
+   },
+   "ad_cases": {
+    "min_s": 3823,
+    "median_s": 197867.0,
+    "nearest_before_s": 3823,
+    "injections_within_30min_before_change": 0,
+    "injections_inside_bracket": 0
+   }
+  },
+  {
+   "last_before": "2022-05-07 15:59:00 UTC",
+   "first_after": "2022-05-08 16:00:00 UTC",
+   "bracket_s": 86460,
+   "from": "e134f661b3",
+   "to": "41f7e4e7b7",
+   "in_data_gap": true,
+   "moved_pods": [
+    "adservice-0",
+    "adservice-1",
+    "adservice-2",
+    "adservice2-0",
+    "cartservice-0",
+    "cartservice-1",
+    "cartservice-2",
+    "cartservice2-0",
+    "checkoutservice-0",
+    "checkoutservice-1",
+    "checkoutservice2-0",
+    "currencyservice-0",
+    "currencyservice-1",
+    "currencyservice-2",
+    "currencyservice2-0",
+    "emailservice-0",
+    "emailservice-1",
+    "emailservice-2",
+    "emailservice2-0",
+    "frontend-0",
+    "frontend-2",
+    "frontend2-0",
+    "paymentservice-0",
+    "paymentservice-1",
+    "paymentservice-2",
+    "paymentservice2-0",
+    "productcatalogservice-0",
+    "productcatalogservice-1",
+    "productcatalogservice-2",
+    "productcatalogservice2-0",
+    "recommendationservice-0",
+    "recommendationservice-1",
+    "recommendationservice-2",
+    "recommendationservice2-0",
+    "shippingservice-0",
+    "shippingservice-1",
+    "shippingservice-2",
+    "shippingservice2-0"
+   ],
+   "cases_csv": {
+    "min_s": 1380,
+    "median_s": 218399.5,
+    "nearest_before_s": 3694,
+    "injections_within_30min_before_change": 0,
+    "injections_inside_bracket": 0
+   },
+   "ad_cases": {
+    "min_s": 1380,
+    "median_s": 200390.0,
+    "nearest_before_s": 3694,
+    "injections_within_30min_before_change": 0,
+    "injections_inside_bracket": 0
+   }
+  }
+ ],
+ "partial_samples": [
+  {
+   "ts": "2022-05-01 02:55:00 UTC",
+   "split": "test",
+   "pods_without_vm": 6,
+   "vms_of_missing_pods_in_prior_map": [
+    "node-5"
+   ],
+   "prior_complete": "2022-05-01 02:54:00 UTC",
+   "prior_gap_s": 60,
+   "next_complete": "2022-05-01 02:56:00 UTC",
+   "present_pods_agree_with_prior": true,
+   "prior_equals_next_placement": true,
+   "nearest_case_s": 57,
+   "nearest_ad_s": 57
+  },
+  {
+   "ts": "2022-05-02 17:30:00 UTC",
+   "split": "test",
+   "pods_without_vm": 3,
+   "vms_of_missing_pods_in_prior_map": [
+    "node-6"
+   ],
+   "prior_complete": "2022-05-02 17:29:00 UTC",
+   "prior_gap_s": 60,
+   "next_complete": "2022-05-02 17:31:00 UTC",
+   "present_pods_agree_with_prior": true,
+   "prior_equals_next_placement": true,
+   "nearest_case_s": 92,
+   "nearest_ad_s": 92
+  },
+  {
+   "ts": "2022-05-02 20:20:00 UTC",
+   "split": "test",
+   "pods_without_vm": 33,
+   "vms_of_missing_pods_in_prior_map": [
+    "node-5"
+   ],
+   "prior_complete": "2022-05-02 20:19:00 UTC",
+   "prior_gap_s": 60,
+   "next_complete": "2022-05-02 20:21:00 UTC",
+   "present_pods_agree_with_prior": true,
+   "prior_equals_next_placement": true,
+   "nearest_case_s": 172,
+   "nearest_ad_s": 172
+  },
+  {
+   "ts": "2022-05-06 22:18:00 UTC",
+   "split": "test",
+   "pods_without_vm": 1,
+   "vms_of_missing_pods_in_prior_map": [
+    "node-4"
+   ],
+   "prior_complete": "2022-05-06 22:17:00 UTC",
+   "prior_gap_s": 60,
+   "next_complete": "2022-05-06 22:19:00 UTC",
+   "present_pods_agree_with_prior": true,
+   "prior_equals_next_placement": true,
+   "nearest_case_s": 90,
+   "nearest_ad_s": 90
+  },
+  {
+   "ts": "2022-05-07 11:23:00 UTC",
+   "split": "test",
+   "pods_without_vm": 1,
+   "vms_of_missing_pods_in_prior_map": [
+    "node-4"
+   ],
+   "prior_complete": "2022-05-07 11:22:00 UTC",
+   "prior_gap_s": 60,
+   "next_complete": "2022-05-07 11:24:00 UTC",
+   "present_pods_agree_with_prior": true,
+   "prior_equals_next_placement": true,
+   "nearest_case_s": 104,
+   "nearest_ad_s": 104
+  },
+  {
+   "ts": "2022-05-08 23:42:00 UTC",
+   "split": "test",
+   "pods_without_vm": 34,
+   "vms_of_missing_pods_in_prior_map": [
+    "node-6"
+   ],
+   "prior_complete": "2022-05-08 23:41:00 UTC",
+   "prior_gap_s": 60,
+   "next_complete": "2022-05-08 23:43:00 UTC",
+   "present_pods_agree_with_prior": true,
+   "prior_equals_next_placement": true,
+   "nearest_case_s": 203,
+   "nearest_ad_s": 203
+  }
+ ],
+ "pods_per_vm_any_placement": {
+  "node-1": 0,
+  "node-2": 0,
+  "node-3": 11,
+  "node-4": 1,
+  "node-5": 37,
+  "node-6": 35
+ },
+ "complete_maps": [
+  "2b1e248414",
+  "41f7e4e7b7",
+  "e134f661b3"
+ ],
+ "complete_placements_per_day_utc8": {
+  "05-01": [
+   "41f7e4e7b7"
+  ],
+  "05-03": [
+   "2b1e248414"
+  ],
+  "05-05": [
+   "2b1e248414"
+  ],
+  "05-07": [
+   "e134f661b3"
+  ],
+  "05-09": [
+   "41f7e4e7b7"
+  ]
+ },
+ "vm_pod_counts_per_map": {
+  "2b1e248414": {
+   "node-1": 0,
+   "node-2": 0,
+   "node-3": 0,
+   "node-4": 0,
+   "node-5": 33,
+   "node-6": 7
+  },
+  "41f7e4e7b7": {
+   "node-1": 0,
+   "node-2": 0,
+   "node-3": 0,
+   "node-4": 0,
+   "node-5": 6,
+   "node-6": 34
+  },
+  "e134f661b3": {
+   "node-1": 0,
+   "node-2": 0,
+   "node-3": 11,
+   "node-4": 1,
+   "node-5": 28,
+   "node-6": 0
+  }
+ }
+}

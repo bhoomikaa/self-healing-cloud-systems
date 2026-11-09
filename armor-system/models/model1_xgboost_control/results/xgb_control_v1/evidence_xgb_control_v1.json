@@ -1,0 +1,172 @@
+{
+  "evidence_name": "evidence_xgb_control_v1",
+  "evidence_version": "1.0",
+  "linear_issue": "298-49",
+  "scope": "XGBoost fault-classification control only. Historical 298-44, M1-02 and M1-03 evidence is not rewritten.",
+  "config_sha256": "407c55b669bfee4be61712caa6c0e2d477c7af4b5345b76863974599ec5b97e1",
+  "versions": {
+    "python": "3.14.4",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "xgboost": "3.4.1"
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "xgboost_params": {
+    "objective": "multi:softprob",
+    "num_class": 5,
+    "tree_method": "hist",
+    "max_depth": 3,
+    "eta": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.5,
+    "min_child_weight": 1,
+    "lambda": 1,
+    "nthread": 1,
+    "verbosity": 0
+  },
+  "dataset_hashes": {
+    "calibration_manifest_content_sha256": "797e2eb669feda07770544f9f70ca3c92dfea6494e83f43bf8c12b0f73ed737a",
+    "fit_only_scaler_file_sha256": "a9ec5981e28c506af2ff53a3a35b39ec2949949ec719c21cb20d5ea5654032cb",
+    "feature_cache_content_sha256": "87b34b0609509b8e0c98e2789e6cc995cf876e2c9639c8d36af87ac087b8997f",
+    "outer_split_content_sha256": "32ff03fcffca09f3d3953777a020514b4af9c882bc85e3dc1693e282607638ac",
+    "array_sha256": {
+      "X_fit": "c76a6d2692813aff3375624c6e6a1a890684d7ad08886c53b3f6b446b8f690d3",
+      "y_fit": "5671650beb72d2aa8b9eecc1e893ffe36111defedd5b549ace5b31531d4d4a46",
+      "X_validation": "ec2f359395064693ba6f1e956fe840fea77d3f56c1b91f3fb53783309fc15a48",
+      "y_validation": "5354fc528b819529ca9f0e834ff0255df081963cb1ca62e67159ea96afe69b3b",
+      "fit_case_index": "cd323b4fa38c21af581d6d26e89ed9dd89bb260593e5bdf7742a5e10aed6d2e6",
+      "validation_case_index": "b780bd9fb72b03f913e2821703786ec481b6a84ec794c1f21c0cdeaee5d6bbdb"
+    },
+    "feature_names_sha256": "5cb859f6d7bd354cd07e66e30817479837fee3ff7be7d091b71f65a2acb33800"
+  },
+  "cases": {
+    "fit": 88,
+    "validation": 25,
+    "calibration_used": 0,
+    "held_out_used": 0
+  },
+  "result_files_sha256": {
+    "case_features_provenance.json": "e3714773f0ab37d3a2fc3629f7461c8631ed8ffba028a0befb4807bea2c05eea",
+    "config_used.json": "bd2ebc4b51ad607b87e152bd59281e35954515804b55d3cf048a0b1d6e1fbfe8",
+    "majority_control.json": "cbeeef774b030f0c4a94b5ecfe288828f4ac1e53cd3f6156255c02df06432d8d",
+    "observation_timing.json": "f7f5ce474d5312101ced0f0b7bff4ec879c632c48a10cf1787a9d33daa718c7f",
+    "per_seed/seed_0_metrics.json": "b0a9452044c131847afb23943238d2323538467b91a864d084da5448291813d2",
+    "per_seed/seed_0_predictions.csv": "8536b7db8d7dc2bbad38f84a48a0188f79f304750c7549378d28d3ce1b09d55c",
+    "per_seed/seed_1_metrics.json": "c8ccb7776b707c0cead7c135090bacfec1f406f614c7baa9531102a08ace79dd",
+    "per_seed/seed_1_predictions.csv": "a82754ef7bbb1e27715eded0e4a0da1f7a5b41709d63452115d84c4004cf4ef4",
+    "per_seed/seed_2_metrics.json": "37a443178798d9eeb1c99aad660d003b46fad648c95323c8ee3ea1cf74721da0",
+    "per_seed/seed_2_predictions.csv": "0213296cd467020536217afce0b71cbb28a42ecc6c4557abd2965f9efc2a8061",
+    "per_seed/seed_3_metrics.json": "0f62a407da609e61a09a9dbdbed409ca004fe13ab3e905654132446a82266636",
+    "per_seed/seed_3_predictions.csv": "2e79915a0262c07befac29388ec6c3542ea072b5537c2e0344f68be0614a0aaf",
+    "per_seed/seed_4_metrics.json": "0bf38e62ececbace585a672cb205599dec26499fe447f71969c8608d0e4986c4",
+    "per_seed/seed_4_predictions.csv": "26c0996a37f5a940cd2b78c2c08a067af918433ff6ccc4543b38d09091c51d67",
+    "validation_summary.json": "255fd3ce40de4fcde8616315cc14f8c64e22a0d7b6855d4cbc1f24da18f604ba"
+  },
+  "reproducibility": {
+    "runs": 2,
+    "identical_to_each_other": true,
+    "identical_to_saved_results": true,
+    "files_compared": 15,
+    "per_seed_prediction_sha256": {
+      "per_seed/seed_0_predictions.csv": "8536b7db8d7dc2bbad38f84a48a0188f79f304750c7549378d28d3ce1b09d55c",
+      "per_seed/seed_1_predictions.csv": "a82754ef7bbb1e27715eded0e4a0da1f7a5b41709d63452115d84c4004cf4ef4",
+      "per_seed/seed_2_predictions.csv": "0213296cd467020536217afce0b71cbb28a42ecc6c4557abd2965f9efc2a8061",
+      "per_seed/seed_3_predictions.csv": "2e79915a0262c07befac29388ec6c3542ea072b5537c2e0344f68be0614a0aaf",
+      "per_seed/seed_4_predictions.csv": "26c0996a37f5a940cd2b78c2c08a067af918433ff6ccc4543b38d09091c51d67"
+    }
+  },
+  "suite_runs": {
+    "suites": [
+      {
+        "suite": "data",
+        "ran": 37,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "result": "OK",
+        "seconds": 1.2
+      },
+      {
+        "suite": "prep",
+        "ran": 208,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "result": "OK",
+        "seconds": 10.2
+      }
+    ],
+    "ran": 245,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "skipping_disabled": true
+  },
+  "commands": {
+    "run": ".venv/bin/python -I armor-system/models/model1_xgboost_control/xgb_control.py",
+    "evidence": ".venv/bin/python -I armor-system/models/model1_xgboost_control/xgb_control.py --write-evidence",
+    "tests": "M1_REQUIRE_REAL_DATA=1 .venv/bin/python -I -B -m unittest discover -s armor-system/tests/<data|prep> -p 'test_*.py'"
+  },
+  "held_out_evaluation": "not run; no held-out predictions or metrics exist in any saved artifact",
+  "commit_reference": {
+    "scheme": "No self-referential commit SHA or hash. source_set_sha256 identifies the exact content of the XGBoost control files; the final merge commit is recorded in the Linear 298-49 comment after merge.",
+    "evidence_base_commit": "4c0ea0126de2411b2aa121ada44d4d9ddc89a2e3",
+    "branch": "khushidonda/298-49-model-1-implement-xgboost-fault-classification-control",
+    "working_tree_clean_when_generated": false,
+    "source_set_sha256": "f60e088efa7cfdb29bcbf9eb1293c023c7d46beae9548eb97fba636ed9c2561b",
+    "source_files": [
+      {
+        "path": "armor-system/data/prep/m1_case_features.py",
+        "bytes": 6142,
+        "sha256": "ed438ac95defdc405c22498821002c25e736c977bb7d26c923ebabed7952447f"
+      },
+      {
+        "path": "armor-system/models/model1_xgboost_control/README.md",
+        "bytes": 8298,
+        "sha256": "fefc971a62af260fad60277041ca144219efce09b52ba2b3954d83866f340a55"
+      },
+      {
+        "path": "armor-system/models/model1_xgboost_control/config_v1.json",
+        "bytes": 1398,
+        "sha256": "8075f0ebc21a05285946ea3b97d6efd5ba63a3857b588ce791680d727752dc79"
+      },
+      {
+        "path": "armor-system/models/model1_xgboost_control/metrics.py",
+        "bytes": 5628,
+        "sha256": "6441c482f7dd5d53a7cac149a9058a7302e5be5b54936434c51bfc1ef7ccb839"
+      },
+      {
+        "path": "armor-system/models/model1_xgboost_control/requirements.txt",
+        "bytes": 15,
+        "sha256": "140ae4b87021e63f9b8cb3a584018281fb02f85104c4772e5b7ec63c2e25fb33"
+      },
+      {
+        "path": "armor-system/models/model1_xgboost_control/xgb_control.py",
+        "bytes": 26875,
+        "sha256": "ced772b00d8e13cbe9dbc1ccacb592c181a1c2b377e37bb31cf0c2c8f64ea11f"
+      },
+      {
+        "path": "armor-system/tests/prep/test_m1_xgb_control.py",
+        "bytes": 18444,
+        "sha256": "0d97a9c28c902e3e808ddaa6473fa03f14fed7a9a8639a71c1c3eff20c0d9f36"
+      },
+      {
+        "path": "armor-system/tests/prep/test_m1_xgb_features.py",
+        "bytes": 12608,
+        "sha256": "09e6a14c79c5c05421905724cd39ebd0357c6009244dc90e154e08fa0776c14a"
+      },
+      {
+        "path": "armor-system/tests/prep/test_m1_xgb_metrics.py",
+        "bytes": 5687,
+        "sha256": "368199d2eb2687d707d0f4eaff9ae9975ba6479b6478ee3d706e1bf0c8b053d2"
+      }
+    ],
+    "final_merge_commit": null
+  }
+}

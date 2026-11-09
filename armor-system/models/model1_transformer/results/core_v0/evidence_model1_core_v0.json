@@ -1,0 +1,433 @@
+{
+  "command": ".venv/bin/python -I armor-system/models/model1_transformer/smoke_forward_backward.py --write-evidence",
+  "commit_reference": {
+    "branch": "khushidonda/298-50-model-1-implement-multimodal-spatio-temporal-transformer",
+    "evidence_base_commit": "de44e3deb2b392fe81da321ffc0d22cb5c6fe6aa",
+    "final_merge_commit": null,
+    "origin_main_at_generation": "de44e3deb2b392fe81da321ffc0d22cb5c6fe6aa",
+    "scheme": "No self-referential hash: source_set_sha256 identifies the exact content of the files below (identical in the working tree and in a commit that adds them).",
+    "source_files": [
+      {
+        "bytes": 10230,
+        "path": "armor-system/models/model1_transformer/ARCHITECTURE.md",
+        "sha256": "83b2321162151bbd9937f92995424dea624db06e07951bb923781d4a43453e25"
+      },
+      {
+        "bytes": 99,
+        "path": "armor-system/models/model1_transformer/__init__.py",
+        "sha256": "127c49df988fc7e97b1a109159603c8935fdc9abee9375c18d18e9c0aa10e92a"
+      },
+      {
+        "bytes": 4555,
+        "path": "armor-system/models/model1_transformer/adapters.py",
+        "sha256": "345f9a4c8eee3647d993467c1693491fa1b72fd65b9bafd6f72704dfd4ea946b"
+      },
+      {
+        "bytes": 6457,
+        "path": "armor-system/models/model1_transformer/core.py",
+        "sha256": "5b04ea956297ee0d0eeaffb3f2ee5a8f81257f78f5f1cb5f52662e023a41d12a"
+      },
+      {
+        "bytes": 1471,
+        "path": "armor-system/models/model1_transformer/heads.py",
+        "sha256": "b467ac0fa6bd91cf105766fc0c701139244ba85d02d3873fadfab60703629630"
+      },
+      {
+        "bytes": 2977,
+        "path": "armor-system/models/model1_transformer/losses.py",
+        "sha256": "a433ccbdb27c875992fad2abffc9f2069247c97dc724d737c96cd660144cbbe0"
+      },
+      {
+        "bytes": 4276,
+        "path": "armor-system/models/model1_transformer/model.py",
+        "sha256": "c31f15eb77be68d96d04e6cbead3be89ef32ced4de76743ee64eb891510abd2a"
+      },
+      {
+        "bytes": 17265,
+        "path": "armor-system/models/model1_transformer/smoke_forward_backward.py",
+        "sha256": "51db8380551723aa3ee605916f0e5b125ec56436580d79f8c238814ba7b87bff"
+      },
+      {
+        "bytes": 4968,
+        "path": "armor-system/models/model1_transformer/spec.py",
+        "sha256": "bd406a872e999bea4eea9fd203d9f866d04f85f4cc41c8aaa3f752121113126a"
+      },
+      {
+        "bytes": 1919,
+        "path": "armor-system/tests/prep/_m1_model_helpers.py",
+        "sha256": "123e36d000b56251fd3d9f8d9974fa456c7487e947bcbb8ba34b78e4960ee67e"
+      },
+      {
+        "bytes": 14068,
+        "path": "armor-system/tests/prep/test_m1_model_invariance.py",
+        "sha256": "bd28133e40e6bac548538fa24cbbe3d2be54cc3d0fe6b39c910b79dc964555b2"
+      },
+      {
+        "bytes": 5433,
+        "path": "armor-system/tests/prep/test_m1_model_real_smoke.py",
+        "sha256": "6d0c3ef1033223e54d5bb490c4d6c3093b66a38b170632689a7a2593711d5815"
+      },
+      {
+        "bytes": 19513,
+        "path": "armor-system/tests/prep/test_m1_model_shapes.py",
+        "sha256": "576356cae49681c2804632d51c9858aa575531751ef728f7256ee0f1ec609cfb"
+      }
+    ],
+    "source_set_sha256": "949e1941e4e3f79d0a5960ec9c38e7452d9c96c885deeadbd3afd128e8567334",
+    "uncommitted_changes_when_generated": [
+      "armor-system/models/model1_transformer/ARCHITECTURE.md",
+      "armor-system/models/model1_transformer/__init__.py",
+      "armor-system/models/model1_transformer/adapters.py",
+      "armor-system/models/model1_transformer/core.py",
+      "armor-system/models/model1_transformer/heads.py",
+      "armor-system/models/model1_transformer/losses.py",
+      "armor-system/models/model1_transformer/model.py",
+      "armor-system/models/model1_transformer/results/core_v0/evidence_model1_core_v0.json",
+      "armor-system/models/model1_transformer/smoke_forward_backward.py",
+      "armor-system/models/model1_transformer/spec.py",
+      "armor-system/tests/prep/_m1_model_helpers.py",
+      "armor-system/tests/prep/test_m1_model_invariance.py",
+      "armor-system/tests/prep/test_m1_model_real_smoke.py",
+      "armor-system/tests/prep/test_m1_model_shapes.py"
+    ]
+  },
+  "environment": {
+    "deterministic_algorithms": true,
+    "device": "cpu",
+    "numpy": "2.5.3",
+    "platform": "Darwin arm64",
+    "python": "3.14.4",
+    "torch": "2.14.0",
+    "torch_num_threads": 1
+  },
+  "evidence_name": "evidence_model1_core_v0",
+  "evidence_version": "1.0",
+  "generation_seconds": 27.1,
+  "historical_evidence": {
+    "armor-system/data/artifacts/d1/evidence/evidence.json": {
+      "sha256": "4beeca7fe5ead73c8d5109d1b339725509314879e1421a58f95eb33fbbfbba7e",
+      "unchanged_vs_HEAD": true
+    },
+    "armor-system/data/artifacts/d1/evidence/evidence_m1_03.json": {
+      "sha256": "73a3bad2fb2f614c44636539b8519e6c6d3848bd09f7045ed9d4930fcd97bb23",
+      "unchanged_vs_HEAD": true
+    },
+    "armor-system/models/model1_xgboost_control/results/xgb_control_v1/evidence_xgb_control_v1.json": {
+      "sha256": "b5576d29513a15965be41bf8289055af8a26a76266ab4e4332fa4912f086edf9",
+      "unchanged_vs_HEAD": true
+    }
+  },
+  "invariance_tests": {
+    "MI-1": [
+      {
+        "status": "ok",
+        "test": "test_nan_and_inf_in_unavailable_slots_are_harmless"
+      },
+      {
+        "status": "ok",
+        "test": "test_unavailable_input_and_target_values_do_not_change_anything"
+      }
+    ],
+    "MI-2": [
+      {
+        "status": "ok",
+        "test": "test_gradient_at_unavailable_input_entries_is_exactly_zero_eval"
+      },
+      {
+        "status": "ok",
+        "test": "test_gradient_at_unavailable_input_entries_is_exactly_zero_with_dropout"
+      }
+    ],
+    "MI-3": [
+      {
+        "status": "ok",
+        "test": "test_changing_a_legitimate_zero_changes_the_output"
+      }
+    ],
+    "MI-4": [
+      {
+        "status": "ok",
+        "test": "test_float32"
+      },
+      {
+        "status": "ok",
+        "test": "test_float64"
+      }
+    ],
+    "MI-5": [
+      {
+        "status": "ok",
+        "test": "test_appended_padding_float64"
+      },
+      {
+        "status": "ok",
+        "test": "test_interleaved_padding_float64"
+      },
+      {
+        "status": "ok",
+        "test": "test_padding_float32"
+      }
+    ],
+    "MI-6": [
+      {
+        "status": "ok",
+        "test": "test_a_violation_fails_the_check"
+      },
+      {
+        "status": "ok",
+        "test": "test_no_nonzero_value_outside_the_applicable_mask_in_any_period"
+      },
+      {
+        "status": "ok",
+        "test": "test_the_model_channel_lists_cover_every_non_zero_entry"
+      }
+    ],
+    "MI-7": [
+      {
+        "status": "ok",
+        "test": "test_a_whole_modality_unavailable_gets_exactly_zero_fusion_weight"
+      },
+      {
+        "status": "ok",
+        "test": "test_vm_trace_and_log_never_have_weight_and_all_unavailable_gives_zero_weights"
+      }
+    ]
+  },
+  "linear_issue": "298-50",
+  "model": {
+    "class_weights": [
+      0.533333,
+      0.606897,
+      1.955556,
+      1.353846,
+      4.4
+    ],
+    "config": {
+      "d_ffn": 256,
+      "d_model": 64,
+      "dropout": 0.1,
+      "fusion_eps": 1e-08,
+      "n_classes": 5,
+      "n_heads": 4,
+      "n_input_steps": 6,
+      "n_layers": 2,
+      "n_modalities": 3,
+      "n_node_types": 2
+    },
+    "initial_state_sha256": "2d91439f33f29a4b78bb590a1260d3876cd32d5cea7749d9b1c0e3cd011f3225",
+    "parameters": 168200,
+    "spec_fingerprint": "24890dde17fc484c38662d9268cfec4646d0cde5170951f00af61b0de56a302f"
+  },
+  "reproducibility": {
+    "clean_process_reruns_identical": true,
+    "hashes": {
+      "initial_state_sha256": "2d91439f33f29a4b78bb590a1260d3876cd32d5cea7749d9b1c0e3cd011f3225",
+      "parameters": 168200,
+      "s1_fusion_weights": "43dd711c530960d74385ce971ccc66d02d4b5c51297e322fad5f6b75b10d5305",
+      "s1_grad_norm": 1.675669,
+      "s1_inputs": "93299715c6f3ad58fe4973e90953e4bb29af483e627ec13faa6c12844acdcc01",
+      "s1_logits": "f9c8f48563ad3184e4b4d9563eeef42c1c8326bab3ad08297bd53961ebb0665d",
+      "s1_loss": 0.6665233373641968,
+      "s1_prediction": "8f20790a22ee4d564e8e328492db133209f508ae30b95dcddca3ab864ebbb373",
+      "s2_fusion_weights": "1429f7ebcd43c6c8292241e2e480b08a30627e25f8d7d12cdcebf0601196316c",
+      "s2_grad_norm": 2.573296,
+      "s2_inputs": "f92dab7bf4455be1c71b59bbfd57aa515fb5b76cb443af66c577b095c4273886",
+      "s2_logits": "a217d8d308078c91cd3dbe785de726938ad51a5de90682dd67e2833b1c18265c",
+      "s2_loss": 1.6233206987380981,
+      "s2_prediction": "28fc86972b6488e1bf24939dd54c5e541c66a170646196d7391b3c73593cc3cd"
+    },
+    "in_process_two_runs_identical": true
+  },
+  "scope": "Model 1 v0 spatio-temporal Transformer core (architecture, masked losses, MI-1..MI-7, real-D1 CPU forward/backward). No training, no validation or test evaluation.",
+  "smoke": {
+    "batch_size": 8,
+    "batches": {
+      "s1": {
+        "categories": [
+          "normal_reference"
+        ],
+        "effective_mask_coverage": 0.52709,
+        "inputs_finite": true,
+        "inputs_sha256": "93299715c6f3ad58fe4973e90953e4bb29af483e627ec13faa6c12844acdcc01",
+        "inputs_shape": [
+          8,
+          6,
+          46,
+          130
+        ],
+        "kind": "s1_pretrain",
+        "roles": [
+          "fit"
+        ],
+        "size": 8,
+        "start_index": [
+          273,
+          264,
+          1725,
+          478,
+          235,
+          940,
+          495,
+          1634
+        ],
+        "target_shape": [
+          8,
+          46,
+          130
+        ]
+      },
+      "s2": {
+        "categories": [
+          "event_associated"
+        ],
+        "effective_mask_coverage": 0.52709,
+        "inputs_finite": true,
+        "inputs_sha256": "f92dab7bf4455be1c71b59bbfd57aa515fb5b76cb443af66c577b095c4273886",
+        "inputs_shape": [
+          8,
+          6,
+          46,
+          130
+        ],
+        "kind": "s2_fault_finetune",
+        "roles": [
+          "fit"
+        ],
+        "size": 8,
+        "start_index": [
+          2581,
+          2178,
+          2603,
+          2516,
+          1909,
+          718,
+          2469,
+          1031
+        ],
+        "target_shape": [
+          8,
+          46,
+          130
+        ]
+      }
+    },
+    "eval_s1": {
+      "fusion_weights_sha256": "43dd711c530960d74385ce971ccc66d02d4b5c51297e322fad5f6b75b10d5305",
+      "hidden_shape": [
+        8,
+        6,
+        46,
+        64
+      ],
+      "logits_sha256": "f9c8f48563ad3184e4b4d9563eeef42c1c8326bab3ad08297bd53961ebb0665d",
+      "logits_shape": [
+        8,
+        5
+      ],
+      "prediction_outside_applicable_all_zero": true,
+      "prediction_sha256": "8f20790a22ee4d564e8e328492db133209f508ae30b95dcddca3ab864ebbb373",
+      "prediction_shape": [
+        8,
+        46,
+        130
+      ]
+    },
+    "eval_s2": {
+      "fusion_weights_sha256": "1429f7ebcd43c6c8292241e2e480b08a30627e25f8d7d12cdcebf0601196316c",
+      "hidden_shape": [
+        8,
+        6,
+        46,
+        64
+      ],
+      "logits_sha256": "a217d8d308078c91cd3dbe785de726938ad51a5de90682dd67e2833b1c18265c",
+      "logits_shape": [
+        8,
+        5
+      ],
+      "prediction_outside_applicable_all_zero": true,
+      "prediction_sha256": "28fc86972b6488e1bf24939dd54c5e541c66a170646196d7391b3c73593cc3cd",
+      "prediction_shape": [
+        8,
+        46,
+        130
+      ]
+    },
+    "optimizer_steps_taken": 0,
+    "s1_masked_mse": {
+      "effective_target_entries": 25216,
+      "global_grad_norm": 1.675669,
+      "loss": 0.6665233373641968,
+      "parameters_with_gradient": 55,
+      "parameters_without_gradient": 4,
+      "without_gradient_prefix": "fault_head."
+    },
+    "s1_unlabelled_labels_rejected_by_fault_loss": true,
+    "s2_weighted_ce": {
+      "global_grad_norm": 2.573296,
+      "labels": [
+        0,
+        1,
+        2,
+        1,
+        1,
+        1,
+        4,
+        3
+      ],
+      "loss": 1.6233206987380981,
+      "parameters_with_gradient": 55,
+      "parameters_without_gradient": 4,
+      "without_gradient_prefix": "next_step_head."
+    },
+    "seed": 0
+  },
+  "tests": {
+    "m1_integration": {
+      "command": ".venv/bin/python -I armor-system/data/m1_integration.py",
+      "errors": 0,
+      "evidence_m1_03_verified": true,
+      "failures": 0,
+      "seconds": 18.1,
+      "skipped": 0,
+      "suites": {
+        "data": {
+          "errors": 0,
+          "failures": 0,
+          "ran": 37,
+          "skipped": 0
+        },
+        "prep": {
+          "errors": 0,
+          "failures": 0,
+          "ran": 264,
+          "skipped": 0
+        }
+      },
+      "tests_ran": 301
+    },
+    "model_modules": {
+      "invariance": {
+        "errors": 0,
+        "failures": 0,
+        "ok": true,
+        "ran": 16,
+        "skipped": 0
+      },
+      "real_smoke": {
+        "errors": 0,
+        "failures": 0,
+        "ok": true,
+        "ran": 10,
+        "skipped": 0
+      },
+      "shapes": {
+        "errors": 0,
+        "failures": 0,
+        "ok": true,
+        "ran": 30,
+        "skipped": 0
+      }
+    }
+  }
+}

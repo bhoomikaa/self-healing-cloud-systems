@@ -1,0 +1,38 @@
+{
+ "armor_released_reference": {
+  "FN": 0,
+  "FP": 8,
+  "TP": 98,
+  "f1": 0.9608,
+  "matches_published": {
+   "f1": true,
+   "precision": true,
+   "recall": true
+  },
+  "n_intervals": 50,
+  "precision": 0.9245,
+  "published": {
+   "f1": 0.9608,
+   "precision": 0.9245,
+   "recall": 1.0
+  },
+  "recall": 1.0,
+  "scored": true
+ },
+ "period": "test",
+ "scoring_set": {
+  "contiguous_target_minutes": false,
+  "counts": {
+   "event_associated": 501,
+   "ignore": 967,
+   "normal_reference": 1400,
+   "windows": 2868
+  },
+  "n_ambiguous_event_windows_dropped": 0,
+  "n_cases": 84,
+  "n_labels": {
+   "official": 98,
+   "ours": 84
+  }
+ }
+}

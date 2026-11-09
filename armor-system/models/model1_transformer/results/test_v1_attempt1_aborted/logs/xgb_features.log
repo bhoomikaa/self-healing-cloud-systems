@@ -1,0 +1,5 @@
+usage: run_test.py [-h] --mode {validation,test} [--out OUT]
+                   [--worker {missing,xgb-features,xgb-train}] [--seed SEED]
+                   [--features FEATURES] [--masks MASKS] [--run-id RUN_ID]
+                   [--no-missing] [--missing-check]
+run_test.py: error: test output goes to /Users/khushidonda/298A_project/team-repo/armor-system/models/model1_transformer/results/test_v1 only

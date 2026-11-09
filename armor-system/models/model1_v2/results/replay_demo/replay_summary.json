@@ -1,0 +1,266 @@
+{
+ "replay": true,
+ "not_live_telemetry": true,
+ "source": {
+  "kind": "replay",
+  "name": "armor-d1-validation-period",
+  "dataset": "ARMOR D1 release (Zenodo 21744694, CC-BY-4.0), feature cache",
+  "note": "recorded 2022 data replayed for demonstration; not live telemetry"
+ },
+ "model": {
+  "name": "model1-v2-ensemble",
+  "version": "2.0.0",
+  "protocol": "armor-system/models/model1_post_test_analysis/V2_ENSEMBLE_PROTOCOL.md (2ac3ab7)",
+  "members": "five frozen v1 Stage 2 checkpoints (seeds 0-4)",
+  "classes": [
+   "Container Hardware",
+   "Container Network",
+   "Node CPU",
+   "Node Disk",
+   "Node Memory"
+  ],
+  "checkpoint_sha256": [
+   "01940bfb9cd3588e3f3da2f5862f4d9f470095d1f815669e31d827c047343e40",
+   "671e0fb31f2c19ccff135360c4490c252fdd0eb89fb0955c1ea201758a135fb0",
+   "1c29d48b1e9e975af573f54a69c8b15e542d499b99e8adf08d05f0d5b7a956df",
+   "cb2c31a71571b15d89d43903fbea86e7637c1c45b03e08206456d7847f6e96fa",
+   "c25f2fa09b3a56275c9da3abfce00894cf30d296fa911f62e549131a55f11a02"
+  ],
+  "detection_threshold": 0.7831957951425433,
+  "fit_only_scaler_sha256": "a9ec5981e28c506af2ff53a3a35b39ec2949949ec719c21cb20d5ea5654032cb"
+ },
+ "minutes": 875,
+ "windows": 869,
+ "requests": 15,
+ "alert_minutes": 134,
+ "incidents": 22,
+ "scoring_against_documented_validation_incidents": {
+  "precision": 0.75,
+  "recall": 0.72,
+  "f1": 0.7347,
+  "density": 1.12,
+  "TP": 18,
+  "FP": 6,
+  "FN": 7,
+  "n_intervals": 22,
+  "n_labels": 25
+ },
+ "expected_from_committed_v2_validation": {
+  "TP": 18,
+  "FP": 6,
+  "f1": 0.7347
+ },
+ "incident_fault_type_vs_documented_class": {
+  "basis": "mean ensemble window probabilities over each incident's windows (serving path); differs from the evaluated case-window basis",
+  "incidents_hitting_a_documented_case": 16,
+  "pred_equals_documented_class": 16,
+  "rows": [
+   {
+    "start_ts": 1651715400,
+    "true": [
+     "Node Disk"
+    ],
+    "pred": "Node Disk"
+   },
+   {
+    "start_ts": 1651716480,
+    "true": [
+     "Container Hardware",
+     "Node Disk"
+    ],
+    "pred": "Container Hardware"
+   },
+   {
+    "start_ts": 1651723740,
+    "true": [
+     "Container Network"
+    ],
+    "pred": "Container Network"
+   },
+   {
+    "start_ts": 1651728300,
+    "true": [
+     "Container Hardware"
+    ],
+    "pred": "Container Hardware"
+   },
+   {
+    "start_ts": 1651729320,
+    "true": [
+     "Node Disk"
+    ],
+    "pred": "Node Disk"
+   },
+   {
+    "start_ts": 1651734720,
+    "true": [
+     "Container Hardware"
+    ],
+    "pred": "Container Hardware"
+   },
+   {
+    "start_ts": 1651736700,
+    "true": [
+     "Container Network"
+    ],
+    "pred": "Container Network"
+   },
+   {
+    "start_ts": 1651738260,
+    "true": [
+     "Container Hardware"
+    ],
+    "pred": "Container Hardware"
+   },
+   {
+    "start_ts": 1651739400,
+    "true": [
+     "Container Hardware",
+     "Node Disk"
+    ],
+    "pred": "Node Disk"
+   },
+   {
+    "start_ts": 1651742880,
+    "true": [
+     "Container Hardware"
+    ],
+    "pred": "Container Hardware"
+   },
+   {
+    "start_ts": 1651746120,
+    "true": [
+     "Container Hardware"
+    ],
+    "pred": "Container Hardware"
+   },
+   {
+    "start_ts": 1651753200,
+    "true": [
+     "Container Hardware"
+    ],
+    "pred": "Container Hardware"
+   },
+   {
+    "start_ts": 1651755240,
+    "true": [
+     "Container Network"
+    ],
+    "pred": "Container Network"
+   },
+   {
+    "start_ts": 1651758540,
+    "true": [
+     "Container Hardware"
+    ],
+    "pred": "Container Hardware"
+   },
+   {
+    "start_ts": 1651760100,
+    "true": [
+     "Container Network"
+    ],
+    "pred": "Container Network"
+   },
+   {
+    "start_ts": 1651762620,
+    "true": [
+     "Container Network"
+    ],
+    "pred": "Container Network"
+   }
+  ]
+ },
+ "latency": [
+  {
+   "minutes": 66,
+   "windows": 60,
+   "round_trip_ms": 630.3,
+   "server_ms": 562.6
+  },
+  {
+   "minutes": 66,
+   "windows": 60,
+   "round_trip_ms": 567.5,
+   "server_ms": 501.3
+  },
+  {
+   "minutes": 66,
+   "windows": 60,
+   "round_trip_ms": 563.0,
+   "server_ms": 499.7
+  },
+  {
+   "minutes": 66,
+   "windows": 60,
+   "round_trip_ms": 560.1,
+   "server_ms": 496.7
+  },
+  {
+   "minutes": 66,
+   "windows": 60,
+   "round_trip_ms": 561.2,
+   "server_ms": 498.0
+  },
+  {
+   "minutes": 66,
+   "windows": 60,
+   "round_trip_ms": 560.7,
+   "server_ms": 497.0
+  },
+  {
+   "minutes": 66,
+   "windows": 60,
+   "round_trip_ms": 561.4,
+   "server_ms": 496.4
+  },
+  {
+   "minutes": 66,
+   "windows": 60,
+   "round_trip_ms": 562.9,
+   "server_ms": 499.4
+  },
+  {
+   "minutes": 66,
+   "windows": 60,
+   "round_trip_ms": 560.2,
+   "server_ms": 496.7
+  },
+  {
+   "minutes": 66,
+   "windows": 60,
+   "round_trip_ms": 560.8,
+   "server_ms": 496.6
+  },
+  {
+   "minutes": 66,
+   "windows": 60,
+   "round_trip_ms": 561.4,
+   "server_ms": 496.5
+  },
+  {
+   "minutes": 66,
+   "windows": 60,
+   "round_trip_ms": 564.3,
+   "server_ms": 499.3
+  },
+  {
+   "minutes": 66,
+   "windows": 60,
+   "round_trip_ms": 560.0,
+   "server_ms": 496.4
+  },
+  {
+   "minutes": 66,
+   "windows": 60,
+   "round_trip_ms": 558.9,
+   "server_ms": 495.4
+  },
+  {
+   "minutes": 35,
+   "windows": 29,
+   "round_trip_ms": 264.5,
+   "server_ms": 230.5
+  }
+ ]
+}

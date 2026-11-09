@@ -1,0 +1,149 @@
+{
+  "bootstrap_seed": 20261028,
+  "case_index": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125
+  ],
+  "class_order": [
+    "Container Hardware",
+    "Container Network",
+    "Node CPU",
+    "Node Disk",
+    "Node Memory"
+  ],
+  "evaluated_on": "25 validation cases (saved predictions only)",
+  "experiment": "paired case-level bootstrap, five-seed Model 1 v1 vs frozen XGBoost control",
+  "interval": "95% percentile interval (2.5th/97.5th percentile, linear interpolation)",
+  "limitations": [
+    "25 validation cases; case-level accuracy moves in steps of 0.04.",
+    "Node Memory has ONE validation case: missing from roughly 36-38% of resamples (F1 0 for both models there); when present one flip moves its recall between 0 and 1.",
+    "v1's checkpoints were selected with validation data (Stage 2: fault NLL + balanced BCE) and XGBoost used a fixed configuration without selection: the comparison favours v1 slightly; the locked test partition is the unbiased estimate.",
+    "Cases are resampled as independent although the 25 cases come from 23 incident groups; percentile intervals from 25 cases are approximate."
+  ],
+  "metric_definition": "frozen XGBoost control metrics.py: macro-F1 averages ALL five labels, zero-division counts 0, so a class absent from a resample keeps F1 0 for both models; weighted-F1 weights by resample support",
+  "metrics": {
+    "macro_f1": {
+      "difference_transformer_minus_xgboost": {
+        "ci95_high": 0.2296818478906714,
+        "ci95_low": -0.16285909090909081,
+        "mean": 0.028347503632254793
+      },
+      "fraction_difference_negative": 0.407,
+      "fraction_difference_positive": 0.592,
+      "fraction_difference_zero": 0.001,
+      "transformer": {
+        "ci95_high": 0.8194803921568629,
+        "ci95_low": 0.6020541125541125,
+        "mean": 0.7428616612307033
+      },
+      "xgboost": {
+        "ci95_high": 0.9234616848064217,
+        "ci95_low": 0.471278149386845,
+        "mean": 0.7145141575984485
+      }
+    },
+    "weighted_f1": {
+      "difference_transformer_minus_xgboost": {
+        "ci95_high": 0.21358531180893411,
+        "ci95_low": -0.05780722383498871,
+        "mean": 0.07898024617440413
+      },
+      "fraction_difference_negative": 0.127,
+      "fraction_difference_positive": 0.872,
+      "fraction_difference_zero": 0.001,
+      "transformer": {
+        "ci95_high": 0.9772537595907927,
+        "ci95_low": 0.8235889610389611,
+        "mean": 0.9073717449687292
+      },
+      "xgboost": {
+        "ci95_high": 0.9513651903651903,
+        "ci95_low": 0.6783968747626643,
+        "mean": 0.8283914987943252
+      }
+    }
+  },
+  "observed": {
+    "difference": {
+      "macro_f1": -0.030150632992738235,
+      "weighted_f1": 0.07857980849559798
+    },
+    "transformer": {
+      "macro_f1": 0.7835335775335776,
+      "weighted_f1": 0.9068625152625153
+    },
+    "xgboost": {
+      "macro_f1": 0.8136842105263158,
+      "weighted_f1": 0.8282827067669173
+    }
+  },
+  "provenance": {
+    "accessed": "saved validation predictions only; no dataset, model, calibration or test observation",
+    "code_sha256": {
+      "bootstrap_compare.py": "d3fbb2a4a234e755214cecb5e10850a052717c18e4e384c603b144c680038677",
+      "bootstrap_v1.py": "e3f33d0a9357155465db7813dcc287d82e5dd64777ae604cad1cc27d97597569",
+      "xgb_metrics.py": "6441c482f7dd5d53a7cac149a9058a7302e5be5b54936434c51bfc1ef7ccb839"
+    },
+    "frozen_case_features_provenance_sha256": "e3714773f0ab37d3a2fc3629f7461c8631ed8ffba028a0befb4807bea2c05eea",
+    "input_files_sha256": {
+      "transformer/seed_0": "b4f8d8d74f64e0ec8933d428659092c0e4c24a47733dbbd9437ddda99ba81cd0",
+      "transformer/seed_1": "4c34b7160556c4871b9797b8c3b96d2ce45a9439c02cbbca65514c452e3df576",
+      "transformer/seed_2": "07bcacda0343c93a59eb264b54dbfd16e430b50bae5ec8c63c433c63b2e85802",
+      "transformer/seed_3": "2db42e432586f20d915cf8918db9de4ecb8224c0038e01b0e3df8279793172d0",
+      "transformer/seed_4": "525a40847bb7c9ef298d2c42c24f29d273c7f8e23757327e5f77422f8bfcb068",
+      "xgboost/seed_0": "8536b7db8d7dc2bbad38f84a48a0188f79f304750c7549378d28d3ce1b09d55c",
+      "xgboost/seed_1": "a82754ef7bbb1e27715eded0e4a0da1f7a5b41709d63452115d84c4004cf4ef4",
+      "xgboost/seed_2": "0213296cd467020536217afce0b71cbb28a42ecc6c4557abd2965f9efc2a8061",
+      "xgboost/seed_3": "2e79915a0262c07befac29388ec6c3542ea072b5537c2e0344f68be0614a0aaf",
+      "xgboost/seed_4": "26c0996a37f5a940cd2b78c2c08a067af918433ff6ccc4543b38d09091c51d67"
+    },
+    "numpy": "2.5.3",
+    "python": "3.14.4"
+  },
+  "reading": {
+    "downward_shift": "an absent class keeps F1 0, so resample means sit below the observed values while the paired difference is much less affected",
+    "fraction_positive": "share of resamples with a positive difference; NOT a probability that v1 is better",
+    "pending": "no multiple-comparison adjustment (two metrics reported)",
+    "seeds": "the five seeds enter only as averaging; seed variance is not a source of uncertainty across incidents"
+  },
+  "resamples": 1000,
+  "resamples_without_class": {
+    "Container Hardware": 0.0,
+    "Container Network": 0.001,
+    "Node CPU": 0.049,
+    "Node Disk": 0.005,
+    "Node Memory": 0.383
+  },
+  "resampling": "25 cases with replacement; the same cases for both models and all five seeds; numpy default_rng(seed).integers(0, 25, (1000, 25))",
+  "statistic": "mean over the five seeds of each model, then v1 minus XGBoost",
+  "support": [
+    10,
+    6,
+    3,
+    5,
+    1
+  ]
+}

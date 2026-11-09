@@ -1,0 +1,1723 @@
+{
+  "config_sha256": "407c55b669bfee4be61712caa6c0e2d477c7af4b5345b76863974599ec5b97e1",
+  "per_seed": [
+    {
+      "n_cases": 84,
+      "accuracy": 0.8571428571428571,
+      "macro_f1": 0.7002272774230873,
+      "weighted_f1": 0.8414336581137547,
+      "per_class": {
+        "precision": [
+          0.9459459459459459,
+          0.7586206896551724,
+          0.75,
+          0.9166666666666666,
+          0.5
+        ],
+        "recall": [
+          0.9722222222222222,
+          1.0,
+          0.375,
+          0.7857142857142857,
+          0.25
+        ],
+        "f1": [
+          0.9589041095890412,
+          0.8627450980392156,
+          0.5,
+          0.8461538461538461,
+          0.3333333333333333
+        ],
+        "support": [
+          36,
+          22,
+          8,
+          14,
+          4
+        ],
+        "predicted": [
+          37,
+          29,
+          4,
+          12,
+          2
+        ]
+      },
+      "confusion_matrix": [
+        [
+          35,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          22,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          3,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          11,
+          1
+        ],
+        [
+          0,
+          2,
+          1,
+          0,
+          1
+        ]
+      ],
+      "macro_f1_excluding_node_memory": 0.7919507634455257,
+      "family_diagnostic": {
+        "families": {
+          "container": {
+            "classes": [
+              "Container Hardware",
+              "Container Network"
+            ],
+            "n_cases": 58,
+            "confusion_true_rows_vs_all_predicted_columns": [
+              [
+                35,
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                22,
+                0,
+                0,
+                0
+              ]
+            ],
+            "row_labels": [
+              "Container Hardware",
+              "Container Network"
+            ],
+            "column_labels": [
+              "Container Hardware",
+              "Container Network",
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "exactly_correct": 57,
+            "wrong_inside_family": 1,
+            "wrong_outside_family": 0,
+            "family_level_accuracy": {
+              "value": 1.0,
+              "numerator": 58,
+              "denominator": 58,
+              "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)"
+            },
+            "conditional_within_family_accuracy": {
+              "value": 0.9827586206896551,
+              "numerator": 57,
+              "denominator": 58,
+              "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy"
+            }
+          },
+          "node": {
+            "classes": [
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "n_cases": 26,
+            "confusion_true_rows_vs_all_predicted_columns": [
+              [
+                2,
+                2,
+                3,
+                1,
+                0
+              ],
+              [
+                0,
+                2,
+                0,
+                11,
+                1
+              ],
+              [
+                0,
+                2,
+                1,
+                0,
+                1
+              ]
+            ],
+            "row_labels": [
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "column_labels": [
+              "Container Hardware",
+              "Container Network",
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "exactly_correct": 15,
+            "wrong_inside_family": 3,
+            "wrong_outside_family": 8,
+            "family_level_accuracy": {
+              "value": 0.6923076923076923,
+              "numerator": 18,
+              "denominator": 26,
+              "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)"
+            },
+            "conditional_within_family_accuracy": {
+              "value": 0.8333333333333334,
+              "numerator": 15,
+              "denominator": 18,
+              "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy"
+            }
+          }
+        },
+        "family_confusion_true_rows_pred_cols": {
+          "labels": [
+            "container",
+            "node"
+          ],
+          "matrix": [
+            [
+              58,
+              0
+            ],
+            [
+              8,
+              18
+            ]
+          ]
+        },
+        "note": "Families follow the D1 category names. They do not prove a fault physically affects only pods or only VMs."
+      },
+      "per_class_names": [
+        "Container Hardware",
+        "Container Network",
+        "Node CPU",
+        "Node Disk",
+        "Node Memory"
+      ],
+      "seed": 0,
+      "model_ubj_sha256": "b0cea21816a4b089de7c6f7a22da5552239b94bbe19ee046bac74e25a65691c7"
+    },
+    {
+      "n_cases": 84,
+      "accuracy": 0.8809523809523809,
+      "macro_f1": 0.7388940261738697,
+      "weighted_f1": 0.8687679129390059,
+      "per_class": {
+        "precision": [
+          0.9459459459459459,
+          0.8148148148148148,
+          0.8,
+          0.9230769230769231,
+          0.5
+        ],
+        "recall": [
+          0.9722222222222222,
+          1.0,
+          0.5,
+          0.8571428571428571,
+          0.25
+        ],
+        "f1": [
+          0.9589041095890412,
+          0.8979591836734693,
+          0.6153846153846154,
+          0.888888888888889,
+          0.3333333333333333
+        ],
+        "support": [
+          36,
+          22,
+          8,
+          14,
+          4
+        ],
+        "predicted": [
+          37,
+          27,
+          5,
+          13,
+          2
+        ]
+      },
+      "confusion_matrix": [
+        [
+          35,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          22,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          4,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          12,
+          1
+        ],
+        [
+          0,
+          2,
+          1,
+          0,
+          1
+        ]
+      ],
+      "macro_f1_excluding_node_memory": 0.8402841993840037,
+      "family_diagnostic": {
+        "families": {
+          "container": {
+            "classes": [
+              "Container Hardware",
+              "Container Network"
+            ],
+            "n_cases": 58,
+            "confusion_true_rows_vs_all_predicted_columns": [
+              [
+                35,
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                22,
+                0,
+                0,
+                0
+              ]
+            ],
+            "row_labels": [
+              "Container Hardware",
+              "Container Network"
+            ],
+            "column_labels": [
+              "Container Hardware",
+              "Container Network",
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "exactly_correct": 57,
+            "wrong_inside_family": 1,
+            "wrong_outside_family": 0,
+            "family_level_accuracy": {
+              "value": 1.0,
+              "numerator": 58,
+              "denominator": 58,
+              "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)"
+            },
+            "conditional_within_family_accuracy": {
+              "value": 0.9827586206896551,
+              "numerator": 57,
+              "denominator": 58,
+              "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy"
+            }
+          },
+          "node": {
+            "classes": [
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "n_cases": 26,
+            "confusion_true_rows_vs_all_predicted_columns": [
+              [
+                2,
+                1,
+                4,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                12,
+                1
+              ],
+              [
+                0,
+                2,
+                1,
+                0,
+                1
+              ]
+            ],
+            "row_labels": [
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "column_labels": [
+              "Container Hardware",
+              "Container Network",
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "exactly_correct": 17,
+            "wrong_inside_family": 3,
+            "wrong_outside_family": 6,
+            "family_level_accuracy": {
+              "value": 0.7692307692307693,
+              "numerator": 20,
+              "denominator": 26,
+              "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)"
+            },
+            "conditional_within_family_accuracy": {
+              "value": 0.85,
+              "numerator": 17,
+              "denominator": 20,
+              "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy"
+            }
+          }
+        },
+        "family_confusion_true_rows_pred_cols": {
+          "labels": [
+            "container",
+            "node"
+          ],
+          "matrix": [
+            [
+              58,
+              0
+            ],
+            [
+              6,
+              20
+            ]
+          ]
+        },
+        "note": "Families follow the D1 category names. They do not prove a fault physically affects only pods or only VMs."
+      },
+      "per_class_names": [
+        "Container Hardware",
+        "Container Network",
+        "Node CPU",
+        "Node Disk",
+        "Node Memory"
+      ],
+      "seed": 1,
+      "model_ubj_sha256": "186bde536bd4abe7d97e826cfc4dac7a36b59a61c5e9c82133e5691b631464eb"
+    },
+    {
+      "n_cases": 84,
+      "accuracy": 0.8452380952380952,
+      "macro_f1": 0.7036855838225702,
+      "weighted_f1": 0.8375462056968905,
+      "per_class": {
+        "precision": [
+          0.9459459459459459,
+          0.7777777777777778,
+          0.7142857142857143,
+          0.9,
+          0.3333333333333333
+        ],
+        "recall": [
+          0.9722222222222222,
+          0.9545454545454546,
+          0.625,
+          0.6428571428571429,
+          0.25
+        ],
+        "f1": [
+          0.9589041095890412,
+          0.8571428571428572,
+          0.6666666666666666,
+          0.75,
+          0.28571428571428575
+        ],
+        "support": [
+          36,
+          22,
+          8,
+          14,
+          4
+        ],
+        "predicted": [
+          37,
+          27,
+          7,
+          10,
+          3
+        ]
+      },
+      "confusion_matrix": [
+        [
+          35,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          21,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          9,
+          2
+        ],
+        [
+          0,
+          2,
+          1,
+          0,
+          1
+        ]
+      ],
+      "macro_f1_excluding_node_memory": 0.8081784083496413,
+      "family_diagnostic": {
+        "families": {
+          "container": {
+            "classes": [
+              "Container Hardware",
+              "Container Network"
+            ],
+            "n_cases": 58,
+            "confusion_true_rows_vs_all_predicted_columns": [
+              [
+                35,
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                21,
+                1,
+                0,
+                0
+              ]
+            ],
+            "row_labels": [
+              "Container Hardware",
+              "Container Network"
+            ],
+            "column_labels": [
+              "Container Hardware",
+              "Container Network",
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "exactly_correct": 56,
+            "wrong_inside_family": 1,
+            "wrong_outside_family": 1,
+            "family_level_accuracy": {
+              "value": 0.9827586206896551,
+              "numerator": 57,
+              "denominator": 58,
+              "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)"
+            },
+            "conditional_within_family_accuracy": {
+              "value": 0.9824561403508771,
+              "numerator": 56,
+              "denominator": 57,
+              "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy"
+            }
+          },
+          "node": {
+            "classes": [
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "n_cases": 26,
+            "confusion_true_rows_vs_all_predicted_columns": [
+              [
+                2,
+                0,
+                5,
+                1,
+                0
+              ],
+              [
+                0,
+                3,
+                0,
+                9,
+                2
+              ],
+              [
+                0,
+                2,
+                1,
+                0,
+                1
+              ]
+            ],
+            "row_labels": [
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "column_labels": [
+              "Container Hardware",
+              "Container Network",
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "exactly_correct": 15,
+            "wrong_inside_family": 4,
+            "wrong_outside_family": 7,
+            "family_level_accuracy": {
+              "value": 0.7307692307692307,
+              "numerator": 19,
+              "denominator": 26,
+              "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)"
+            },
+            "conditional_within_family_accuracy": {
+              "value": 0.7894736842105263,
+              "numerator": 15,
+              "denominator": 19,
+              "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy"
+            }
+          }
+        },
+        "family_confusion_true_rows_pred_cols": {
+          "labels": [
+            "container",
+            "node"
+          ],
+          "matrix": [
+            [
+              57,
+              1
+            ],
+            [
+              7,
+              19
+            ]
+          ]
+        },
+        "note": "Families follow the D1 category names. They do not prove a fault physically affects only pods or only VMs."
+      },
+      "per_class_names": [
+        "Container Hardware",
+        "Container Network",
+        "Node CPU",
+        "Node Disk",
+        "Node Memory"
+      ],
+      "seed": 2,
+      "model_ubj_sha256": "9bf7c51b7f4cb6f2890b66c9ca37151adfc434c806223b8b48a8a24d7759a18b"
+    },
+    {
+      "n_cases": 84,
+      "accuracy": 0.8452380952380952,
+      "macro_f1": 0.7010115911485775,
+      "weighted_f1": 0.8369051800558649,
+      "per_class": {
+        "precision": [
+          0.9459459459459459,
+          0.7692307692307693,
+          0.5714285714285714,
+          0.9166666666666666,
+          0.5
+        ],
+        "recall": [
+          0.9722222222222222,
+          0.9090909090909091,
+          0.5,
+          0.7857142857142857,
+          0.25
+        ],
+        "f1": [
+          0.9589041095890412,
+          0.8333333333333333,
+          0.5333333333333333,
+          0.8461538461538461,
+          0.3333333333333333
+        ],
+        "support": [
+          36,
+          22,
+          8,
+          14,
+          4
+        ],
+        "predicted": [
+          37,
+          26,
+          7,
+          12,
+          2
+        ]
+      },
+      "confusion_matrix": [
+        [
+          35,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          20,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          4,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          11,
+          1
+        ],
+        [
+          0,
+          2,
+          1,
+          0,
+          1
+        ]
+      ],
+      "macro_f1_excluding_node_memory": 0.7929311556023885,
+      "family_diagnostic": {
+        "families": {
+          "container": {
+            "classes": [
+              "Container Hardware",
+              "Container Network"
+            ],
+            "n_cases": 58,
+            "confusion_true_rows_vs_all_predicted_columns": [
+              [
+                35,
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                20,
+                2,
+                0,
+                0
+              ]
+            ],
+            "row_labels": [
+              "Container Hardware",
+              "Container Network"
+            ],
+            "column_labels": [
+              "Container Hardware",
+              "Container Network",
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "exactly_correct": 55,
+            "wrong_inside_family": 1,
+            "wrong_outside_family": 2,
+            "family_level_accuracy": {
+              "value": 0.9655172413793104,
+              "numerator": 56,
+              "denominator": 58,
+              "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)"
+            },
+            "conditional_within_family_accuracy": {
+              "value": 0.9821428571428571,
+              "numerator": 55,
+              "denominator": 56,
+              "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy"
+            }
+          },
+          "node": {
+            "classes": [
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "n_cases": 26,
+            "confusion_true_rows_vs_all_predicted_columns": [
+              [
+                2,
+                1,
+                4,
+                1,
+                0
+              ],
+              [
+                0,
+                2,
+                0,
+                11,
+                1
+              ],
+              [
+                0,
+                2,
+                1,
+                0,
+                1
+              ]
+            ],
+            "row_labels": [
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "column_labels": [
+              "Container Hardware",
+              "Container Network",
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "exactly_correct": 16,
+            "wrong_inside_family": 3,
+            "wrong_outside_family": 7,
+            "family_level_accuracy": {
+              "value": 0.7307692307692307,
+              "numerator": 19,
+              "denominator": 26,
+              "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)"
+            },
+            "conditional_within_family_accuracy": {
+              "value": 0.8421052631578947,
+              "numerator": 16,
+              "denominator": 19,
+              "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy"
+            }
+          }
+        },
+        "family_confusion_true_rows_pred_cols": {
+          "labels": [
+            "container",
+            "node"
+          ],
+          "matrix": [
+            [
+              56,
+              2
+            ],
+            [
+              7,
+              19
+            ]
+          ]
+        },
+        "note": "Families follow the D1 category names. They do not prove a fault physically affects only pods or only VMs."
+      },
+      "per_class_names": [
+        "Container Hardware",
+        "Container Network",
+        "Node CPU",
+        "Node Disk",
+        "Node Memory"
+      ],
+      "seed": 3,
+      "model_ubj_sha256": "103986e8d3ac2e422300f8f3d1c3b404cc58e43ecf7c2b5ffc103e56752bf732"
+    },
+    {
+      "n_cases": 84,
+      "accuracy": 0.8571428571428571,
+      "macro_f1": 0.7036782578152441,
+      "weighted_f1": 0.8427293558800408,
+      "per_class": {
+        "precision": [
+          0.9459459459459459,
+          0.7333333333333333,
+          0.75,
+          1.0,
+          0.5
+        ],
+        "recall": [
+          0.9722222222222222,
+          1.0,
+          0.375,
+          0.7857142857142857,
+          0.25
+        ],
+        "f1": [
+          0.9589041095890412,
+          0.846153846153846,
+          0.5,
+          0.88,
+          0.3333333333333333
+        ],
+        "support": [
+          36,
+          22,
+          8,
+          14,
+          4
+        ],
+        "predicted": [
+          37,
+          30,
+          4,
+          11,
+          2
+        ]
+      },
+      "confusion_matrix": [
+        [
+          35,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          22,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          3,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          11,
+          1
+        ],
+        [
+          0,
+          2,
+          1,
+          0,
+          1
+        ]
+      ],
+      "macro_f1_excluding_node_memory": 0.7962644889357218,
+      "family_diagnostic": {
+        "families": {
+          "container": {
+            "classes": [
+              "Container Hardware",
+              "Container Network"
+            ],
+            "n_cases": 58,
+            "confusion_true_rows_vs_all_predicted_columns": [
+              [
+                35,
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                22,
+                0,
+                0,
+                0
+              ]
+            ],
+            "row_labels": [
+              "Container Hardware",
+              "Container Network"
+            ],
+            "column_labels": [
+              "Container Hardware",
+              "Container Network",
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "exactly_correct": 57,
+            "wrong_inside_family": 1,
+            "wrong_outside_family": 0,
+            "family_level_accuracy": {
+              "value": 1.0,
+              "numerator": 58,
+              "denominator": 58,
+              "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)"
+            },
+            "conditional_within_family_accuracy": {
+              "value": 0.9827586206896551,
+              "numerator": 57,
+              "denominator": 58,
+              "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy"
+            }
+          },
+          "node": {
+            "classes": [
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "n_cases": 26,
+            "confusion_true_rows_vs_all_predicted_columns": [
+              [
+                2,
+                3,
+                3,
+                0,
+                0
+              ],
+              [
+                0,
+                2,
+                0,
+                11,
+                1
+              ],
+              [
+                0,
+                2,
+                1,
+                0,
+                1
+              ]
+            ],
+            "row_labels": [
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "column_labels": [
+              "Container Hardware",
+              "Container Network",
+              "Node CPU",
+              "Node Disk",
+              "Node Memory"
+            ],
+            "exactly_correct": 15,
+            "wrong_inside_family": 2,
+            "wrong_outside_family": 9,
+            "family_level_accuracy": {
+              "value": 0.6538461538461539,
+              "numerator": 17,
+              "denominator": 26,
+              "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)"
+            },
+            "conditional_within_family_accuracy": {
+              "value": 0.8823529411764706,
+              "numerator": 15,
+              "denominator": 17,
+              "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy"
+            }
+          }
+        },
+        "family_confusion_true_rows_pred_cols": {
+          "labels": [
+            "container",
+            "node"
+          ],
+          "matrix": [
+            [
+              58,
+              0
+            ],
+            [
+              9,
+              17
+            ]
+          ]
+        },
+        "note": "Families follow the D1 category names. They do not prove a fault physically affects only pods or only VMs."
+      },
+      "per_class_names": [
+        "Container Hardware",
+        "Container Network",
+        "Node CPU",
+        "Node Disk",
+        "Node Memory"
+      ],
+      "seed": 4,
+      "model_ubj_sha256": "4951edaf9338e8d0842e0d23882fb12dc1a78dfa83bb580ccb227fd5152b2728"
+    }
+  ],
+  "mean_sd_across_seeds": {
+    "accuracy": {
+      "mean": 0.8571428571428571,
+      "sd": 0.0145802960879951,
+      "n": 5,
+      "values": [
+        0.8571428571428571,
+        0.8809523809523809,
+        0.8452380952380952,
+        0.8452380952380952,
+        0.8571428571428571
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.7094993472766697,
+      "sd": 0.016505645692817622,
+      "n": 5,
+      "values": [
+        0.7002272774230873,
+        0.7388940261738697,
+        0.7036855838225702,
+        0.7010115911485775,
+        0.7036782578152441
+      ]
+    },
+    "weighted_f1": {
+      "mean": 0.8454764625371116,
+      "sd": 0.013254606570358271,
+      "n": 5,
+      "values": [
+        0.8414336581137547,
+        0.8687679129390059,
+        0.8375462056968905,
+        0.8369051800558649,
+        0.8427293558800408
+      ]
+    },
+    "macro_f1_excluding_node_memory": {
+      "mean": 0.8059218031434561,
+      "sd": 0.020267443930681542,
+      "n": 5,
+      "values": [
+        0.7919507634455257,
+        0.8402841993840037,
+        0.8081784083496413,
+        0.7929311556023885,
+        0.7962644889357218
+      ]
+    },
+    "per_class": {
+      "precision": [
+        {
+          "mean": 0.9459459459459459,
+          "sd": 0.0,
+          "n": 5,
+          "values": [
+            0.9459459459459459,
+            0.9459459459459459,
+            0.9459459459459459,
+            0.9459459459459459,
+            0.9459459459459459
+          ]
+        },
+        {
+          "mean": 0.7707554769623735,
+          "sd": 0.02975118733423899,
+          "n": 5,
+          "values": [
+            0.7586206896551724,
+            0.8148148148148148,
+            0.7777777777777778,
+            0.7692307692307693,
+            0.7333333333333333
+          ]
+        },
+        {
+          "mean": 0.7171428571428571,
+          "sd": 0.08698463387640515,
+          "n": 5,
+          "values": [
+            0.75,
+            0.8,
+            0.7142857142857143,
+            0.5714285714285714,
+            0.75
+          ]
+        },
+        {
+          "mean": 0.9312820512820512,
+          "sd": 0.03935500689934303,
+          "n": 5,
+          "values": [
+            0.9166666666666666,
+            0.9230769230769231,
+            0.9,
+            0.9166666666666666,
+            1.0
+          ]
+        },
+        {
+          "mean": 0.4666666666666666,
+          "sd": 0.074535599249993,
+          "n": 5,
+          "values": [
+            0.5,
+            0.5,
+            0.3333333333333333,
+            0.5,
+            0.5
+          ]
+        }
+      ],
+      "recall": [
+        {
+          "mean": 0.9722222222222221,
+          "sd": 1.2412670766236366e-16,
+          "n": 5,
+          "values": [
+            0.9722222222222222,
+            0.9722222222222222,
+            0.9722222222222222,
+            0.9722222222222222,
+            0.9722222222222222
+          ]
+        },
+        {
+          "mean": 0.9727272727272727,
+          "sd": 0.04065578140908709,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            0.9545454545454546,
+            0.9090909090909091,
+            1.0
+          ]
+        },
+        {
+          "mean": 0.475,
+          "sd": 0.10458250331675945,
+          "n": 5,
+          "values": [
+            0.375,
+            0.5,
+            0.625,
+            0.5,
+            0.375
+          ]
+        },
+        {
+          "mean": 0.7714285714285714,
+          "sd": 0.07824607964359513,
+          "n": 5,
+          "values": [
+            0.7857142857142857,
+            0.8571428571428571,
+            0.6428571428571429,
+            0.7857142857142857,
+            0.7857142857142857
+          ]
+        },
+        {
+          "mean": 0.25,
+          "sd": 0.0,
+          "n": 5,
+          "values": [
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25
+          ]
+        }
+      ],
+      "f1": [
+        {
+          "mean": 0.9589041095890412,
+          "sd": 0.0,
+          "n": 5,
+          "values": [
+            0.9589041095890412,
+            0.9589041095890412,
+            0.9589041095890412,
+            0.9589041095890412,
+            0.9589041095890412
+          ]
+        },
+        {
+          "mean": 0.8594668636685443,
+          "sd": 0.0242796435796023,
+          "n": 5,
+          "values": [
+            0.8627450980392156,
+            0.8979591836734693,
+            0.8571428571428572,
+            0.8333333333333333,
+            0.846153846153846
+          ]
+        },
+        {
+          "mean": 0.563076923076923,
+          "sd": 0.07468100031481259,
+          "n": 5,
+          "values": [
+            0.5,
+            0.6153846153846154,
+            0.6666666666666666,
+            0.5333333333333333,
+            0.5
+          ]
+        },
+        {
+          "mean": 0.8422393162393164,
+          "sd": 0.05509262749148523,
+          "n": 5,
+          "values": [
+            0.8461538461538461,
+            0.888888888888889,
+            0.75,
+            0.8461538461538461,
+            0.88
+          ]
+        },
+        {
+          "mean": 0.32380952380952377,
+          "sd": 0.02129588549999797,
+          "n": 5,
+          "values": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.28571428571428575,
+            0.3333333333333333,
+            0.3333333333333333
+          ]
+        }
+      ]
+    },
+    "per_class_support": [
+      36,
+      22,
+      8,
+      14,
+      4
+    ],
+    "mean_confusion_matrix": [
+      [
+        35.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        21.4,
+        0.6,
+        0.0,
+        0.0
+      ],
+      [
+        2.0,
+        1.4,
+        3.8,
+        0.8,
+        0.0
+      ],
+      [
+        0.0,
+        2.0,
+        0.0,
+        10.8,
+        1.2
+      ],
+      [
+        0.0,
+        2.0,
+        1.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "family": {
+      "container": {
+        "n_cases": 58,
+        "exactly_correct": {
+          "mean": 56.4,
+          "sd": 0.8944271909999159,
+          "n": 5,
+          "values": [
+            57.0,
+            57.0,
+            56.0,
+            55.0,
+            57.0
+          ]
+        },
+        "wrong_inside_family": {
+          "mean": 1.0,
+          "sd": 0.0,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "wrong_outside_family": {
+          "mean": 0.6,
+          "sd": 0.8944271909999159,
+          "n": 5,
+          "values": [
+            0.0,
+            0.0,
+            1.0,
+            2.0,
+            0.0
+          ]
+        },
+        "family_level_accuracy": {
+          "mean": 0.9896551724137932,
+          "sd": 0.01542115846551578,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            0.9827586206896551,
+            0.9655172413793104,
+            1.0
+          ]
+        },
+        "conditional_within_family_accuracy": {
+          "mean": 0.98257497191254,
+          "sd": 0.000274783885186614,
+          "n": 5,
+          "values": [
+            0.9827586206896551,
+            0.9827586206896551,
+            0.9824561403508771,
+            0.9821428571428571,
+            0.9827586206896551
+          ]
+        }
+      },
+      "node": {
+        "n_cases": 26,
+        "exactly_correct": {
+          "mean": 15.6,
+          "sd": 0.8944271909999159,
+          "n": 5,
+          "values": [
+            15.0,
+            17.0,
+            15.0,
+            16.0,
+            15.0
+          ]
+        },
+        "wrong_inside_family": {
+          "mean": 3.0,
+          "sd": 0.7071067811865476,
+          "n": 5,
+          "values": [
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            2.0
+          ]
+        },
+        "wrong_outside_family": {
+          "mean": 7.4,
+          "sd": 1.1401754250991378,
+          "n": 5,
+          "values": [
+            8.0,
+            6.0,
+            7.0,
+            7.0,
+            9.0
+          ]
+        },
+        "family_level_accuracy": {
+          "mean": 0.7153846153846154,
+          "sd": 0.043852900965351466,
+          "n": 5,
+          "values": [
+            0.6923076923076923,
+            0.7692307692307693,
+            0.7307692307692307,
+            0.7307692307692307,
+            0.6538461538461539
+          ]
+        },
+        "conditional_within_family_accuracy": {
+          "mean": 0.8394530443756449,
+          "sd": 0.03351887896651884,
+          "n": 5,
+          "values": [
+            0.8333333333333334,
+            0.85,
+            0.7894736842105263,
+            0.8421052631578947,
+            0.8823529411764706
+          ]
+        }
+      }
+    }
+  },
+  "majority_control": {
+    "n_cases": 84,
+    "accuracy": 0.42857142857142855,
+    "macro_f1": 0.12,
+    "weighted_f1": 0.2571428571428571,
+    "per_class": {
+      "precision": [
+        0.42857142857142855,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recall": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "f1": [
+        0.6,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "support": [
+        36,
+        22,
+        8,
+        14,
+        4
+      ],
+      "predicted": [
+        84,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "confusion_matrix": [
+      [
+        36,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        22,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        14,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "macro_f1_excluding_node_memory": 0.15,
+    "family_diagnostic": {
+      "families": {
+        "container": {
+          "classes": [
+            "Container Hardware",
+            "Container Network"
+          ],
+          "n_cases": 58,
+          "confusion_true_rows_vs_all_predicted_columns": [
+            [
+              36,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              22,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "row_labels": [
+            "Container Hardware",
+            "Container Network"
+          ],
+          "column_labels": [
+            "Container Hardware",
+            "Container Network",
+            "Node CPU",
+            "Node Disk",
+            "Node Memory"
+          ],
+          "exactly_correct": 36,
+          "wrong_inside_family": 22,
+          "wrong_outside_family": 0,
+          "family_level_accuracy": {
+            "value": 1.0,
+            "numerator": 58,
+            "denominator": 58,
+            "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)"
+          },
+          "conditional_within_family_accuracy": {
+            "value": 0.6206896551724138,
+            "numerator": 36,
+            "denominator": 58,
+            "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy"
+          }
+        },
+        "node": {
+          "classes": [
+            "Node CPU",
+            "Node Disk",
+            "Node Memory"
+          ],
+          "n_cases": 26,
+          "confusion_true_rows_vs_all_predicted_columns": [
+            [
+              8,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              14,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "row_labels": [
+            "Node CPU",
+            "Node Disk",
+            "Node Memory"
+          ],
+          "column_labels": [
+            "Container Hardware",
+            "Container Network",
+            "Node CPU",
+            "Node Disk",
+            "Node Memory"
+          ],
+          "exactly_correct": 0,
+          "wrong_inside_family": 0,
+          "wrong_outside_family": 26,
+          "family_level_accuracy": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 26,
+            "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)"
+          },
+          "conditional_within_family_accuracy": {
+            "value": null,
+            "numerator": 0,
+            "denominator": 0,
+            "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy"
+          }
+        }
+      },
+      "family_confusion_true_rows_pred_cols": {
+        "labels": [
+          "container",
+          "node"
+        ],
+        "matrix": [
+          [
+            58,
+            0
+          ],
+          [
+            26,
+            0
+          ]
+        ]
+      },
+      "note": "Families follow the D1 category names. They do not prove a fault physically affects only pods or only VMs."
+    },
+    "per_class_names": [
+      "Container Hardware",
+      "Container Network",
+      "Node CPU",
+      "Node Disk",
+      "Node Memory"
+    ],
+    "predicted_class": 0,
+    "predicted_name": "Container Hardware"
+  }
+}

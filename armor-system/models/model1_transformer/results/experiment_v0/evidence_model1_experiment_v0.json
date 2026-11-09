@@ -1,0 +1,255 @@
+{
+  "alignment_with_xgboost": {
+    "cases": 25,
+    "minute_union_sha256": "004d53ea6f834f51ae571edb75c97ff6fd78a05b2cc98cdf7e7d87a7c9c6944d",
+    "validation_case_index_sha256": "b780bd9fb72b03f913e2821703786ec481b6a84ec794c1f21c0cdeaee5d6bbdb",
+    "windows": 150
+  },
+  "commit_reference": {
+    "git_head_at_run": "e7b508d75b88a7360ca33b31b5f363e2c26fa4a6",
+    "scheme": "no self-referential hash; source_set_sha256 covers the code and config that produced the results",
+    "source_files": [
+      {
+        "bytes": 9459,
+        "path": "armor-system/models/model1_transformer/TRAINING.md",
+        "sha256": "17f3cb2b90ba78b00ee8d80e36403ba64c8ec11a487e39dc6ffe894694ee7cc6"
+      },
+      {
+        "bytes": 4555,
+        "path": "armor-system/models/model1_transformer/adapters.py",
+        "sha256": "345f9a4c8eee3647d993467c1693491fa1b72fd65b9bafd6f72704dfd4ea946b"
+      },
+      {
+        "bytes": 10378,
+        "path": "armor-system/models/model1_transformer/case_eval.py",
+        "sha256": "fd8197d1752532b8d6a69ad1c309e8e1ee98813bd98c276746931f7defb30d97"
+      },
+      {
+        "bytes": 5020,
+        "path": "armor-system/models/model1_transformer/checkpoint.py",
+        "sha256": "213acdd19d3ce1681deab0358f958a130ed15562e9e9b3639b24500c36bf7e9f"
+      },
+      {
+        "bytes": 6457,
+        "path": "armor-system/models/model1_transformer/core.py",
+        "sha256": "5b04ea956297ee0d0eeaffb3f2ee5a8f81257f78f5f1cb5f52662e023a41d12a"
+      },
+      {
+        "bytes": 1471,
+        "path": "armor-system/models/model1_transformer/heads.py",
+        "sha256": "b467ac0fa6bd91cf105766fc0c701139244ba85d02d3873fadfab60703629630"
+      },
+      {
+        "bytes": 2977,
+        "path": "armor-system/models/model1_transformer/losses.py",
+        "sha256": "a433ccbdb27c875992fad2abffc9f2069247c97dc724d737c96cd660144cbbe0"
+      },
+      {
+        "bytes": 4276,
+        "path": "armor-system/models/model1_transformer/model.py",
+        "sha256": "c31f15eb77be68d96d04e6cbead3be89ef32ced4de76743ee64eb891510abd2a"
+      },
+      {
+        "bytes": 15878,
+        "path": "armor-system/models/model1_transformer/run_experiment.py",
+        "sha256": "d503bdd2f7bce185d4699a59da2b9d54732ef848c368b974027d4e075dcd175c"
+      },
+      {
+        "bytes": 4968,
+        "path": "armor-system/models/model1_transformer/spec.py",
+        "sha256": "bd406a872e999bea4eea9fd203d9f866d04f85f4cc41c8aaa3f752121113126a"
+      },
+      {
+        "bytes": 12309,
+        "path": "armor-system/models/model1_transformer/training.py",
+        "sha256": "425ada84e24b8dda528fda140e6977386019c475bd5dfabfbacdd0be51d24f23"
+      },
+      {
+        "bytes": 2077,
+        "path": "armor-system/models/model1_transformer/training_config_v1.json",
+        "sha256": "49c815d095c7cfd5ecbc0c04cbf842da751e0d218de0d9b2e09fc6934d307de6"
+      },
+      {
+        "bytes": 7617,
+        "path": "armor-system/models/model1_transformer/weighting.py",
+        "sha256": "11817207c21ae882711eb878fa4f6c9cfdf2f86b4c0a2b268e3dc79661b0f88a"
+      }
+    ],
+    "source_set_sha256": "7f384c6a9a9287ff36adc94b6c0b8321ed8e4e65b3d186981611bcf76f450fec"
+  },
+  "config": {
+    "file": "armor-system/models/model1_transformer/training_config_v1.json",
+    "training_config_sha256": "6f55a13b5fd26d95e3c8a6c9354a58031f9a8c912db79d64cedd02cb2a2f2527"
+  },
+  "dataset_hashes": {
+    "feature_cache_content_sha256": "87b34b0609509b8e0c98e2789e6cc995cf876e2c9639c8d36af87ac087b8997f",
+    "fit_only_scaler_file_sha256": "a9ec5981e28c506af2ff53a3a35b39ec2949949ec719c21cb20d5ea5654032cb",
+    "manifest_content_sha256": "797e2eb669feda07770544f9f70ca3c92dfea6494e83f43bf8c12b0f73ed737a",
+    "preprocessing_config_sha256": "e9aa3ccc776a8bc9940d151ba3feea3c79f502eff58e12c9946babe0aaefeb8c",
+    "spec_fingerprint": "24890dde17fc484c38662d9268cfec4646d0cde5170951f00af61b0de56a302f"
+  },
+  "evidence_name": "evidence_model1_experiment_v0",
+  "hardware": {
+    "cpu": "Apple M4",
+    "cuda_available": false,
+    "deterministic_algorithms": true,
+    "device": "cpu",
+    "numpy": "2.5.3",
+    "platform": "Darwin arm64 25.5.0",
+    "python": "3.14.4",
+    "torch": "2.14.0",
+    "torch_num_threads": 1
+  },
+  "linear_issue": "298-51",
+  "objectives_used": [
+    "s1_pretrain",
+    "s2_fault_finetune",
+    "s1_early_stopping",
+    "validation_fault_eval"
+  ],
+  "per_seed": {
+    "0": {
+      "checkpoints": {
+        "dir": "/Users/khushidonda/298A_project/checkpoints/model1_v0/seed_0",
+        "s1_pt_sha256": "507822c6c7e6c6b5f538106aade94da90d4537c5db5d3eb5e8a9088262e920ac",
+        "s2_pt_sha256": "1c9014b2bff49e01d5efa133688efc23e8ad551408e56c2514537b0068036a1a",
+        "s2_state_sha256": "5cf02ee8e660b673f7f9bd847b06f2bf403eb31bb4bf30ff66cbbbe698ca1b9a",
+        "s2_state_sha256_reloaded": "5cf02ee8e660b673f7f9bd847b06f2bf403eb31bb4bf30ff66cbbbe698ca1b9a"
+      },
+      "elapsed_seconds": 2034.3,
+      "epochs_run": {
+        "s1": 100,
+        "s2": 49
+      },
+      "git_head": "e7b508d75b88a7360ca33b31b5f363e2c26fa4a6",
+      "predictions_csv_sha256": "4a9c212f0c2a4c7ed360d46bc43c16cd74dde602eb85105725084c42f7d77a33",
+      "selected": {
+        "s1_epoch": 95,
+        "s1_val_masked_mse": 0.21520565662149393,
+        "s2_epoch": 39,
+        "s2_val_case_nll": 0.39858825113487834
+      }
+    },
+    "1": {
+      "checkpoints": {
+        "dir": "/Users/khushidonda/298A_project/checkpoints/model1_v0/seed_1",
+        "s1_pt_sha256": "85129f372d3e09bf6b545246aa4fa494a4e66a3e778c8ff665b97524e410d30e",
+        "s2_pt_sha256": "6a15dc897f95499cc24c78f0ad90d8d8f0f36380af0484217d49221cdb84a957",
+        "s2_state_sha256": "e4b0461624847e41cea8bd18106cb021a393d7e388f6358c7ba0a02820152b88",
+        "s2_state_sha256_reloaded": "e4b0461624847e41cea8bd18106cb021a393d7e388f6358c7ba0a02820152b88"
+      },
+      "elapsed_seconds": 1404.4,
+      "epochs_run": {
+        "s1": 59,
+        "s2": 54
+      },
+      "git_head": "e7b508d75b88a7360ca33b31b5f363e2c26fa4a6",
+      "predictions_csv_sha256": "74aaa806e39bd18fbd05855db0fd84ffbdea27859660b4b79ac328913b9166ef",
+      "selected": {
+        "s1_epoch": 49,
+        "s1_val_masked_mse": 0.21691173613354292,
+        "s2_epoch": 44,
+        "s2_val_case_nll": 0.17735295000744628
+      }
+    },
+    "2": {
+      "checkpoints": {
+        "dir": "/Users/khushidonda/298A_project/checkpoints/model1_v0/seed_2",
+        "s1_pt_sha256": "c422ee01a62aca9cc33f0d042f053690fbfcc5acc5542d31076eff9705fd7e7e",
+        "s2_pt_sha256": "3648c60ce26e7eb55f70564dd335cce85165c9ccd5dee0bbb09236e7a97e51e7",
+        "s2_state_sha256": "f8eb612826c24d1bc8fc08f342e8465c9b3f8c5ac9224299c401e2c5924a3d93",
+        "s2_state_sha256_reloaded": "f8eb612826c24d1bc8fc08f342e8465c9b3f8c5ac9224299c401e2c5924a3d93"
+      },
+      "elapsed_seconds": 1977.5,
+      "epochs_run": {
+        "s1": 93,
+        "s2": 54
+      },
+      "git_head": "e7b508d75b88a7360ca33b31b5f363e2c26fa4a6",
+      "predictions_csv_sha256": "2b6c7b9dc7aa71e0fc850fab9bb37a269e73a76ee6eae5ef6c057356e7d5e580",
+      "selected": {
+        "s1_epoch": 83,
+        "s1_val_masked_mse": 0.21599495240332464,
+        "s2_epoch": 44,
+        "s2_val_case_nll": 0.1837876426969577
+      }
+    },
+    "3": {
+      "checkpoints": {
+        "dir": "/Users/khushidonda/298A_project/checkpoints/model1_v0/seed_3",
+        "s1_pt_sha256": "26578ebeffc121af89c0e874dffa5afcb36ea06c0582fddced5acf24fd6d647b",
+        "s2_pt_sha256": "fa4f7166401e2bfbfee914a0a66abb7cc6e8288f390497b5b04aa03567379be4",
+        "s2_state_sha256": "ddb8a8c6fa280cea79e925b44289943c1cd92e4168f5865891bb518fc0329295",
+        "s2_state_sha256_reloaded": "ddb8a8c6fa280cea79e925b44289943c1cd92e4168f5865891bb518fc0329295"
+      },
+      "elapsed_seconds": 2087.0,
+      "epochs_run": {
+        "s1": 100,
+        "s2": 70
+      },
+      "git_head": "e7b508d75b88a7360ca33b31b5f363e2c26fa4a6",
+      "predictions_csv_sha256": "e665c177304cbd0c22c42b1a26dc13801fb3ca33ac49f2297ca49778a00828d9",
+      "selected": {
+        "s1_epoch": 92,
+        "s1_val_masked_mse": 0.21549630466670172,
+        "s2_epoch": 60,
+        "s2_val_case_nll": 0.17516975521699252
+      }
+    },
+    "4": {
+      "checkpoints": {
+        "dir": "/Users/khushidonda/298A_project/checkpoints/model1_v0/seed_4",
+        "s1_pt_sha256": "f1e71a003d47fbc3438d74215c3a59911c0e3c42f817521619c6ee7a105c60a1",
+        "s2_pt_sha256": "d4e6890c89fc89bcf1f4a3c6390d5d8aeb8c570207ad4299df652bb6bb1f75b6",
+        "s2_state_sha256": "86ead9ec9f2d5ebaa3fb93f27eb684ef3cb52d445b86964014fdb0322ad6fabe",
+        "s2_state_sha256_reloaded": "86ead9ec9f2d5ebaa3fb93f27eb684ef3cb52d445b86964014fdb0322ad6fabe"
+      },
+      "elapsed_seconds": 1974.2,
+      "epochs_run": {
+        "s1": 97,
+        "s2": 44
+      },
+      "git_head": "e7b508d75b88a7360ca33b31b5f363e2c26fa4a6",
+      "predictions_csv_sha256": "93dc0903b50281ea24eedfeda771e61bcd377179f192739fb7b3e6be2cd03fb8",
+      "selected": {
+        "s1_epoch": 87,
+        "s1_val_masked_mse": 0.21727721500201888,
+        "s2_epoch": 34,
+        "s2_val_case_nll": 0.3686102983302403
+      }
+    }
+  },
+  "reproducibility": {
+    "all_identical": true,
+    "identical": {
+      "histories.json": true,
+      "metrics.json": true,
+      "predictions.csv": true,
+      "s1_pt_sha256": true,
+      "s2_pt_sha256": true,
+      "s2_state_sha256": true,
+      "selected_epochs": true
+    },
+    "s2_state_sha256": "5cf02ee8e660b673f7f9bd847b06f2bf403eb31bb4bf30ff66cbbbe698ca1b9a",
+    "seed": 0
+  },
+  "results_file_sha256": {
+    "seed_0/histories.json": "b6ed5e8fb54faf4e9edbe44ecaf7b53cdaacc5512cd717fec104fe5a1aa293cc",
+    "seed_0/metrics.json": "74a6643b349e258b5695e36e8d9ab5b68e5d89f779b0e287ab99be1dc1a39f55",
+    "seed_0/predictions.csv": "4a9c212f0c2a4c7ed360d46bc43c16cd74dde602eb85105725084c42f7d77a33",
+    "seed_1/histories.json": "1641c6dff6c16ec1ffa446cccb675efffb815d685a619b3334de3db57d8d9191",
+    "seed_1/metrics.json": "b029358654056914b63cba49e3228defebd568b79111ac9308ac8ce535a80251",
+    "seed_1/predictions.csv": "74aaa806e39bd18fbd05855db0fd84ffbdea27859660b4b79ac328913b9166ef",
+    "seed_2/histories.json": "7e0cd67139d325dc6db19f07197e87b49613ba2a4c130f39b0f88c03579eadc4",
+    "seed_2/metrics.json": "0be6943e911727b5fb3d6a6f41742253d01630d5e1ea6d3f1b8695299717417e",
+    "seed_2/predictions.csv": "2b6c7b9dc7aa71e0fc850fab9bb37a269e73a76ee6eae5ef6c057356e7d5e580",
+    "seed_3/histories.json": "7b7f2ceea9fa19a6b55291be8fa89456f39732c52cdcefb28cb91c7a65a7bd40",
+    "seed_3/metrics.json": "e73205c1054b7b6cb33f16e7588477e3fe9912c03ae2ed08504db8c21ac42b6f",
+    "seed_3/predictions.csv": "e665c177304cbd0c22c42b1a26dc13801fb3ca33ac49f2297ca49778a00828d9",
+    "seed_4/histories.json": "16d5ec61b61639aea350164d8d02b9ae5dba75736439fb96add8898648f1b3fc",
+    "seed_4/metrics.json": "46f4297c8f5dd3a374307d4f54dd0ebf61ba4873ff2da6731439b6b7f5e02ab0",
+    "seed_4/predictions.csv": "93dc0903b50281ea24eedfeda771e61bcd377179f192739fb7b3e6be2cd03fb8",
+    "validation_summary.json": "cbe6cacb4bd0dc918804259a75b5eb2a4e0a9bfea56242d8b372f0d028920a34"
+  },
+  "scope": "first fixed five-seed Transformer experiment; validation only; no calibration fitting, no test evaluation"
+}

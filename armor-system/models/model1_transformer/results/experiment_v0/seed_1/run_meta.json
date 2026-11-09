@@ -1,0 +1,68 @@
+{
+  "alignment": {
+    "cases": 25,
+    "minute_union_sha256": "004d53ea6f834f51ae571edb75c97ff6fd78a05b2cc98cdf7e7d87a7c9c6944d",
+    "validation_case_index_sha256": "b780bd9fb72b03f913e2821703786ec481b6a84ec794c1f21c0cdeaee5d6bbdb",
+    "windows": 150
+  },
+  "checkpoints": {
+    "dir": "/Users/khushidonda/298A_project/checkpoints/model1_v0/seed_1",
+    "s1_pt_sha256": "85129f372d3e09bf6b545246aa4fa494a4e66a3e778c8ff665b97524e410d30e",
+    "s2_pt_sha256": "6a15dc897f95499cc24c78f0ad90d8d8f0f36380af0484217d49221cdb84a957",
+    "s2_state_sha256": "e4b0461624847e41cea8bd18106cb021a393d7e388f6358c7ba0a02820152b88",
+    "s2_state_sha256_reloaded": "e4b0461624847e41cea8bd18106cb021a393d7e388f6358c7ba0a02820152b88"
+  },
+  "class_weights": [
+    0.5333333333333333,
+    0.6068965517241379,
+    1.9555555555555555,
+    1.353846153846154,
+    4.4
+  ],
+  "elapsed_seconds": 1404.4,
+  "epochs_run": {
+    "s1": 59,
+    "s2": 54
+  },
+  "hardware": {
+    "cpu": "Apple M4",
+    "cuda_available": false,
+    "deterministic_algorithms": true,
+    "device": "cpu",
+    "numpy": "2.5.3",
+    "platform": "Darwin arm64 25.5.0",
+    "python": "3.14.4",
+    "torch": "2.14.0",
+    "torch_num_threads": 1
+  },
+  "objectives_used": [
+    "s1_pretrain",
+    "s2_fault_finetune",
+    "s1_early_stopping",
+    "validation_fault_eval"
+  ],
+  "predictions_csv_sha256": "74aaa806e39bd18fbd05855db0fd84ffbdea27859660b4b79ac328913b9166ef",
+  "provenance": {
+    "feature_cache_content_sha256": "87b34b0609509b8e0c98e2789e6cc995cf876e2c9639c8d36af87ac087b8997f",
+    "fit_only_scaler_file_sha256": "a9ec5981e28c506af2ff53a3a35b39ec2949949ec719c21cb20d5ea5654032cb",
+    "git_head": "e7b508d75b88a7360ca33b31b5f363e2c26fa4a6",
+    "manifest_content_sha256": "797e2eb669feda07770544f9f70ca3c92dfea6494e83f43bf8c12b0f73ed737a",
+    "numpy": "2.5.3",
+    "preprocessing_config_sha256": "e9aa3ccc776a8bc9940d151ba3feea3c79f502eff58e12c9946babe0aaefeb8c",
+    "python": "3.14.4",
+    "spec_fingerprint": "24890dde17fc484c38662d9268cfec4646d0cde5170951f00af61b0de56a302f",
+    "torch": "2.14.0",
+    "train_config_sha256": "6f55a13b5fd26d95e3c8a6c9354a58031f9a8c912db79d64cedd02cb2a2f2527"
+  },
+  "seed": 1,
+  "selected": {
+    "s1_epoch": 49,
+    "s1_val_masked_mse": 0.21691173613354292,
+    "s2_epoch": 44,
+    "s2_val_case_nll": 0.17735295000744628
+  },
+  "stopped_early": {
+    "s1": true,
+    "s2": true
+  }
+}

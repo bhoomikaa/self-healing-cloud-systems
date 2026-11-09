@@ -1,0 +1,216 @@
+{
+  "cases": {
+    "fit": 88,
+    "validation": 25,
+    "calibration_used": 0,
+    "held_out_used": 0
+  },
+  "feature_matrix_shapes": {
+    "fit": [
+      88,
+      520
+    ],
+    "validation": [
+      25,
+      520
+    ]
+  },
+  "feature_names_sha256": "5cb859f6d7bd354cd07e66e30817479837fee3ff7be7d091b71f65a2acb33800",
+  "first_features": [
+    "vm|system.cpu.iowait|mean",
+    "vm|system.cpu.iowait|std",
+    "vm|system.cpu.iowait|max_abs",
+    "vm|system.cpu.iowait|delta",
+    "vm|system.cpu.pct_usage|mean",
+    "vm|system.cpu.pct_usage|std",
+    "vm|system.cpu.pct_usage|max_abs",
+    "vm|system.cpu.pct_usage|delta"
+  ],
+  "n_features": 520,
+  "array_sha256": {
+    "X_fit": "c76a6d2692813aff3375624c6e6a1a890684d7ad08886c53b3f6b446b8f690d3",
+    "y_fit": "5671650beb72d2aa8b9eecc1e893ffe36111defedd5b549ace5b31531d4d4a46",
+    "X_validation": "ec2f359395064693ba6f1e956fe840fea77d3f56c1b91f3fb53783309fc15a48",
+    "y_validation": "5354fc528b819529ca9f0e834ff0255df081963cb1ca62e67159ea96afe69b3b",
+    "fit_case_index": "cd323b4fa38c21af581d6d26e89ed9dd89bb260593e5bdf7742a5e10aed6d2e6",
+    "validation_case_index": "b780bd9fb72b03f913e2821703786ec481b6a84ec794c1f21c0cdeaee5d6bbdb"
+  },
+  "fit_case_index": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87
+  ],
+  "validation_case_index": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125
+  ],
+  "class_order": [
+    "Container Hardware",
+    "Container Network",
+    "Node CPU",
+    "Node Disk",
+    "Node Memory"
+  ],
+  "class_distribution": {
+    "fit": [
+      33,
+      29,
+      9,
+      13,
+      4
+    ],
+    "validation": [
+      10,
+      6,
+      3,
+      5,
+      1
+    ]
+  },
+  "class_weights_from_fit_cases": [
+    0.5333333333333333,
+    0.6068965517241379,
+    1.9555555555555555,
+    1.353846153846154,
+    4.4
+  ],
+  "windows_per_case": {
+    "fit": [
+      5,
+      6
+    ],
+    "validation": [
+      6,
+      6
+    ]
+  },
+  "distinct_minutes_per_case": {
+    "fit": [
+      11,
+      12
+    ],
+    "validation": [
+      12,
+      12
+    ]
+  },
+  "incident_groups": {
+    "fit": 75,
+    "validation": 23,
+    "shared": 0
+  },
+  "inputs": {
+    "calibration_manifest_content_sha256": "797e2eb669feda07770544f9f70ca3c92dfea6494e83f43bf8c12b0f73ed737a",
+    "fit_only_scaler_file_sha256": "a9ec5981e28c506af2ff53a3a35b39ec2949949ec719c21cb20d5ea5654032cb",
+    "feature_cache_content_sha256": "87b34b0609509b8e0c98e2789e6cc995cf876e2c9639c8d36af87ac087b8997f",
+    "outer_split_content_sha256": "32ff03fcffca09f3d3953777a020514b4af9c882bc85e3dc1693e282607638ac"
+  }
+}

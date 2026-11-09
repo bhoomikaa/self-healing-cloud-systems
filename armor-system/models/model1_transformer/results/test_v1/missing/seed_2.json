@@ -1,0 +1,7129 @@
+{
+ "armor": {
+  "drop_log": {
+   "dropped": [
+    "log"
+   ],
+   "hides_all_vms": false,
+   "models": {
+    "official": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 13,
+       "FP": 13,
+       "TP": 85,
+       "armor_false_positive_intervals": 13,
+       "coverage_padded_300s": 0.6251743375174338,
+       "f1": 0.8673,
+       "n_alert_minutes": 452,
+       "n_intervals": 73,
+       "normal_alarm_rate": 0.09785714285714285,
+       "precision": 0.8673,
+       "recall": 0.8673,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 14,
+       "FP": 14,
+       "TP": 84,
+       "armor_false_positive_intervals": 14,
+       "coverage_padded_300s": 0.6140167364016736,
+       "f1": 0.8571,
+       "n_alert_minutes": 431,
+       "n_intervals": 74,
+       "normal_alarm_rate": 0.09142857142857143,
+       "precision": 0.8571,
+       "recall": 0.8571,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 77,
+       "FP": 0,
+       "TP": 21,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.09902370990237098,
+       "f1": 0.353,
+       "n_alert_minutes": 78,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 1.0,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 89,
+       "FP": 0,
+       "TP": 9,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.04428172942817294,
+       "f1": 0.1682,
+       "n_alert_minutes": 44,
+       "n_intervals": 9,
+       "normal_alarm_rate": 0.004285714285714286,
+       "precision": 1.0,
+       "recall": 0.0918,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 75,
+       "FP": 1,
+       "TP": 23,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.11401673640167365,
+       "f1": 0.3771,
+       "n_alert_minutes": 82,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.9583,
+       "recall": 0.2347,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 86,
+       "FP": 0,
+       "TP": 12,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.05683403068340307,
+       "f1": 0.2181,
+       "n_alert_minutes": 51,
+       "n_intervals": 12,
+       "normal_alarm_rate": 0.005,
+       "precision": 1.0,
+       "recall": 0.1224,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 40,
+       "FP": 14,
+       "TP": 58,
+       "armor_false_positive_intervals": 14,
+       "coverage_padded_300s": 0.3999302649930265,
+       "f1": 0.6823,
+       "n_alert_minutes": 417,
+       "n_intervals": 62,
+       "normal_alarm_rate": 0.05714285714285714,
+       "precision": 0.8056,
+       "recall": 0.5918,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 46,
+       "FP": 11,
+       "TP": 52,
+       "armor_false_positive_intervals": 11,
+       "coverage_padded_300s": 0.33577405857740583,
+       "f1": 0.646,
+       "n_alert_minutes": 333,
+       "n_intervals": 55,
+       "normal_alarm_rate": 0.039285714285714285,
+       "precision": 0.8254,
+       "recall": 0.5306,
+       "scored": true
+      }
+     }
+    },
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 14,
+       "FP": 21,
+       "TP": 70,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.6251743375174338,
+       "f1": 0.8,
+       "n_alert_minutes": 452,
+       "n_intervals": 73,
+       "normal_alarm_rate": 0.09785714285714285,
+       "precision": 0.7692,
+       "recall": 0.8333,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 15,
+       "FP": 22,
+       "TP": 69,
+       "armor_false_positive_intervals": 22,
+       "coverage_padded_300s": 0.6140167364016736,
+       "f1": 0.7885,
+       "n_alert_minutes": 431,
+       "n_intervals": 74,
+       "normal_alarm_rate": 0.09142857142857143,
+       "precision": 0.7582,
+       "recall": 0.8214,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 2,
+       "TP": 18,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09902370990237098,
+       "f1": 0.3462,
+       "n_alert_minutes": 78,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.9,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 75,
+       "FP": 0,
+       "TP": 9,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.04428172942817294,
+       "f1": 0.1935,
+       "n_alert_minutes": 44,
+       "n_intervals": 9,
+       "normal_alarm_rate": 0.004285714285714286,
+       "precision": 1.0,
+       "recall": 0.1071,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 64,
+       "FP": 4,
+       "TP": 20,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.11401673640167365,
+       "f1": 0.3704,
+       "n_alert_minutes": 82,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.8333,
+       "recall": 0.2381,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 73,
+       "FP": 1,
+       "TP": 11,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.05683403068340307,
+       "f1": 0.2292,
+       "n_alert_minutes": 51,
+       "n_intervals": 12,
+       "normal_alarm_rate": 0.005,
+       "precision": 0.9167,
+       "recall": 0.131,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 29,
+       "FP": 16,
+       "TP": 55,
+       "armor_false_positive_intervals": 16,
+       "coverage_padded_300s": 0.3999302649930265,
+       "f1": 0.7097,
+       "n_alert_minutes": 417,
+       "n_intervals": 62,
+       "normal_alarm_rate": 0.05714285714285714,
+       "precision": 0.7746,
+       "recall": 0.6548,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 34,
+       "FP": 12,
+       "TP": 50,
+       "armor_false_positive_intervals": 12,
+       "coverage_padded_300s": 0.33577405857740583,
+       "f1": 0.6849,
+       "n_alert_minutes": 333,
+       "n_intervals": 55,
+       "normal_alarm_rate": 0.039285714285714285,
+       "precision": 0.8065,
+       "recall": 0.5952,
+       "scored": true
+      }
+     }
+    }
+   }
+  },
+  "drop_log+metric": {
+   "dropped": [
+    "log",
+    "metric"
+   ],
+   "hides_all_vms": true,
+   "models": {
+    "official": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 48,
+       "FP": 9,
+       "TP": 50,
+       "armor_false_positive_intervals": 9,
+       "coverage_padded_300s": 0.36854951185495116,
+       "f1": 0.637,
+       "n_alert_minutes": 280,
+       "n_intervals": 51,
+       "normal_alarm_rate": 0.056428571428571425,
+       "precision": 0.8475,
+       "recall": 0.5102,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 40,
+       "FP": 10,
+       "TP": 58,
+       "armor_false_positive_intervals": 10,
+       "coverage_padded_300s": 0.4490934449093445,
+       "f1": 0.6988,
+       "n_alert_minutes": 330,
+       "n_intervals": 59,
+       "normal_alarm_rate": 0.07214285714285715,
+       "precision": 0.8529,
+       "recall": 0.5918,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 87,
+       "FP": 0,
+       "TP": 11,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.05822873082287308,
+       "f1": 0.2018,
+       "n_alert_minutes": 57,
+       "n_intervals": 11,
+       "normal_alarm_rate": 0.005,
+       "precision": 1.0,
+       "recall": 0.1122,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 86,
+       "FP": 1,
+       "TP": 12,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.0693863319386332,
+       "f1": 0.2161,
+       "n_alert_minutes": 65,
+       "n_intervals": 13,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.9231,
+       "recall": 0.1224,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 86,
+       "FP": 0,
+       "TP": 12,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.06241283124128313,
+       "f1": 0.2181,
+       "n_alert_minutes": 52,
+       "n_intervals": 12,
+       "normal_alarm_rate": 0.002142857142857143,
+       "precision": 1.0,
+       "recall": 0.1224,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 85,
+       "FP": 0,
+       "TP": 13,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.06729428172942817,
+       "f1": 0.2343,
+       "n_alert_minutes": 62,
+       "n_intervals": 13,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 1.0,
+       "recall": 0.1327,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 85,
+       "FP": 0,
+       "TP": 13,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.06624825662482567,
+       "f1": 0.2343,
+       "n_alert_minutes": 69,
+       "n_intervals": 12,
+       "normal_alarm_rate": 0.0014285714285714286,
+       "precision": 1.0,
+       "recall": 0.1327,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 37,
+       "FP": 19,
+       "TP": 61,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.4783821478382148,
+       "f1": 0.6854,
+       "n_alert_minutes": 564,
+       "n_intervals": 68,
+       "normal_alarm_rate": 0.12428571428571429,
+       "precision": 0.7625,
+       "recall": 0.6224,
+       "scored": true
+      }
+     }
+    },
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 44,
+       "FP": 15,
+       "TP": 40,
+       "armor_false_positive_intervals": 15,
+       "coverage_padded_300s": 0.36854951185495116,
+       "f1": 0.5756,
+       "n_alert_minutes": 280,
+       "n_intervals": 51,
+       "normal_alarm_rate": 0.056428571428571425,
+       "precision": 0.7273,
+       "recall": 0.4762,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 37,
+       "FP": 18,
+       "TP": 47,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.4490934449093445,
+       "f1": 0.6309,
+       "n_alert_minutes": 330,
+       "n_intervals": 59,
+       "normal_alarm_rate": 0.07214285714285715,
+       "precision": 0.7231,
+       "recall": 0.5595,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 74,
+       "FP": 1,
+       "TP": 10,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.05822873082287308,
+       "f1": 0.2105,
+       "n_alert_minutes": 57,
+       "n_intervals": 11,
+       "normal_alarm_rate": 0.005,
+       "precision": 0.9091,
+       "recall": 0.119,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 73,
+       "FP": 2,
+       "TP": 11,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.0693863319386332,
+       "f1": 0.2269,
+       "n_alert_minutes": 65,
+       "n_intervals": 13,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.8462,
+       "recall": 0.131,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 73,
+       "FP": 1,
+       "TP": 11,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.06241283124128313,
+       "f1": 0.2292,
+       "n_alert_minutes": 52,
+       "n_intervals": 12,
+       "normal_alarm_rate": 0.002142857142857143,
+       "precision": 0.9167,
+       "recall": 0.131,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 73,
+       "FP": 2,
+       "TP": 11,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.06729428172942817,
+       "f1": 0.2269,
+       "n_alert_minutes": 62,
+       "n_intervals": 13,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.8462,
+       "recall": 0.131,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 72,
+       "FP": 1,
+       "TP": 12,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.06624825662482567,
+       "f1": 0.2475,
+       "n_alert_minutes": 69,
+       "n_intervals": 12,
+       "normal_alarm_rate": 0.0014285714285714286,
+       "precision": 0.9231,
+       "recall": 0.1429,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 36,
+       "FP": 29,
+       "TP": 48,
+       "armor_false_positive_intervals": 29,
+       "coverage_padded_300s": 0.4783821478382148,
+       "f1": 0.5963,
+       "n_alert_minutes": 564,
+       "n_intervals": 68,
+       "normal_alarm_rate": 0.12428571428571429,
+       "precision": 0.6234,
+       "recall": 0.5714,
+       "scored": true
+      }
+     }
+    }
+   }
+  },
+  "drop_log+trace": {
+   "dropped": [
+    "log",
+    "trace"
+   ],
+   "hides_all_vms": false,
+   "models": {
+    "official": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 15,
+       "FP": 11,
+       "TP": 83,
+       "armor_false_positive_intervals": 11,
+       "coverage_padded_300s": 0.6147140864714087,
+       "f1": 0.8646,
+       "n_alert_minutes": 458,
+       "n_intervals": 68,
+       "normal_alarm_rate": 0.10214285714285715,
+       "precision": 0.883,
+       "recall": 0.8469,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 22,
+       "FP": 10,
+       "TP": 76,
+       "armor_false_positive_intervals": 10,
+       "coverage_padded_300s": 0.5240585774058577,
+       "f1": 0.8261,
+       "n_alert_minutes": 373,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.07785714285714286,
+       "precision": 0.8837,
+       "recall": 0.7755,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 74,
+       "FP": 1,
+       "TP": 24,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.12377963737796374,
+       "f1": 0.3902,
+       "n_alert_minutes": 85,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.012142857142857143,
+       "precision": 0.96,
+       "recall": 0.2449,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 85,
+       "FP": 0,
+       "TP": 13,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.06101813110181311,
+       "f1": 0.2343,
+       "n_alert_minutes": 49,
+       "n_intervals": 13,
+       "normal_alarm_rate": 0.004285714285714286,
+       "precision": 1.0,
+       "recall": 0.1327,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 76,
+       "FP": 2,
+       "TP": 22,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.1192468619246862,
+       "f1": 0.3607,
+       "n_alert_minutes": 92,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.013571428571428571,
+       "precision": 0.9167,
+       "recall": 0.2245,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 86,
+       "FP": 0,
+       "TP": 12,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.058577405857740586,
+       "f1": 0.2181,
+       "n_alert_minutes": 55,
+       "n_intervals": 12,
+       "normal_alarm_rate": 0.005,
+       "precision": 1.0,
+       "recall": 0.1224,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 60,
+       "FP": 11,
+       "TP": 38,
+       "armor_false_positive_intervals": 11,
+       "coverage_padded_300s": 0.24302649930264994,
+       "f1": 0.517,
+       "n_alert_minutes": 243,
+       "n_intervals": 43,
+       "normal_alarm_rate": 0.03428571428571429,
+       "precision": 0.7755,
+       "recall": 0.3878,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 50,
+       "FP": 9,
+       "TP": 48,
+       "armor_false_positive_intervals": 9,
+       "coverage_padded_300s": 0.3078800557880056,
+       "f1": 0.6194,
+       "n_alert_minutes": 334,
+       "n_intervals": 50,
+       "normal_alarm_rate": 0.06285714285714286,
+       "precision": 0.8421,
+       "recall": 0.4898,
+       "scored": true
+      }
+     }
+    },
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 15,
+       "FP": 20,
+       "TP": 69,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.6147140864714087,
+       "f1": 0.7977,
+       "n_alert_minutes": 458,
+       "n_intervals": 68,
+       "normal_alarm_rate": 0.10214285714285715,
+       "precision": 0.7753,
+       "recall": 0.8214,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 21,
+       "FP": 17,
+       "TP": 63,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.5240585774058577,
+       "f1": 0.7683,
+       "n_alert_minutes": 373,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.07785714285714286,
+       "precision": 0.7875,
+       "recall": 0.75,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 64,
+       "FP": 4,
+       "TP": 20,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.12377963737796374,
+       "f1": 0.3704,
+       "n_alert_minutes": 85,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.012142857142857143,
+       "precision": 0.8333,
+       "recall": 0.2381,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 71,
+       "FP": 0,
+       "TP": 13,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.06101813110181311,
+       "f1": 0.2681,
+       "n_alert_minutes": 49,
+       "n_intervals": 13,
+       "normal_alarm_rate": 0.004285714285714286,
+       "precision": 1.0,
+       "recall": 0.1548,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 5,
+       "TP": 18,
+       "armor_false_positive_intervals": 5,
+       "coverage_padded_300s": 0.1192468619246862,
+       "f1": 0.3365,
+       "n_alert_minutes": 92,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.013571428571428571,
+       "precision": 0.7826,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 72,
+       "FP": 0,
+       "TP": 12,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.058577405857740586,
+       "f1": 0.2501,
+       "n_alert_minutes": 55,
+       "n_intervals": 12,
+       "normal_alarm_rate": 0.005,
+       "precision": 1.0,
+       "recall": 0.1429,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 51,
+       "FP": 14,
+       "TP": 33,
+       "armor_false_positive_intervals": 14,
+       "coverage_padded_300s": 0.24302649930264994,
+       "f1": 0.5038,
+       "n_alert_minutes": 243,
+       "n_intervals": 43,
+       "normal_alarm_rate": 0.03428571428571429,
+       "precision": 0.7021,
+       "recall": 0.3929,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 44,
+       "FP": 15,
+       "TP": 40,
+       "armor_false_positive_intervals": 15,
+       "coverage_padded_300s": 0.3078800557880056,
+       "f1": 0.5756,
+       "n_alert_minutes": 334,
+       "n_intervals": 50,
+       "normal_alarm_rate": 0.06285714285714286,
+       "precision": 0.7273,
+       "recall": 0.4762,
+       "scored": true
+      }
+     }
+    }
+   }
+  },
+  "drop_metric": {
+   "dropped": [
+    "metric"
+   ],
+   "hides_all_vms": true,
+   "models": {
+    "official": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 58,
+       "FP": 2,
+       "TP": 40,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.2590655509065551,
+       "f1": 0.5715,
+       "n_alert_minutes": 206,
+       "n_intervals": 41,
+       "normal_alarm_rate": 0.035,
+       "precision": 0.9524,
+       "recall": 0.4082,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 40,
+       "FP": 8,
+       "TP": 58,
+       "armor_false_positive_intervals": 8,
+       "coverage_padded_300s": 0.42747559274755925,
+       "f1": 0.7073,
+       "n_alert_minutes": 311,
+       "n_intervals": 57,
+       "normal_alarm_rate": 0.06642857142857143,
+       "precision": 0.8788,
+       "recall": 0.5918,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 84,
+       "FP": 0,
+       "TP": 14,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.07357043235704323,
+       "f1": 0.2501,
+       "n_alert_minutes": 64,
+       "n_intervals": 14,
+       "normal_alarm_rate": 0.002142857142857143,
+       "precision": 1.0,
+       "recall": 0.1429,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 79,
+       "FP": 2,
+       "TP": 19,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.12308228730822873,
+       "f1": 0.3194,
+       "n_alert_minutes": 125,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.015,
+       "precision": 0.9048,
+       "recall": 0.1939,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 84,
+       "FP": 0,
+       "TP": 14,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.07357043235704323,
+       "f1": 0.2501,
+       "n_alert_minutes": 61,
+       "n_intervals": 14,
+       "normal_alarm_rate": 0.002142857142857143,
+       "precision": 1.0,
+       "recall": 0.1429,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 77,
+       "FP": 3,
+       "TP": 21,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.13842398884239887,
+       "f1": 0.3443,
+       "n_alert_minutes": 135,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.017142857142857144,
+       "precision": 0.875,
+       "recall": 0.2143,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 83,
+       "FP": 0,
+       "TP": 15,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.08089260808926081,
+       "f1": 0.2655,
+       "n_alert_minutes": 82,
+       "n_intervals": 15,
+       "normal_alarm_rate": 0.0014285714285714286,
+       "precision": 1.0,
+       "recall": 0.1531,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 47,
+       "FP": 12,
+       "TP": 51,
+       "armor_false_positive_intervals": 12,
+       "coverage_padded_300s": 0.3601813110181311,
+       "f1": 0.6335,
+       "n_alert_minutes": 409,
+       "n_intervals": 57,
+       "normal_alarm_rate": 0.065,
+       "precision": 0.8095,
+       "recall": 0.5204,
+       "scored": true
+      }
+     }
+    },
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 51,
+       "FP": 8,
+       "TP": 33,
+       "armor_false_positive_intervals": 8,
+       "coverage_padded_300s": 0.2590655509065551,
+       "f1": 0.528,
+       "n_alert_minutes": 206,
+       "n_intervals": 41,
+       "normal_alarm_rate": 0.035,
+       "precision": 0.8049,
+       "recall": 0.3929,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 38,
+       "FP": 17,
+       "TP": 46,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.42747559274755925,
+       "f1": 0.6259,
+       "n_alert_minutes": 311,
+       "n_intervals": 57,
+       "normal_alarm_rate": 0.06642857142857143,
+       "precision": 0.7302,
+       "recall": 0.5476,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 71,
+       "FP": 1,
+       "TP": 13,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.07357043235704323,
+       "f1": 0.2654,
+       "n_alert_minutes": 64,
+       "n_intervals": 14,
+       "normal_alarm_rate": 0.002142857142857143,
+       "precision": 0.9286,
+       "recall": 0.1548,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 67,
+       "FP": 4,
+       "TP": 17,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.12308228730822873,
+       "f1": 0.3238,
+       "n_alert_minutes": 125,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.015,
+       "precision": 0.8095,
+       "recall": 0.2024,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 71,
+       "FP": 1,
+       "TP": 13,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.07357043235704323,
+       "f1": 0.2654,
+       "n_alert_minutes": 61,
+       "n_intervals": 14,
+       "normal_alarm_rate": 0.002142857142857143,
+       "precision": 0.9286,
+       "recall": 0.1548,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 65,
+       "FP": 5,
+       "TP": 19,
+       "armor_false_positive_intervals": 5,
+       "coverage_padded_300s": 0.13842398884239887,
+       "f1": 0.3519,
+       "n_alert_minutes": 135,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.017142857142857144,
+       "precision": 0.7917,
+       "recall": 0.2262,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 70,
+       "FP": 1,
+       "TP": 14,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.08089260808926081,
+       "f1": 0.2829,
+       "n_alert_minutes": 82,
+       "n_intervals": 15,
+       "normal_alarm_rate": 0.0014285714285714286,
+       "precision": 0.9333,
+       "recall": 0.1667,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 42,
+       "FP": 21,
+       "TP": 42,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.3601813110181311,
+       "f1": 0.5714,
+       "n_alert_minutes": 409,
+       "n_intervals": 57,
+       "normal_alarm_rate": 0.065,
+       "precision": 0.6667,
+       "recall": 0.5,
+       "scored": true
+      }
+     }
+    }
+   }
+  },
+  "drop_metric+trace": {
+   "dropped": [
+    "metric",
+    "trace"
+   ],
+   "hides_all_vms": true,
+   "models": {
+    "official": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 76,
+       "FP": 0,
+       "TP": 22,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.1206415620641562,
+       "f1": 0.3667,
+       "n_alert_minutes": 115,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.01,
+       "precision": 1.0,
+       "recall": 0.2245,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 58,
+       "FP": 12,
+       "TP": 40,
+       "armor_false_positive_intervals": 12,
+       "coverage_padded_300s": 0.3594839609483961,
+       "f1": 0.5334,
+       "n_alert_minutes": 263,
+       "n_intervals": 42,
+       "normal_alarm_rate": 0.06428571428571428,
+       "precision": 0.7692,
+       "recall": 0.4082,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 87,
+       "FP": 0,
+       "TP": 11,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.053347280334728034,
+       "f1": 0.2018,
+       "n_alert_minutes": 44,
+       "n_intervals": 11,
+       "normal_alarm_rate": 0.0007142857142857143,
+       "precision": 1.0,
+       "recall": 0.1122,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 84,
+       "FP": 0,
+       "TP": 14,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.07531380753138076,
+       "f1": 0.2501,
+       "n_alert_minutes": 75,
+       "n_intervals": 14,
+       "normal_alarm_rate": 0.0014285714285714286,
+       "precision": 1.0,
+       "recall": 0.1429,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 86,
+       "FP": 0,
+       "TP": 12,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.058577405857740586,
+       "f1": 0.2181,
+       "n_alert_minutes": 48,
+       "n_intervals": 12,
+       "normal_alarm_rate": 0.0014285714285714286,
+       "precision": 1.0,
+       "recall": 0.1224,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 82,
+       "FP": 0,
+       "TP": 16,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.0896094839609484,
+       "f1": 0.2808,
+       "n_alert_minutes": 91,
+       "n_intervals": 16,
+       "normal_alarm_rate": 0.005,
+       "precision": 1.0,
+       "recall": 0.1633,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 91,
+       "FP": 0,
+       "TP": 7,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.03765690376569038,
+       "f1": 0.1333,
+       "n_alert_minutes": 38,
+       "n_intervals": 7,
+       "normal_alarm_rate": 0.0,
+       "precision": 1.0,
+       "recall": 0.0714,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 77,
+       "FP": 4,
+       "TP": 21,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.12622036262203626,
+       "f1": 0.3415,
+       "n_alert_minutes": 118,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.84,
+       "recall": 0.2143,
+       "scored": true
+      }
+     }
+    },
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 63,
+       "FP": 1,
+       "TP": 21,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.1206415620641562,
+       "f1": 0.3962,
+       "n_alert_minutes": 115,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.01,
+       "precision": 0.9545,
+       "recall": 0.25,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 48,
+       "FP": 13,
+       "TP": 36,
+       "armor_false_positive_intervals": 13,
+       "coverage_padded_300s": 0.3594839609483961,
+       "f1": 0.5414,
+       "n_alert_minutes": 263,
+       "n_intervals": 42,
+       "normal_alarm_rate": 0.06428571428571428,
+       "precision": 0.7347,
+       "recall": 0.4286,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 73,
+       "FP": 0,
+       "TP": 11,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.053347280334728034,
+       "f1": 0.2317,
+       "n_alert_minutes": 44,
+       "n_intervals": 11,
+       "normal_alarm_rate": 0.0007142857142857143,
+       "precision": 1.0,
+       "recall": 0.131,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 71,
+       "FP": 1,
+       "TP": 13,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.07531380753138076,
+       "f1": 0.2654,
+       "n_alert_minutes": 75,
+       "n_intervals": 14,
+       "normal_alarm_rate": 0.0014285714285714286,
+       "precision": 0.9286,
+       "recall": 0.1548,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 73,
+       "FP": 1,
+       "TP": 11,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.058577405857740586,
+       "f1": 0.2292,
+       "n_alert_minutes": 48,
+       "n_intervals": 12,
+       "normal_alarm_rate": 0.0014285714285714286,
+       "precision": 0.9167,
+       "recall": 0.131,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 69,
+       "FP": 1,
+       "TP": 15,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.0896094839609484,
+       "f1": 0.3,
+       "n_alert_minutes": 91,
+       "n_intervals": 16,
+       "normal_alarm_rate": 0.005,
+       "precision": 0.9375,
+       "recall": 0.1786,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 77,
+       "FP": 0,
+       "TP": 7,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.03765690376569038,
+       "f1": 0.1538,
+       "n_alert_minutes": 38,
+       "n_intervals": 7,
+       "normal_alarm_rate": 0.0,
+       "precision": 1.0,
+       "recall": 0.0833,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 64,
+       "FP": 5,
+       "TP": 20,
+       "armor_false_positive_intervals": 5,
+       "coverage_padded_300s": 0.12622036262203626,
+       "f1": 0.367,
+       "n_alert_minutes": 118,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.8,
+       "recall": 0.2381,
+       "scored": true
+      }
+     }
+    }
+   }
+  },
+  "drop_trace": {
+   "dropped": [
+    "trace"
+   ],
+   "hides_all_vms": false,
+   "models": {
+    "official": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 14,
+       "FP": 10,
+       "TP": 84,
+       "armor_false_positive_intervals": 10,
+       "coverage_padded_300s": 0.592747559274756,
+       "f1": 0.875,
+       "n_alert_minutes": 439,
+       "n_intervals": 68,
+       "normal_alarm_rate": 0.09285714285714286,
+       "precision": 0.8936,
+       "recall": 0.8571,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 21,
+       "FP": 10,
+       "TP": 77,
+       "armor_false_positive_intervals": 10,
+       "coverage_padded_300s": 0.5338214783821479,
+       "f1": 0.8324,
+       "n_alert_minutes": 392,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.08071428571428571,
+       "precision": 0.8851,
+       "recall": 0.7857,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 79,
+       "FP": 0,
+       "TP": 19,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.09205020920502092,
+       "f1": 0.3248,
+       "n_alert_minutes": 78,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 1.0,
+       "recall": 0.1939,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 86,
+       "FP": 0,
+       "TP": 12,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.05509065550906555,
+       "f1": 0.2181,
+       "n_alert_minutes": 53,
+       "n_intervals": 12,
+       "normal_alarm_rate": 0.004285714285714286,
+       "precision": 1.0,
+       "recall": 0.1224,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 79,
+       "FP": 1,
+       "TP": 19,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.09728033472803348,
+       "f1": 0.3221,
+       "n_alert_minutes": 83,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.95,
+       "recall": 0.1939,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 80,
+       "FP": 1,
+       "TP": 18,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.08926080892608089,
+       "f1": 0.3077,
+       "n_alert_minutes": 67,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.9474,
+       "recall": 0.1837,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 47,
+       "FP": 9,
+       "TP": 51,
+       "armor_false_positive_intervals": 9,
+       "coverage_padded_300s": 0.3009065550906555,
+       "f1": 0.6456,
+       "n_alert_minutes": 281,
+       "n_intervals": 55,
+       "normal_alarm_rate": 0.030714285714285715,
+       "precision": 0.85,
+       "recall": 0.5204,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 40,
+       "FP": 10,
+       "TP": 58,
+       "armor_false_positive_intervals": 10,
+       "coverage_padded_300s": 0.353207810320781,
+       "f1": 0.6988,
+       "n_alert_minutes": 376,
+       "n_intervals": 59,
+       "normal_alarm_rate": 0.04928571428571429,
+       "precision": 0.8529,
+       "recall": 0.5918,
+       "scored": true
+      }
+     }
+    },
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 15,
+       "FP": 18,
+       "TP": 69,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.592747559274756,
+       "f1": 0.807,
+       "n_alert_minutes": 439,
+       "n_intervals": 68,
+       "normal_alarm_rate": 0.09285714285714286,
+       "precision": 0.7931,
+       "recall": 0.8214,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 19,
+       "FP": 17,
+       "TP": 65,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.5338214783821479,
+       "f1": 0.7831,
+       "n_alert_minutes": 392,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.08071428571428571,
+       "precision": 0.7927,
+       "recall": 0.7738,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09205020920502092,
+       "f1": 0.3138,
+       "n_alert_minutes": 78,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 72,
+       "FP": 0,
+       "TP": 12,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.05509065550906555,
+       "f1": 0.2501,
+       "n_alert_minutes": 53,
+       "n_intervals": 12,
+       "normal_alarm_rate": 0.004285714285714286,
+       "precision": 1.0,
+       "recall": 0.1429,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 67,
+       "FP": 3,
+       "TP": 17,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.09728033472803348,
+       "f1": 0.3269,
+       "n_alert_minutes": 83,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.85,
+       "recall": 0.2024,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 68,
+       "FP": 3,
+       "TP": 16,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.08926080892608089,
+       "f1": 0.3107,
+       "n_alert_minutes": 67,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.8421,
+       "recall": 0.1905,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 40,
+       "FP": 15,
+       "TP": 44,
+       "armor_false_positive_intervals": 15,
+       "coverage_padded_300s": 0.3009065550906555,
+       "f1": 0.6154,
+       "n_alert_minutes": 281,
+       "n_intervals": 55,
+       "normal_alarm_rate": 0.030714285714285715,
+       "precision": 0.7458,
+       "recall": 0.5238,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 34,
+       "FP": 16,
+       "TP": 50,
+       "armor_false_positive_intervals": 16,
+       "coverage_padded_300s": 0.353207810320781,
+       "f1": 0.6667,
+       "n_alert_minutes": 376,
+       "n_intervals": 59,
+       "normal_alarm_rate": 0.04928571428571429,
+       "precision": 0.7576,
+       "recall": 0.5952,
+       "scored": true
+      }
+     }
+    }
+   }
+  },
+  "full": {
+   "dropped": [],
+   "hides_all_vms": false,
+   "models": {
+    "official": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 15,
+       "FP": 12,
+       "TP": 83,
+       "armor_false_positive_intervals": 12,
+       "coverage_padded_300s": 0.5962343096234309,
+       "f1": 0.8601,
+       "n_alert_minutes": 428,
+       "n_intervals": 72,
+       "normal_alarm_rate": 0.08642857142857142,
+       "precision": 0.8737,
+       "recall": 0.8469,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 15,
+       "FP": 12,
+       "TP": 83,
+       "armor_false_positive_intervals": 12,
+       "coverage_padded_300s": 0.5962343096234309,
+       "f1": 0.8601,
+       "n_alert_minutes": 428,
+       "n_intervals": 72,
+       "normal_alarm_rate": 0.08642857142857142,
+       "precision": 0.8737,
+       "recall": 0.8469,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 79,
+       "FP": 0,
+       "TP": 19,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.0903068340306834,
+       "f1": 0.3248,
+       "n_alert_minutes": 71,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 1.0,
+       "recall": 0.1939,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 79,
+       "FP": 0,
+       "TP": 19,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.0903068340306834,
+       "f1": 0.3248,
+       "n_alert_minutes": 71,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 1.0,
+       "recall": 0.1939,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 78,
+       "FP": 0,
+       "TP": 20,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.09379358437935843,
+       "f1": 0.339,
+       "n_alert_minutes": 76,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 1.0,
+       "recall": 0.2041,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 78,
+       "FP": 0,
+       "TP": 20,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.09379358437935843,
+       "f1": 0.339,
+       "n_alert_minutes": 76,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 1.0,
+       "recall": 0.2041,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 40,
+       "FP": 15,
+       "TP": 58,
+       "armor_false_positive_intervals": 15,
+       "coverage_padded_300s": 0.40341701534170155,
+       "f1": 0.6783,
+       "n_alert_minutes": 399,
+       "n_intervals": 62,
+       "normal_alarm_rate": 0.04642857142857143,
+       "precision": 0.7945,
+       "recall": 0.5918,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 40,
+       "FP": 15,
+       "TP": 58,
+       "armor_false_positive_intervals": 15,
+       "coverage_padded_300s": 0.40341701534170155,
+       "f1": 0.6783,
+       "n_alert_minutes": 399,
+       "n_intervals": 62,
+       "normal_alarm_rate": 0.04642857142857143,
+       "precision": 0.7945,
+       "recall": 0.5918,
+       "scored": true
+      }
+     }
+    },
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 15,
+       "FP": 20,
+       "TP": 69,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5962343096234309,
+       "f1": 0.7977,
+       "n_alert_minutes": 428,
+       "n_intervals": 72,
+       "normal_alarm_rate": 0.08642857142857142,
+       "precision": 0.7753,
+       "recall": 0.8214,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 15,
+       "FP": 20,
+       "TP": 69,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5962343096234309,
+       "f1": 0.7977,
+       "n_alert_minutes": 428,
+       "n_intervals": 72,
+       "normal_alarm_rate": 0.08642857142857142,
+       "precision": 0.7753,
+       "recall": 0.8214,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.0903068340306834,
+       "f1": 0.3138,
+       "n_alert_minutes": 71,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.0903068340306834,
+       "f1": 0.3138,
+       "n_alert_minutes": 71,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 2,
+       "TP": 18,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09379358437935843,
+       "f1": 0.3462,
+       "n_alert_minutes": 76,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 66,
+       "FP": 2,
+       "TP": 18,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09379358437935843,
+       "f1": 0.3462,
+       "n_alert_minutes": 76,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9,
+       "recall": 0.2143,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 27,
+       "FP": 15,
+       "TP": 57,
+       "armor_false_positive_intervals": 15,
+       "coverage_padded_300s": 0.40341701534170155,
+       "f1": 0.7308,
+       "n_alert_minutes": 399,
+       "n_intervals": 62,
+       "normal_alarm_rate": 0.04642857142857143,
+       "precision": 0.7917,
+       "recall": 0.6786,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 27,
+       "FP": 15,
+       "TP": 57,
+       "armor_false_positive_intervals": 15,
+       "coverage_padded_300s": 0.40341701534170155,
+       "f1": 0.7308,
+       "n_alert_minutes": 399,
+       "n_intervals": 62,
+       "normal_alarm_rate": 0.04642857142857143,
+       "precision": 0.7917,
+       "recall": 0.6786,
+       "scored": true
+      }
+     }
+    }
+   }
+  }
+ },
+ "binding": {
+  "v0_s1": {
+   "epoch": 83,
+   "pt_sha256": "c422ee01a62aca9cc33f0d042f053690fbfcc5acc5542d31076eff9705fd7e7e",
+   "state_sha256": "1f2e5c3dab1076fa24c8a7db2a5741301d10353a38deab1130b139c6bd810593"
+  },
+  "v1_s1": {
+   "epoch": 77,
+   "pt_sha256": "1c4b68fab7f372db40665e8bae984c07f1df4cef64efd13f8fe56a05a5fc850f",
+   "state_sha256": "6335cb0e8601385e48e1b66c940e3d608c02a054a645deafaa829864e1e2ae5f"
+  },
+  "v1_s2": {
+   "epoch": 50,
+   "pt_sha256": "1c29d48b1e9e975af573f54a69c8b15e542d499b99e8adf08d05f0d5b7a956df",
+   "state_sha256": "2ae8bffe375dcc44d0af845ed86fdd1cde87e4dfbd88859fe576a89bbe2e90fa"
+  }
+ },
+ "clean_reference": {
+  "official": {
+   "d3_p90": {
+    "clean_thresholds": {
+     "FN": 15,
+     "FP": 12,
+     "TP": 83,
+     "armor_false_positive_intervals": 12,
+     "coverage_padded_300s": 0.5962343096234309,
+     "f1": 0.8601,
+     "n_alert_minutes": 428,
+     "n_intervals": 72,
+     "normal_alarm_rate": 0.08642857142857142,
+     "precision": 0.8737,
+     "recall": 0.8469,
+     "scored": true
+    },
+    "recalibrated": {
+     "FN": 15,
+     "FP": 12,
+     "TP": 83,
+     "armor_false_positive_intervals": 12,
+     "coverage_padded_300s": 0.5962343096234309,
+     "f1": 0.8601,
+     "n_alert_minutes": 428,
+     "n_intervals": 72,
+     "normal_alarm_rate": 0.08642857142857142,
+     "precision": 0.8737,
+     "recall": 0.8469,
+     "scored": true
+    }
+   },
+   "d3_p99": {
+    "clean_thresholds": {
+     "FN": 79,
+     "FP": 0,
+     "TP": 19,
+     "armor_false_positive_intervals": 0,
+     "coverage_padded_300s": 0.0903068340306834,
+     "f1": 0.3248,
+     "n_alert_minutes": 71,
+     "n_intervals": 18,
+     "normal_alarm_rate": 0.0064285714285714285,
+     "precision": 1.0,
+     "recall": 0.1939,
+     "scored": true
+    },
+    "recalibrated": {
+     "FN": 79,
+     "FP": 0,
+     "TP": 19,
+     "armor_false_positive_intervals": 0,
+     "coverage_padded_300s": 0.0903068340306834,
+     "f1": 0.3248,
+     "n_alert_minutes": 71,
+     "n_intervals": 18,
+     "normal_alarm_rate": 0.0064285714285714285,
+     "precision": 1.0,
+     "recall": 0.1939,
+     "scored": true
+    }
+   },
+   "v0_p99": {
+    "clean_thresholds": {
+     "FN": 78,
+     "FP": 0,
+     "TP": 20,
+     "armor_false_positive_intervals": 0,
+     "coverage_padded_300s": 0.09379358437935843,
+     "f1": 0.339,
+     "n_alert_minutes": 76,
+     "n_intervals": 20,
+     "normal_alarm_rate": 0.007142857142857143,
+     "precision": 1.0,
+     "recall": 0.2041,
+     "scored": true
+    },
+    "recalibrated": {
+     "FN": 78,
+     "FP": 0,
+     "TP": 20,
+     "armor_false_positive_intervals": 0,
+     "coverage_padded_300s": 0.09379358437935843,
+     "f1": 0.339,
+     "n_alert_minutes": 76,
+     "n_intervals": 20,
+     "normal_alarm_rate": 0.007142857142857143,
+     "precision": 1.0,
+     "recall": 0.2041,
+     "scored": true
+    }
+   },
+   "v1_primary": {
+    "clean_thresholds": {
+     "FN": 40,
+     "FP": 15,
+     "TP": 58,
+     "armor_false_positive_intervals": 15,
+     "coverage_padded_300s": 0.40341701534170155,
+     "f1": 0.6783,
+     "n_alert_minutes": 399,
+     "n_intervals": 62,
+     "normal_alarm_rate": 0.04642857142857143,
+     "precision": 0.7945,
+     "recall": 0.5918,
+     "scored": true
+    },
+    "recalibrated": {
+     "FN": 40,
+     "FP": 15,
+     "TP": 58,
+     "armor_false_positive_intervals": 15,
+     "coverage_padded_300s": 0.40341701534170155,
+     "f1": 0.6783,
+     "n_alert_minutes": 399,
+     "n_intervals": 62,
+     "normal_alarm_rate": 0.04642857142857143,
+     "precision": 0.7945,
+     "recall": 0.5918,
+     "scored": true
+    }
+   }
+  },
+  "ours": {
+   "d3_p90": {
+    "clean_thresholds": {
+     "FN": 15,
+     "FP": 20,
+     "TP": 69,
+     "armor_false_positive_intervals": 20,
+     "coverage_padded_300s": 0.5962343096234309,
+     "f1": 0.7977,
+     "n_alert_minutes": 428,
+     "n_intervals": 72,
+     "normal_alarm_rate": 0.08642857142857142,
+     "precision": 0.7753,
+     "recall": 0.8214,
+     "scored": true
+    },
+    "recalibrated": {
+     "FN": 15,
+     "FP": 20,
+     "TP": 69,
+     "armor_false_positive_intervals": 20,
+     "coverage_padded_300s": 0.5962343096234309,
+     "f1": 0.7977,
+     "n_alert_minutes": 428,
+     "n_intervals": 72,
+     "normal_alarm_rate": 0.08642857142857142,
+     "precision": 0.7753,
+     "recall": 0.8214,
+     "scored": true
+    }
+   },
+   "d3_p99": {
+    "clean_thresholds": {
+     "FN": 68,
+     "FP": 2,
+     "TP": 16,
+     "armor_false_positive_intervals": 2,
+     "coverage_padded_300s": 0.0903068340306834,
+     "f1": 0.3138,
+     "n_alert_minutes": 71,
+     "n_intervals": 18,
+     "normal_alarm_rate": 0.0064285714285714285,
+     "precision": 0.8889,
+     "recall": 0.1905,
+     "scored": true
+    },
+    "recalibrated": {
+     "FN": 68,
+     "FP": 2,
+     "TP": 16,
+     "armor_false_positive_intervals": 2,
+     "coverage_padded_300s": 0.0903068340306834,
+     "f1": 0.3138,
+     "n_alert_minutes": 71,
+     "n_intervals": 18,
+     "normal_alarm_rate": 0.0064285714285714285,
+     "precision": 0.8889,
+     "recall": 0.1905,
+     "scored": true
+    }
+   },
+   "v0_p99": {
+    "clean_thresholds": {
+     "FN": 66,
+     "FP": 2,
+     "TP": 18,
+     "armor_false_positive_intervals": 2,
+     "coverage_padded_300s": 0.09379358437935843,
+     "f1": 0.3462,
+     "n_alert_minutes": 76,
+     "n_intervals": 20,
+     "normal_alarm_rate": 0.007142857142857143,
+     "precision": 0.9,
+     "recall": 0.2143,
+     "scored": true
+    },
+    "recalibrated": {
+     "FN": 66,
+     "FP": 2,
+     "TP": 18,
+     "armor_false_positive_intervals": 2,
+     "coverage_padded_300s": 0.09379358437935843,
+     "f1": 0.3462,
+     "n_alert_minutes": 76,
+     "n_intervals": 20,
+     "normal_alarm_rate": 0.007142857142857143,
+     "precision": 0.9,
+     "recall": 0.2143,
+     "scored": true
+    }
+   },
+   "v1_primary": {
+    "clean_thresholds": {
+     "FN": 27,
+     "FP": 15,
+     "TP": 57,
+     "armor_false_positive_intervals": 15,
+     "coverage_padded_300s": 0.40341701534170155,
+     "f1": 0.7308,
+     "n_alert_minutes": 399,
+     "n_intervals": 62,
+     "normal_alarm_rate": 0.04642857142857143,
+     "precision": 0.7917,
+     "recall": 0.6786,
+     "scored": true
+    },
+    "recalibrated": {
+     "FN": 27,
+     "FP": 15,
+     "TP": 57,
+     "armor_false_positive_intervals": 15,
+     "coverage_padded_300s": 0.40341701534170155,
+     "f1": 0.7308,
+     "n_alert_minutes": 399,
+     "n_intervals": 62,
+     "normal_alarm_rate": 0.04642857142857143,
+     "precision": 0.7917,
+     "recall": 0.6786,
+     "scored": true
+    }
+   }
+  }
+ },
+ "random": {
+  "0.0": {
+   "0": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 15,
+       "FP": 20,
+       "TP": 69,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5962343096234309,
+       "f1": 0.7977,
+       "n_alert_minutes": 428,
+       "n_intervals": 72,
+       "normal_alarm_rate": 0.08642857142857142,
+       "precision": 0.7753,
+       "recall": 0.8214,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 15,
+       "FP": 20,
+       "TP": 69,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5962343096234309,
+       "f1": 0.7977,
+       "n_alert_minutes": 428,
+       "n_intervals": 72,
+       "normal_alarm_rate": 0.08642857142857142,
+       "precision": 0.7753,
+       "recall": 0.8214,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.0903068340306834,
+       "f1": 0.3138,
+       "n_alert_minutes": 71,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.0903068340306834,
+       "f1": 0.3138,
+       "n_alert_minutes": 71,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 2,
+       "TP": 18,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09379358437935843,
+       "f1": 0.3462,
+       "n_alert_minutes": 76,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 66,
+       "FP": 2,
+       "TP": 18,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09379358437935843,
+       "f1": 0.3462,
+       "n_alert_minutes": 76,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9,
+       "recall": 0.2143,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 27,
+       "FP": 15,
+       "TP": 57,
+       "armor_false_positive_intervals": 15,
+       "coverage_padded_300s": 0.40341701534170155,
+       "f1": 0.7308,
+       "n_alert_minutes": 399,
+       "n_intervals": 62,
+       "normal_alarm_rate": 0.04642857142857143,
+       "precision": 0.7917,
+       "recall": 0.6786,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 27,
+       "FP": 15,
+       "TP": 57,
+       "armor_false_positive_intervals": 15,
+       "coverage_padded_300s": 0.40341701534170155,
+       "f1": 0.7308,
+       "n_alert_minutes": 399,
+       "n_intervals": 62,
+       "normal_alarm_rate": 0.04642857142857143,
+       "precision": 0.7917,
+       "recall": 0.6786,
+       "scored": true
+      }
+     }
+    }
+   }
+  },
+  "0.1": {
+   "0": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 15,
+       "FP": 19,
+       "TP": 69,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.5941422594142259,
+       "f1": 0.8023,
+       "n_alert_minutes": 425,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.085,
+       "precision": 0.7841,
+       "recall": 0.8214,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 15,
+       "FP": 19,
+       "TP": 69,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.5965829846582985,
+       "f1": 0.8023,
+       "n_alert_minutes": 422,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.08214285714285714,
+       "precision": 0.7841,
+       "recall": 0.8214,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09239888423988843,
+       "f1": 0.3138,
+       "n_alert_minutes": 77,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09135285913528592,
+       "f1": 0.3138,
+       "n_alert_minutes": 73,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 64,
+       "FP": 4,
+       "TP": 20,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.12168758716875872,
+       "f1": 0.3704,
+       "n_alert_minutes": 85,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.8333,
+       "recall": 0.2381,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 65,
+       "FP": 4,
+       "TP": 19,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.11820083682008369,
+       "f1": 0.3552,
+       "n_alert_minutes": 84,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.8261,
+       "recall": 0.2262,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 30,
+       "FP": 14,
+       "TP": 54,
+       "armor_false_positive_intervals": 14,
+       "coverage_padded_300s": 0.3947001394700139,
+       "f1": 0.7105,
+       "n_alert_minutes": 407,
+       "n_intervals": 58,
+       "normal_alarm_rate": 0.045,
+       "precision": 0.7941,
+       "recall": 0.6429,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 30,
+       "FP": 16,
+       "TP": 54,
+       "armor_false_positive_intervals": 16,
+       "coverage_padded_300s": 0.40341701534170155,
+       "f1": 0.7013,
+       "n_alert_minutes": 412,
+       "n_intervals": 60,
+       "normal_alarm_rate": 0.047142857142857146,
+       "precision": 0.7714,
+       "recall": 0.6429,
+       "scored": true
+      }
+     }
+    }
+   },
+   "1": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 14,
+       "FP": 18,
+       "TP": 70,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.5871687587168759,
+       "f1": 0.814,
+       "n_alert_minutes": 426,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.08285714285714285,
+       "precision": 0.7955,
+       "recall": 0.8333,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 14,
+       "FP": 18,
+       "TP": 70,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.5822873082287309,
+       "f1": 0.814,
+       "n_alert_minutes": 417,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.08142857142857143,
+       "precision": 0.7955,
+       "recall": 0.8333,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 2,
+       "TP": 18,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.10251046025104603,
+       "f1": 0.3462,
+       "n_alert_minutes": 82,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 68,
+       "FP": 1,
+       "TP": 16,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.08368200836820083,
+       "f1": 0.3169,
+       "n_alert_minutes": 76,
+       "n_intervals": 17,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.9412,
+       "recall": 0.1905,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 64,
+       "FP": 2,
+       "TP": 20,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.11157601115760112,
+       "f1": 0.3774,
+       "n_alert_minutes": 88,
+       "n_intervals": 22,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.9091,
+       "recall": 0.2381,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 66,
+       "FP": 1,
+       "TP": 18,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.09553695955369595,
+       "f1": 0.3495,
+       "n_alert_minutes": 82,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9474,
+       "recall": 0.2143,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 31,
+       "FP": 19,
+       "TP": 53,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.4110878661087866,
+       "f1": 0.6795,
+       "n_alert_minutes": 398,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.055,
+       "precision": 0.7361,
+       "recall": 0.631,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 31,
+       "FP": 19,
+       "TP": 53,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.4117852161785216,
+       "f1": 0.6795,
+       "n_alert_minutes": 400,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.056428571428571425,
+       "precision": 0.7361,
+       "recall": 0.631,
+       "scored": true
+      }
+     }
+    }
+   },
+   "2": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 16,
+       "FP": 18,
+       "TP": 68,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.5655509065550907,
+       "f1": 0.8,
+       "n_alert_minutes": 414,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.08357142857142857,
+       "precision": 0.7907,
+       "recall": 0.8095,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 16,
+       "FP": 18,
+       "TP": 68,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.5648535564853556,
+       "f1": 0.8,
+       "n_alert_minutes": 407,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.08071428571428571,
+       "precision": 0.7907,
+       "recall": 0.8095,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 65,
+       "FP": 2,
+       "TP": 19,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.10564853556485355,
+       "f1": 0.3619,
+       "n_alert_minutes": 76,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9048,
+       "recall": 0.2262,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 66,
+       "FP": 1,
+       "TP": 18,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.09344490934449093,
+       "f1": 0.3495,
+       "n_alert_minutes": 68,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.005,
+       "precision": 0.9474,
+       "recall": 0.2143,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 1,
+       "TP": 18,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.08926080892608089,
+       "f1": 0.3495,
+       "n_alert_minutes": 75,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.005,
+       "precision": 0.9474,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 69,
+       "FP": 1,
+       "TP": 15,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.07426778242677824,
+       "f1": 0.3,
+       "n_alert_minutes": 67,
+       "n_intervals": 16,
+       "normal_alarm_rate": 0.005,
+       "precision": 0.9375,
+       "recall": 0.1786,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 27,
+       "FP": 15,
+       "TP": 57,
+       "armor_false_positive_intervals": 15,
+       "coverage_padded_300s": 0.4211994421199442,
+       "f1": 0.7308,
+       "n_alert_minutes": 432,
+       "n_intervals": 61,
+       "normal_alarm_rate": 0.06357142857142857,
+       "precision": 0.7917,
+       "recall": 0.6786,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 29,
+       "FP": 14,
+       "TP": 55,
+       "armor_false_positive_intervals": 14,
+       "coverage_padded_300s": 0.3926080892608089,
+       "f1": 0.719,
+       "n_alert_minutes": 383,
+       "n_intervals": 63,
+       "normal_alarm_rate": 0.05071428571428571,
+       "precision": 0.7971,
+       "recall": 0.6548,
+       "scored": true
+      }
+     }
+    }
+   },
+   "3": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 15,
+       "FP": 22,
+       "TP": 69,
+       "armor_false_positive_intervals": 22,
+       "coverage_padded_300s": 0.6007670850767085,
+       "f1": 0.7885,
+       "n_alert_minutes": 429,
+       "n_intervals": 74,
+       "normal_alarm_rate": 0.08857142857142856,
+       "precision": 0.7582,
+       "recall": 0.8214,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 15,
+       "FP": 21,
+       "TP": 69,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.6150627615062761,
+       "f1": 0.7931,
+       "n_alert_minutes": 442,
+       "n_intervals": 73,
+       "normal_alarm_rate": 0.09071428571428572,
+       "precision": 0.7667,
+       "recall": 0.8214,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.08926080892608089,
+       "f1": 0.3138,
+       "n_alert_minutes": 76,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.08612273361227336,
+       "f1": 0.3138,
+       "n_alert_minutes": 71,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 65,
+       "FP": 3,
+       "TP": 19,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.10599721059972106,
+       "f1": 0.3585,
+       "n_alert_minutes": 86,
+       "n_intervals": 22,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.8636,
+       "recall": 0.2262,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 73,
+       "FP": 0,
+       "TP": 11,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.049860529986053,
+       "f1": 0.2317,
+       "n_alert_minutes": 47,
+       "n_intervals": 11,
+       "normal_alarm_rate": 0.002857142857142857,
+       "precision": 1.0,
+       "recall": 0.131,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 29,
+       "FP": 19,
+       "TP": 55,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.41143654114365413,
+       "f1": 0.6962,
+       "n_alert_minutes": 407,
+       "n_intervals": 65,
+       "normal_alarm_rate": 0.052142857142857144,
+       "precision": 0.7432,
+       "recall": 0.6548,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 30,
+       "FP": 17,
+       "TP": 54,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.3786610878661088,
+       "f1": 0.6968,
+       "n_alert_minutes": 368,
+       "n_intervals": 63,
+       "normal_alarm_rate": 0.041428571428571426,
+       "precision": 0.7606,
+       "recall": 0.6429,
+       "scored": true
+      }
+     }
+    }
+   },
+   "4": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 17,
+       "FP": 20,
+       "TP": 67,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5767085076708508,
+       "f1": 0.7836,
+       "n_alert_minutes": 413,
+       "n_intervals": 72,
+       "normal_alarm_rate": 0.08428571428571428,
+       "precision": 0.7701,
+       "recall": 0.7976,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 18,
+       "FP": 21,
+       "TP": 66,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.5564853556485355,
+       "f1": 0.7719,
+       "n_alert_minutes": 393,
+       "n_intervals": 72,
+       "normal_alarm_rate": 0.07857142857142857,
+       "precision": 0.7586,
+       "recall": 0.7857,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 2,
+       "TP": 18,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.10251046025104603,
+       "f1": 0.3462,
+       "n_alert_minutes": 80,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.9,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 70,
+       "FP": 1,
+       "TP": 14,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.07496513249651325,
+       "f1": 0.2829,
+       "n_alert_minutes": 67,
+       "n_intervals": 15,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9333,
+       "recall": 0.1667,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 62,
+       "FP": 1,
+       "TP": 22,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.1105299860529986,
+       "f1": 0.4112,
+       "n_alert_minutes": 87,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.9565,
+       "recall": 0.2619,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 63,
+       "FP": 3,
+       "TP": 21,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.11506276150627615,
+       "f1": 0.3889,
+       "n_alert_minutes": 87,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.875,
+       "recall": 0.25,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 28,
+       "FP": 23,
+       "TP": 56,
+       "armor_false_positive_intervals": 23,
+       "coverage_padded_300s": 0.43340306834030684,
+       "f1": 0.6872,
+       "n_alert_minutes": 409,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.054285714285714284,
+       "precision": 0.7089,
+       "recall": 0.6667,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 30,
+       "FP": 19,
+       "TP": 54,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.4082984658298466,
+       "f1": 0.6879,
+       "n_alert_minutes": 379,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.05071428571428571,
+       "precision": 0.7397,
+       "recall": 0.6429,
+       "scored": true
+      }
+     }
+    }
+   },
+   "5": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 15,
+       "FP": 19,
+       "TP": 69,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.5871687587168759,
+       "f1": 0.8023,
+       "n_alert_minutes": 431,
+       "n_intervals": 72,
+       "normal_alarm_rate": 0.08857142857142856,
+       "precision": 0.7841,
+       "recall": 0.8214,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 15,
+       "FP": 20,
+       "TP": 69,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5934449093444909,
+       "f1": 0.7977,
+       "n_alert_minutes": 436,
+       "n_intervals": 73,
+       "normal_alarm_rate": 0.08928571428571429,
+       "precision": 0.7753,
+       "recall": 0.8214,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 69,
+       "FP": 1,
+       "TP": 15,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.08193863319386332,
+       "f1": 0.3,
+       "n_alert_minutes": 76,
+       "n_intervals": 16,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9375,
+       "recall": 0.1786,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 72,
+       "FP": 0,
+       "TP": 12,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.05613668061366806,
+       "f1": 0.2501,
+       "n_alert_minutes": 59,
+       "n_intervals": 12,
+       "normal_alarm_rate": 0.004285714285714286,
+       "precision": 1.0,
+       "recall": 0.1429,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 1,
+       "TP": 18,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.08647140864714087,
+       "f1": 0.3495,
+       "n_alert_minutes": 79,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9474,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 68,
+       "FP": 1,
+       "TP": 16,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.07880055788005579,
+       "f1": 0.3169,
+       "n_alert_minutes": 72,
+       "n_intervals": 17,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.9412,
+       "recall": 0.1905,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 29,
+       "FP": 19,
+       "TP": 55,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.4292189679218968,
+       "f1": 0.6962,
+       "n_alert_minutes": 417,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.06142857142857143,
+       "precision": 0.7432,
+       "recall": 0.6548,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 31,
+       "FP": 19,
+       "TP": 53,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.4198047419804742,
+       "f1": 0.6795,
+       "n_alert_minutes": 407,
+       "n_intervals": 64,
+       "normal_alarm_rate": 0.06,
+       "precision": 0.7361,
+       "recall": 0.631,
+       "scored": true
+      }
+     }
+    }
+   },
+   "6": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 15,
+       "FP": 18,
+       "TP": 69,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.5885634588563459,
+       "f1": 0.807,
+       "n_alert_minutes": 423,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.08357142857142857,
+       "precision": 0.7931,
+       "recall": 0.8214,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 16,
+       "FP": 19,
+       "TP": 68,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.5777545327754533,
+       "f1": 0.7953,
+       "n_alert_minutes": 418,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.08214285714285714,
+       "precision": 0.7816,
+       "recall": 0.8095,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.08856345885634588,
+       "f1": 0.3138,
+       "n_alert_minutes": 73,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 67,
+       "FP": 2,
+       "TP": 17,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09135285913528592,
+       "f1": 0.3301,
+       "n_alert_minutes": 77,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.8947,
+       "recall": 0.2024,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 67,
+       "FP": 2,
+       "TP": 17,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.08926080892608089,
+       "f1": 0.3301,
+       "n_alert_minutes": 75,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.8947,
+       "recall": 0.2024,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 67,
+       "FP": 2,
+       "TP": 17,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09205020920502092,
+       "f1": 0.3301,
+       "n_alert_minutes": 79,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.8947,
+       "recall": 0.2024,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 27,
+       "FP": 14,
+       "TP": 57,
+       "armor_false_positive_intervals": 14,
+       "coverage_padded_300s": 0.41248256624825663,
+       "f1": 0.7355,
+       "n_alert_minutes": 402,
+       "n_intervals": 62,
+       "normal_alarm_rate": 0.055714285714285716,
+       "precision": 0.8028,
+       "recall": 0.6786,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 26,
+       "FP": 16,
+       "TP": 58,
+       "armor_false_positive_intervals": 16,
+       "coverage_padded_300s": 0.43340306834030684,
+       "f1": 0.7342,
+       "n_alert_minutes": 437,
+       "n_intervals": 65,
+       "normal_alarm_rate": 0.06357142857142857,
+       "precision": 0.7838,
+       "recall": 0.6905,
+       "scored": true
+      }
+     }
+    }
+   },
+   "7": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 18,
+       "FP": 20,
+       "TP": 66,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5638075313807531,
+       "f1": 0.7764,
+       "n_alert_minutes": 409,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.08142857142857143,
+       "precision": 0.7674,
+       "recall": 0.7857,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 16,
+       "FP": 20,
+       "TP": 68,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5878661087866108,
+       "f1": 0.7907,
+       "n_alert_minutes": 424,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.08714285714285715,
+       "precision": 0.7727,
+       "recall": 0.8095,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 69,
+       "FP": 1,
+       "TP": 15,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.08089260808926081,
+       "f1": 0.3,
+       "n_alert_minutes": 71,
+       "n_intervals": 16,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9375,
+       "recall": 0.1786,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 69,
+       "FP": 1,
+       "TP": 15,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.08333333333333333,
+       "f1": 0.3,
+       "n_alert_minutes": 77,
+       "n_intervals": 16,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.9375,
+       "recall": 0.1786,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.08542538354253836,
+       "f1": 0.3138,
+       "n_alert_minutes": 78,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 68,
+       "FP": 1,
+       "TP": 16,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.08089260808926081,
+       "f1": 0.3169,
+       "n_alert_minutes": 74,
+       "n_intervals": 17,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9412,
+       "recall": 0.1905,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 29,
+       "FP": 20,
+       "TP": 55,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.42538354253835425,
+       "f1": 0.6918,
+       "n_alert_minutes": 428,
+       "n_intervals": 65,
+       "normal_alarm_rate": 0.055,
+       "precision": 0.7333,
+       "recall": 0.6548,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 28,
+       "FP": 23,
+       "TP": 56,
+       "armor_false_positive_intervals": 23,
+       "coverage_padded_300s": 0.451534170153417,
+       "f1": 0.6872,
+       "n_alert_minutes": 455,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.06571428571428571,
+       "precision": 0.7089,
+       "recall": 0.6667,
+       "scored": true
+      }
+     }
+    }
+   },
+   "8": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 14,
+       "FP": 18,
+       "TP": 70,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.5854253835425384,
+       "f1": 0.814,
+       "n_alert_minutes": 428,
+       "n_intervals": 73,
+       "normal_alarm_rate": 0.08285714285714285,
+       "precision": 0.7955,
+       "recall": 0.8333,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 18,
+       "FP": 19,
+       "TP": 66,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.551255230125523,
+       "f1": 0.7811,
+       "n_alert_minutes": 402,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.07571428571428572,
+       "precision": 0.7765,
+       "recall": 0.7857,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.08856345885634588,
+       "f1": 0.3138,
+       "n_alert_minutes": 76,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 70,
+       "FP": 0,
+       "TP": 14,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.06659693165969316,
+       "f1": 0.2858,
+       "n_alert_minutes": 58,
+       "n_intervals": 14,
+       "normal_alarm_rate": 0.005,
+       "precision": 1.0,
+       "recall": 0.1667,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 1,
+       "TP": 18,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.09274755927475593,
+       "f1": 0.3495,
+       "n_alert_minutes": 80,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9474,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 70,
+       "FP": 1,
+       "TP": 14,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.07078103207810321,
+       "f1": 0.2829,
+       "n_alert_minutes": 63,
+       "n_intervals": 15,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.9333,
+       "recall": 0.1667,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 29,
+       "FP": 18,
+       "TP": 55,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.40585774058577406,
+       "f1": 0.7006,
+       "n_alert_minutes": 408,
+       "n_intervals": 64,
+       "normal_alarm_rate": 0.05285714285714286,
+       "precision": 0.7534,
+       "recall": 0.6548,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 34,
+       "FP": 11,
+       "TP": 50,
+       "armor_false_positive_intervals": 11,
+       "coverage_padded_300s": 0.344839609483961,
+       "f1": 0.6896,
+       "n_alert_minutes": 331,
+       "n_intervals": 56,
+       "normal_alarm_rate": 0.03571428571428571,
+       "precision": 0.8197,
+       "recall": 0.5952,
+       "scored": true
+      }
+     }
+    }
+   },
+   "9": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 16,
+       "FP": 19,
+       "TP": 68,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.5756624825662483,
+       "f1": 0.7953,
+       "n_alert_minutes": 423,
+       "n_intervals": 68,
+       "normal_alarm_rate": 0.08357142857142857,
+       "precision": 0.7816,
+       "recall": 0.8095,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 16,
+       "FP": 20,
+       "TP": 68,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5854253835425384,
+       "f1": 0.7907,
+       "n_alert_minutes": 429,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.08642857142857142,
+       "precision": 0.7727,
+       "recall": 0.8095,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09379358437935843,
+       "f1": 0.3138,
+       "n_alert_minutes": 72,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 65,
+       "FP": 2,
+       "TP": 19,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.1098326359832636,
+       "f1": 0.3619,
+       "n_alert_minutes": 83,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.9048,
+       "recall": 0.2262,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 65,
+       "FP": 2,
+       "TP": 19,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.10634588563458856,
+       "f1": 0.3619,
+       "n_alert_minutes": 83,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.9048,
+       "recall": 0.2262,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 61,
+       "FP": 3,
+       "TP": 23,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.1314504881450488,
+       "f1": 0.4182,
+       "n_alert_minutes": 96,
+       "n_intervals": 25,
+       "normal_alarm_rate": 0.01,
+       "precision": 0.8846,
+       "recall": 0.2738,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 27,
+       "FP": 22,
+       "TP": 57,
+       "armor_false_positive_intervals": 22,
+       "coverage_padded_300s": 0.4327057182705718,
+       "f1": 0.6994,
+       "n_alert_minutes": 415,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.054285714285714284,
+       "precision": 0.7215,
+       "recall": 0.6786,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 27,
+       "FP": 22,
+       "TP": 57,
+       "armor_false_positive_intervals": 22,
+       "coverage_padded_300s": 0.4341004184100418,
+       "f1": 0.6994,
+       "n_alert_minutes": 419,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.054285714285714284,
+       "precision": 0.7215,
+       "recall": 0.6786,
+       "scored": true
+      }
+     }
+    }
+   }
+  },
+  "0.2": {
+   "0": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 17,
+       "FP": 22,
+       "TP": 67,
+       "armor_false_positive_intervals": 22,
+       "coverage_padded_300s": 0.5896094839609484,
+       "f1": 0.7746,
+       "n_alert_minutes": 435,
+       "n_intervals": 73,
+       "normal_alarm_rate": 0.09071428571428572,
+       "precision": 0.7528,
+       "recall": 0.7976,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 17,
+       "FP": 21,
+       "TP": 67,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.5742677824267782,
+       "f1": 0.7791,
+       "n_alert_minutes": 420,
+       "n_intervals": 72,
+       "normal_alarm_rate": 0.08571428571428572,
+       "precision": 0.7614,
+       "recall": 0.7976,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 64,
+       "FP": 2,
+       "TP": 20,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.10251046025104603,
+       "f1": 0.3774,
+       "n_alert_minutes": 78,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9091,
+       "recall": 0.2381,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 64,
+       "FP": 2,
+       "TP": 20,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.10425383542538354,
+       "f1": 0.3774,
+       "n_alert_minutes": 82,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.9091,
+       "recall": 0.2381,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 60,
+       "FP": 1,
+       "TP": 24,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.11227336122733612,
+       "f1": 0.4404,
+       "n_alert_minutes": 84,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.96,
+       "recall": 0.2857,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 62,
+       "FP": 1,
+       "TP": 22,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.10774058577405858,
+       "f1": 0.4112,
+       "n_alert_minutes": 84,
+       "n_intervals": 22,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9565,
+       "recall": 0.2619,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 29,
+       "FP": 24,
+       "TP": 55,
+       "armor_false_positive_intervals": 24,
+       "coverage_padded_300s": 0.4302649930264993,
+       "f1": 0.6749,
+       "n_alert_minutes": 433,
+       "n_intervals": 67,
+       "normal_alarm_rate": 0.05928571428571429,
+       "precision": 0.6962,
+       "recall": 0.6548,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 26,
+       "FP": 24,
+       "TP": 58,
+       "armor_false_positive_intervals": 24,
+       "coverage_padded_300s": 0.4616457461645746,
+       "f1": 0.6988,
+       "n_alert_minutes": 484,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.075,
+       "precision": 0.7073,
+       "recall": 0.6905,
+       "scored": true
+      }
+     }
+    }
+   },
+   "1": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 19,
+       "FP": 22,
+       "TP": 65,
+       "armor_false_positive_intervals": 22,
+       "coverage_padded_300s": 0.5655509065550907,
+       "f1": 0.7602,
+       "n_alert_minutes": 420,
+       "n_intervals": 68,
+       "normal_alarm_rate": 0.08857142857142856,
+       "precision": 0.7471,
+       "recall": 0.7738,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 21,
+       "FP": 21,
+       "TP": 63,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.5334728033472803,
+       "f1": 0.75,
+       "n_alert_minutes": 400,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.08,
+       "precision": 0.75,
+       "recall": 0.75,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 2,
+       "TP": 18,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.100418410041841,
+       "f1": 0.3462,
+       "n_alert_minutes": 75,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.9,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 67,
+       "FP": 1,
+       "TP": 17,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.08926080892608089,
+       "f1": 0.3334,
+       "n_alert_minutes": 70,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.004285714285714286,
+       "precision": 0.9444,
+       "recall": 0.2024,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 61,
+       "FP": 3,
+       "TP": 23,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.12796373779637377,
+       "f1": 0.4182,
+       "n_alert_minutes": 91,
+       "n_intervals": 25,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.8846,
+       "recall": 0.2738,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 68,
+       "FP": 1,
+       "TP": 16,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.08577405857740586,
+       "f1": 0.3169,
+       "n_alert_minutes": 61,
+       "n_intervals": 17,
+       "normal_alarm_rate": 0.0035714285714285713,
+       "precision": 0.9412,
+       "recall": 0.1905,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 28,
+       "FP": 20,
+       "TP": 56,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.42887029288702927,
+       "f1": 0.7,
+       "n_alert_minutes": 421,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.06142857142857143,
+       "precision": 0.7368,
+       "recall": 0.6667,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 28,
+       "FP": 20,
+       "TP": 56,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.4295676429567643,
+       "f1": 0.7,
+       "n_alert_minutes": 424,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.06142857142857143,
+       "precision": 0.7368,
+       "recall": 0.6667,
+       "scored": true
+      }
+     }
+    }
+   },
+   "2": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 17,
+       "FP": 19,
+       "TP": 67,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.5606694560669456,
+       "f1": 0.7882,
+       "n_alert_minutes": 405,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.07714285714285714,
+       "precision": 0.7791,
+       "recall": 0.7976,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 17,
+       "FP": 20,
+       "TP": 67,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5697350069735007,
+       "f1": 0.7836,
+       "n_alert_minutes": 414,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.08071428571428571,
+       "precision": 0.7701,
+       "recall": 0.7976,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 67,
+       "FP": 2,
+       "TP": 17,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09414225941422594,
+       "f1": 0.3301,
+       "n_alert_minutes": 80,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.8947,
+       "recall": 0.2024,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 71,
+       "FP": 2,
+       "TP": 13,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.07078103207810321,
+       "f1": 0.2627,
+       "n_alert_minutes": 65,
+       "n_intervals": 15,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.8667,
+       "recall": 0.1548,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 63,
+       "FP": 2,
+       "TP": 21,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.11227336122733612,
+       "f1": 0.3925,
+       "n_alert_minutes": 87,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.913,
+       "recall": 0.25,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 69,
+       "FP": 2,
+       "TP": 15,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.08368200836820083,
+       "f1": 0.2971,
+       "n_alert_minutes": 73,
+       "n_intervals": 17,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.8824,
+       "recall": 0.1786,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 28,
+       "FP": 17,
+       "TP": 56,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.4435146443514644,
+       "f1": 0.7134,
+       "n_alert_minutes": 439,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.06928571428571428,
+       "precision": 0.7671,
+       "recall": 0.6667,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 25,
+       "FP": 18,
+       "TP": 59,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.4686192468619247,
+       "f1": 0.7329,
+       "n_alert_minutes": 471,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.075,
+       "precision": 0.7662,
+       "recall": 0.7024,
+       "scored": true
+      }
+     }
+    }
+   },
+   "3": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 20,
+       "FP": 17,
+       "TP": 64,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.555439330543933,
+       "f1": 0.7757,
+       "n_alert_minutes": 414,
+       "n_intervals": 68,
+       "normal_alarm_rate": 0.08357142857142857,
+       "precision": 0.7901,
+       "recall": 0.7619,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 18,
+       "FP": 20,
+       "TP": 66,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5885634588563459,
+       "f1": 0.7764,
+       "n_alert_minutes": 432,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.08857142857142856,
+       "precision": 0.7674,
+       "recall": 0.7857,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 65,
+       "FP": 2,
+       "TP": 19,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.10669456066945607,
+       "f1": 0.3619,
+       "n_alert_minutes": 83,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.9048,
+       "recall": 0.2262,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 65,
+       "FP": 2,
+       "TP": 19,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.10669456066945607,
+       "f1": 0.3619,
+       "n_alert_minutes": 83,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.9048,
+       "recall": 0.2262,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 60,
+       "FP": 1,
+       "TP": 24,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.12656903765690378,
+       "f1": 0.4404,
+       "n_alert_minutes": 94,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.96,
+       "recall": 0.2857,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 60,
+       "FP": 3,
+       "TP": 24,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.13807531380753138,
+       "f1": 0.4324,
+       "n_alert_minutes": 97,
+       "n_intervals": 26,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.8889,
+       "recall": 0.2857,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 31,
+       "FP": 19,
+       "TP": 53,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.41701534170153415,
+       "f1": 0.6795,
+       "n_alert_minutes": 432,
+       "n_intervals": 64,
+       "normal_alarm_rate": 0.07,
+       "precision": 0.7361,
+       "recall": 0.631,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 31,
+       "FP": 20,
+       "TP": 53,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.42642956764295675,
+       "f1": 0.6752,
+       "n_alert_minutes": 442,
+       "n_intervals": 65,
+       "normal_alarm_rate": 0.07428571428571429,
+       "precision": 0.726,
+       "recall": 0.631,
+       "scored": true
+      }
+     }
+    }
+   },
+   "4": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 17,
+       "FP": 23,
+       "TP": 67,
+       "armor_false_positive_intervals": 23,
+       "coverage_padded_300s": 0.5596234309623431,
+       "f1": 0.7701,
+       "n_alert_minutes": 404,
+       "n_intervals": 73,
+       "normal_alarm_rate": 0.08,
+       "precision": 0.7444,
+       "recall": 0.7976,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 17,
+       "FP": 23,
+       "TP": 67,
+       "armor_false_positive_intervals": 23,
+       "coverage_padded_300s": 0.5746164574616457,
+       "f1": 0.7701,
+       "n_alert_minutes": 411,
+       "n_intervals": 73,
+       "normal_alarm_rate": 0.08071428571428571,
+       "precision": 0.7444,
+       "recall": 0.7976,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 67,
+       "FP": 2,
+       "TP": 17,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09693165969316597,
+       "f1": 0.3301,
+       "n_alert_minutes": 79,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.8947,
+       "recall": 0.2024,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 69,
+       "FP": 1,
+       "TP": 15,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.08158995815899582,
+       "f1": 0.3,
+       "n_alert_minutes": 74,
+       "n_intervals": 16,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9375,
+       "recall": 0.1786,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 3,
+       "TP": 18,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.10355648535564854,
+       "f1": 0.3429,
+       "n_alert_minutes": 86,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.8571,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 70,
+       "FP": 1,
+       "TP": 14,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.07426778242677824,
+       "f1": 0.2829,
+       "n_alert_minutes": 66,
+       "n_intervals": 15,
+       "normal_alarm_rate": 0.004285714285714286,
+       "precision": 0.9333,
+       "recall": 0.1667,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 27,
+       "FP": 19,
+       "TP": 57,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.4295676429567643,
+       "f1": 0.7125,
+       "n_alert_minutes": 425,
+       "n_intervals": 67,
+       "normal_alarm_rate": 0.06142857142857143,
+       "precision": 0.75,
+       "recall": 0.6786,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 23,
+       "FP": 21,
+       "TP": 61,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.4804741980474198,
+       "f1": 0.7349,
+       "n_alert_minutes": 518,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.07571428571428572,
+       "precision": 0.7439,
+       "recall": 0.7262,
+       "scored": true
+      }
+     }
+    }
+   },
+   "5": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 18,
+       "FP": 17,
+       "TP": 66,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.5362622036262203,
+       "f1": 0.7904,
+       "n_alert_minutes": 403,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.08,
+       "precision": 0.7952,
+       "recall": 0.7857,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 18,
+       "FP": 17,
+       "TP": 66,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.5313807531380753,
+       "f1": 0.7904,
+       "n_alert_minutes": 386,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.07428571428571429,
+       "precision": 0.7952,
+       "recall": 0.7857,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 69,
+       "FP": 2,
+       "TP": 15,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.08821478382147838,
+       "f1": 0.2971,
+       "n_alert_minutes": 76,
+       "n_intervals": 17,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.8824,
+       "recall": 0.1786,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 64,
+       "FP": 2,
+       "TP": 20,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.11122733612273361,
+       "f1": 0.3774,
+       "n_alert_minutes": 87,
+       "n_intervals": 22,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.9091,
+       "recall": 0.2381,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 64,
+       "FP": 2,
+       "TP": 20,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.10704323570432357,
+       "f1": 0.3774,
+       "n_alert_minutes": 82,
+       "n_intervals": 22,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9091,
+       "recall": 0.2381,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 59,
+       "FP": 3,
+       "TP": 25,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.13563458856345886,
+       "f1": 0.4464,
+       "n_alert_minutes": 100,
+       "n_intervals": 28,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.8929,
+       "recall": 0.2976,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 26,
+       "FP": 21,
+       "TP": 58,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.44700139470013944,
+       "f1": 0.7117,
+       "n_alert_minutes": 450,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.06714285714285714,
+       "precision": 0.7342,
+       "recall": 0.6905,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 31,
+       "FP": 20,
+       "TP": 53,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.3957461645746165,
+       "f1": 0.6752,
+       "n_alert_minutes": 369,
+       "n_intervals": 67,
+       "normal_alarm_rate": 0.05357142857142857,
+       "precision": 0.726,
+       "recall": 0.631,
+       "scored": true
+      }
+     }
+    }
+   },
+   "6": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 18,
+       "FP": 21,
+       "TP": 66,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.5679916317991632,
+       "f1": 0.7719,
+       "n_alert_minutes": 411,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.085,
+       "precision": 0.7586,
+       "recall": 0.7857,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 19,
+       "FP": 21,
+       "TP": 65,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.5376569037656904,
+       "f1": 0.7647,
+       "n_alert_minutes": 374,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.07428571428571429,
+       "precision": 0.7558,
+       "recall": 0.7738,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 63,
+       "FP": 3,
+       "TP": 21,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.1199442119944212,
+       "f1": 0.3889,
+       "n_alert_minutes": 83,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.875,
+       "recall": 0.25,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 75,
+       "FP": 0,
+       "TP": 9,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.040446304044630406,
+       "f1": 0.1935,
+       "n_alert_minutes": 42,
+       "n_intervals": 9,
+       "normal_alarm_rate": 0.002142857142857143,
+       "precision": 1.0,
+       "recall": 0.1071,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 58,
+       "FP": 4,
+       "TP": 26,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.1398186889818689,
+       "f1": 0.4561,
+       "n_alert_minutes": 94,
+       "n_intervals": 28,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.8667,
+       "recall": 0.3095,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 72,
+       "FP": 2,
+       "TP": 12,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.06345885634588563,
+       "f1": 0.245,
+       "n_alert_minutes": 57,
+       "n_intervals": 14,
+       "normal_alarm_rate": 0.0035714285714285713,
+       "precision": 0.8571,
+       "recall": 0.1429,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 27,
+       "FP": 18,
+       "TP": 57,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.41701534170153415,
+       "f1": 0.717,
+       "n_alert_minutes": 407,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.05714285714285714,
+       "precision": 0.76,
+       "recall": 0.6786,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 30,
+       "FP": 18,
+       "TP": 54,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.4013249651324965,
+       "f1": 0.6923,
+       "n_alert_minutes": 388,
+       "n_intervals": 65,
+       "normal_alarm_rate": 0.055,
+       "precision": 0.75,
+       "recall": 0.6429,
+       "scored": true
+      }
+     }
+    }
+   },
+   "7": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 19,
+       "FP": 21,
+       "TP": 65,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.5589260808926081,
+       "f1": 0.7647,
+       "n_alert_minutes": 420,
+       "n_intervals": 67,
+       "normal_alarm_rate": 0.085,
+       "precision": 0.7558,
+       "recall": 0.7738,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 21,
+       "FP": 19,
+       "TP": 63,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.5296373779637378,
+       "f1": 0.759,
+       "n_alert_minutes": 402,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.07928571428571428,
+       "precision": 0.7683,
+       "recall": 0.75,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 65,
+       "FP": 1,
+       "TP": 19,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.099721059972106,
+       "f1": 0.3654,
+       "n_alert_minutes": 83,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.005,
+       "precision": 0.95,
+       "recall": 0.2262,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 66,
+       "FP": 1,
+       "TP": 18,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.09483960948396095,
+       "f1": 0.3495,
+       "n_alert_minutes": 77,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.0035714285714285713,
+       "precision": 0.9474,
+       "recall": 0.2143,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 62,
+       "FP": 1,
+       "TP": 22,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.11157601115760112,
+       "f1": 0.4112,
+       "n_alert_minutes": 94,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.9565,
+       "recall": 0.2619,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 58,
+       "FP": 2,
+       "TP": 26,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.13284518828451883,
+       "f1": 0.4643,
+       "n_alert_minutes": 96,
+       "n_intervals": 27,
+       "normal_alarm_rate": 0.004285714285714286,
+       "precision": 0.9286,
+       "recall": 0.3095,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 29,
+       "FP": 15,
+       "TP": 55,
+       "armor_false_positive_intervals": 15,
+       "coverage_padded_300s": 0.403068340306834,
+       "f1": 0.7143,
+       "n_alert_minutes": 429,
+       "n_intervals": 59,
+       "normal_alarm_rate": 0.06357142857142857,
+       "precision": 0.7857,
+       "recall": 0.6548,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 24,
+       "FP": 17,
+       "TP": 60,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.4525801952580195,
+       "f1": 0.7453,
+       "n_alert_minutes": 504,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.07571428571428572,
+       "precision": 0.7792,
+       "recall": 0.7143,
+       "scored": true
+      }
+     }
+    }
+   },
+   "8": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 18,
+       "FP": 20,
+       "TP": 66,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5833333333333334,
+       "f1": 0.7764,
+       "n_alert_minutes": 432,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.09357142857142857,
+       "precision": 0.7674,
+       "recall": 0.7857,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 20,
+       "FP": 21,
+       "TP": 64,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.549860529986053,
+       "f1": 0.7574,
+       "n_alert_minutes": 404,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.08142857142857143,
+       "precision": 0.7529,
+       "recall": 0.7619,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 68,
+       "FP": 1,
+       "TP": 16,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.0896094839609484,
+       "f1": 0.3169,
+       "n_alert_minutes": 76,
+       "n_intervals": 17,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.9412,
+       "recall": 0.1905,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 67,
+       "FP": 1,
+       "TP": 17,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.09762900976290098,
+       "f1": 0.3334,
+       "n_alert_minutes": 84,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9444,
+       "recall": 0.2024,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 63,
+       "FP": 3,
+       "TP": 21,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.1195955369595537,
+       "f1": 0.3889,
+       "n_alert_minutes": 92,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.875,
+       "recall": 0.25,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 65,
+       "FP": 2,
+       "TP": 19,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.10564853556485355,
+       "f1": 0.3619,
+       "n_alert_minutes": 84,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.9048,
+       "recall": 0.2262,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 31,
+       "FP": 18,
+       "TP": 53,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.4089958158995816,
+       "f1": 0.6839,
+       "n_alert_minutes": 424,
+       "n_intervals": 63,
+       "normal_alarm_rate": 0.054285714285714284,
+       "precision": 0.7465,
+       "recall": 0.631,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 28,
+       "FP": 20,
+       "TP": 56,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.44037656903765693,
+       "f1": 0.7,
+       "n_alert_minutes": 474,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.06357142857142857,
+       "precision": 0.7368,
+       "recall": 0.6667,
+       "scored": true
+      }
+     }
+    }
+   },
+   "9": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 18,
+       "FP": 19,
+       "TP": 66,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.5547419804741981,
+       "f1": 0.7811,
+       "n_alert_minutes": 412,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.08142857142857143,
+       "precision": 0.7765,
+       "recall": 0.7857,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 17,
+       "FP": 19,
+       "TP": 67,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.544281729428173,
+       "f1": 0.7882,
+       "n_alert_minutes": 385,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.075,
+       "precision": 0.7791,
+       "recall": 0.7976,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 63,
+       "FP": 3,
+       "TP": 21,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.11645746164574616,
+       "f1": 0.3889,
+       "n_alert_minutes": 86,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.01,
+       "precision": 0.875,
+       "recall": 0.25,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 62,
+       "FP": 2,
+       "TP": 22,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.12447698744769875,
+       "f1": 0.4074,
+       "n_alert_minutes": 104,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.011428571428571429,
+       "precision": 0.9167,
+       "recall": 0.2619,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 63,
+       "FP": 2,
+       "TP": 21,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.11227336122733612,
+       "f1": 0.3925,
+       "n_alert_minutes": 92,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.913,
+       "recall": 0.25,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 61,
+       "FP": 3,
+       "TP": 23,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.12622036262203626,
+       "f1": 0.4182,
+       "n_alert_minutes": 106,
+       "n_intervals": 25,
+       "normal_alarm_rate": 0.011428571428571429,
+       "precision": 0.8846,
+       "recall": 0.2738,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 29,
+       "FP": 21,
+       "TP": 55,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.4309623430962343,
+       "f1": 0.6875,
+       "n_alert_minutes": 428,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.06357142857142857,
+       "precision": 0.7237,
+       "recall": 0.6548,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 31,
+       "FP": 17,
+       "TP": 53,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.37691771269177127,
+       "f1": 0.6883,
+       "n_alert_minutes": 354,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.045,
+       "precision": 0.7571,
+       "recall": 0.631,
+       "scored": true
+      }
+     }
+    }
+   }
+  },
+  "0.3": {
+   "0": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 15,
+       "FP": 18,
+       "TP": 69,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.5624128312412832,
+       "f1": 0.807,
+       "n_alert_minutes": 423,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.08571428571428572,
+       "precision": 0.7931,
+       "recall": 0.8214,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 14,
+       "FP": 18,
+       "TP": 70,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.5739191073919108,
+       "f1": 0.814,
+       "n_alert_minutes": 421,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.08714285714285715,
+       "precision": 0.7955,
+       "recall": 0.8333,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 3,
+       "TP": 18,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.10634588563458856,
+       "f1": 0.3429,
+       "n_alert_minutes": 86,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.8571,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 67,
+       "FP": 4,
+       "TP": 17,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.10564853556485355,
+       "f1": 0.3238,
+       "n_alert_minutes": 81,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.8095,
+       "recall": 0.2024,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 64,
+       "FP": 4,
+       "TP": 20,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.1209902370990237,
+       "f1": 0.3704,
+       "n_alert_minutes": 91,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.8333,
+       "recall": 0.2381,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 70,
+       "FP": 2,
+       "TP": 14,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.07845188284518828,
+       "f1": 0.28,
+       "n_alert_minutes": 66,
+       "n_intervals": 16,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.875,
+       "recall": 0.1667,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 28,
+       "FP": 18,
+       "TP": 56,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.4086471408647141,
+       "f1": 0.7089,
+       "n_alert_minutes": 412,
+       "n_intervals": 64,
+       "normal_alarm_rate": 0.056428571428571425,
+       "precision": 0.7568,
+       "recall": 0.6667,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 28,
+       "FP": 17,
+       "TP": 56,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.40446304044630405,
+       "f1": 0.7134,
+       "n_alert_minutes": 410,
+       "n_intervals": 63,
+       "normal_alarm_rate": 0.055,
+       "precision": 0.7671,
+       "recall": 0.6667,
+       "scored": true
+      }
+     }
+    }
+   },
+   "1": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 22,
+       "FP": 22,
+       "TP": 62,
+       "armor_false_positive_intervals": 22,
+       "coverage_padded_300s": 0.5132496513249651,
+       "f1": 0.7381,
+       "n_alert_minutes": 392,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.08214285714285714,
+       "precision": 0.7381,
+       "recall": 0.7381,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 23,
+       "FP": 21,
+       "TP": 61,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.5094142259414226,
+       "f1": 0.7349,
+       "n_alert_minutes": 382,
+       "n_intervals": 68,
+       "normal_alarm_rate": 0.07857142857142857,
+       "precision": 0.7439,
+       "recall": 0.7262,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 2,
+       "TP": 18,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.1007670850767085,
+       "f1": 0.3462,
+       "n_alert_minutes": 75,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 66,
+       "FP": 2,
+       "TP": 18,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.10181311018131102,
+       "f1": 0.3462,
+       "n_alert_minutes": 71,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9,
+       "recall": 0.2143,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 63,
+       "FP": 1,
+       "TP": 21,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.11541143654114365,
+       "f1": 0.3962,
+       "n_alert_minutes": 87,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.9545,
+       "recall": 0.25,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 64,
+       "FP": 2,
+       "TP": 20,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.11227336122733612,
+       "f1": 0.3774,
+       "n_alert_minutes": 84,
+       "n_intervals": 22,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9091,
+       "recall": 0.2381,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 28,
+       "FP": 17,
+       "TP": 56,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.4131799163179916,
+       "f1": 0.7134,
+       "n_alert_minutes": 431,
+       "n_intervals": 67,
+       "normal_alarm_rate": 0.06285714285714286,
+       "precision": 0.7671,
+       "recall": 0.6667,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 24,
+       "FP": 21,
+       "TP": 60,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.4755927475592748,
+       "f1": 0.7273,
+       "n_alert_minutes": 537,
+       "n_intervals": 72,
+       "normal_alarm_rate": 0.08428571428571428,
+       "precision": 0.7407,
+       "recall": 0.7143,
+       "scored": true
+      }
+     }
+    }
+   },
+   "2": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 12,
+       "FP": 20,
+       "TP": 72,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5781032078103208,
+       "f1": 0.8182,
+       "n_alert_minutes": 401,
+       "n_intervals": 76,
+       "normal_alarm_rate": 0.08,
+       "precision": 0.7826,
+       "recall": 0.8571,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 12,
+       "FP": 21,
+       "TP": 72,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.5885634588563459,
+       "f1": 0.8135,
+       "n_alert_minutes": 393,
+       "n_intervals": 78,
+       "normal_alarm_rate": 0.07714285714285714,
+       "precision": 0.7742,
+       "recall": 0.8571,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 63,
+       "FP": 1,
+       "TP": 21,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.1108786610878661,
+       "f1": 0.3962,
+       "n_alert_minutes": 79,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.9545,
+       "recall": 0.25,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 65,
+       "FP": 0,
+       "TP": 19,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.09623430962343096,
+       "f1": 0.3689,
+       "n_alert_minutes": 68,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.002857142857142857,
+       "precision": 1.0,
+       "recall": 0.2262,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 60,
+       "FP": 3,
+       "TP": 24,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.13214783821478382,
+       "f1": 0.4324,
+       "n_alert_minutes": 90,
+       "n_intervals": 26,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.8889,
+       "recall": 0.2857,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 63,
+       "FP": 3,
+       "TP": 21,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.11680613668061367,
+       "f1": 0.3889,
+       "n_alert_minutes": 84,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.875,
+       "recall": 0.25,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 30,
+       "FP": 22,
+       "TP": 54,
+       "armor_false_positive_intervals": 22,
+       "coverage_padded_300s": 0.4201534170153417,
+       "f1": 0.675,
+       "n_alert_minutes": 408,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.06,
+       "precision": 0.7105,
+       "recall": 0.6429,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 26,
+       "FP": 22,
+       "TP": 58,
+       "armor_false_positive_intervals": 22,
+       "coverage_padded_300s": 0.4710599721059972,
+       "f1": 0.7073,
+       "n_alert_minutes": 502,
+       "n_intervals": 72,
+       "normal_alarm_rate": 0.08,
+       "precision": 0.725,
+       "recall": 0.6905,
+       "scored": true
+      }
+     }
+    }
+   },
+   "3": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 15,
+       "FP": 22,
+       "TP": 69,
+       "armor_false_positive_intervals": 22,
+       "coverage_padded_300s": 0.5798465829846583,
+       "f1": 0.7885,
+       "n_alert_minutes": 421,
+       "n_intervals": 76,
+       "normal_alarm_rate": 0.08642857142857142,
+       "precision": 0.7582,
+       "recall": 0.8214,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 14,
+       "FP": 25,
+       "TP": 70,
+       "armor_false_positive_intervals": 25,
+       "coverage_padded_300s": 0.6206415620641562,
+       "f1": 0.7821,
+       "n_alert_minutes": 454,
+       "n_intervals": 80,
+       "normal_alarm_rate": 0.09357142857142857,
+       "precision": 0.7368,
+       "recall": 0.8333,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 62,
+       "FP": 2,
+       "TP": 22,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.12133891213389121,
+       "f1": 0.4074,
+       "n_alert_minutes": 91,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.9167,
+       "recall": 0.2619,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 61,
+       "FP": 2,
+       "TP": 23,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.12273361227336123,
+       "f1": 0.422,
+       "n_alert_minutes": 94,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.01,
+       "precision": 0.92,
+       "recall": 0.2738,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 60,
+       "FP": 1,
+       "TP": 24,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.1209902370990237,
+       "f1": 0.4404,
+       "n_alert_minutes": 97,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.96,
+       "recall": 0.2857,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 55,
+       "FP": 1,
+       "TP": 29,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.148884239888424,
+       "f1": 0.5087,
+       "n_alert_minutes": 115,
+       "n_intervals": 28,
+       "normal_alarm_rate": 0.011428571428571429,
+       "precision": 0.9667,
+       "recall": 0.3452,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 31,
+       "FP": 18,
+       "TP": 53,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.41736401673640167,
+       "f1": 0.6839,
+       "n_alert_minutes": 429,
+       "n_intervals": 62,
+       "normal_alarm_rate": 0.07142857142857142,
+       "precision": 0.7465,
+       "recall": 0.631,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 25,
+       "FP": 19,
+       "TP": 59,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.4504881450488145,
+       "f1": 0.7284,
+       "n_alert_minutes": 473,
+       "n_intervals": 66,
+       "normal_alarm_rate": 0.07714285714285714,
+       "precision": 0.7564,
+       "recall": 0.7024,
+       "scored": true
+      }
+     }
+    }
+   },
+   "4": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 21,
+       "FP": 19,
+       "TP": 63,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.5244072524407253,
+       "f1": 0.759,
+       "n_alert_minutes": 394,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.075,
+       "precision": 0.7683,
+       "recall": 0.75,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 22,
+       "FP": 17,
+       "TP": 62,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.5087168758716876,
+       "f1": 0.7607,
+       "n_alert_minutes": 379,
+       "n_intervals": 67,
+       "normal_alarm_rate": 0.07142857142857142,
+       "precision": 0.7848,
+       "recall": 0.7381,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 65,
+       "FP": 4,
+       "TP": 19,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.11331938633193864,
+       "f1": 0.3552,
+       "n_alert_minutes": 83,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.8261,
+       "recall": 0.2262,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 71,
+       "FP": 0,
+       "TP": 13,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.06171548117154812,
+       "f1": 0.2681,
+       "n_alert_minutes": 51,
+       "n_intervals": 13,
+       "normal_alarm_rate": 0.0035714285714285713,
+       "precision": 1.0,
+       "recall": 0.1548,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 63,
+       "FP": 3,
+       "TP": 21,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.1195955369595537,
+       "f1": 0.3889,
+       "n_alert_minutes": 92,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.875,
+       "recall": 0.25,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 70,
+       "FP": 3,
+       "TP": 14,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.08403068340306834,
+       "f1": 0.2773,
+       "n_alert_minutes": 67,
+       "n_intervals": 17,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.8235,
+       "recall": 0.1667,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 24,
+       "FP": 17,
+       "TP": 60,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.4341004184100418,
+       "f1": 0.7453,
+       "n_alert_minutes": 436,
+       "n_intervals": 67,
+       "normal_alarm_rate": 0.06714285714285714,
+       "precision": 0.7792,
+       "recall": 0.7143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 22,
+       "FP": 20,
+       "TP": 62,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.46129707112970714,
+       "f1": 0.747,
+       "n_alert_minutes": 474,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.07857142857142857,
+       "precision": 0.7561,
+       "recall": 0.7381,
+       "scored": true
+      }
+     }
+    }
+   },
+   "5": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 14,
+       "FP": 17,
+       "TP": 70,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.5575313807531381,
+       "f1": 0.8187,
+       "n_alert_minutes": 410,
+       "n_intervals": 74,
+       "normal_alarm_rate": 0.08285714285714285,
+       "precision": 0.8046,
+       "recall": 0.8333,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 15,
+       "FP": 14,
+       "TP": 69,
+       "armor_false_positive_intervals": 14,
+       "coverage_padded_300s": 0.5271966527196653,
+       "f1": 0.8263,
+       "n_alert_minutes": 384,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.07714285714285714,
+       "precision": 0.8313,
+       "recall": 0.8214,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 67,
+       "FP": 1,
+       "TP": 17,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.08507670850767085,
+       "f1": 0.3334,
+       "n_alert_minutes": 79,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.9444,
+       "recall": 0.2024,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 67,
+       "FP": 0,
+       "TP": 17,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.08612273361227336,
+       "f1": 0.3367,
+       "n_alert_minutes": 79,
+       "n_intervals": 17,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 1.0,
+       "recall": 0.2024,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 3,
+       "TP": 18,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.1007670850767085,
+       "f1": 0.3429,
+       "n_alert_minutes": 83,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.8571,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 63,
+       "FP": 3,
+       "TP": 21,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.11610878661087866,
+       "f1": 0.3889,
+       "n_alert_minutes": 99,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.875,
+       "recall": 0.25,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 32,
+       "FP": 20,
+       "TP": 52,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.42329149232914925,
+       "f1": 0.6666,
+       "n_alert_minutes": 425,
+       "n_intervals": 67,
+       "normal_alarm_rate": 0.07,
+       "precision": 0.7222,
+       "recall": 0.619,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 34,
+       "FP": 19,
+       "TP": 50,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.40550906555090654,
+       "f1": 0.6536,
+       "n_alert_minutes": 404,
+       "n_intervals": 64,
+       "normal_alarm_rate": 0.06428571428571428,
+       "precision": 0.7246,
+       "recall": 0.5952,
+       "scored": true
+      }
+     }
+    }
+   },
+   "6": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 17,
+       "FP": 20,
+       "TP": 67,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5529986052998606,
+       "f1": 0.7836,
+       "n_alert_minutes": 413,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.08071428571428571,
+       "precision": 0.7701,
+       "recall": 0.7976,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 17,
+       "FP": 20,
+       "TP": 67,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5557880055788006,
+       "f1": 0.7836,
+       "n_alert_minutes": 401,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.07928571428571428,
+       "precision": 0.7701,
+       "recall": 0.7976,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 65,
+       "FP": 1,
+       "TP": 19,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.09693165969316597,
+       "f1": 0.3654,
+       "n_alert_minutes": 89,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.95,
+       "recall": 0.2262,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 66,
+       "FP": 0,
+       "TP": 18,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.08751743375174338,
+       "f1": 0.353,
+       "n_alert_minutes": 83,
+       "n_intervals": 17,
+       "normal_alarm_rate": 0.005,
+       "precision": 1.0,
+       "recall": 0.2143,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 62,
+       "FP": 1,
+       "TP": 22,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.11122733612273361,
+       "f1": 0.4112,
+       "n_alert_minutes": 100,
+       "n_intervals": 22,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9565,
+       "recall": 0.2619,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 59,
+       "FP": 4,
+       "TP": 25,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.14609483960948397,
+       "f1": 0.4425,
+       "n_alert_minutes": 114,
+       "n_intervals": 28,
+       "normal_alarm_rate": 0.011428571428571429,
+       "precision": 0.8621,
+       "recall": 0.2976,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 28,
+       "FP": 19,
+       "TP": 56,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.4222454672245467,
+       "f1": 0.7044,
+       "n_alert_minutes": 422,
+       "n_intervals": 68,
+       "normal_alarm_rate": 0.06142857142857143,
+       "precision": 0.7467,
+       "recall": 0.6667,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 21,
+       "FP": 19,
+       "TP": 63,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.4640864714086471,
+       "f1": 0.759,
+       "n_alert_minutes": 479,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.07214285714285715,
+       "precision": 0.7683,
+       "recall": 0.75,
+       "scored": true
+      }
+     }
+    }
+   },
+   "7": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 17,
+       "FP": 19,
+       "TP": 67,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.5631101813110181,
+       "f1": 0.7882,
+       "n_alert_minutes": 407,
+       "n_intervals": 72,
+       "normal_alarm_rate": 0.08214285714285714,
+       "precision": 0.7791,
+       "recall": 0.7976,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 13,
+       "FP": 22,
+       "TP": 71,
+       "armor_false_positive_intervals": 22,
+       "coverage_padded_300s": 0.6464435146443515,
+       "f1": 0.8022,
+       "n_alert_minutes": 469,
+       "n_intervals": 76,
+       "normal_alarm_rate": 0.10142857142857142,
+       "precision": 0.7634,
+       "recall": 0.8452,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 3,
+       "TP": 18,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.10285913528591353,
+       "f1": 0.3429,
+       "n_alert_minutes": 81,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.8571,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 72,
+       "FP": 0,
+       "TP": 12,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.06171548117154812,
+       "f1": 0.2501,
+       "n_alert_minutes": 58,
+       "n_intervals": 12,
+       "normal_alarm_rate": 0.004285714285714286,
+       "precision": 1.0,
+       "recall": 0.1429,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 62,
+       "FP": 2,
+       "TP": 22,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.11192468619246862,
+       "f1": 0.4074,
+       "n_alert_minutes": 92,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.9167,
+       "recall": 0.2619,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 63,
+       "FP": 2,
+       "TP": 21,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.10285913528591353,
+       "f1": 0.3925,
+       "n_alert_minutes": 82,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.913,
+       "recall": 0.25,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 33,
+       "FP": 18,
+       "TP": 51,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.40794979079497906,
+       "f1": 0.6666,
+       "n_alert_minutes": 418,
+       "n_intervals": 60,
+       "normal_alarm_rate": 0.062142857142857146,
+       "precision": 0.7391,
+       "recall": 0.6071,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 28,
+       "FP": 23,
+       "TP": 56,
+       "armor_false_positive_intervals": 23,
+       "coverage_padded_300s": 0.4605997210599721,
+       "f1": 0.6872,
+       "n_alert_minutes": 480,
+       "n_intervals": 67,
+       "normal_alarm_rate": 0.07428571428571429,
+       "precision": 0.7089,
+       "recall": 0.6667,
+       "scored": true
+      }
+     }
+    }
+   },
+   "8": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 19,
+       "FP": 26,
+       "TP": 65,
+       "armor_false_positive_intervals": 26,
+       "coverage_padded_300s": 0.5679916317991632,
+       "f1": 0.7429,
+       "n_alert_minutes": 418,
+       "n_intervals": 76,
+       "normal_alarm_rate": 0.08571428571428572,
+       "precision": 0.7143,
+       "recall": 0.7738,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 17,
+       "FP": 25,
+       "TP": 67,
+       "armor_false_positive_intervals": 25,
+       "coverage_padded_300s": 0.5753138075313807,
+       "f1": 0.7614,
+       "n_alert_minutes": 421,
+       "n_intervals": 77,
+       "normal_alarm_rate": 0.08642857142857142,
+       "precision": 0.7283,
+       "recall": 0.7976,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 67,
+       "FP": 4,
+       "TP": 17,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.10285913528591353,
+       "f1": 0.3238,
+       "n_alert_minutes": 79,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.8095,
+       "recall": 0.2024,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 66,
+       "FP": 4,
+       "TP": 18,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.11262203626220363,
+       "f1": 0.3396,
+       "n_alert_minutes": 93,
+       "n_intervals": 22,
+       "normal_alarm_rate": 0.010714285714285714,
+       "precision": 0.8182,
+       "recall": 0.2143,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 64,
+       "FP": 5,
+       "TP": 20,
+       "armor_false_positive_intervals": 5,
+       "coverage_padded_300s": 0.1202928870292887,
+       "f1": 0.367,
+       "n_alert_minutes": 87,
+       "n_intervals": 25,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.8,
+       "recall": 0.2381,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 65,
+       "FP": 4,
+       "TP": 19,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.11645746164574616,
+       "f1": 0.3552,
+       "n_alert_minutes": 95,
+       "n_intervals": 22,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.8261,
+       "recall": 0.2262,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 31,
+       "FP": 14,
+       "TP": 53,
+       "armor_false_positive_intervals": 14,
+       "coverage_padded_300s": 0.3817991631799163,
+       "f1": 0.702,
+       "n_alert_minutes": 395,
+       "n_intervals": 57,
+       "normal_alarm_rate": 0.05357142857142857,
+       "precision": 0.791,
+       "recall": 0.631,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 26,
+       "FP": 15,
+       "TP": 58,
+       "armor_false_positive_intervals": 15,
+       "coverage_padded_300s": 0.4222454672245467,
+       "f1": 0.7389,
+       "n_alert_minutes": 456,
+       "n_intervals": 62,
+       "normal_alarm_rate": 0.07071428571428572,
+       "precision": 0.7945,
+       "recall": 0.6905,
+       "scored": true
+      }
+     }
+    }
+   },
+   "9": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 15,
+       "FP": 21,
+       "TP": 69,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.5812412831241283,
+       "f1": 0.7931,
+       "n_alert_minutes": 419,
+       "n_intervals": 74,
+       "normal_alarm_rate": 0.08,
+       "precision": 0.7667,
+       "recall": 0.8214,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 15,
+       "FP": 19,
+       "TP": 69,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.5683403068340307,
+       "f1": 0.8023,
+       "n_alert_minutes": 411,
+       "n_intervals": 72,
+       "normal_alarm_rate": 0.07714285714285714,
+       "precision": 0.7841,
+       "recall": 0.8214,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 65,
+       "FP": 1,
+       "TP": 19,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.1007670850767085,
+       "f1": 0.3654,
+       "n_alert_minutes": 83,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.95,
+       "recall": 0.2262,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.08821478382147838,
+       "f1": 0.3138,
+       "n_alert_minutes": 79,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.005714285714285714,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 62,
+       "FP": 3,
+       "TP": 22,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.11541143654114365,
+       "f1": 0.4037,
+       "n_alert_minutes": 91,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.88,
+       "recall": 0.2619,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 63,
+       "FP": 3,
+       "TP": 21,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.11471408647140864,
+       "f1": 0.3889,
+       "n_alert_minutes": 97,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.875,
+       "recall": 0.25,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 29,
+       "FP": 19,
+       "TP": 55,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.4271269177126918,
+       "f1": 0.6962,
+       "n_alert_minutes": 419,
+       "n_intervals": 68,
+       "normal_alarm_rate": 0.06642857142857143,
+       "precision": 0.7432,
+       "recall": 0.6548,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 24,
+       "FP": 22,
+       "TP": 60,
+       "armor_false_positive_intervals": 22,
+       "coverage_padded_300s": 0.48675034867503486,
+       "f1": 0.7229,
+       "n_alert_minutes": 527,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.08928571428571429,
+       "precision": 0.7317,
+       "recall": 0.7143,
+       "scored": true
+      }
+     }
+    }
+   }
+  },
+  "0.4": {
+   "0": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 19,
+       "FP": 21,
+       "TP": 65,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.5523012552301255,
+       "f1": 0.7647,
+       "n_alert_minutes": 395,
+       "n_intervals": 74,
+       "normal_alarm_rate": 0.08214285714285714,
+       "precision": 0.7558,
+       "recall": 0.7738,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 17,
+       "FP": 20,
+       "TP": 67,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5711297071129707,
+       "f1": 0.7836,
+       "n_alert_minutes": 406,
+       "n_intervals": 72,
+       "normal_alarm_rate": 0.085,
+       "precision": 0.7701,
+       "recall": 0.7976,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 67,
+       "FP": 2,
+       "TP": 17,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09588563458856346,
+       "f1": 0.3301,
+       "n_alert_minutes": 80,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.8947,
+       "recall": 0.2024,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09239888423988843,
+       "f1": 0.3138,
+       "n_alert_minutes": 82,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 65,
+       "FP": 2,
+       "TP": 19,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.1087866108786611,
+       "f1": 0.3619,
+       "n_alert_minutes": 92,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.9048,
+       "recall": 0.2262,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 64,
+       "FP": 2,
+       "TP": 20,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.11192468619246862,
+       "f1": 0.3774,
+       "n_alert_minutes": 95,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.9091,
+       "recall": 0.2381,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 31,
+       "FP": 17,
+       "TP": 53,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.40341701534170155,
+       "f1": 0.6883,
+       "n_alert_minutes": 417,
+       "n_intervals": 61,
+       "normal_alarm_rate": 0.06142857142857143,
+       "precision": 0.7571,
+       "recall": 0.631,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 38,
+       "FP": 16,
+       "TP": 46,
+       "armor_false_positive_intervals": 16,
+       "coverage_padded_300s": 0.34344490934449096,
+       "f1": 0.6301,
+       "n_alert_minutes": 338,
+       "n_intervals": 56,
+       "normal_alarm_rate": 0.04357142857142857,
+       "precision": 0.7419,
+       "recall": 0.5476,
+       "scored": true
+      }
+     }
+    }
+   },
+   "1": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 19,
+       "FP": 24,
+       "TP": 65,
+       "armor_false_positive_intervals": 24,
+       "coverage_padded_300s": 0.5352161785216178,
+       "f1": 0.7514,
+       "n_alert_minutes": 384,
+       "n_intervals": 74,
+       "normal_alarm_rate": 0.075,
+       "precision": 0.7303,
+       "recall": 0.7738,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 16,
+       "FP": 24,
+       "TP": 68,
+       "armor_false_positive_intervals": 24,
+       "coverage_padded_300s": 0.5854253835425384,
+       "f1": 0.7727,
+       "n_alert_minutes": 416,
+       "n_intervals": 76,
+       "normal_alarm_rate": 0.08642857142857142,
+       "precision": 0.7391,
+       "recall": 0.8095,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 67,
+       "FP": 2,
+       "TP": 17,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09379358437935843,
+       "f1": 0.3301,
+       "n_alert_minutes": 78,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.8947,
+       "recall": 0.2024,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 71,
+       "FP": 0,
+       "TP": 13,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.06485355648535565,
+       "f1": 0.2681,
+       "n_alert_minutes": 59,
+       "n_intervals": 13,
+       "normal_alarm_rate": 0.0035714285714285713,
+       "precision": 1.0,
+       "recall": 0.1548,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 61,
+       "FP": 2,
+       "TP": 23,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.1202928870292887,
+       "f1": 0.422,
+       "n_alert_minutes": 93,
+       "n_intervals": 24,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.92,
+       "recall": 0.2738,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 71,
+       "FP": 0,
+       "TP": 13,
+       "armor_false_positive_intervals": 0,
+       "coverage_padded_300s": 0.06311018131101813,
+       "f1": 0.2681,
+       "n_alert_minutes": 53,
+       "n_intervals": 13,
+       "normal_alarm_rate": 0.002142857142857143,
+       "precision": 1.0,
+       "recall": 0.1548,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 31,
+       "FP": 21,
+       "TP": 53,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.39539748953974896,
+       "f1": 0.6709,
+       "n_alert_minutes": 397,
+       "n_intervals": 65,
+       "normal_alarm_rate": 0.065,
+       "precision": 0.7162,
+       "recall": 0.631,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 25,
+       "FP": 22,
+       "TP": 59,
+       "armor_false_positive_intervals": 22,
+       "coverage_padded_300s": 0.47419804741980476,
+       "f1": 0.7152,
+       "n_alert_minutes": 519,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.09357142857142857,
+       "precision": 0.7284,
+       "recall": 0.7024,
+       "scored": true
+      }
+     }
+    }
+   },
+   "2": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 16,
+       "FP": 16,
+       "TP": 68,
+       "armor_false_positive_intervals": 16,
+       "coverage_padded_300s": 0.5303347280334728,
+       "f1": 0.8095,
+       "n_alert_minutes": 403,
+       "n_intervals": 68,
+       "normal_alarm_rate": 0.07142857142857142,
+       "precision": 0.8095,
+       "recall": 0.8095,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 14,
+       "FP": 19,
+       "TP": 70,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.5896094839609484,
+       "f1": 0.8092,
+       "n_alert_minutes": 464,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.08785714285714286,
+       "precision": 0.7865,
+       "recall": 0.8333,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 69,
+       "FP": 1,
+       "TP": 15,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.07845188284518828,
+       "f1": 0.3,
+       "n_alert_minutes": 75,
+       "n_intervals": 16,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9375,
+       "recall": 0.1786,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 70,
+       "FP": 1,
+       "TP": 14,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.07287308228730822,
+       "f1": 0.2829,
+       "n_alert_minutes": 56,
+       "n_intervals": 15,
+       "normal_alarm_rate": 0.002857142857142857,
+       "precision": 0.9333,
+       "recall": 0.1667,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 62,
+       "FP": 1,
+       "TP": 22,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.10739191073919108,
+       "f1": 0.4112,
+       "n_alert_minutes": 87,
+       "n_intervals": 22,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9565,
+       "recall": 0.2619,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 75,
+       "FP": 1,
+       "TP": 9,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.049860529986053,
+       "f1": 0.1914,
+       "n_alert_minutes": 47,
+       "n_intervals": 10,
+       "normal_alarm_rate": 0.002857142857142857,
+       "precision": 0.9,
+       "recall": 0.1071,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 30,
+       "FP": 15,
+       "TP": 54,
+       "armor_false_positive_intervals": 15,
+       "coverage_padded_300s": 0.39295676429567644,
+       "f1": 0.7059,
+       "n_alert_minutes": 403,
+       "n_intervals": 61,
+       "normal_alarm_rate": 0.05285714285714286,
+       "precision": 0.7826,
+       "recall": 0.6429,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 26,
+       "FP": 18,
+       "TP": 58,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.45083682008368203,
+       "f1": 0.725,
+       "n_alert_minutes": 506,
+       "n_intervals": 67,
+       "normal_alarm_rate": 0.07142857142857142,
+       "precision": 0.7632,
+       "recall": 0.6905,
+       "scored": true
+      }
+     }
+    }
+   },
+   "3": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 18,
+       "FP": 19,
+       "TP": 66,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.5543933054393305,
+       "f1": 0.7811,
+       "n_alert_minutes": 406,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.08,
+       "precision": 0.7765,
+       "recall": 0.7857,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 16,
+       "FP": 18,
+       "TP": 68,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.5910041841004184,
+       "f1": 0.8,
+       "n_alert_minutes": 449,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.09142857142857143,
+       "precision": 0.7907,
+       "recall": 0.8095,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 65,
+       "FP": 2,
+       "TP": 19,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.10425383542538354,
+       "f1": 0.3619,
+       "n_alert_minutes": 89,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.9048,
+       "recall": 0.2262,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 70,
+       "FP": 1,
+       "TP": 14,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.07147838214783822,
+       "f1": 0.2829,
+       "n_alert_minutes": 66,
+       "n_intervals": 14,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9333,
+       "recall": 0.1667,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 62,
+       "FP": 2,
+       "TP": 22,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.11785216178521618,
+       "f1": 0.4074,
+       "n_alert_minutes": 93,
+       "n_intervals": 22,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.9167,
+       "recall": 0.2619,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 60,
+       "FP": 1,
+       "TP": 24,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.12935843793584378,
+       "f1": 0.4404,
+       "n_alert_minutes": 103,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.96,
+       "recall": 0.2857,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 35,
+       "FP": 21,
+       "TP": 49,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.3915620641562064,
+       "f1": 0.6363,
+       "n_alert_minutes": 386,
+       "n_intervals": 63,
+       "normal_alarm_rate": 0.065,
+       "precision": 0.7,
+       "recall": 0.5833,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 35,
+       "FP": 21,
+       "TP": 49,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.39504881450488144,
+       "f1": 0.6363,
+       "n_alert_minutes": 396,
+       "n_intervals": 62,
+       "normal_alarm_rate": 0.065,
+       "precision": 0.7,
+       "recall": 0.5833,
+       "scored": true
+      }
+     }
+    }
+   },
+   "4": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 19,
+       "FP": 18,
+       "TP": 65,
+       "armor_false_positive_intervals": 18,
+       "coverage_padded_300s": 0.5359135285913529,
+       "f1": 0.7784,
+       "n_alert_minutes": 398,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.08142857142857143,
+       "precision": 0.7831,
+       "recall": 0.7738,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 15,
+       "FP": 20,
+       "TP": 69,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5944909344490934,
+       "f1": 0.7977,
+       "n_alert_minutes": 448,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.09357142857142857,
+       "precision": 0.7753,
+       "recall": 0.8214,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 69,
+       "FP": 1,
+       "TP": 15,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.08682008368200837,
+       "f1": 0.3,
+       "n_alert_minutes": 79,
+       "n_intervals": 16,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9375,
+       "recall": 0.1786,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 70,
+       "FP": 1,
+       "TP": 14,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.07810320781032078,
+       "f1": 0.2829,
+       "n_alert_minutes": 84,
+       "n_intervals": 15,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.9333,
+       "recall": 0.1667,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 1,
+       "TP": 18,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.09518828451882845,
+       "f1": 0.3495,
+       "n_alert_minutes": 87,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.9474,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 65,
+       "FP": 2,
+       "TP": 19,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.11122733612273361,
+       "f1": 0.3619,
+       "n_alert_minutes": 108,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.012857142857142857,
+       "precision": 0.9048,
+       "recall": 0.2262,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 36,
+       "FP": 16,
+       "TP": 48,
+       "armor_false_positive_intervals": 16,
+       "coverage_padded_300s": 0.37308228730822873,
+       "f1": 0.6486,
+       "n_alert_minutes": 388,
+       "n_intervals": 58,
+       "normal_alarm_rate": 0.056428571428571425,
+       "precision": 0.75,
+       "recall": 0.5714,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 33,
+       "FP": 16,
+       "TP": 51,
+       "armor_false_positive_intervals": 16,
+       "coverage_padded_300s": 0.40097629009762903,
+       "f1": 0.6755,
+       "n_alert_minutes": 423,
+       "n_intervals": 61,
+       "normal_alarm_rate": 0.062142857142857146,
+       "precision": 0.7612,
+       "recall": 0.6071,
+       "scored": true
+      }
+     }
+    }
+   },
+   "5": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 22,
+       "FP": 19,
+       "TP": 62,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.5488145048814504,
+       "f1": 0.7515,
+       "n_alert_minutes": 396,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.08142857142857143,
+       "precision": 0.7654,
+       "recall": 0.7381,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 19,
+       "FP": 21,
+       "TP": 65,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.5920502092050209,
+       "f1": 0.7647,
+       "n_alert_minutes": 445,
+       "n_intervals": 69,
+       "normal_alarm_rate": 0.09857142857142857,
+       "precision": 0.7558,
+       "recall": 0.7738,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 1,
+       "TP": 18,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.09728033472803348,
+       "f1": 0.3495,
+       "n_alert_minutes": 82,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9474,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 66,
+       "FP": 1,
+       "TP": 18,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.09693165969316597,
+       "f1": 0.3495,
+       "n_alert_minutes": 81,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9474,
+       "recall": 0.2143,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 62,
+       "FP": 3,
+       "TP": 22,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.13249651324965134,
+       "f1": 0.4037,
+       "n_alert_minutes": 94,
+       "n_intervals": 25,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.88,
+       "recall": 0.2619,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 62,
+       "FP": 3,
+       "TP": 22,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.13179916317991633,
+       "f1": 0.4037,
+       "n_alert_minutes": 97,
+       "n_intervals": 25,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.88,
+       "recall": 0.2619,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 32,
+       "FP": 20,
+       "TP": 52,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.39539748953974896,
+       "f1": 0.6666,
+       "n_alert_minutes": 393,
+       "n_intervals": 65,
+       "normal_alarm_rate": 0.06928571428571428,
+       "precision": 0.7222,
+       "recall": 0.619,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 32,
+       "FP": 22,
+       "TP": 52,
+       "armor_false_positive_intervals": 22,
+       "coverage_padded_300s": 0.405160390516039,
+       "f1": 0.6582,
+       "n_alert_minutes": 404,
+       "n_intervals": 67,
+       "normal_alarm_rate": 0.07285714285714286,
+       "precision": 0.7027,
+       "recall": 0.619,
+       "scored": true
+      }
+     }
+    }
+   },
+   "6": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 18,
+       "FP": 19,
+       "TP": 66,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.547071129707113,
+       "f1": 0.7811,
+       "n_alert_minutes": 406,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.08071428571428571,
+       "precision": 0.7765,
+       "recall": 0.7857,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 20,
+       "FP": 17,
+       "TP": 64,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.5101115760111576,
+       "f1": 0.7757,
+       "n_alert_minutes": 352,
+       "n_intervals": 70,
+       "normal_alarm_rate": 0.06857142857142857,
+       "precision": 0.7901,
+       "recall": 0.7619,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 67,
+       "FP": 2,
+       "TP": 17,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.10495118549511855,
+       "f1": 0.3301,
+       "n_alert_minutes": 77,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.8947,
+       "recall": 0.2024,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 69,
+       "FP": 1,
+       "TP": 15,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.08647140864714087,
+       "f1": 0.3,
+       "n_alert_minutes": 70,
+       "n_intervals": 16,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9375,
+       "recall": 0.1786,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 60,
+       "FP": 2,
+       "TP": 24,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.1304044630404463,
+       "f1": 0.4363,
+       "n_alert_minutes": 88,
+       "n_intervals": 25,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9231,
+       "recall": 0.2857,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 61,
+       "FP": 4,
+       "TP": 23,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.13389121338912133,
+       "f1": 0.4144,
+       "n_alert_minutes": 104,
+       "n_intervals": 26,
+       "normal_alarm_rate": 0.011428571428571429,
+       "precision": 0.8519,
+       "recall": 0.2738,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 33,
+       "FP": 19,
+       "TP": 51,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.4201534170153417,
+       "f1": 0.6623,
+       "n_alert_minutes": 422,
+       "n_intervals": 65,
+       "normal_alarm_rate": 0.07571428571428572,
+       "precision": 0.7286,
+       "recall": 0.6071,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 33,
+       "FP": 17,
+       "TP": 51,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.4072524407252441,
+       "f1": 0.671,
+       "n_alert_minutes": 413,
+       "n_intervals": 63,
+       "normal_alarm_rate": 0.07142857142857142,
+       "precision": 0.75,
+       "recall": 0.6071,
+       "scored": true
+      }
+     }
+    }
+   },
+   "7": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 17,
+       "FP": 11,
+       "TP": 67,
+       "armor_false_positive_intervals": 11,
+       "coverage_padded_300s": 0.5177824267782427,
+       "f1": 0.8272,
+       "n_alert_minutes": 401,
+       "n_intervals": 63,
+       "normal_alarm_rate": 0.07928571428571428,
+       "precision": 0.859,
+       "recall": 0.7976,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 16,
+       "FP": 12,
+       "TP": 68,
+       "armor_false_positive_intervals": 12,
+       "coverage_padded_300s": 0.5320781032078103,
+       "f1": 0.8293,
+       "n_alert_minutes": 394,
+       "n_intervals": 65,
+       "normal_alarm_rate": 0.07571428571428572,
+       "precision": 0.85,
+       "recall": 0.8095,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 68,
+       "FP": 2,
+       "TP": 16,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.09309623430962342,
+       "f1": 0.3138,
+       "n_alert_minutes": 86,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.009285714285714286,
+       "precision": 0.8889,
+       "recall": 0.1905,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 71,
+       "FP": 1,
+       "TP": 13,
+       "armor_false_positive_intervals": 1,
+       "coverage_padded_300s": 0.07112970711297072,
+       "f1": 0.2654,
+       "n_alert_minutes": 66,
+       "n_intervals": 14,
+       "normal_alarm_rate": 0.0064285714285714285,
+       "precision": 0.9286,
+       "recall": 0.1548,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 67,
+       "FP": 3,
+       "TP": 17,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.10495118549511855,
+       "f1": 0.3269,
+       "n_alert_minutes": 93,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.010714285714285714,
+       "precision": 0.85,
+       "recall": 0.2024,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 67,
+       "FP": 4,
+       "TP": 17,
+       "armor_false_positive_intervals": 4,
+       "coverage_padded_300s": 0.10634588563458856,
+       "f1": 0.3238,
+       "n_alert_minutes": 93,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.011428571428571429,
+       "precision": 0.8095,
+       "recall": 0.2024,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 34,
+       "FP": 16,
+       "TP": 50,
+       "armor_false_positive_intervals": 16,
+       "coverage_padded_300s": 0.3880753138075314,
+       "f1": 0.6667,
+       "n_alert_minutes": 418,
+       "n_intervals": 58,
+       "normal_alarm_rate": 0.07214285714285715,
+       "precision": 0.7576,
+       "recall": 0.5952,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 33,
+       "FP": 21,
+       "TP": 51,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.4246861924686193,
+       "f1": 0.6538,
+       "n_alert_minutes": 472,
+       "n_intervals": 63,
+       "normal_alarm_rate": 0.085,
+       "precision": 0.7083,
+       "recall": 0.6071,
+       "scored": true
+      }
+     }
+    }
+   },
+   "8": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 20,
+       "FP": 22,
+       "TP": 64,
+       "armor_false_positive_intervals": 22,
+       "coverage_padded_300s": 0.5244072524407253,
+       "f1": 0.7529,
+       "n_alert_minutes": 378,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.07142857142857142,
+       "precision": 0.7442,
+       "recall": 0.7619,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 19,
+       "FP": 20,
+       "TP": 65,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5575313807531381,
+       "f1": 0.7692,
+       "n_alert_minutes": 407,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.08214285714285714,
+       "precision": 0.7647,
+       "recall": 0.7738,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 69,
+       "FP": 3,
+       "TP": 15,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.09239888423988843,
+       "f1": 0.2942,
+       "n_alert_minutes": 81,
+       "n_intervals": 18,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.8333,
+       "recall": 0.1786,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 67,
+       "FP": 3,
+       "TP": 17,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.1108786610878661,
+       "f1": 0.3269,
+       "n_alert_minutes": 96,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.012857142857142857,
+       "precision": 0.85,
+       "recall": 0.2024,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 66,
+       "FP": 3,
+       "TP": 18,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.10669456066945607,
+       "f1": 0.3429,
+       "n_alert_minutes": 88,
+       "n_intervals": 20,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.8571,
+       "recall": 0.2143,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 70,
+       "FP": 3,
+       "TP": 14,
+       "armor_false_positive_intervals": 3,
+       "coverage_padded_300s": 0.08751743375174338,
+       "f1": 0.2773,
+       "n_alert_minutes": 75,
+       "n_intervals": 17,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.8235,
+       "recall": 0.1667,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 33,
+       "FP": 21,
+       "TP": 51,
+       "armor_false_positive_intervals": 21,
+       "coverage_padded_300s": 0.39609483960948394,
+       "f1": 0.6538,
+       "n_alert_minutes": 408,
+       "n_intervals": 64,
+       "normal_alarm_rate": 0.06142857142857143,
+       "precision": 0.7083,
+       "recall": 0.6071,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 27,
+       "FP": 25,
+       "TP": 57,
+       "armor_false_positive_intervals": 25,
+       "coverage_padded_300s": 0.46443514644351463,
+       "f1": 0.6868,
+       "n_alert_minutes": 499,
+       "n_intervals": 71,
+       "normal_alarm_rate": 0.07928571428571428,
+       "precision": 0.6951,
+       "recall": 0.6786,
+       "scored": true
+      }
+     }
+    }
+   },
+   "9": {
+    "ours": {
+     "d3_p90": {
+      "clean_thresholds": {
+       "FN": 17,
+       "FP": 20,
+       "TP": 67,
+       "armor_false_positive_intervals": 20,
+       "coverage_padded_300s": 0.5289400278940027,
+       "f1": 0.7836,
+       "n_alert_minutes": 410,
+       "n_intervals": 73,
+       "normal_alarm_rate": 0.08785714285714286,
+       "precision": 0.7701,
+       "recall": 0.7976,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 21,
+       "FP": 17,
+       "TP": 63,
+       "armor_false_positive_intervals": 17,
+       "coverage_padded_300s": 0.4679218967921897,
+       "f1": 0.7683,
+       "n_alert_minutes": 351,
+       "n_intervals": 67,
+       "normal_alarm_rate": 0.07071428571428572,
+       "precision": 0.7875,
+       "recall": 0.75,
+       "scored": true
+      }
+     },
+     "d3_p99": {
+      "clean_thresholds": {
+       "FN": 64,
+       "FP": 2,
+       "TP": 20,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.1087866108786611,
+       "f1": 0.3774,
+       "n_alert_minutes": 88,
+       "n_intervals": 21,
+       "normal_alarm_rate": 0.007142857142857143,
+       "precision": 0.9091,
+       "recall": 0.2381,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 66,
+       "FP": 2,
+       "TP": 18,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.099721059972106,
+       "f1": 0.3462,
+       "n_alert_minutes": 85,
+       "n_intervals": 19,
+       "normal_alarm_rate": 0.008571428571428572,
+       "precision": 0.9,
+       "recall": 0.2143,
+       "scored": true
+      }
+     },
+     "v0_p99": {
+      "clean_thresholds": {
+       "FN": 57,
+       "FP": 2,
+       "TP": 27,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.14295676429567644,
+       "f1": 0.4778,
+       "n_alert_minutes": 104,
+       "n_intervals": 28,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.931,
+       "recall": 0.3214,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 63,
+       "FP": 2,
+       "TP": 21,
+       "armor_false_positive_intervals": 2,
+       "coverage_padded_300s": 0.11750348675034868,
+       "f1": 0.3925,
+       "n_alert_minutes": 90,
+       "n_intervals": 23,
+       "normal_alarm_rate": 0.007857142857142858,
+       "precision": 0.913,
+       "recall": 0.25,
+       "scored": true
+      }
+     },
+     "v1_primary": {
+      "clean_thresholds": {
+       "FN": 33,
+       "FP": 19,
+       "TP": 51,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.38145048814504884,
+       "f1": 0.6623,
+       "n_alert_minutes": 365,
+       "n_intervals": 63,
+       "normal_alarm_rate": 0.05357142857142857,
+       "precision": 0.7286,
+       "recall": 0.6071,
+       "scored": true
+      },
+      "recalibrated": {
+       "FN": 34,
+       "FP": 19,
+       "TP": 50,
+       "armor_false_positive_intervals": 19,
+       "coverage_padded_300s": 0.3695955369595537,
+       "f1": 0.6536,
+       "n_alert_minutes": 352,
+       "n_intervals": 62,
+       "normal_alarm_rate": 0.052142857142857144,
+       "precision": 0.7246,
+       "recall": 0.5952,
+       "scored": true
+      }
+     }
+    }
+   }
+  }
+ },
+ "seed": 2
+}

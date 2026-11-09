@@ -1,0 +1,218 @@
+{
+  "n_cases": 25,
+  "accuracy": 0.84,
+  "macro_f1": 0.8328070175438598,
+  "weighted_f1": 0.8409473684210528,
+  "per_class": {
+    "precision": [
+      1.0,
+      0.6666666666666666,
+      0.6666666666666666,
+      1.0,
+      1.0
+    ],
+    "recall": [
+      0.9,
+      1.0,
+      0.6666666666666666,
+      0.6,
+      1.0
+    ],
+    "f1": [
+      0.9473684210526316,
+      0.8,
+      0.6666666666666666,
+      0.7499999999999999,
+      1.0
+    ],
+    "support": [
+      10,
+      6,
+      3,
+      5,
+      1
+    ],
+    "predicted": [
+      9,
+      9,
+      3,
+      3,
+      1
+    ]
+  },
+  "confusion_matrix": [
+    [
+      9,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      6,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      3,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "macro_f1_excluding_node_memory": 0.7910087719298246,
+  "family_diagnostic": {
+    "families": {
+      "container": {
+        "classes": [
+          "Container Hardware",
+          "Container Network"
+        ],
+        "n_cases": 16,
+        "confusion_true_rows_vs_all_predicted_columns": [
+          [
+            9,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0,
+            0,
+            0
+          ]
+        ],
+        "row_labels": [
+          "Container Hardware",
+          "Container Network"
+        ],
+        "column_labels": [
+          "Container Hardware",
+          "Container Network",
+          "Node CPU",
+          "Node Disk",
+          "Node Memory"
+        ],
+        "exactly_correct": 15,
+        "wrong_inside_family": 1,
+        "wrong_outside_family": 0,
+        "family_level_accuracy": {
+          "value": 1.0,
+          "numerator": 16,
+          "denominator": 16,
+          "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)"
+        },
+        "conditional_within_family_accuracy": {
+          "value": 0.9375,
+          "numerator": 15,
+          "denominator": 16,
+          "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy"
+        }
+      },
+      "node": {
+        "classes": [
+          "Node CPU",
+          "Node Disk",
+          "Node Memory"
+        ],
+        "n_cases": 9,
+        "confusion_true_rows_vs_all_predicted_columns": [
+          [
+            0,
+            1,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "row_labels": [
+          "Node CPU",
+          "Node Disk",
+          "Node Memory"
+        ],
+        "column_labels": [
+          "Container Hardware",
+          "Container Network",
+          "Node CPU",
+          "Node Disk",
+          "Node Memory"
+        ],
+        "exactly_correct": 6,
+        "wrong_inside_family": 1,
+        "wrong_outside_family": 2,
+        "family_level_accuracy": {
+          "value": 0.7777777777777778,
+          "numerator": 7,
+          "denominator": 9,
+          "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)"
+        },
+        "conditional_within_family_accuracy": {
+          "value": 0.8571428571428571,
+          "numerator": 6,
+          "denominator": 7,
+          "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy"
+        }
+      }
+    },
+    "family_confusion_true_rows_pred_cols": {
+      "labels": [
+        "container",
+        "node"
+      ],
+      "matrix": [
+        [
+          16,
+          0
+        ],
+        [
+          2,
+          7
+        ]
+      ]
+    },
+    "note": "Families follow the D1 category names. They do not prove a fault physically affects only pods or only VMs."
+  },
+  "per_class_names": [
+    "Container Hardware",
+    "Container Network",
+    "Node CPU",
+    "Node Disk",
+    "Node Memory"
+  ],
+  "seed": 1,
+  "model_ubj_sha256": "186bde536bd4abe7d97e826cfc4dac7a36b59a61c5e9c82133e5691b631464eb"
+}

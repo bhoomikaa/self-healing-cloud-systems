@@ -1,0 +1,7 @@
+{
+ "freeze_record_sha256": "7166ef4cd92d09141007d5c4f9898ac5c3f71de5ae2df375f8df6dfbb4886b18",
+ "head": "fdea1a5881aac4f5489eb0125adb69f5a6a64b15",
+ "note": "written before any test window was read; its presence refuses every later test run",
+ "run_id": "e7304d82465a499a958879a46e9d0410",
+ "started_unix": 1793166443
+}

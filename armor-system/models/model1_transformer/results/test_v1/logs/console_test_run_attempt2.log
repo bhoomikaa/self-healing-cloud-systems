@@ -1,0 +1,7 @@
+[test core] seed 0 done in 47s: v1 macro-F1 0.6991, primary F1 0.6755
+[test core] seed 1 done in 45s: v1 macro-F1 0.7555, primary F1 0.7952
+[test core] seed 2 done in 48s: v1 macro-F1 0.7573, primary F1 0.7308
+[test core] seed 3 done in 52s: v1 macro-F1 0.7608, primary F1 0.7674
+[test core] seed 4 done in 54s: v1 macro-F1 0.6343, primary F1 0.6666
+seeds 0-3 identical to attempt 1: True
+test run complete: /Users/khushidonda/298A_project/team-repo/armor-system/models/model1_transformer/results/test_v1

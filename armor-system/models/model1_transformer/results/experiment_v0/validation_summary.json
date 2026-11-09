@@ -1,0 +1,235 @@
+{
+  "bootstrap_intervals": "pending: no case-level bootstrap exists for the XGBoost control; none is invented here",
+  "comparison_with_frozen_xgboost": {
+    "accuracy": {
+      "difference_of_means": 0.10399999999999987,
+      "transformer_mean": 0.9359999999999999,
+      "transformer_sd": 0.0726636084983398,
+      "xgboost_mean": 0.8320000000000001,
+      "xgboost_sd": 0.017888543819998284
+    },
+    "macro_f1": {
+      "difference_of_means": 0.04378099093888577,
+      "transformer_mean": 0.8574652014652016,
+      "transformer_sd": 0.18021079819184746,
+      "xgboost_mean": 0.8136842105263158,
+      "xgboost_sd": 0.028251606643369405
+    },
+    "weighted_f1": {
+      "difference_of_means": 0.10574220165799109,
+      "transformer_mean": 0.9340249084249084,
+      "transformer_sd": 0.07558290084503723,
+      "xgboost_mean": 0.8282827067669173,
+      "xgboost_sd": 0.02206144806060655
+    }
+  },
+  "evaluated_on": "25 validation cases (checkpoint selection and metrics only)",
+  "experiment": "model1_transformer_v0_five_seed_validation",
+  "limitations": [
+    "25 validation cases; Node Memory has 1 case, so its recall is 0 or 1 and macro-F1 moves by up to 0.2 on that case alone.",
+    "Seed SD measures training randomness only, not uncertainty across incidents.",
+    "Validation also chose the stopping epoch, so these numbers are slightly optimistic; the locked test partition is the unbiased estimate.",
+    "Incident-conditioned classification of a known incident window, not early detection."
+  ],
+  "mean_sd_across_seeds": {
+    "accuracy": {
+      "mean": 0.9359999999999999,
+      "n": 5,
+      "sd": 0.0726636084983398,
+      "values": [
+        0.84,
+        0.96,
+        1.0,
+        1.0,
+        0.88
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.8574652014652016,
+      "n": 5,
+      "sd": 0.18021079819184746,
+      "values": [
+        0.6292063492063492,
+        0.9623931623931623,
+        1.0,
+        1.0,
+        0.6957264957264957
+      ]
+    },
+    "macro_f1_excluding_node_memory": {
+      "mean": 0.9218315018315018,
+      "n": 5,
+      "sd": 0.09250148634943468,
+      "values": [
+        0.7865079365079365,
+        0.9529914529914529,
+        1.0,
+        1.0,
+        0.8696581196581196
+      ]
+    },
+    "mean_confusion_matrix": [
+      [
+        10.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.2,
+        2.4,
+        0.0,
+        0.4
+      ],
+      [
+        0.0,
+        0.2,
+        0.4,
+        4.4,
+        0.0
+      ],
+      [
+        0.0,
+        0.4,
+        0.0,
+        0.0,
+        0.6
+      ]
+    ],
+    "per_class_recall": {
+      "Container Hardware": {
+        "mean": 1.0,
+        "n": 5,
+        "sd": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "Container Network": {
+        "mean": 1.0,
+        "n": 5,
+        "sd": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "Node CPU": {
+        "mean": 0.7999999999999999,
+        "n": 5,
+        "sd": 0.29814239699997197,
+        "values": [
+          0.3333333333333333,
+          1.0,
+          1.0,
+          1.0,
+          0.6666666666666666
+        ]
+      },
+      "Node Disk": {
+        "mean": 0.8800000000000001,
+        "n": 5,
+        "sd": 0.1095445115010332,
+        "values": [
+          0.8,
+          0.8,
+          1.0,
+          1.0,
+          0.8
+        ]
+      },
+      "Node Memory": {
+        "mean": 0.6,
+        "n": 5,
+        "sd": 0.5477225575051662,
+        "values": [
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      }
+    },
+    "val_case_nll": {
+      "mean": 0.26070177947730305,
+      "n": 5,
+      "sd": 0.11273360911008008,
+      "values": [
+        0.39858825113487834,
+        0.17735295000744628,
+        0.1837876426969577,
+        0.17516975521699252,
+        0.3686102983302403
+      ]
+    },
+    "weighted_f1": {
+      "mean": 0.9340249084249084,
+      "n": 5,
+      "sd": 0.07558290084503723,
+      "values": [
+        0.8314920634920634,
+        0.9593162393162393,
+        1.0,
+        1.0,
+        0.8793162393162394
+      ]
+    }
+  },
+  "primary_metric": "five-class validation macro-F1",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "selected_epochs": {
+    "0": {
+      "s1_epoch": 95,
+      "s1_val_masked_mse": 0.21520565662149393,
+      "s2_epoch": 39,
+      "s2_val_case_nll": 0.39858825113487834
+    },
+    "1": {
+      "s1_epoch": 49,
+      "s1_val_masked_mse": 0.21691173613354292,
+      "s2_epoch": 44,
+      "s2_val_case_nll": 0.17735295000744628
+    },
+    "2": {
+      "s1_epoch": 83,
+      "s1_val_masked_mse": 0.21599495240332464,
+      "s2_epoch": 44,
+      "s2_val_case_nll": 0.1837876426969577
+    },
+    "3": {
+      "s1_epoch": 92,
+      "s1_val_masked_mse": 0.21549630466670172,
+      "s2_epoch": 60,
+      "s2_val_case_nll": 0.17516975521699252
+    },
+    "4": {
+      "s1_epoch": 87,
+      "s1_val_masked_mse": 0.21727721500201888,
+      "s2_epoch": 34,
+      "s2_val_case_nll": 0.3686102983302403
+    }
+  }
+}

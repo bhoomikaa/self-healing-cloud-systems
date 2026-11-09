@@ -1,0 +1,4 @@
+# Model 1 v2 serving: the only third-party packages the service imports (torch pulls in sympy, mpmath, typing_extensions).
+# Versions are the ones the service, tests and latency numbers were produced with (Python 3.14.4, macOS arm64, CPU only).
+torch==2.14.0
+numpy==2.5.3

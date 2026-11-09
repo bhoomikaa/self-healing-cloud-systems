@@ -1,0 +1,1101 @@
+{
+ "calibration": {
+  "block_bootstrap_p90": {
+   "block_length": 7,
+   "blocks_per_resample": 47,
+   "boot_mean": 1.4586142676297573,
+   "boot_sd": 0.2484911243879206,
+   "ci95_high": 1.7937914276123021,
+   "ci95_low": 0.7336567568778956,
+   "percentile": 90.0,
+   "resamples": 1000,
+   "seed": 20261028,
+   "tau_full_sample": 1.5217318058013916,
+   "windows": 329
+  },
+  "consecutive_window_fraction": 0.9664634146341463,
+  "n_windows": 329,
+  "ranks_used_p90": {
+   "lower_rank_ascending": 296,
+   "lower_rank_from_top": 34,
+   "n": 329,
+   "percentile": 90.0,
+   "position": 295.2,
+   "upper_rank_ascending": 297,
+   "upper_rank_from_top": 33,
+   "weight_on_upper": 0.19999999999998863
+  },
+  "rolled_fraction_above_primary": 0.10030395136778116
+ },
+ "d3_forecast_error_stage1": {
+  "calibration": {
+   "epsilon": 0.0013996989108112168,
+   "n_windows": 329,
+   "node_iqr": [
+    0.11052067098338673,
+    0.09880873659664802,
+    0.10183499076913097,
+    0.1645381800745462,
+    0.1530196053648011,
+    0.10942253643970824,
+    0.12735884827577004,
+    0.14802693352331175,
+    0.16878202650020668,
+    0.13832644016512688,
+    0.16597842481090896,
+    0.19186772593082188,
+    0.12132372342417438,
+    0.14103285345694047,
+    0.1224615543466603,
+    0.27017681800170357,
+    0.1378894686467858,
+    0.13890692870530288,
+    0.11692131642282397,
+    0.1266554020373021,
+    0.13752055103488203,
+    0.17529530450710223,
+    0.17716880374694952,
+    0.24158458756204887,
+    0.14951041487519098,
+    0.1315526815898841,
+    0.14320397794266104,
+    0.2664030074696854,
+    0.11823071618766967,
+    0.14239253563640777,
+    0.13727630477475322,
+    0.2419768725151203,
+    0.09892475432260726,
+    0.0935332546692765,
+    0.10048104334849775,
+    0.14240047322757976,
+    0.10572435414137756,
+    0.09940114602444215,
+    0.1078562379581569,
+    0.10990681548044832,
+    0.2914515690582411,
+    0.26158433878252296,
+    0.33580745099165654,
+    0.20554582476830444,
+    0.23145193139736955,
+    0.32254649846811695
+   ],
+   "node_median": [
+    0.10637952118113184,
+    0.10586565073634127,
+    0.0999640127497408,
+    0.14505996691891476,
+    0.1344477426232759,
+    0.11609879363895462,
+    0.10787353071655084,
+    0.11192685404859008,
+    0.13259727671233923,
+    0.13761181970137223,
+    0.1417379242181438,
+    0.09801429608917264,
+    0.12759971879687418,
+    0.1483379472896731,
+    0.12102373778068062,
+    0.22958618056530758,
+    0.1247511246236866,
+    0.1349074818497206,
+    0.10104393924557872,
+    0.09587337102392995,
+    0.14963108887672993,
+    0.16205718626940774,
+    0.22519354775958628,
+    0.13269772684224862,
+    0.1133490848646102,
+    0.10479789875670181,
+    0.09675128709300287,
+    0.2038510642052149,
+    0.11404716776844746,
+    0.15553343150330792,
+    0.1523538526327078,
+    0.13036051253575817,
+    0.08964176235038175,
+    0.07107203962765649,
+    0.08909054206351989,
+    0.11887878035308308,
+    0.12835229732836864,
+    0.13357273483876544,
+    0.12861707154948993,
+    0.06903514314380182,
+    0.17417652499553132,
+    0.21013906259857615,
+    0.1865578569443271,
+    0.18623924386005017,
+    0.20619324036163222,
+    0.21589234898635332
+   ],
+   "nodes_without_any_valid_window": 0,
+   "thresholds": {
+    "m1_raw_max": {
+     "90.0": 6.70570851293045,
+     "95.0": 10.99787135843841,
+     "97.0": 12.80351878122529,
+     "99.0": 27.368569652148437,
+     "99.5": 36.191734319902274
+    },
+    "m2_max_normalised": {
+     "90.0": 38.11747715798474,
+     "95.0": 65.82165071197741,
+     "97.0": 74.79875699186313,
+     "99.0": 163.03597908275725,
+     "99.5": 259.244215158544
+    },
+    "m3_topk_mean_normalised": {
+     "90.0": 21.016249600568898,
+     "95.0": 31.739128975763276,
+     "97.0": 54.709293932147105,
+     "99.0": 91.78824922361537,
+     "99.5": 157.2170919118799
+    }
+   }
+  },
+  "validation": {
+   "m1_raw_max": {
+    "90.0": {
+     "FN": 6,
+     "FP": 7,
+     "TP": 19,
+     "alert_minutes_by_category": {
+      "event_associated": 46,
+      "ignore": 26,
+      "normal_reference": 31
+     },
+     "armor_false_positive_intervals": 7,
+     "coverage_padded_300s": 0.5477560414269275,
+     "coverage_raw": 0.2600690448791715,
+     "delay": {
+      "max_s": 43.0,
+      "mean_s": -222.8421052631579,
+      "median_s": -90.0,
+      "min_s": -849.0,
+      "n_hits": 19,
+      "n_negative": 13
+     },
+     "f1": 0.7451,
+     "intervals": {
+      "hit": 18,
+      "ignore_overlap_not_hit": 2,
+      "normal_only_false_alarm": 5,
+      "overlapping_ignore_regions_total": 18
+     },
+     "n_alert_minutes": 103,
+     "n_intervals": 25,
+     "normal_reference": {
+      "alarm_rate": 0.07542579075425791,
+      "alarm_windows": 31,
+      "inside_interval_rate": 0.1922141119221411,
+      "inside_interval_windows": 79,
+      "windows": 411
+     },
+     "precision": 0.7308,
+     "recall": 0.76,
+     "scored": true,
+     "singleton_alerts_dropped": 8,
+     "threshold": 6.70570851293045
+    },
+    "95.0": {
+     "FN": 15,
+     "FP": 3,
+     "TP": 10,
+     "alert_minutes_by_category": {
+      "event_associated": 27,
+      "ignore": 14,
+      "normal_reference": 14
+     },
+     "armor_false_positive_intervals": 3,
+     "coverage_padded_300s": 0.2336018411967779,
+     "coverage_raw": 0.08400460299194476,
+     "delay": {
+      "max_s": 54.0,
+      "mean_s": -13.3,
+      "median_s": 5.0,
+      "min_s": -210.0,
+      "n_hits": 10,
+      "n_negative": 4
+     },
+     "f1": 0.5263,
+     "intervals": {
+      "hit": 10,
+      "ignore_overlap_not_hit": 0,
+      "normal_only_false_alarm": 3,
+      "overlapping_ignore_regions_total": 8
+     },
+     "n_alert_minutes": 55,
+     "n_intervals": 13,
+     "normal_reference": {
+      "alarm_rate": 0.0340632603406326,
+      "alarm_windows": 14,
+      "inside_interval_rate": 0.0267639902676399,
+      "inside_interval_windows": 11,
+      "windows": 411
+     },
+     "precision": 0.7692,
+     "recall": 0.4,
+     "scored": true,
+     "singleton_alerts_dropped": 16,
+     "threshold": 10.99787135843841
+    },
+    "97.0": {
+     "FN": 17,
+     "FP": 2,
+     "TP": 8,
+     "alert_minutes_by_category": {
+      "event_associated": 25,
+      "ignore": 9,
+      "normal_reference": 9
+     },
+     "armor_false_positive_intervals": 2,
+     "coverage_padded_300s": 0.17376294591484465,
+     "coverage_raw": 0.05868814729574223,
+     "delay": {
+      "max_s": 54.0,
+      "mean_s": 14.375,
+      "median_s": 14.5,
+      "min_s": -18.0,
+      "n_hits": 8,
+      "n_negative": 2
+     },
+     "f1": 0.4571,
+     "intervals": {
+      "hit": 8,
+      "ignore_overlap_not_hit": 0,
+      "normal_only_false_alarm": 2,
+      "overlapping_ignore_regions_total": 5
+     },
+     "n_alert_minutes": 43,
+     "n_intervals": 10,
+     "normal_reference": {
+      "alarm_rate": 0.021897810218978103,
+      "alarm_windows": 9,
+      "inside_interval_rate": 0.009732360097323601,
+      "inside_interval_windows": 4,
+      "windows": 411
+     },
+     "precision": 0.8,
+     "recall": 0.32,
+     "scored": true,
+     "singleton_alerts_dropped": 12,
+     "threshold": 12.80351878122529
+    },
+    "99.0": {
+     "FN": 22,
+     "FP": 0,
+     "TP": 3,
+     "alert_minutes_by_category": {
+      "event_associated": 9,
+      "ignore": 1,
+      "normal_reference": 1
+     },
+     "armor_false_positive_intervals": 0,
+     "coverage_padded_300s": 0.047180667433831994,
+     "coverage_raw": 0.012658227848101266,
+     "delay": {
+      "max_s": 22.0,
+      "mean_s": 10.666666666666666,
+      "median_s": 7.0,
+      "min_s": 3.0,
+      "n_hits": 3,
+      "n_negative": 0
+     },
+     "f1": 0.2143,
+     "intervals": {
+      "hit": 3,
+      "ignore_overlap_not_hit": 0,
+      "normal_only_false_alarm": 0,
+      "overlapping_ignore_regions_total": 0
+     },
+     "n_alert_minutes": 11,
+     "n_intervals": 3,
+     "normal_reference": {
+      "alarm_rate": 0.0024330900243309003,
+      "alarm_windows": 1,
+      "inside_interval_rate": 0.0,
+      "inside_interval_windows": 0,
+      "windows": 411
+     },
+     "precision": 1.0,
+     "recall": 0.12,
+     "scored": true,
+     "singleton_alerts_dropped": 4,
+     "threshold": 27.368569652148437
+    },
+    "99.5": {
+     "FN": 24,
+     "FP": 0,
+     "TP": 1,
+     "alert_minutes_by_category": {
+      "event_associated": 5,
+      "ignore": 1,
+      "normal_reference": 0
+     },
+     "armor_false_positive_intervals": 0,
+     "coverage_padded_300s": 0.014959723820483314,
+     "coverage_raw": 0.0034522439585730723,
+     "delay": {
+      "max_s": 63.0,
+      "mean_s": 63.0,
+      "median_s": 63.0,
+      "min_s": 63.0,
+      "n_hits": 1,
+      "n_negative": 0
+     },
+     "f1": 0.0769,
+     "intervals": {
+      "hit": 1,
+      "ignore_overlap_not_hit": 0,
+      "normal_only_false_alarm": 0,
+      "overlapping_ignore_regions_total": 0
+     },
+     "n_alert_minutes": 6,
+     "n_intervals": 1,
+     "normal_reference": {
+      "alarm_rate": 0.0,
+      "alarm_windows": 0,
+      "inside_interval_rate": 0.0,
+      "inside_interval_windows": 0,
+      "windows": 411
+     },
+     "precision": 1.0,
+     "recall": 0.04,
+     "scored": true,
+     "singleton_alerts_dropped": 4,
+     "threshold": 36.191734319902274
+    }
+   },
+   "m2_max_normalised": {
+    "90.0": {
+     "FN": 5,
+     "FP": 7,
+     "TP": 20,
+     "alert_minutes_by_category": {
+      "event_associated": 50,
+      "ignore": 30,
+      "normal_reference": 30
+     },
+     "armor_false_positive_intervals": 7,
+     "coverage_padded_300s": 0.5489067894131185,
+     "coverage_raw": 0.2612197928653625,
+     "delay": {
+      "max_s": 43.0,
+      "mean_s": -266.8,
+      "median_s": -37.5,
+      "min_s": -2226.0,
+      "n_hits": 20,
+      "n_negative": 14
+     },
+     "f1": 0.7692,
+     "intervals": {
+      "hit": 18,
+      "ignore_overlap_not_hit": 1,
+      "normal_only_false_alarm": 6,
+      "overlapping_ignore_regions_total": 17
+     },
+     "n_alert_minutes": 110,
+     "n_intervals": 25,
+     "normal_reference": {
+      "alarm_rate": 0.072992700729927,
+      "alarm_windows": 30,
+      "inside_interval_rate": 0.13138686131386862,
+      "inside_interval_windows": 54,
+      "windows": 411
+     },
+     "precision": 0.7407,
+     "recall": 0.8,
+     "scored": true,
+     "singleton_alerts_dropped": 8,
+     "threshold": 38.11747715798474
+    },
+    "95.0": {
+     "FN": 14,
+     "FP": 3,
+     "TP": 11,
+     "alert_minutes_by_category": {
+      "event_associated": 32,
+      "ignore": 15,
+      "normal_reference": 11
+     },
+     "armor_false_positive_intervals": 3,
+     "coverage_padded_300s": 0.25316455696202533,
+     "coverage_raw": 0.09205983889528194,
+     "delay": {
+      "max_s": 24.0,
+      "mean_s": -34.36363636363637,
+      "median_s": -5.0,
+      "min_s": -350.0,
+      "n_hits": 11,
+      "n_negative": 6
+     },
+     "f1": 0.5641,
+     "intervals": {
+      "hit": 11,
+      "ignore_overlap_not_hit": 0,
+      "normal_only_false_alarm": 3,
+      "overlapping_ignore_regions_total": 9
+     },
+     "n_alert_minutes": 58,
+     "n_intervals": 14,
+     "normal_reference": {
+      "alarm_rate": 0.0267639902676399,
+      "alarm_windows": 11,
+      "inside_interval_rate": 0.019464720194647202,
+      "inside_interval_windows": 8,
+      "windows": 411
+     },
+     "precision": 0.7857,
+     "recall": 0.44,
+     "scored": true,
+     "singleton_alerts_dropped": 10,
+     "threshold": 65.82165071197741
+    },
+    "97.0": {
+     "FN": 15,
+     "FP": 3,
+     "TP": 10,
+     "alert_minutes_by_category": {
+      "event_associated": 30,
+      "ignore": 11,
+      "normal_reference": 9
+     },
+     "armor_false_positive_intervals": 3,
+     "coverage_padded_300s": 0.23014959723820483,
+     "coverage_raw": 0.0805523590333717,
+     "delay": {
+      "max_s": 54.0,
+      "mean_s": -28.8,
+      "median_s": 5.0,
+      "min_s": -350.0,
+      "n_hits": 10,
+      "n_negative": 4
+     },
+     "f1": 0.5263,
+     "intervals": {
+      "hit": 10,
+      "ignore_overlap_not_hit": 0,
+      "normal_only_false_alarm": 3,
+      "overlapping_ignore_regions_total": 6
+     },
+     "n_alert_minutes": 50,
+     "n_intervals": 13,
+     "normal_reference": {
+      "alarm_rate": 0.021897810218978103,
+      "alarm_windows": 9,
+      "inside_interval_rate": 0.019464720194647202,
+      "inside_interval_windows": 8,
+      "windows": 411
+     },
+     "precision": 0.7692,
+     "recall": 0.4,
+     "scored": true,
+     "singleton_alerts_dropped": 8,
+     "threshold": 74.79875699186313
+    },
+    "99.0": {
+     "FN": 19,
+     "FP": 0,
+     "TP": 6,
+     "alert_minutes_by_category": {
+      "event_associated": 13,
+      "ignore": 3,
+      "normal_reference": 0
+     },
+     "armor_false_positive_intervals": 0,
+     "coverage_padded_300s": 0.09436133486766399,
+     "coverage_raw": 0.02531645569620253,
+     "delay": {
+      "max_s": 67.0,
+      "mean_s": 25.333333333333332,
+      "median_s": 23.0,
+      "min_s": -18.0,
+      "n_hits": 6,
+      "n_negative": 1
+     },
+     "f1": 0.3871,
+     "intervals": {
+      "hit": 6,
+      "ignore_overlap_not_hit": 0,
+      "normal_only_false_alarm": 0,
+      "overlapping_ignore_regions_total": 1
+     },
+     "n_alert_minutes": 16,
+     "n_intervals": 6,
+     "normal_reference": {
+      "alarm_rate": 0.0,
+      "alarm_windows": 0,
+      "inside_interval_rate": 0.0,
+      "inside_interval_windows": 0,
+      "windows": 411
+     },
+     "precision": 1.0,
+     "recall": 0.24,
+     "scored": true,
+     "singleton_alerts_dropped": 3,
+     "threshold": 163.03597908275725
+    },
+    "99.5": {
+     "FN": 25,
+     "FP": 0,
+     "TP": 0,
+     "alert_minutes_by_category": {
+      "event_associated": 3,
+      "ignore": 1,
+      "normal_reference": 0
+     },
+     "armor_false_positive_intervals": 0,
+     "coverage_padded_300s": 0.0,
+     "coverage_raw": 0.0,
+     "delay": {
+      "max_s": null,
+      "mean_s": null,
+      "median_s": null,
+      "min_s": null,
+      "n_hits": 0,
+      "n_negative": 0
+     },
+     "f1": 0.0,
+     "intervals": {
+      "hit": 0,
+      "ignore_overlap_not_hit": 0,
+      "normal_only_false_alarm": 0,
+      "overlapping_ignore_regions_total": 0
+     },
+     "n_alert_minutes": 4,
+     "n_intervals": 0,
+     "normal_reference": {
+      "alarm_rate": 0.0,
+      "alarm_windows": 0,
+      "inside_interval_rate": 0.0,
+      "inside_interval_windows": 0,
+      "windows": 411
+     },
+     "precision": 0.0,
+     "reason": "no surviving alert interval (ARMOR raises ZeroDivisionError)",
+     "recall": 0.0,
+     "scored": false,
+     "singleton_alerts_dropped": 4,
+     "threshold": 259.244215158544
+    }
+   },
+   "m3_topk_mean_normalised": {
+    "90.0": {
+     "FN": 7,
+     "FP": 5,
+     "TP": 18,
+     "alert_minutes_by_category": {
+      "event_associated": 50,
+      "ignore": 21,
+      "normal_reference": 24
+     },
+     "armor_false_positive_intervals": 5,
+     "coverage_padded_300s": 0.4372842347525892,
+     "coverage_raw": 0.17261219792865362,
+     "delay": {
+      "max_s": 114.0,
+      "mean_s": -55.0,
+      "median_s": -6.5,
+      "min_s": -392.0,
+      "n_hits": 18,
+      "n_negative": 11
+     },
+     "f1": 0.75,
+     "intervals": {
+      "hit": 18,
+      "ignore_overlap_not_hit": 0,
+      "normal_only_false_alarm": 5,
+      "overlapping_ignore_regions_total": 16
+     },
+     "n_alert_minutes": 95,
+     "n_intervals": 23,
+     "normal_reference": {
+      "alarm_rate": 0.058394160583941604,
+      "alarm_windows": 24,
+      "inside_interval_rate": 0.058394160583941604,
+      "inside_interval_windows": 24,
+      "windows": 411
+     },
+     "precision": 0.7826,
+     "recall": 0.72,
+     "scored": true,
+     "singleton_alerts_dropped": 8,
+     "threshold": 21.016249600568898
+    },
+    "95.0": {
+     "FN": 15,
+     "FP": 4,
+     "TP": 10,
+     "alert_minutes_by_category": {
+      "event_associated": 36,
+      "ignore": 15,
+      "normal_reference": 9
+     },
+     "armor_false_positive_intervals": 4,
+     "coverage_padded_300s": 0.24971231300345226,
+     "coverage_raw": 0.08860759493670886,
+     "delay": {
+      "max_s": 24.0,
+      "mean_s": -0.5,
+      "median_s": -1.0,
+      "min_s": -38.0,
+      "n_hits": 10,
+      "n_negative": 5
+     },
+     "f1": 0.5128,
+     "intervals": {
+      "hit": 10,
+      "ignore_overlap_not_hit": 1,
+      "normal_only_false_alarm": 3,
+      "overlapping_ignore_regions_total": 11
+     },
+     "n_alert_minutes": 60,
+     "n_intervals": 14,
+     "normal_reference": {
+      "alarm_rate": 0.021897810218978103,
+      "alarm_windows": 9,
+      "inside_interval_rate": 0.0170316301703163,
+      "inside_interval_windows": 7,
+      "windows": 411
+     },
+     "precision": 0.7143,
+     "recall": 0.4,
+     "scored": true,
+     "singleton_alerts_dropped": 7,
+     "threshold": 31.739128975763276
+    },
+    "97.0": {
+     "FN": 18,
+     "FP": 2,
+     "TP": 7,
+     "alert_minutes_by_category": {
+      "event_associated": 23,
+      "ignore": 4,
+      "normal_reference": 5
+     },
+     "armor_false_positive_intervals": 2,
+     "coverage_padded_300s": 0.14384349827387802,
+     "coverage_raw": 0.04027617951668585,
+     "delay": {
+      "max_s": 54.0,
+      "mean_s": 12.428571428571429,
+      "median_s": 7.0,
+      "min_s": -18.0,
+      "n_hits": 7,
+      "n_negative": 2
+     },
+     "f1": 0.4118,
+     "intervals": {
+      "hit": 7,
+      "ignore_overlap_not_hit": 0,
+      "normal_only_false_alarm": 2,
+      "overlapping_ignore_regions_total": 3
+     },
+     "n_alert_minutes": 32,
+     "n_intervals": 9,
+     "normal_reference": {
+      "alarm_rate": 0.012165450121654502,
+      "alarm_windows": 5,
+      "inside_interval_rate": 0.009732360097323601,
+      "inside_interval_windows": 4,
+      "windows": 411
+     },
+     "precision": 0.7778,
+     "recall": 0.28,
+     "scored": true,
+     "singleton_alerts_dropped": 4,
+     "threshold": 54.709293932147105
+    },
+    "99.0": {
+     "FN": 19,
+     "FP": 0,
+     "TP": 6,
+     "alert_minutes_by_category": {
+      "event_associated": 14,
+      "ignore": 3,
+      "normal_reference": 2
+     },
+     "armor_false_positive_intervals": 0,
+     "coverage_padded_300s": 0.09321058688147296,
+     "coverage_raw": 0.024165707710011506,
+     "delay": {
+      "max_s": 63.0,
+      "mean_s": 20.833333333333332,
+      "median_s": 15.5,
+      "min_s": -18.0,
+      "n_hits": 6,
+      "n_negative": 2
+     },
+     "f1": 0.3871,
+     "intervals": {
+      "hit": 6,
+      "ignore_overlap_not_hit": 0,
+      "normal_only_false_alarm": 0,
+      "overlapping_ignore_regions_total": 2
+     },
+     "n_alert_minutes": 19,
+     "n_intervals": 6,
+     "normal_reference": {
+      "alarm_rate": 0.004866180048661801,
+      "alarm_windows": 2,
+      "inside_interval_rate": 0.0,
+      "inside_interval_windows": 0,
+      "windows": 411
+     },
+     "precision": 1.0,
+     "recall": 0.24,
+     "scored": true,
+     "singleton_alerts_dropped": 5,
+     "threshold": 91.78824922361537
+    },
+    "99.5": {
+     "FN": 24,
+     "FP": 0,
+     "TP": 1,
+     "alert_minutes_by_category": {
+      "event_associated": 3,
+      "ignore": 1,
+      "normal_reference": 0
+     },
+     "armor_false_positive_intervals": 0,
+     "coverage_padded_300s": 0.014959723820483314,
+     "coverage_raw": 0.0034522439585730723,
+     "delay": {
+      "max_s": 63.0,
+      "mean_s": 63.0,
+      "median_s": 63.0,
+      "min_s": 63.0,
+      "n_hits": 1,
+      "n_negative": 0
+     },
+     "f1": 0.0769,
+     "intervals": {
+      "hit": 1,
+      "ignore_overlap_not_hit": 0,
+      "normal_only_false_alarm": 0,
+      "overlapping_ignore_regions_total": 0
+     },
+     "n_alert_minutes": 4,
+     "n_intervals": 1,
+     "normal_reference": {
+      "alarm_rate": 0.0,
+      "alarm_windows": 0,
+      "inside_interval_rate": 0.0,
+      "inside_interval_windows": 0,
+      "windows": 411
+     },
+     "precision": 1.0,
+     "recall": 0.04,
+     "scored": true,
+     "singleton_alerts_dropped": 2,
+     "threshold": 157.2170919118799
+    }
+   }
+  }
+ },
+ "primary_rule": "supervised logit -> causal 60 s rolling max -> empirical 90th percentile of rolled calibration scores",
+ "thresholds": {
+  "d2_p90_unrolled": 1.2513364315032953,
+  "p95.0": 1.8271928548812837,
+  "p97.0": 2.0102000474929778,
+  "p99.0": 2.384312629699707,
+  "p99.5": 2.519263839721681,
+  "primary_p90": 1.5217318058013916,
+  "spot": 1.618992138800659
+ },
+ "validation": {
+  "d1_p95.0": {
+   "FN": 14,
+   "FP": 4,
+   "TP": 11,
+   "alert_minutes_by_category": {
+    "event_associated": 39,
+    "ignore": 13,
+    "normal_reference": 7
+   },
+   "armor_false_positive_intervals": 4,
+   "coverage_padded_300s": 0.2428078250863061,
+   "coverage_raw": 0.07019562715765247,
+   "delay": {
+    "max_s": 228.0,
+    "mean_s": 107.9090909090909,
+    "median_s": 103.0,
+    "min_s": 55.0,
+    "n_hits": 11,
+    "n_negative": 0
+   },
+   "f1": 0.55,
+   "intervals": {
+    "hit": 11,
+    "ignore_overlap_not_hit": 2,
+    "normal_only_false_alarm": 2,
+    "overlapping_ignore_regions_total": 6
+   },
+   "n_alert_minutes": 59,
+   "n_intervals": 15,
+   "normal_reference": {
+    "alarm_rate": 0.0170316301703163,
+    "alarm_windows": 7,
+    "inside_interval_rate": 0.0170316301703163,
+    "inside_interval_windows": 7,
+    "windows": 411
+   },
+   "precision": 0.7333,
+   "recall": 0.44,
+   "scored": true,
+   "singleton_alerts_dropped": 0,
+   "threshold": 1.8271928548812837
+  },
+  "d1_p97.0": {
+   "FN": 17,
+   "FP": 2,
+   "TP": 8,
+   "alert_minutes_by_category": {
+    "event_associated": 24,
+    "ignore": 6,
+    "normal_reference": 6
+   },
+   "armor_false_positive_intervals": 2,
+   "coverage_padded_300s": 0.15880322209436135,
+   "coverage_raw": 0.04372842347525892,
+   "delay": {
+    "max_s": 228.0,
+    "mean_s": 133.125,
+    "median_s": 120.5,
+    "min_s": 63.0,
+    "n_hits": 8,
+    "n_negative": 0
+   },
+   "f1": 0.4571,
+   "intervals": {
+    "hit": 8,
+    "ignore_overlap_not_hit": 0,
+    "normal_only_false_alarm": 2,
+    "overlapping_ignore_regions_total": 2
+   },
+   "n_alert_minutes": 36,
+   "n_intervals": 10,
+   "normal_reference": {
+    "alarm_rate": 0.014598540145985401,
+    "alarm_windows": 6,
+    "inside_interval_rate": 0.014598540145985401,
+    "inside_interval_windows": 6,
+    "windows": 411
+   },
+   "precision": 0.8,
+   "recall": 0.32,
+   "scored": true,
+   "singleton_alerts_dropped": 0,
+   "threshold": 2.0102000474929778
+  },
+  "d1_p99.0": {
+   "FN": 23,
+   "FP": 0,
+   "TP": 2,
+   "alert_minutes_by_category": {
+    "event_associated": 7,
+    "ignore": 0,
+    "normal_reference": 0
+   },
+   "armor_false_positive_intervals": 0,
+   "coverage_padded_300s": 0.031070195627157654,
+   "coverage_raw": 0.00805523590333717,
+   "delay": {
+    "max_s": 228.0,
+    "mean_s": 145.5,
+    "median_s": 145.5,
+    "min_s": 63.0,
+    "n_hits": 2,
+    "n_negative": 0
+   },
+   "f1": 0.1481,
+   "intervals": {
+    "hit": 2,
+    "ignore_overlap_not_hit": 0,
+    "normal_only_false_alarm": 0,
+    "overlapping_ignore_regions_total": 0
+   },
+   "n_alert_minutes": 7,
+   "n_intervals": 2,
+   "normal_reference": {
+    "alarm_rate": 0.0,
+    "alarm_windows": 0,
+    "inside_interval_rate": 0.0,
+    "inside_interval_windows": 0,
+    "windows": 411
+   },
+   "precision": 1.0,
+   "recall": 0.08,
+   "scored": true,
+   "singleton_alerts_dropped": 0,
+   "threshold": 2.384312629699707
+  },
+  "d1_p99.5": {
+   "FN": 24,
+   "FP": 0,
+   "TP": 1,
+   "alert_minutes_by_category": {
+    "event_associated": 5,
+    "ignore": 0,
+    "normal_reference": 0
+   },
+   "armor_false_positive_intervals": 0,
+   "coverage_padded_300s": 0.01726121979286536,
+   "coverage_raw": 0.005753739930955121,
+   "delay": {
+    "max_s": 63.0,
+    "mean_s": 63.0,
+    "median_s": 63.0,
+    "min_s": 63.0,
+    "n_hits": 1,
+    "n_negative": 0
+   },
+   "f1": 0.0769,
+   "intervals": {
+    "hit": 1,
+    "ignore_overlap_not_hit": 0,
+    "normal_only_false_alarm": 0,
+    "overlapping_ignore_regions_total": 0
+   },
+   "n_alert_minutes": 5,
+   "n_intervals": 1,
+   "normal_reference": {
+    "alarm_rate": 0.0,
+    "alarm_windows": 0,
+    "inside_interval_rate": 0.0,
+    "inside_interval_windows": 0,
+    "windows": 411
+   },
+   "precision": 1.0,
+   "recall": 0.04,
+   "scored": true,
+   "singleton_alerts_dropped": 0,
+   "threshold": 2.519263839721681
+  },
+  "d1_spot": {
+   "FN": 13,
+   "FP": 6,
+   "TP": 12,
+   "alert_minutes_by_category": {
+    "event_associated": 57,
+    "ignore": 21,
+    "normal_reference": 13
+   },
+   "armor_false_positive_intervals": 6,
+   "coverage_padded_300s": 0.31070195627157654,
+   "coverage_raw": 0.1047180667433832,
+   "delay": {
+    "max_s": 228.0,
+    "mean_s": 87.08333333333333,
+    "median_s": 79.0,
+    "min_s": 53.0,
+    "n_hits": 12,
+    "n_negative": 0
+   },
+   "f1": 0.5582,
+   "intervals": {
+    "hit": 12,
+    "ignore_overlap_not_hit": 2,
+    "normal_only_false_alarm": 4,
+    "overlapping_ignore_regions_total": 8
+   },
+   "n_alert_minutes": 91,
+   "n_intervals": 18,
+   "normal_reference": {
+    "alarm_rate": 0.031630170316301706,
+    "alarm_windows": 13,
+    "inside_interval_rate": 0.031630170316301706,
+    "inside_interval_windows": 13,
+    "windows": 411
+   },
+   "precision": 0.6667,
+   "recall": 0.48,
+   "scored": true,
+   "singleton_alerts_dropped": 0,
+   "threshold": 1.618992138800659
+  },
+  "d2_no_rolling": {
+   "FN": 11,
+   "FP": 5,
+   "TP": 14,
+   "alert_minutes_by_category": {
+    "event_associated": 63,
+    "ignore": 19,
+    "normal_reference": 19
+   },
+   "armor_false_positive_intervals": 5,
+   "coverage_padded_300s": 0.3578826237054085,
+   "coverage_raw": 0.14039125431530494,
+   "delay": {
+    "max_s": 108.0,
+    "mean_s": 65.71428571428571,
+    "median_s": 65.0,
+    "min_s": 22.0,
+    "n_hits": 14,
+    "n_negative": 0
+   },
+   "f1": 0.6363,
+   "intervals": {
+    "hit": 14,
+    "ignore_overlap_not_hit": 1,
+    "normal_only_false_alarm": 4,
+    "overlapping_ignore_regions_total": 8
+   },
+   "n_alert_minutes": 101,
+   "n_intervals": 19,
+   "normal_reference": {
+    "alarm_rate": 0.046228710462287104,
+    "alarm_windows": 19,
+    "inside_interval_rate": 0.0705596107055961,
+    "inside_interval_windows": 29,
+    "windows": 411
+   },
+   "precision": 0.7368,
+   "recall": 0.56,
+   "scored": true,
+   "singleton_alerts_dropped": 2,
+   "threshold": 1.2513364315032953
+  },
+  "primary": {
+   "FN": 11,
+   "FP": 6,
+   "TP": 14,
+   "alert_minutes_by_category": {
+    "event_associated": 65,
+    "ignore": 24,
+    "normal_reference": 15
+   },
+   "armor_false_positive_intervals": 6,
+   "coverage_padded_300s": 0.3475258918296893,
+   "coverage_raw": 0.12888377445339472,
+   "delay": {
+    "max_s": 162.0,
+    "mean_s": -2.142857142857143,
+    "median_s": 65.0,
+    "min_s": -965.0,
+    "n_hits": 14,
+    "n_negative": 1
+   },
+   "f1": 0.6222,
+   "intervals": {
+    "hit": 13,
+    "ignore_overlap_not_hit": 2,
+    "normal_only_false_alarm": 4,
+    "overlapping_ignore_regions_total": 8
+   },
+   "n_alert_minutes": 104,
+   "n_intervals": 19,
+   "normal_reference": {
+    "alarm_rate": 0.0364963503649635,
+    "alarm_windows": 15,
+    "inside_interval_rate": 0.0364963503649635,
+    "inside_interval_windows": 15,
+    "windows": 411
+   },
+   "precision": 0.7,
+   "recall": 0.56,
+   "scored": true,
+   "singleton_alerts_dropped": 0,
+   "threshold": 1.5217318058013916
+  }
+ }
+}

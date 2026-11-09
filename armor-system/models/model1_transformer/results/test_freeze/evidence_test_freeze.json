@@ -1,0 +1,1479 @@
+{
+ "attempt": 2,
+ "attempt1": {
+  "archive": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/",
+  "archive_commit": "0b52b14",
+  "external_marker_left_in_place": "~/298A_project/checkpoints/model1_test_run_marker.json",
+  "incident_note": "armor-system/models/model1_transformer/TEST_INCIDENT_attempt1.md",
+  "previous_freeze_commit": "fdea1a5881aac4f5489eb0125adb69f5a6a64b15"
+ },
+ "attempt2_markers": [
+  "armor-system/models/model1_transformer/results/test_v1/TEST_RUN_MARKER_attempt2.json",
+  "~/298A_project/checkpoints/model1_test_run_marker_attempt2.json"
+ ],
+ "attempt2_rules": [
+  "refused if either attempt-2 marker exists or results/test_v1/ is not empty",
+  "test-mode outputs: results/test_v1/ and its subfolders",
+  "after completion seeds 0-3 are compared byte for byte with the attempt-1 archive (results/test_v1/attempt1_consistency.json)"
+ ],
+ "base_commit": "426d1cedbed0f9e19dfda28b416504aea46fed7f",
+ "branch": "khushidonda/298-51-model-1-two-stage-training-and-validation",
+ "checkpoints": {
+  "files": [
+   {
+    "path": "model1_v1/seed_0/s1_best.pt",
+    "sha256": "5ede5e2d55eeeb5abf20270e9e4bf09b9b05921ff86f14743c2add2f93f0c072"
+   },
+   {
+    "path": "model1_v1/seed_0/s1_best.json",
+    "sha256": "aae8ed853468b71c3639925c858fa797ef4ed1e9d8c6db4d72e8a9b914a6d7a6"
+   },
+   {
+    "path": "model1_v1/seed_0/s2_best.pt",
+    "sha256": "01940bfb9cd3588e3f3da2f5862f4d9f470095d1f815669e31d827c047343e40"
+   },
+   {
+    "path": "model1_v1/seed_0/s2_best.json",
+    "sha256": "245555eb4f76d9ae4ddc908042baccb242c6deae405d8786a19fbcf5fe7f8203"
+   },
+   {
+    "path": "model1_v1/seed_1/s1_best.pt",
+    "sha256": "0f0c0189355280ddf16f8427f73541c6cea53056dc2033db41c68f7e2110b08b"
+   },
+   {
+    "path": "model1_v1/seed_1/s1_best.json",
+    "sha256": "af231464d66d63211e8cd38836e689ad0488ae257a880fe9080a797101312709"
+   },
+   {
+    "path": "model1_v1/seed_1/s2_best.pt",
+    "sha256": "671e0fb31f2c19ccff135360c4490c252fdd0eb89fb0955c1ea201758a135fb0"
+   },
+   {
+    "path": "model1_v1/seed_1/s2_best.json",
+    "sha256": "2bf1caec02706344528fa2e585b109ed2e7e64651193d72af9a4b29d7b2647df"
+   },
+   {
+    "path": "model1_v1/seed_2/s1_best.pt",
+    "sha256": "1c4b68fab7f372db40665e8bae984c07f1df4cef64efd13f8fe56a05a5fc850f"
+   },
+   {
+    "path": "model1_v1/seed_2/s1_best.json",
+    "sha256": "2216098c9294a3856914a40d37332e4cd9dd7a14f7b71a6dd376409bf5a74d01"
+   },
+   {
+    "path": "model1_v1/seed_2/s2_best.pt",
+    "sha256": "1c29d48b1e9e975af573f54a69c8b15e542d499b99e8adf08d05f0d5b7a956df"
+   },
+   {
+    "path": "model1_v1/seed_2/s2_best.json",
+    "sha256": "4780b095c57a83b6d5b32bc3ea7feb5a86fe35ad5cbc3dc2c238dfe4bca5da6b"
+   },
+   {
+    "path": "model1_v1/seed_3/s1_best.pt",
+    "sha256": "09305071fdaea809eedc7f028cb0628b8b4e496e51b3f287f9cff8f3368f0ae2"
+   },
+   {
+    "path": "model1_v1/seed_3/s1_best.json",
+    "sha256": "804b1c97b778275b59b8c5ab93d296c28960a0cc69f4084217793c72347f575f"
+   },
+   {
+    "path": "model1_v1/seed_3/s2_best.pt",
+    "sha256": "cb2c31a71571b15d89d43903fbea86e7637c1c45b03e08206456d7847f6e96fa"
+   },
+   {
+    "path": "model1_v1/seed_3/s2_best.json",
+    "sha256": "4285792af92adcd88ebe67298c50cd2cb8c8c10b835239e8f4d3e06fdb3aae57"
+   },
+   {
+    "path": "model1_v1/seed_4/s1_best.pt",
+    "sha256": "9116933fc769a322a2e14994215f81236704dd88508ef29ec924fe2d8c67d709"
+   },
+   {
+    "path": "model1_v1/seed_4/s1_best.json",
+    "sha256": "97af0b1eede7b93cac2b67eeb665bb1b2a47682a304149a9b2814b0d59b4bfdf"
+   },
+   {
+    "path": "model1_v1/seed_4/s2_best.pt",
+    "sha256": "c25f2fa09b3a56275c9da3abfce00894cf30d296fa911f62e549131a55f11a02"
+   },
+   {
+    "path": "model1_v1/seed_4/s2_best.json",
+    "sha256": "c74d6deca4979d237b74efe1e9236c7ea83f09bde02546182731528e468e0a93"
+   },
+   {
+    "path": "model1_v0/seed_0/s1_best.pt",
+    "sha256": "507822c6c7e6c6b5f538106aade94da90d4537c5db5d3eb5e8a9088262e920ac"
+   },
+   {
+    "path": "model1_v0/seed_0/s1_best.json",
+    "sha256": "63332e590b0b6ea00894ac4d265ff4c244756e814e8a93c12d0a92e34d2bb7ac"
+   },
+   {
+    "path": "model1_v0/seed_0/s2_best.pt",
+    "sha256": "1c9014b2bff49e01d5efa133688efc23e8ad551408e56c2514537b0068036a1a"
+   },
+   {
+    "path": "model1_v0/seed_0/s2_best.json",
+    "sha256": "5b00c89d47cea5abd99a5379e8f0c3674e0a7baad2aca1471ccdff9c957fac4d"
+   },
+   {
+    "path": "model1_v0/seed_1/s1_best.pt",
+    "sha256": "85129f372d3e09bf6b545246aa4fa494a4e66a3e778c8ff665b97524e410d30e"
+   },
+   {
+    "path": "model1_v0/seed_1/s1_best.json",
+    "sha256": "9135728124fa08c090d6f5f70ed5f7c90627dfdc45a6733b88a30f19d859c169"
+   },
+   {
+    "path": "model1_v0/seed_1/s2_best.pt",
+    "sha256": "6a15dc897f95499cc24c78f0ad90d8d8f0f36380af0484217d49221cdb84a957"
+   },
+   {
+    "path": "model1_v0/seed_1/s2_best.json",
+    "sha256": "44ce907e7220edb13d155b070bc1f91c2aa239b3d093bd5e3acc7f025facc869"
+   },
+   {
+    "path": "model1_v0/seed_2/s1_best.pt",
+    "sha256": "c422ee01a62aca9cc33f0d042f053690fbfcc5acc5542d31076eff9705fd7e7e"
+   },
+   {
+    "path": "model1_v0/seed_2/s1_best.json",
+    "sha256": "6e61c9bdd338c2a87add2f3bebf99f25b2d4748bf99a689c11edf0e5789a7f9e"
+   },
+   {
+    "path": "model1_v0/seed_2/s2_best.pt",
+    "sha256": "3648c60ce26e7eb55f70564dd335cce85165c9ccd5dee0bbb09236e7a97e51e7"
+   },
+   {
+    "path": "model1_v0/seed_2/s2_best.json",
+    "sha256": "9782690e2d499104618cf21f66325419d478250fdfc9300ad72c7743fc1a0f2e"
+   },
+   {
+    "path": "model1_v0/seed_3/s1_best.pt",
+    "sha256": "26578ebeffc121af89c0e874dffa5afcb36ea06c0582fddced5acf24fd6d647b"
+   },
+   {
+    "path": "model1_v0/seed_3/s1_best.json",
+    "sha256": "d9e852f3a053043f915098587b89f417e63d7bd9e3e9fab9131d2d0307128415"
+   },
+   {
+    "path": "model1_v0/seed_3/s2_best.pt",
+    "sha256": "fa4f7166401e2bfbfee914a0a66abb7cc6e8288f390497b5b04aa03567379be4"
+   },
+   {
+    "path": "model1_v0/seed_3/s2_best.json",
+    "sha256": "4fae86c97b779c9d36fa15d3f37f052b4f103c32cb8c910ff0b35c9120fef85b"
+   },
+   {
+    "path": "model1_v0/seed_4/s1_best.pt",
+    "sha256": "f1e71a003d47fbc3438d74215c3a59911c0e3c42f817521619c6ee7a105c60a1"
+   },
+   {
+    "path": "model1_v0/seed_4/s1_best.json",
+    "sha256": "8563489fc234e5a2715d4a67b9e7abb9c30bf3348ef83cb2ad01923fb8cce107"
+   },
+   {
+    "path": "model1_v0/seed_4/s2_best.pt",
+    "sha256": "d4e6890c89fc89bcf1f4a3c6390d5d8aeb8c570207ad4299df652bb6bb1f75b6"
+   },
+   {
+    "path": "model1_v0/seed_4/s2_best.json",
+    "sha256": "c7933f4972e91c6a71772ebcf0e63fd7a36afc10e2be35fac55faf24e501fe44"
+   }
+  ],
+  "root": "~/298A_project/checkpoints",
+  "set_sha256": "f2e077864ebfd32296aa85a959600ab16fde8e732918bb1f7e50b347ddc0c28d"
+ },
+ "commits_before_freeze": {
+  "attempt1_archive": "0b52b14",
+  "d3_p90_missing": "dd5b3c2",
+  "freeze_attempt1": "fdea1a5",
+  "protocol_section_11": "dfb7711",
+  "test_machinery": "e148255",
+  "test_plan": "a7c4349",
+  "test_plan_update": "72b507e",
+  "v1_implementation_phase2": "569c5eb878e8ba8300eee227b64d133df5e22d62",
+  "v1_protocol_phase1": "3f9b4da4d7152782d217a17a950612cf90cd2299",
+  "v1_results_phase3": "4b9a0d9baac233174b1ea08cb9301174f69af8ae",
+  "validation_ensemble": "1b27b04"
+ },
+ "environment": {
+  "python": "3.14.4"
+ },
+ "evidence_name": "evidence_test_freeze",
+ "evidence_version": "1.0",
+ "external_inputs": {
+  "armor_code": {
+   "anomaly_detector.py": "5166023fd39aad6deb72ff528d2009631fae282373972adbec11adcda32414e3",
+   "spot.py": "164cdad8b4f56fe8155d9b5cd4bfaf8f1495491a0f58497baf407e718fb52cc5",
+   "task_metrics.py": "1463c8de9d32e4aaeb1279193b8c8bf50ca0fd794b1e093945406cb27219cbc6"
+  },
+  "armor_official_labels": {
+   "crc32": "defe8c73",
+   "path_in_manifest": "D1/cases/ad_cases.pkl",
+   "read_by_freeze": false,
+   "size": 1136
+  },
+  "armor_released_intervals_full": {
+   "path": "armor-system/data/raw/armor_zenodo_21744694/ARMOR/res/D1/20260113_101332/scenarios/full/tmp/pre_interval.json",
+   "sha256": "c8da7bfa44cf18c44403739b98de8e45e98d1f628ae500c3e0ccb57f46c0e9d7"
+  },
+  "feature_cache": {
+   "path": "armor-system/data/processed/d1_features_v1.npz",
+   "sha256": "7013609af89b651512f4a45b0d02670777234ef2a7c39b3e7310ff04cc28745f"
+  }
+ },
+ "fix": "run_test.py output-path check (formerly line 481) accepts subfolders of results/test_v1/ in test mode; no model, checkpoint, threshold, protocol or test-plan change",
+ "integration_run": {
+  "command": "M1_REQUIRE_REAL_DATA=1 .venv/bin/python -I armor-system/data/m1_integration.py",
+  "evidence_verification": "OK",
+  "skipped": 0,
+  "suites": {
+   "data": {
+    "errors": 0,
+    "failures": 0,
+    "ran": 37,
+    "skipped": 0
+   },
+   "prep": {
+    "errors": 0,
+    "failures": 0,
+    "ran": 540,
+    "skipped": 0
+   }
+  },
+  "total_ran": 577,
+  "tree": "0b52b14 + this commit's run_test.py and test_m1_run_test.py"
+ },
+ "linear_issue": "298-51",
+ "locks": {
+  "kept_unchanged": [
+   "window_errors.SCORABLE_ROLES",
+   "case_eval.predict_window_probabilities role check",
+   "m1_case_features.build_case_matrix role check",
+   "xgb_control.final_test"
+  ],
+  "lifted_by": "test_freeze.unlocked(token): adds 'test' to window_errors.SCORABLE_ROLES and m1_case_features.ALLOWED_ROLES inside a with block, for a token from claim_test_run() only"
+ },
+ "official_armor_labels_read": false,
+ "one_shot": {
+  "markers": [
+   "armor-system/models/model1_transformer/results/test_v1/TEST_RUN_MARKER.json",
+   "~/298A_project/checkpoints/model1_test_run_marker.json"
+  ],
+  "rule": "the runner refuses to start if either marker exists; a marker is written (exclusive create) before any test window is read"
+ },
+ "protocol": {
+  "path": "armor-system/models/model1_transformer/V1_PROTOCOL.md",
+  "sha256": "d5047e7df208204874e861b697acb2d518b16634673429f2caff4e5d3df1c5ae"
+ },
+ "scope": "Frozen state for the one-shot Model 1 / v0 / XGBoost test evaluation. Written before any test-period window, test case label or official ARMOR label is read.",
+ "test_data_accessed": false,
+ "test_plan": {
+  "path": "armor-system/models/model1_transformer/TEST_PLAN.md",
+  "sha256": "145f49519c04f767a884352e0afe8386fee47c88f0b1285ee2720954baaaa0d7"
+ },
+ "tracked_files": [
+  {
+   "path": "armor-system/data/artifacts/d1/README.md",
+   "sha256": "5f80ca0696b0aa8e6d6019ede62ec2992bdbc771a3521e27e5ab5abd41da2ce8"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/augmentation/augmentation_assessment.json",
+   "sha256": "098a508b1c1f5800f9d582dc5470c0a1a217d480acb500c40c13ca7fbe9b37d5"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/correlation_channels_train.csv",
+   "sha256": "12d0a1dc0b8da1c67e2459a4e537078d804993a6a9c5343ec391e27d245c7d99"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/correlation_modality_summary_train.json",
+   "sha256": "8c321a765d13efddfdfca5321b4bce1da75fa5dcd1a2b05931d097ab7525fbd3"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/descriptive_stats_by_modality_full.csv",
+   "sha256": "06a8895f07f1676e609b6fb19228526dcef62863f331e7bd681075fc7b7cc0ee"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/eda_findings.json",
+   "sha256": "822420306ab710ae3e091ca25a2f4a4a42117892b33f44665ae8fcd7df964ef8"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/fault_distribution.csv",
+   "sha256": "8df92808c9f6e0521648d3cddf8b0c969a8922feb46ca0a15dd0c6c246c24cfb"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/feature_histograms_train.json",
+   "sha256": "44ae66bc55db0088b1abd95aa045c62acc5ec1a5aa03fb23e32d02bb314483ce"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/figures/01_fault_distribution.png",
+   "sha256": "e4bd206435d8ac7b016e73e687d45c5241e44e48097a58ea02a79a6bb0ef7694"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/figures/02_split_class_distributions.png",
+   "sha256": "7bd53a4c1191d8e42671e8bf9f06dbbcc8825e943ef83f146ebe84fbf18d7c56"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/figures/03_feature_distributions.png",
+   "sha256": "3623d8ba1b02e0eec96c6990fada08330e715752d374c774a5dce4169d990f7f"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/figures/04_zero_fraction_node_modality.png",
+   "sha256": "248282c92afff984dbe82bfd3dd722928c632d9df8a310d2d8f3c281e1bd30a7"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/figures/05_correlation_heatmap.png",
+   "sha256": "f12685c664ec12b6dafb614dcdfce00266adb1161aa152048349a0f633a3abef"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/figures/06_temporal_trends.png",
+   "sha256": "fe3770f15291c25b1fe5b44e07eb119c6f85ae1629e0c8da0ce8d57dbf158b73"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/figures/07_incident_aligned.png",
+   "sha256": "26721d2c9ac2936dd9c79bd1cf45ce82dddc59e520acc55cd3667935fead7ecf"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/figures/08_outliers.png",
+   "sha256": "4bca2713af9f2f69f17b4f281cd99588bf365e3fbaef4fb50a968b413331dc76"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/figures/09_train_vs_validation_ks.png",
+   "sha256": "98492e101e463b6d8387cdd63c5a938ccb0127ed5a3221d50415387d972cedb1"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/figures/10_split_timeline.png",
+   "sha256": "b6b5cd458f16dcdad54af6f94625313173a11f6d19a2d2ff92dfd7a17263c66c"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/highly_correlated_pairs_train.csv",
+   "sha256": "c334cfb05525322ba5e39d946a478e8d3606f21228b354cd4952d247493aff9a"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/incident_aligned.csv",
+   "sha256": "837b807acbe27cc8195c860a067474d1ddc3e865ceae1d6404bf85e64a26ef3b"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/incident_aligned_coverage.json",
+   "sha256": "a468126532c5ed46e8603ea3799736fb404d207a93bc039aaff79e1de12c0eeb"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/missingness_node_modality_train.csv",
+   "sha256": "0b73d82167fba987fe26079c0f38a1899f59d5b2b969d0c60ac853fc794b1270"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/split_class_distributions.csv",
+   "sha256": "9123158389502964a65dfdc2cb440821ccc99671f48e927332d490ff74c38b44"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/temporal_trends_full_10min.csv",
+   "sha256": "74c583b06394c8a50e6671c312c7e6fc3230afd927a17913bb95f77b30681ee7"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/train_vs_validation_model1.csv",
+   "sha256": "300d2e201f52a574c169cdb532ef57bca4a5cb6fc65bb2983d7a3c5ee2257fef"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/variability_outliers_train.csv",
+   "sha256": "beea1296214272cc6cba11467796c74d96f8d6892643b12b526ac32e896b955d"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/eda/zero_fraction_by_channel_train.csv",
+   "sha256": "895dc4cce798649d646feca69313fc1646b2f9a5b409bbadfddf9f8a27487a66"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/evidence/README.md",
+   "sha256": "29bfa125f287ccacfa70375d072d159c7e2b5aec84fe06b9f9bc57c7a2ab45fb"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/evidence/dashboard_browser_check.json",
+   "sha256": "a8c99ef93da8a51f167b13439cfb7f56fca224cc40be0080b5f6f1d9ea400cd7"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/evidence/evidence.json",
+   "sha256": "4beeca7fe5ead73c8d5109d1b339725509314879e1421a58f95eb33fbbfbba7e"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/evidence/evidence_m1_03.json",
+   "sha256": "73a3bad2fb2f614c44636539b8519e6c6d3848bd09f7045ed9d4930fcd97bb23"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/inspection/channel_statistics_full_dataset.csv",
+   "sha256": "5ca5bfbe755f54dd5d9009e0f2d33683ab86f0729bfc3d8b6864174ec3fb5414"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/inspection/inspection_summary.json",
+   "sha256": "c7f5e7576bdcf358736f2055f3c579e2906395fc5f3177d7c7323beacd7c7dfc"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/inspection/representative_records.json",
+   "sha256": "19dbf7332b9acd84fa5d71e58ddf6f392b25b4cc3c95bc647c6208518ae4aa74"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/inspection/schema.json",
+   "sha256": "7d386817ec312b30562b9fc14e0d660ad98bc90ab77336d5f1c502108064e771"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/preprocessing/before_after_summary.csv",
+   "sha256": "e635532769b1de518a87cfee3491dd114bc9ff2620021655cf5826edde951d08"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/preprocessing/counting_units.json",
+   "sha256": "1cb11d1837131445455c14e0cd111581d719690d4807683b0cf7a19ff4199298"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/preprocessing/prepared_example.json",
+   "sha256": "c05f1c4703cb6d99027e44337ad1a54a3eb9ff777087d92a70d53ea6efa79890"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/preprocessing/preprocessing_config_v1.json",
+   "sha256": "32dd074eca150238f294f33ea3ba22b273c362856153f94de41fb584c8e05db8"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/preprocessing/preprocessing_results.json",
+   "sha256": "2d43575e5ca08b56e5b5925fc6534be4857d7f5174dc74fd8432aaa7e6532af2"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/preprocessing/scaler_model1_fit_only_v1.npz",
+   "sha256": "a9ec5981e28c506af2ff53a3a35b39ec2949949ec719c21cb20d5ea5654032cb"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/preprocessing/scaler_model1_train_period_v1.npz",
+   "sha256": "ded590428deffb09c19dada80598ec9a3b093906a9898fb6051a0624aa1521f4"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/preprocessing/scaler_official_train_period_v1.npz",
+   "sha256": "b6b667e93c2eea51f29f4a91e621b9e5eab27d464e1066d12b972e76576a986c"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/preprocessing/split_counts_by_unit.csv",
+   "sha256": "bcced9eb0e318c78b1047b6da1718b31ed58323f9d4dd524097cf131eb9ad9c1"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/preprocessing/structural_masks.csv",
+   "sha256": "d7bcc4b7b446fd6de1c019b633d0699a85672487e64051c285b6bf1273fdceb0"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/preprocessing/window_counts.csv",
+   "sha256": "27a527d8fcfe1b57658e4abddb49c55fedfa8537babb884507686eda552645f6"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/quality/nine_stage_validation.json",
+   "sha256": "85aca7b70a460cc2088ee2382e22577a8d8dbf2ed6e11db4710c62af757fbc05"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/splits/boundary_scan.json",
+   "sha256": "7f83a72eeeab4156eb310e63e3f7cc5f39df1d3c0e9717dd8f4281ece3bd47a8"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/splits/case_split_assignments.csv",
+   "sha256": "3291a9dbe3db9ff9ea719630cef719124ec3298ae9e947a695e5f4c40a8f2bde"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/splits/model1_calibration_split_v1.json",
+   "sha256": "65dd5fe83fa145d01e8a7f1c2481a16ad4d6b4d30ae816d80d433b730353c301"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/splits/model1_candidate_100_26_84_v1.json",
+   "sha256": "956354262ad4aa86fd4cf9360941f243da77fcb3f70767dfa8f5e376301b608d"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/splits/model1_split_101_25_84_v1.json",
+   "sha256": "25d05f3bd7c64a7f16eff3c84ca2b5a62188979418b4ce79e1978a8d5f7c4c0d"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/splits/official_armor_v1.json",
+   "sha256": "d0b204cd231818d8fefd7e202cb43770a1c2524c3ad01932b107ff62d90886fb"
+  },
+  {
+   "path": "armor-system/data/artifacts/d1/splits/rolling_origin_folds_v1.json",
+   "sha256": "028a2dac08c897276b4694c5f92e1e59e1687149d9dc696d1ae6f04897b7adb8"
+  },
+  {
+   "path": "armor-system/data/m1_integration.py",
+   "sha256": "9b704741b09edf8b2f79ab9392b52416c4d022a01f225bf9d284204f3a73a1e8"
+  },
+  {
+   "path": "armor-system/data/manifests/armor_d1/README.md",
+   "sha256": "0a862265df79f4fc7a29ad1d6308922b36f98011012411834be184cc615d63e5"
+  },
+  {
+   "path": "armor-system/data/manifests/armor_d1/channel_map.csv",
+   "sha256": "39c2b13a1f74be5294d68f0182a6203438f3a45b2ca5d46ed3e760422fd163b3"
+  },
+  {
+   "path": "armor-system/data/manifests/armor_d1/checksums.json",
+   "sha256": "ef9e0132d4e01934515caacd82adc5eab4454555a1e211a7a77e2c61f9424216"
+  },
+  {
+   "path": "armor-system/data/manifests/armor_d1/class_distribution.csv",
+   "sha256": "5d01d5a255ba04abb0fc48ea4119c21746610a11ac68287970da94b1e128d300"
+  },
+  {
+   "path": "armor-system/data/manifests/armor_d1/d1_inspection.json",
+   "sha256": "5aeb50634c4dd796d74fe2dfef89108443bca94bf0183b5c1605d02ca8715754"
+  },
+  {
+   "path": "armor-system/data/manifests/armor_d1/d1_validation.json",
+   "sha256": "097bf29ce9afdee6cc4cc2057d4b2a235540d08ddec4b9f141d00daaf8349a31"
+  },
+  {
+   "path": "armor-system/data/manifests/armor_d1/file_inventory.csv",
+   "sha256": "9343ded310fd55b3797edbff831216e0703fa9e75d100f53944ce236ac442663"
+  },
+  {
+   "path": "armor-system/data/manifests/armor_d1/label_mappings.json",
+   "sha256": "b6ff38e9808975f8e6de973f2fb621ac8f01e45a139f00d4287d820e929253f5"
+  },
+  {
+   "path": "armor-system/data/manifests/armor_d1/label_reconciliation.csv",
+   "sha256": "e8ce13cc81440d03b35dc06c4b75a469def08b7544b07f9fe4560f7a93b27b5e"
+  },
+  {
+   "path": "armor-system/data/manifests/armor_d1/label_reconciliation.json",
+   "sha256": "7bd96f257b9d6f63903ac9644a347c9117aa2ed610ff6b1ae7850293fb251382"
+  },
+  {
+   "path": "armor-system/data/manifests/armor_d1/outer_archive_listing.csv",
+   "sha256": "f59f691bef13ed6088aa829a251aca71571c54defe556a5908ab533326d8b30b"
+  },
+  {
+   "path": "armor-system/data/manifests/armor_d1/provenance.json",
+   "sha256": "1766cb5de9002bece2cfc95ba27e06378dd6b33e041ef5f50a463b88bc88fbb7"
+  },
+  {
+   "path": "armor-system/data/model1_pipeline.py",
+   "sha256": "3c9a5a8d784c1d749bdc33ec1e2f002fd67cebd0b74784fceb31da683f9d7b44"
+  },
+  {
+   "path": "armor-system/data/prep/__init__.py",
+   "sha256": "cd1a929ae6713fc9840a38fe84443467162823ba27386001569f56b894b6ac34"
+  },
+  {
+   "path": "armor-system/data/prep/augmentation.py",
+   "sha256": "0d460d602cdd068765812b0b5f5f4e93c7f2be66c00c6222b267b81125be382b"
+  },
+  {
+   "path": "armor-system/data/prep/common.py",
+   "sha256": "fc1a2f351f69965ec87e77295c8ad07eb03815b96fd08bb3f7964c055fb37bcf"
+  },
+  {
+   "path": "armor-system/data/prep/detection_calibration.py",
+   "sha256": "e951d8a35eff067a9c4876bebae45da6dba57a15607bb37ea517445908d6ef52"
+  },
+  {
+   "path": "armor-system/data/prep/eda.py",
+   "sha256": "bf933ca12e2251c68e745a39c17145aea779bd4f03a767a56fb1e91b7478dbe1"
+  },
+  {
+   "path": "armor-system/data/prep/figures.py",
+   "sha256": "b6d6373e4f1b8399429c58b93a24e9a06d5a4763b0317f840780e4233b3d68df"
+  },
+  {
+   "path": "armor-system/data/prep/inspect_stage.py",
+   "sha256": "da908d61325f079599bb314e5e8a59b48da57594a531edf7bea27d9d64e035c3"
+  },
+  {
+   "path": "armor-system/data/prep/loader.py",
+   "sha256": "770df85d466b848aa61e91ceee218e90b18d2920f28d1ef732cd48e5dd36fca4"
+  },
+  {
+   "path": "armor-system/data/prep/m1_case_features.py",
+   "sha256": "ed438ac95defdc405c22498821002c25e736c977bb7d26c923ebabed7952447f"
+  },
+  {
+   "path": "armor-system/data/prep/m1_dataset.py",
+   "sha256": "02f217f2d4414ddb0bc6614d70ea07380bdeb13e2ce95fecc4ca1f9b12145831"
+  },
+  {
+   "path": "armor-system/data/prep/m1_evidence.py",
+   "sha256": "cc91f5d57bb71977384b032b64cfabec08709319ee32c3f46c3411b87b0eb42c"
+  },
+  {
+   "path": "armor-system/data/prep/m1_masks.py",
+   "sha256": "a8596bbf9be5c3efb00a90ac3f621bac5b0c2c3ed8eb9a16ed35fc97c4ece7b9"
+  },
+  {
+   "path": "armor-system/data/prep/m1_split.py",
+   "sha256": "0b85a25a56f6f65043f428ae203af892629d25f923de473a78f6dfbd52a51c56"
+  },
+  {
+   "path": "armor-system/data/prep/paths.py",
+   "sha256": "2f35fb005f3fca10e82d69b98f3a3f2cbb551ac7d50c650cad858a54c8a5ea67"
+  },
+  {
+   "path": "armor-system/data/prep/preprocess.py",
+   "sha256": "2c8bee008fef0346fcd95fd421e21143e880239d5f3470d6fdad70392e9959c7"
+  },
+  {
+   "path": "armor-system/data/prep/preprocess_stage.py",
+   "sha256": "05b8ab892d7dfe91deca1e88ccc9cf3cbcaff4beb35cb92e35042d4b039c6ac4"
+  },
+  {
+   "path": "armor-system/data/prep/quality.py",
+   "sha256": "5ba3e5b46b97c1819221b7edee5d31c8bd936106c4f3914428bd3579df5d6dad"
+  },
+  {
+   "path": "armor-system/data/prep/split_stage.py",
+   "sha256": "2c5f165ffb3ec24112110737b116dc7e551272f97ced25726d9c4b77bc5d328b"
+  },
+  {
+   "path": "armor-system/data/prep/splits.py",
+   "sha256": "ddfbf000badd50de81a10a6435e43d4b57067dd8b91045c9bdf928ca367b4652"
+  },
+  {
+   "path": "armor-system/evaluation/detection/DETECTION_PROTOCOL.md",
+   "sha256": "750e3daaafebc52d0dba0587f5e1c98bdcb441185c5244587139bf0d3ab90ace"
+  },
+  {
+   "path": "armor-system/evaluation/detection/V0_DETECTION_PREDECLARATION.md",
+   "sha256": "fa19ffaa047623a46cd2495f581e9b0759c6b67f00531b7bea2695f9efda4592"
+  },
+  {
+   "path": "armor-system/evaluation/detection/armor_scoring.py",
+   "sha256": "4c06a1562b46698339292f70e11d158c0e5bc879769667bca265820b76a66d64"
+  },
+  {
+   "path": "armor-system/evaluation/detection/equivalence.py",
+   "sha256": "9378f1aff5a74097f9f0683a9ee6afa7cead127d34b969f13025e97f027c9104"
+  },
+  {
+   "path": "armor-system/evaluation/detection/evidence_armor_scoring_harness_v1.json",
+   "sha256": "5539e4b428526bfe0c2b094a32c21cb52ae541cc01c780374a128e219f6e419a"
+  },
+  {
+   "path": "armor-system/evaluation/detection/harness_evidence.py",
+   "sha256": "c818fa44d0440e62cf95e7e1ca9949ee141bbd311f5f1e8e679935de6cf889e9"
+  },
+  {
+   "path": "armor-system/evaluation/detection/interval_diagnostics.py",
+   "sha256": "304b93d1f0b9bd7b638693d1e36c47a9aba460b66f911a314d4386c5f34b3736"
+  },
+  {
+   "path": "armor-system/evaluation/detection/verify_armor_published_ad.py",
+   "sha256": "f4eae0beb2e2710f5ee7c4ea6749ed621d01117528022ef36efed0a3a9a87bac"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/.gitkeep",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/ARCHITECTURE.md",
+   "sha256": "83b2321162151bbd9937f92995424dea624db06e07951bb923781d4a43453e25"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/DATA_LAYER.md",
+   "sha256": "803f14515dbb6b40b35ce9f0127f9f7dd5a0faa7ec8f7f9294fdc14be2118a68"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/MODEL1_V0_DESIGN.md",
+   "sha256": "76f2259d978a7f534eb577290e8759b89381ef2761e307598132458d640e7b51"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/TEST_INCIDENT_attempt1.md",
+   "sha256": "4c9381be6506835e5c8bdf895604667b0b982b1f1fa257989967dece09b8d25e"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/TEST_PLAN.md",
+   "sha256": "145f49519c04f767a884352e0afe8386fee47c88f0b1285ee2720954baaaa0d7"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/TRAINING.md",
+   "sha256": "17f3cb2b90ba78b00ee8d80e36403ba64c8ec11a487e39dc6ffe894694ee7cc6"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/V1_PROTOCOL.md",
+   "sha256": "d5047e7df208204874e861b697acb2d518b16634673429f2caff4e5d3df1c5ae"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/__init__.py",
+   "sha256": "127c49df988fc7e97b1a109159603c8935fdc9abee9375c18d18e9c0aa10e92a"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/adapters.py",
+   "sha256": "345f9a4c8eee3647d993467c1693491fa1b72fd65b9bafd6f72704dfd4ea946b"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/bootstrap_compare.py",
+   "sha256": "d3fbb2a4a234e755214cecb5e10850a052717c18e4e384c603b144c680038677"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/bootstrap_v1.py",
+   "sha256": "e3f33d0a9357155465db7813dcc287d82e5dd64777ae604cad1cc27d97597569"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/case_eval.py",
+   "sha256": "fd8197d1752532b8d6a69ad1c309e8e1ee98813bd98c276746931f7defb30d97"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/checkpoint.py",
+   "sha256": "213acdd19d3ce1681deab0358f958a130ed15562e9e9b3639b24500c36bf7e9f"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/core.py",
+   "sha256": "5b04ea956297ee0d0eeaffb3f2ee5a8f81257f78f5f1cb5f52662e023a41d12a"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/detection_v1.py",
+   "sha256": "fcece09f9d416f62f5d4fba367cf51df8afacfe02f6e2c1cd75a2f2e585ccba4"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/ensemble.py",
+   "sha256": "78daf91737ee334932875144e8f45181cbf4d15b90d6a50b0f3af0716012edb1"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/heads.py",
+   "sha256": "b467ac0fa6bd91cf105766fc0c701139244ba85d02d3873fadfab60703629630"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/losses.py",
+   "sha256": "a433ccbdb27c875992fad2abffc9f2069247c97dc724d737c96cd660144cbbe0"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/missing_d3_p90.py",
+   "sha256": "72aa618b04183ae895229fe4bbfed035904c30f04f9fbcf8a14cd4f943a95b0d"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/missing_eval.py",
+   "sha256": "a9c1b208e79d466c8ba4b95c336e4fb7bcbbb0759f84004235e174a1bbca2776"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/model.py",
+   "sha256": "c31f15eb77be68d96d04e6cbead3be89ef32ced4de76743ee64eb891510abd2a"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/model_v1.py",
+   "sha256": "f30e4ba5d499210534ecdf2d77eb0c5ccc9e1a0e3af443f7d87c8e4096a77b4e"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/official_scoring.py",
+   "sha256": "6e813b8ac659ae189fa77e6da7617a9850244cfca1038ed378fd9f2102cd8760"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/paired.py",
+   "sha256": "3ea3801a2d5171e16ed5d1391084172026c558dd263f0c37946eee06f132a902"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/comparison_v0/bootstrap_validation_v1.json",
+   "sha256": "6fb1ff9e31ec02d380816f63f8cf58b0f6e9019176ed0b911d5601372c7e2306"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/comparison_v1/bootstrap_validation_v1_vs_xgboost.json",
+   "sha256": "49b8dcca4bb377012d852dd85c4e18d449e85797294dcff00cf502a386c3902a"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/core_v0/evidence_model1_core_v0.json",
+   "sha256": "675a45bda13b8dd42e4e9fa342a23d7a2bec77d76568cdf3aaf82914bf462c1d"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/detection_v0/evidence_model1_detection_v0.json",
+   "sha256": "24063a3d614d9844748f26a7e58e5f235fb8600cd673afb598d5da77b924e53e"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/detection_v0/seed_0.json",
+   "sha256": "f76f559fe5d690539236cf42670b642c0a6392f780d455340194f0313b9e8524"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/detection_v0/seed_1.json",
+   "sha256": "c13e17d55bc648d6d1e02a8194133ebdf012a3944672bdf01a2ce3a698dfb9c9"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/detection_v0/seed_2.json",
+   "sha256": "6d87cbfeaf5f9811a681a6774cd21e5c22ee63a24bdc46e37ee0929a175e8210"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/detection_v0/seed_3.json",
+   "sha256": "d57f4902037c03ca7762bd5036325191fb6baa3c08807c424092d2ee8f08e32e"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/detection_v0/seed_4.json",
+   "sha256": "82acaf24a3156503ad3208a0c0a87183bce65033ee6d068a314949c30e5e1c80"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/detection_v0/summary.json",
+   "sha256": "ed4f2771cf35f5e7a391b6834e334f1e6dcc6648b33eef272a38f5b19de3fad3"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/ensemble_validation_v1/ensemble_validation.json",
+   "sha256": "30cd9baa1a5a95ebf8221826f7bccbdbd355f3bfca7ec59a5cccefd056115cd1"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/ensemble_validation_v1/predictions_v1_ensemble.csv",
+   "sha256": "52732eb3dc07fce190c45d774c89f64f0d74b8a50be918436ab1699ac983de5d"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/evidence_model1_experiment_v0.json",
+   "sha256": "01e5d980e8a4bfd8ff30cc7506acefb9e220f2436ae89c0e8142fb0fc72de738"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_0/histories.json",
+   "sha256": "b6ed5e8fb54faf4e9edbe44ecaf7b53cdaacc5512cd717fec104fe5a1aa293cc"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_0/metrics.json",
+   "sha256": "74a6643b349e258b5695e36e8d9ab5b68e5d89f779b0e287ab99be1dc1a39f55"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_0/predictions.csv",
+   "sha256": "4a9c212f0c2a4c7ed360d46bc43c16cd74dde602eb85105725084c42f7d77a33"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_0/run_meta.json",
+   "sha256": "141c069fac1e1b551732e4b8e164112aced067a0cbdf7456ebb927b2baa12b80"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_1/histories.json",
+   "sha256": "1641c6dff6c16ec1ffa446cccb675efffb815d685a619b3334de3db57d8d9191"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_1/metrics.json",
+   "sha256": "b029358654056914b63cba49e3228defebd568b79111ac9308ac8ce535a80251"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_1/predictions.csv",
+   "sha256": "74aaa806e39bd18fbd05855db0fd84ffbdea27859660b4b79ac328913b9166ef"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_1/run_meta.json",
+   "sha256": "838cddd1c46a5f0dac135affb78092f9db1b3b33dd17dfb0173c1e3a3b9f36c5"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_2/histories.json",
+   "sha256": "7e0cd67139d325dc6db19f07197e87b49613ba2a4c130f39b0f88c03579eadc4"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_2/metrics.json",
+   "sha256": "0be6943e911727b5fb3d6a6f41742253d01630d5e1ea6d3f1b8695299717417e"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_2/predictions.csv",
+   "sha256": "2b6c7b9dc7aa71e0fc850fab9bb37a269e73a76ee6eae5ef6c057356e7d5e580"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_2/run_meta.json",
+   "sha256": "83eb1711af3532baf8ff6321484f1f8b231ad40fd45c1f025d1626b31c94b68e"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_3/histories.json",
+   "sha256": "7b7f2ceea9fa19a6b55291be8fa89456f39732c52cdcefb28cb91c7a65a7bd40"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_3/metrics.json",
+   "sha256": "e73205c1054b7b6cb33f16e7588477e3fe9912c03ae2ed08504db8c21ac42b6f"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_3/predictions.csv",
+   "sha256": "e665c177304cbd0c22c42b1a26dc13801fb3ca33ac49f2297ca49778a00828d9"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_3/run_meta.json",
+   "sha256": "241cac6ede7a5b017be9e84f2a6e87bb8a7b2a4ba97723dd58b678497d7543a3"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_4/histories.json",
+   "sha256": "16d5ec61b61639aea350164d8d02b9ae5dba75736439fb96add8898648f1b3fc"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_4/metrics.json",
+   "sha256": "46f4297c8f5dd3a374307d4f54dd0ebf61ba4873ff2da6731439b6b7f5e02ab0"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_4/predictions.csv",
+   "sha256": "93dc0903b50281ea24eedfeda771e61bcd377179f192739fb7b3e6be2cd03fb8"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/seed_4/run_meta.json",
+   "sha256": "40a7361f44d9034b2a321f54dafbaa6b638fa6edccc9c2c28764792d2e1ae19d"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v0/validation_summary.json",
+   "sha256": "cbe6cacb4bd0dc918804259a75b5eb2a4e0a9bfea56242d8b372f0d028920a34"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/evidence_model1_v1.json",
+   "sha256": "12bb9866933dd1bb7f11f54f5ed59a933a5125de2ca91de6505577b775ec2f7d"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/missing_d3_p90_seed_0.json",
+   "sha256": "66689bb6ea95cd6e673cf0eea80a7efda882afe1163df6d1540bc8ea1fb8d542"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/missing_d3_p90_seed_1.json",
+   "sha256": "56fc9783d069303ec3143a5d7cb0ba19b11be795fc608e2dd8b707af20c6500f"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/missing_d3_p90_seed_2.json",
+   "sha256": "1b603d18f46742b6812cebb64186db9942571038153f0aa85c4e08551de85faf"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/missing_d3_p90_seed_3.json",
+   "sha256": "dede1b602533a2f2d19c456c0c7063e15f8be8b9ddac3500b514eb53be5360b7"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/missing_d3_p90_seed_4.json",
+   "sha256": "ba6494995685dee2b7680fe256abbf7986acfcf82623403fe31b02735de4a624"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/missing_d3_p90_summary.json",
+   "sha256": "1939087ef8defaacc1ee44044d33db9b6c13b65fc8f72bf06c97d7db61f00dff"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/missing_seed_0.json",
+   "sha256": "45c980abd794e465bdd1512beae5fc298be08524e821c0dc035f1449897d044e"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/missing_seed_1.json",
+   "sha256": "fc19961d10c02b0a7188e5ce8f51db78bc8edab4772d9c9ef01d7416ecb61c87"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/missing_seed_2.json",
+   "sha256": "a8a52a2ae98e5766c4993141bc90112a28d4f9c26b80c8de5b36ef24f07dc6e2"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/missing_seed_3.json",
+   "sha256": "df83a5d9322e6e5f15d0158c6b3e30853d4391ec7d8be2060913da4fb651e206"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/missing_seed_4.json",
+   "sha256": "cd853eed2f9cc03b73818d67ff45d5ef9ffa4e00b7042c845c62e4e13568e355"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/missing_summary.json",
+   "sha256": "e39a615d94b93958dc1cc0a1bc98eaa0a7fb73ef639811a51c951c57336a283b"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_0/detection.json",
+   "sha256": "67fe02f20a3a496c115b3ad9f95f91adf3822e23a741c8cc4c480f54231456c9"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_0/histories.json",
+   "sha256": "346ae319bb51ebd8d5308f948024ac26a0d802b62291d16921b82450ade67165"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_0/metrics.json",
+   "sha256": "280c5c0c38c7563642b5cf23e57491cece219ca3598f419206c0bd4f35bea7f1"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_0/predictions.csv",
+   "sha256": "b4f8d8d74f64e0ec8933d428659092c0e4c24a47733dbbd9437ddda99ba81cd0"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_0/run_meta.json",
+   "sha256": "6028b2ff1bc0398da6a128147f7137b851e18a49c982e065548020c08155bca7"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_1/detection.json",
+   "sha256": "17800949e562965a1c0b4623b19091155bd47252b5d5e29afaa89c6200fd47b3"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_1/histories.json",
+   "sha256": "4f380db7ee4d208a4b3caceb5461fcc84a0d6b4d29042170e48418d29ae6d5ef"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_1/metrics.json",
+   "sha256": "09c243402718439e756a45faced97d6a61407615ff0d0640ac6aa70dc8d5fcce"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_1/predictions.csv",
+   "sha256": "4c34b7160556c4871b9797b8c3b96d2ce45a9439c02cbbca65514c452e3df576"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_1/run_meta.json",
+   "sha256": "ff739850ea757230ee9eaee46260b724a3bd9e2748271c683b8fa076dfc1c15c"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_2/detection.json",
+   "sha256": "ab6373d2243910fb9d47035dd3f807f77f3964410f8f04309f91dc57178150f6"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_2/histories.json",
+   "sha256": "7a1dcc88aa40dca9d6f8ea1022cf114d819aaa7959417ca1d3568b632fa0cde3"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_2/metrics.json",
+   "sha256": "ebcfc052226fef4e95846ae658d59b3489e25fa95c312f150e4b3fac86f750bf"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_2/predictions.csv",
+   "sha256": "07bcacda0343c93a59eb264b54dbfd16e430b50bae5ec8c63c433c63b2e85802"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_2/run_meta.json",
+   "sha256": "3e359a0982e685f6107b81932c00ea7a87aaa8d66e37bae18bde0618b46aaa98"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_3/detection.json",
+   "sha256": "b238cfb0270c4412c21d4ad496ce336bfc1b320c2950adaf13d317a626f5f20d"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_3/histories.json",
+   "sha256": "0c0f20303bba1087aecb06309925667a0665b90c497bf1a7e0a0c355b31c1dcd"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_3/metrics.json",
+   "sha256": "5c8cbdccbc05ed06e8c379c43378a8905ce5b01bf7096f63a27ddd3fd1b372c6"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_3/predictions.csv",
+   "sha256": "2db42e432586f20d915cf8918db9de4ecb8224c0038e01b0e3df8279793172d0"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_3/run_meta.json",
+   "sha256": "2adf196444fe336d9c2dac5046eee7c8ed8484100ddd2ac7b83d1a577d58a84c"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_4/detection.json",
+   "sha256": "1e3f911c67137410f58a681a67abcfb123cfae9227d12d0106f609b87f058b38"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_4/histories.json",
+   "sha256": "57bbc624c77246e799b3d147c075a905d65c3cd3c8ab39f6af3a8a01b5a9adb9"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_4/metrics.json",
+   "sha256": "72fa94966be9a074345609025442680fef79963d7bdd6241767ee26e55371d1d"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_4/predictions.csv",
+   "sha256": "525a40847bb7c9ef298d2c42c24f29d273c7f8e23757327e5f77422f8bfcb068"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/seed_4/run_meta.json",
+   "sha256": "d2d96799e889d5b181182eabc4d213748d392d6c532d215b3cb9e40e2da067f2"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/experiment_v1/validation_summary.json",
+   "sha256": "380cf6e521b941d900715957bb5be2f260986a31381b6e4a064d1be48b33d250"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/EXTERNAL_MARKER_copy_model1_test_run_marker.json",
+   "sha256": "51be4f4b512504ca01e588104fff78d8206ebc7d4706b5b28ed4a4a78deabdaa"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/TEST_RUN_MARKER.json",
+   "sha256": "51be4f4b512504ca01e588104fff78d8206ebc7d4706b5b28ed4a4a78deabdaa"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/logs/console_test_run.log",
+   "sha256": "0721d84208f25ce8c8a8e06db37e2a86845e7d03d1d0711032f7b0ebe442f253"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/logs/missing_0.log",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/logs/missing_1.log",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/logs/missing_2.log",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/logs/missing_3.log",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/logs/missing_4.log",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/logs/xgb_features.log",
+   "sha256": "f939e58f0a367911af7dac15f70a35362ae85803be42bec4937256ffda732f13"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/seed_0/predictions_v0.csv",
+   "sha256": "c7d08f56a55ad195ea6e172743b50357168388df87a2c86ad42eff6c26a23ccb"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/seed_0/predictions_v1.csv",
+   "sha256": "8ee8b8716ea52f6f6491eb0cbf8e1a7c22bd79aa34d0fd66ecfdf584838313ac"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/seed_0/result.json",
+   "sha256": "8bc6781df1d0545a46bb3d2563ba9b738f34b812bcedfca51f00cacb8ef89925"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/seed_1/predictions_v0.csv",
+   "sha256": "7c3acd37ee8fda60d072e16e90f631e9104dff9d99cc6279293315b951740799"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/seed_1/predictions_v1.csv",
+   "sha256": "abc70912cc6b5d9c880ac41addd8f7c6e57c7c5697b7832d0aa3adfd2ea9f9c9"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/seed_1/result.json",
+   "sha256": "c979fe8a1d2c5e200f47908ae3c35e0ba65b9bd86e0021c9156fdd29fe136ee5"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/seed_2/predictions_v0.csv",
+   "sha256": "0ae2d932076572d79171804506a78440911daaa8af2238f7f723c64632fe286c"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/seed_2/predictions_v1.csv",
+   "sha256": "b807115dc4144e70b01934a2de50c730e7bd7cf009014a2ca4233cc8c60268a2"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/seed_2/result.json",
+   "sha256": "1190745b93078262f7db1a97263d132dc3e3cca0b5ac4499c8b17f2ddc48a5a2"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/seed_3/predictions_v0.csv",
+   "sha256": "182e14c4b47354484bd01e6dbd7dafaba36c506ed2e3548fd3cf510d7f4b081e"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/seed_3/predictions_v1.csv",
+   "sha256": "0d37ee4430db52c7f009a08e57b2f17ea1dab37efde86b0262af335445a50e81"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/test_v1_attempt1_aborted/seed_3/result.json",
+   "sha256": "53e9ad16fb230e2d020a81da18ff1214b229bf70a3cc3d9baf6c3d1f68a6ee56"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/results/v1_audit/spot_feasibility_v0_calibration_scores.json",
+   "sha256": "11f3e540a9f652e1138e97d1913e416454f3956a962d7ceb01ecb1e93836750f"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/rolling.py",
+   "sha256": "c56d919b2cb98e8c0f9bf01e95eadaadd469ed70a5d707717986e693efaf603f"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/run_detection_v0.py",
+   "sha256": "90d298578da7b9371d68f5fa1189bfa5ce1c0d17311bcd0d7401486ed4e6b2fb"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/run_experiment.py",
+   "sha256": "d503bdd2f7bce185d4699a59da2b9d54732ef848c368b974027d4e075dcd175c"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/run_test.py",
+   "sha256": "f08a904b10769ac5e48b1ae8dd118b27b7d13df7189afea90369868dead2e9c3"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/run_v1.py",
+   "sha256": "19abd228877d40f617ea3ead86a8d1bf9f8a57af89ee17c97b87d19c8ae8f369"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/scoring_sets.py",
+   "sha256": "2b7d89afb3ba48d2ff8f3e5e0e01eee472e4caf643bd296a3d36fd77daf95f6a"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/sim_missing.py",
+   "sha256": "71f4ca729b298d72f398cadbabc127332217bc2d9b8d71ab7a0e7d20b1a53637"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/smoke_forward_backward.py",
+   "sha256": "51db8380551723aa3ee605916f0e5b125ec56436580d79f8c238814ba7b87bff"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/spec.py",
+   "sha256": "bd406a872e999bea4eea9fd203d9f866d04f85f4cc41c8aaa3f752121113126a"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/test_freeze.py",
+   "sha256": "1b20c619339b392a81b70dd93d814c4f3c058bf07e49501f8660c58178b1f841"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/threshold_diagnostics.py",
+   "sha256": "c5938f6d1953d7f10786b3f95409542e33610cac2985732e00f131a5ed7e9ddd"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/training.py",
+   "sha256": "425ada84e24b8dda528fda140e6977386019c475bd5dfabfbacdd0be51d24f23"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/training_config_v1.json",
+   "sha256": "49c815d095c7cfd5ecbc0c04cbf842da751e0d218de0d9b2e09fc6934d307de6"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/training_v1.py",
+   "sha256": "8b129fd2182b8030cb9d272b379fc12f4f9ac90d2bce6c27ebc6d78863f621c5"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/v1_audit_spot.py",
+   "sha256": "6ceec91d910917b122f985c0769ce71cbe5033739a1cffda518beb730c61fae9"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/weighting.py",
+   "sha256": "11817207c21ae882711eb878fa4f6c9cfdf2f86b4c0a2b268e3dc79661b0f88a"
+  },
+  {
+   "path": "armor-system/models/model1_transformer/window_errors.py",
+   "sha256": "446165fd2d1d2101239b91e6d8408e2c88b01a826ae207d83a2739f106473db4"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/README.md",
+   "sha256": "fefc971a62af260fad60277041ca144219efce09b52ba2b3954d83866f340a55"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/config_v1.json",
+   "sha256": "8075f0ebc21a05285946ea3b97d6efd5ba63a3857b588ce791680d727752dc79"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/metrics.py",
+   "sha256": "6441c482f7dd5d53a7cac149a9058a7302e5be5b54936434c51bfc1ef7ccb839"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/requirements.txt",
+   "sha256": "140ae4b87021e63f9b8cb3a584018281fb02f85104c4772e5b7ec63c2e25fb33"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/case_features_provenance.json",
+   "sha256": "e3714773f0ab37d3a2fc3629f7461c8631ed8ffba028a0befb4807bea2c05eea"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/config_used.json",
+   "sha256": "bd2ebc4b51ad607b87e152bd59281e35954515804b55d3cf048a0b1d6e1fbfe8"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/evidence_xgb_control_v1.json",
+   "sha256": "b5576d29513a15965be41bf8289055af8a26a76266ab4e4332fa4912f086edf9"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/majority_control.json",
+   "sha256": "cbeeef774b030f0c4a94b5ecfe288828f4ac1e53cd3f6156255c02df06432d8d"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/observation_timing.json",
+   "sha256": "f7f5ce474d5312101ced0f0b7bff4ec879c632c48a10cf1787a9d33daa718c7f"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/per_seed/seed_0_metrics.json",
+   "sha256": "b0a9452044c131847afb23943238d2323538467b91a864d084da5448291813d2"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/per_seed/seed_0_predictions.csv",
+   "sha256": "8536b7db8d7dc2bbad38f84a48a0188f79f304750c7549378d28d3ce1b09d55c"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/per_seed/seed_1_metrics.json",
+   "sha256": "c8ccb7776b707c0cead7c135090bacfec1f406f614c7baa9531102a08ace79dd"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/per_seed/seed_1_predictions.csv",
+   "sha256": "a82754ef7bbb1e27715eded0e4a0da1f7a5b41709d63452115d84c4004cf4ef4"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/per_seed/seed_2_metrics.json",
+   "sha256": "37a443178798d9eeb1c99aad660d003b46fad648c95323c8ee3ea1cf74721da0"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/per_seed/seed_2_predictions.csv",
+   "sha256": "0213296cd467020536217afce0b71cbb28a42ecc6c4557abd2965f9efc2a8061"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/per_seed/seed_3_metrics.json",
+   "sha256": "0f62a407da609e61a09a9dbdbed409ca004fe13ab3e905654132446a82266636"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/per_seed/seed_3_predictions.csv",
+   "sha256": "2e79915a0262c07befac29388ec6c3542ea072b5537c2e0344f68be0614a0aaf"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/per_seed/seed_4_metrics.json",
+   "sha256": "0bf38e62ececbace585a672cb205599dec26499fe447f71969c8608d0e4986c4"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/per_seed/seed_4_predictions.csv",
+   "sha256": "26c0996a37f5a940cd2b78c2c08a067af918433ff6ccc4543b38d09091c51d67"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/results/xgb_control_v1/validation_summary.json",
+   "sha256": "255fd3ce40de4fcde8616315cc14f8c64e22a0d7b6855d4cbc1f24da18f604ba"
+  },
+  {
+   "path": "armor-system/models/model1_xgboost_control/xgb_control.py",
+   "sha256": "ced772b00d8e13cbe9dbc1ccacb592c181a1c2b377e37bb31cf0c2c8f64ea11f"
+  },
+  {
+   "path": "armor-system/tests/data/_paths.py",
+   "sha256": "12c305386d6cd2eaac4af8de5b88f68e269d1a9aefb5eb3cd24f7382d1ca3724"
+  },
+  {
+   "path": "armor-system/tests/data/test_d1_checks.py",
+   "sha256": "49f84f8bc1b0c812c44ef40888e3e2b4e74938ee5c0a6ad935dd80155ef56811"
+  },
+  {
+   "path": "armor-system/tests/data/test_pickle_symbolic.py",
+   "sha256": "a25e4d1cda499b3a209c3ed6d627cae95148d54ce5ec985b7beeed78a64a391f"
+  },
+  {
+   "path": "armor-system/tests/data/test_reconcile_labels.py",
+   "sha256": "267c4ce5454134447d0a32e594b24826d59822c4b7b5f865f418d43c317ddd2d"
+  },
+  {
+   "path": "armor-system/tests/data/test_torch_blob.py",
+   "sha256": "ef1587ff87c79aa3b9b91023f6865f6f80dce3d78131d44038943bbc37067418"
+  },
+  {
+   "path": "armor-system/tests/data/test_validate_d1.py",
+   "sha256": "1ddd13d9aff38a596cbbec7b2137a54bfcd6d3d390aaba45acef23ef210aa7a9"
+  },
+  {
+   "path": "armor-system/tests/data/test_zip_safe.py",
+   "sha256": "b699d640c818a00bb1fd5426368d61a2cdf044d59793777a5fd86bbf15b923a1"
+  },
+  {
+   "path": "armor-system/tests/prep/_m1_helpers.py",
+   "sha256": "bd341f6b96a7b4946dc6d4f21eee163edcc7c5b25412b93b3a4f43ebb7e5ebab"
+  },
+  {
+   "path": "armor-system/tests/prep/_m1_model_helpers.py",
+   "sha256": "123e36d000b56251fd3d9f8d9974fa456c7487e947bcbb8ba34b78e4960ee67e"
+  },
+  {
+   "path": "armor-system/tests/prep/_paths.py",
+   "sha256": "5bac78aaa72d6150d5252ad471424d3142190e41d077556ba52d4c9da8e34665"
+  },
+  {
+   "path": "armor-system/tests/prep/test_artifacts.py",
+   "sha256": "281cf5873461066058cc189d4b3afd0c91ac13458f1de185ae7547dfbbfc4c8a"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_armor_baseline_verify.py",
+   "sha256": "8c4fe29623ce0e188822a89f04a02c8bc7b22758dcf7ef2a90f860776b0c392c"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_armor_scoring.py",
+   "sha256": "3f7b6062bf1633394c8f234588b760812ba129cbf641eca5dad9fb13cfb685b3"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_bootstrap_compare.py",
+   "sha256": "fb3fef5ec15596372bc5ba0d1a528b73a33c4a86ad3cbba1026396a8a0bf8b2a"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_case_validation.py",
+   "sha256": "3ebbb04d5745d5fa469e12108464ca96b64f03b12e7cc1dce326262d99bc9b3f"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_dataset.py",
+   "sha256": "8597f84871d863e20c13ebab9119391fd703d12e14acc59f3fbd3a33a855737d"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_detection_calibration.py",
+   "sha256": "b4ff382429c457d37394f13e5057924cf00ca2a3f32ccdb287864c57d380e1c0"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_detection_v0.py",
+   "sha256": "7867e93a7b4d61fcd0c2196d726c07202eb41bfaeb9544e2e5024cdb7d662d9c"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_evidence.py",
+   "sha256": "d0497dcea1837d85ca1178ad211d60f0cd77a0240f7f9d4dcf3b6588839b510f"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_experiment_runner.py",
+   "sha256": "873549a907acb4db32cac9442b5d005f6340c499b5d701dbd0e403e8d9fe10e3"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_masks.py",
+   "sha256": "9910f56d6e1f3c0b827d565d202b11ceb53b32fad5f295bbeb87250f47e3bb1b"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_model_invariance.py",
+   "sha256": "bd28133e40e6bac548538fa24cbbe3d2be54cc3d0fe6b39c910b79dc964555b2"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_model_real_smoke.py",
+   "sha256": "6d0c3ef1033223e54d5bb490c4d6c3093b66a38b170632689a7a2593711d5815"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_model_shapes.py",
+   "sha256": "576356cae49681c2804632d51c9858aa575531751ef728f7256ee0f1ec609cfb"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_required_resources.py",
+   "sha256": "398f4845067df06d9cc6c0b58e73a1cae40ec6d77728f397f969cc54f2fc8d01"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_run_test.py",
+   "sha256": "fbccf49046f7e068e43065a07ab3487b0e6e4563562745f42189a7dca4eecedf"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_split.py",
+   "sha256": "d772724f15ff8bc816d647c3f176f58193022a2f7b9834f53183fcff0af92c78"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_test_freeze.py",
+   "sha256": "30cb4564422bb9c226923d6c482586182956277dbeb64ab185ada6d1f9a31fee"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_training_loop.py",
+   "sha256": "204e4d1843af0a2abcdd1f7168127cd7f332e0bd0776effb13b96eaa7b2ba9ee"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_training_weights.py",
+   "sha256": "9182cba97b18c4657d0357f115a5e468683a9f0db3c5939e03c0b4fd770a0acc"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_v1_audit.py",
+   "sha256": "2c48de95c6ffef04fb315824bd0ee1d9d1ddb79b80aa77672f7168dfffc5f370"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_v1_components.py",
+   "sha256": "92edd02c2f7db14e16ffb485781cdf7993fdf43856a8f42b6bf6a8e62bf9ccff"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_v1_d3_p90.py",
+   "sha256": "a043421f8a37aecd1f31136f829d1567128e79eae75c0bc8a77763bc7f5c9cde"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_v1_detection.py",
+   "sha256": "338c1115f580fa0b110eb384185fe19db3d5de95f9360ea996b2094200cff37a"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_v1_results.py",
+   "sha256": "b6a29a5ba3210bb090bcd2113057ef0b48550e3c73d86f02bbe3a30e45500fed"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_v1_runner.py",
+   "sha256": "20dd8bdcf56bdee065a3b47939962d32a416cd28153b9c7d9939c571698ced28"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_window_errors.py",
+   "sha256": "8b1bc219923e06e54626a49caa20a2d853be6bb814a13f183fbf7cc50330f765"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_xgb_control.py",
+   "sha256": "0d97a9c28c902e3e808ddaa6473fa03f14fed7a9a8639a71c1c3eff20c0d9f36"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_xgb_features.py",
+   "sha256": "09e6a14c79c5c05421905724cd39ebd0357c6009244dc90e154e08fa0776c14a"
+  },
+  {
+   "path": "armor-system/tests/prep/test_m1_xgb_metrics.py",
+   "sha256": "368199d2eb2687d707d0f4eaff9ae9975ba6479b6478ee3d706e1bf0c8b053d2"
+  },
+  {
+   "path": "armor-system/tests/prep/test_preprocess.py",
+   "sha256": "8240e7b58151b1715164ed93dc2947ecb501660a93c151726a9e69c5f085062b"
+  },
+  {
+   "path": "armor-system/tests/prep/test_quality_detectors.py",
+   "sha256": "585104b5566d9ba10828817c1f75d0667a7a17ed5c0e4fb0872c9a309ef73231"
+  },
+  {
+   "path": "armor-system/tests/prep/test_splits.py",
+   "sha256": "b59c117bfa7d96493740c2747b9834fb5111b59bbb1be43272521b54166da72c"
+  }
+ ],
+ "tracked_prefixes": [
+  "armor-system/models/model1_transformer/",
+  "armor-system/models/model1_xgboost_control/",
+  "armor-system/evaluation/detection/",
+  "armor-system/data/prep/",
+  "armor-system/data/artifacts/d1/",
+  "armor-system/data/manifests/armor_d1/",
+  "armor-system/tests/prep/",
+  "armor-system/tests/data/",
+  "armor-system/data/m1_integration.py",
+  "armor-system/data/model1_pipeline.py"
+ ],
+ "tracked_set_sha256": "93d5352afa35275c4c1c84f252698e56423f11f5c8dcb752cc34858a1d8f23bb",
+ "validation_dry_run_after_fix": {
+  "all_identical": true,
+  "missing_check": true
+ }
+}

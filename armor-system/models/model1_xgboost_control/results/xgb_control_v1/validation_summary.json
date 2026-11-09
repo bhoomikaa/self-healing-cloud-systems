@@ -1,0 +1,548 @@
+{
+  "experiment": "xgb_control_v1",
+  "config_sha256": "407c55b669bfee4be61712caa6c0e2d477c7af4b5345b76863974599ec5b97e1",
+  "evaluated_on": "25 validation cases (fitted on 88 fitting cases)",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "xgboost_params": {
+    "objective": "multi:softprob",
+    "num_class": 5,
+    "tree_method": "hist",
+    "max_depth": 3,
+    "eta": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.5,
+    "min_child_weight": 1,
+    "lambda": 1,
+    "nthread": 1,
+    "verbosity": 0
+  },
+  "num_boost_round": 100,
+  "versions": {
+    "python": "3.14.4",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "xgboost": "3.4.1"
+  },
+  "primary_metric": "five-class macro-F1 (all five labels, zero_division = 0)",
+  "per_seed": [
+    {
+      "seed": 0,
+      "accuracy": 0.84,
+      "macro_f1": 0.8328070175438598,
+      "weighted_f1": 0.8409473684210528,
+      "macro_f1_excluding_node_memory": 0.7910087719298246,
+      "model_ubj_sha256": "b0cea21816a4b089de7c6f7a22da5552239b94bbe19ee046bac74e25a65691c7",
+      "per_class_recall": [
+        0.9,
+        1.0,
+        0.6666666666666666,
+        0.6,
+        1.0
+      ]
+    },
+    {
+      "seed": 1,
+      "accuracy": 0.84,
+      "macro_f1": 0.8328070175438598,
+      "weighted_f1": 0.8409473684210528,
+      "macro_f1_excluding_node_memory": 0.7910087719298246,
+      "model_ubj_sha256": "186bde536bd4abe7d97e826cfc4dac7a36b59a61c5e9c82133e5691b631464eb",
+      "per_class_recall": [
+        0.9,
+        1.0,
+        0.6666666666666666,
+        0.6,
+        1.0
+      ]
+    },
+    {
+      "seed": 2,
+      "accuracy": 0.8,
+      "macro_f1": 0.77,
+      "weighted_f1": 0.79,
+      "macro_f1_excluding_node_memory": 0.7125,
+      "model_ubj_sha256": "9bf7c51b7f4cb6f2890b66c9ca37151adfc434c806223b8b48a8a24d7759a18b",
+      "per_class_recall": [
+        0.9,
+        1.0,
+        0.3333333333333333,
+        0.6,
+        1.0
+      ]
+    },
+    {
+      "seed": 3,
+      "accuracy": 0.84,
+      "macro_f1": 0.8328070175438598,
+      "weighted_f1": 0.8409473684210528,
+      "macro_f1_excluding_node_memory": 0.7910087719298246,
+      "model_ubj_sha256": "103986e8d3ac2e422300f8f3d1c3b404cc58e43ecf7c2b5ffc103e56752bf732",
+      "per_class_recall": [
+        0.9,
+        1.0,
+        0.6666666666666666,
+        0.6,
+        1.0
+      ]
+    },
+    {
+      "seed": 4,
+      "accuracy": 0.84,
+      "macro_f1": 0.8,
+      "weighted_f1": 0.8285714285714286,
+      "macro_f1_excluding_node_memory": 0.7500000000000001,
+      "model_ubj_sha256": "4951edaf9338e8d0842e0d23882fb12dc1a78dfa83bb580ccb227fd5152b2728",
+      "per_class_recall": [
+        1.0,
+        1.0,
+        0.6666666666666666,
+        0.4,
+        1.0
+      ]
+    }
+  ],
+  "mean_sd_across_seeds": {
+    "accuracy": {
+      "mean": 0.8320000000000001,
+      "sd": 0.017888543819998284,
+      "n": 5,
+      "values": [
+        0.84,
+        0.84,
+        0.8,
+        0.84,
+        0.84
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.8136842105263158,
+      "sd": 0.028251606643369405,
+      "n": 5,
+      "values": [
+        0.8328070175438598,
+        0.8328070175438598,
+        0.77,
+        0.8328070175438598,
+        0.8
+      ]
+    },
+    "weighted_f1": {
+      "mean": 0.8282827067669173,
+      "sd": 0.02206144806060655,
+      "n": 5,
+      "values": [
+        0.8409473684210528,
+        0.8409473684210528,
+        0.79,
+        0.8409473684210528,
+        0.8285714285714286
+      ]
+    },
+    "macro_f1_excluding_node_memory": {
+      "mean": 0.7671052631578947,
+      "sd": 0.035314508304211664,
+      "n": 5,
+      "values": [
+        0.7910087719298246,
+        0.7910087719298246,
+        0.7125,
+        0.7910087719298246,
+        0.7500000000000001
+      ]
+    },
+    "per_class": {
+      "precision": [
+        {
+          "mean": 0.9800000000000001,
+          "sd": 0.04472135954999579,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            0.9,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "mean": 0.6833333333333333,
+          "sd": 0.03726779962499651,
+          "n": 5,
+          "values": [
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.75
+          ]
+        },
+        {
+          "mean": 0.6,
+          "sd": 0.09128709291752765,
+          "n": 5,
+          "values": [
+            0.6666666666666666,
+            0.6666666666666666,
+            0.5,
+            0.6666666666666666,
+            0.5
+          ]
+        },
+        {
+          "mean": 1.0,
+          "sd": 0.0,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "mean": 1.0,
+          "sd": 0.0,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "recall": [
+        {
+          "mean": 0.9199999999999999,
+          "sd": 0.04472135954999579,
+          "n": 5,
+          "values": [
+            0.9,
+            0.9,
+            0.9,
+            0.9,
+            1.0
+          ]
+        },
+        {
+          "mean": 1.0,
+          "sd": 0.0,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "mean": 0.5999999999999999,
+          "sd": 0.14907119849998599,
+          "n": 5,
+          "values": [
+            0.6666666666666666,
+            0.6666666666666666,
+            0.3333333333333333,
+            0.6666666666666666,
+            0.6666666666666666
+          ]
+        },
+        {
+          "mean": 0.5599999999999999,
+          "sd": 0.08944271909999157,
+          "n": 5,
+          "values": [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.4
+          ]
+        },
+        {
+          "mean": 1.0,
+          "sd": 0.0,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "f1": [
+        {
+          "mean": 0.948421052631579,
+          "sd": 0.03538470802941391,
+          "n": 5,
+          "values": [
+            0.9473684210526316,
+            0.9473684210526316,
+            0.9,
+            0.9473684210526316,
+            1.0
+          ]
+        },
+        {
+          "mean": 0.8114285714285714,
+          "sd": 0.025555062599997555,
+          "n": 5,
+          "values": [
+            0.8,
+            0.8,
+            0.8,
+            0.8,
+            0.8571428571428571
+          ]
+        },
+        {
+          "mean": 0.5942857142857143,
+          "sd": 0.11617486233887163,
+          "n": 5,
+          "values": [
+            0.6666666666666666,
+            0.6666666666666666,
+            0.4,
+            0.6666666666666666,
+            0.5714285714285715
+          ]
+        },
+        {
+          "mean": 0.7142857142857142,
+          "sd": 0.07985957062499241,
+          "n": 5,
+          "values": [
+            0.7499999999999999,
+            0.7499999999999999,
+            0.7499999999999999,
+            0.7499999999999999,
+            0.5714285714285715
+          ]
+        },
+        {
+          "mean": 1.0,
+          "sd": 0.0,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    "per_class_support": [
+      10,
+      6,
+      3,
+      5,
+      1
+    ],
+    "mean_confusion_matrix": [
+      [
+        9.2,
+        0.8,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.2,
+        1.0,
+        1.8,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        1.2,
+        2.8,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "family": {
+      "container": {
+        "n_cases": 16,
+        "exactly_correct": {
+          "mean": 15.2,
+          "sd": 0.4472135954999579,
+          "n": 5,
+          "values": [
+            15.0,
+            15.0,
+            15.0,
+            15.0,
+            16.0
+          ]
+        },
+        "wrong_inside_family": {
+          "mean": 0.8,
+          "sd": 0.4472135954999579,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ]
+        },
+        "wrong_outside_family": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "n": 5,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "family_level_accuracy": {
+          "mean": 1.0,
+          "sd": 0.0,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "conditional_within_family_accuracy": {
+          "mean": 0.95,
+          "sd": 0.02795084971874737,
+          "n": 5,
+          "values": [
+            0.9375,
+            0.9375,
+            0.9375,
+            0.9375,
+            1.0
+          ]
+        }
+      },
+      "node": {
+        "n_cases": 9,
+        "exactly_correct": {
+          "mean": 5.6,
+          "sd": 0.5477225575051661,
+          "n": 5,
+          "values": [
+            6.0,
+            6.0,
+            5.0,
+            6.0,
+            5.0
+          ]
+        },
+        "wrong_inside_family": {
+          "mean": 1.2,
+          "sd": 0.4472135954999579,
+          "n": 5,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ]
+        },
+        "wrong_outside_family": {
+          "mean": 2.2,
+          "sd": 0.4472135954999579,
+          "n": 5,
+          "values": [
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0
+          ]
+        },
+        "family_level_accuracy": {
+          "mean": 0.7555555555555555,
+          "sd": 0.049690399499995354,
+          "n": 5,
+          "values": [
+            0.7777777777777778,
+            0.7777777777777778,
+            0.6666666666666666,
+            0.7777777777777778,
+            0.7777777777777778
+          ]
+        },
+        "conditional_within_family_accuracy": {
+          "mean": 0.8238095238095238,
+          "sd": 0.062087641954310914,
+          "n": 5,
+          "values": [
+            0.8571428571428571,
+            0.8571428571428571,
+            0.8333333333333334,
+            0.8571428571428571,
+            0.7142857142857143
+          ]
+        }
+      }
+    }
+  },
+  "majority_control": {
+    "predicted_name": "Container Hardware",
+    "accuracy": 0.4,
+    "macro_f1": 0.1142857142857143,
+    "weighted_f1": 0.22857142857142862,
+    "macro_f1_excluding_node_memory": 0.14285714285714288,
+    "per_class_recall": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "validation_support": {
+    "Container Hardware": 10,
+    "Container Network": 6,
+    "Node CPU": 3,
+    "Node Disk": 5,
+    "Node Memory": 1
+  },
+  "limitations": [
+    "Seed SD measures training randomness only. It is not uncertainty across independent incidents; 25 validation cases give wide uncertainty.",
+    "Node Memory has ONE validation case, so its recall can only be 0 or 1 and per-seed values are not a stable estimate.",
+    "Node CPU has 3 validation cases. Macro-F1 therefore moves in large steps.",
+    "Labels come from documented fault windows (event_associated), not verified minute-level anomalies.",
+    "No configuration was tuned: parameters were fixed in advance. The held-out evaluation set was not used."
+  ]
+}

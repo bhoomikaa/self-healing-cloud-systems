@@ -1,0 +1,185 @@
+{
+  "evidence_name": "evidence_m1_03",
+  "evidence_version": "1.0",
+  "scope": "Linear 298-48 (Model 1 M1-03 data layer) only. The 298-44 data-preparation evidence is armor-system/data/artifacts/d1/evidence/evidence.json and is not touched.",
+  "linear_issue": "298-48",
+  "hashes": {
+    "calibration_manifest_file_sha256": "65dd5fe83fa145d01e8a7f1c2481a16ad4d6b4d30ae816d80d433b730353c301",
+    "calibration_manifest_content_sha256": "797e2eb669feda07770544f9f70ca3c92dfea6494e83f43bf8c12b0f73ed737a",
+    "fit_only_scaler_file_sha256": "a9ec5981e28c506af2ff53a3a35b39ec2949949ec719c21cb20d5ea5654032cb",
+    "feature_cache_content_sha256": "87b34b0609509b8e0c98e2789e6cc995cf876e2c9639c8d36af87ac087b8997f",
+    "outer_split_content_sha256": "32ff03fcffca09f3d3953777a020514b4af9c882bc85e3dc1693e282607638ac",
+    "preprocessing_config_sha256": "e9aa3ccc776a8bc9940d151ba3feea3c79f502eff58e12c9946babe0aaefeb8c"
+  },
+  "counts": {
+    "fit": 2868,
+    "calibration": 559,
+    "validation": 869,
+    "test": 2868,
+    "cases": {
+      "fit": 88,
+      "calibration": 13,
+      "validation": 25,
+      "test": 84
+    }
+  },
+  "d1_verification": {
+    "inventory_files_checked": 9,
+    "armor_members_checked": 16,
+    "problems": [],
+    "d2_present": false,
+    "sources": [
+      "data/manifests/armor_d1/file_inventory.csv",
+      "data/manifests/armor_d1/checksums.json"
+    ]
+  },
+  "feature_cache_rebuild": {
+    "rebuilt_digest": "87b34b0609509b8e0c98e2789e6cc995cf876e2c9639c8d36af87ac087b8997f",
+    "on_disk_digest_before": "87b34b0609509b8e0c98e2789e6cc995cf876e2c9639c8d36af87ac087b8997f",
+    "rebuilt_equals_manifest": true,
+    "on_disk_was_current": true,
+    "replaced_on_disk_cache": false
+  },
+  "reproducibility": {
+    "runs": 2,
+    "manifest_identical": true,
+    "scaler_identical": true,
+    "equal_to_committed": true,
+    "manifest_file_sha256": "65dd5fe83fa145d01e8a7f1c2481a16ad4d6b4d30ae816d80d433b730353c301",
+    "scaler_file_sha256": "a9ec5981e28c506af2ff53a3a35b39ec2949949ec719c21cb20d5ea5654032cb"
+  },
+  "integration_command": ".venv/bin/python -I armor-system/data/m1_integration.py --write-evidence",
+  "tests": {
+    "command": "M1_REQUIRE_REAL_DATA=1 .venv/bin/python -I -B -m unittest discover -s armor-system/tests/<data|prep> -p 'test_*.py'",
+    "skipping_disabled": true,
+    "suites": [
+      {
+        "suite": "data",
+        "directory": "armor-system/tests/data",
+        "ran": 37,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "result": "OK",
+        "seconds": 1.2
+      },
+      {
+        "suite": "prep",
+        "directory": "armor-system/tests/prep",
+        "ran": 151,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "result": "OK",
+        "seconds": 4.9
+      }
+    ],
+    "ran": 188,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "environment": {
+    "python": "3.14.4",
+    "platform": "Darwin arm64",
+    "numpy": "2.5.3",
+    "torch": "2.14.0",
+    "device": "cpu"
+  },
+  "commit_reference": {
+    "scheme": "No self-referential hash. evidence_base_commit is the commit this work was based on when the evidence was generated; source_set_sha256 identifies the exact content of the M1-03 files and is identical in the working tree and in the commit that adds them; the final PR merge commit is recorded in the Linear 298-48 comment after merge.",
+    "evidence_base_commit": "df275fc0c20ad6c84f716dc4fbe35e211bf01da8",
+    "branch": "khushidonda/298-48-model-1-pytorch-dataloader-masks-and-leakage-tests",
+    "working_tree_clean_when_generated": false,
+    "source_set_sha256": "26b869a36e4fa0b09dcaf23677e86900d7f7e90dbd27c6c8caf0635ef9d6dc7d",
+    "source_files": [
+      {
+        "path": "armor-system/data/artifacts/d1/preprocessing/scaler_model1_fit_only_v1.npz",
+        "bytes": 84628,
+        "sha256": "a9ec5981e28c506af2ff53a3a35b39ec2949949ec719c21cb20d5ea5654032cb"
+      },
+      {
+        "path": "armor-system/data/artifacts/d1/splits/model1_calibration_split_v1.json",
+        "bytes": 138360,
+        "sha256": "65dd5fe83fa145d01e8a7f1c2481a16ad4d6b4d30ae816d80d433b730353c301"
+      },
+      {
+        "path": "armor-system/data/m1_integration.py",
+        "bytes": 12623,
+        "sha256": "9b704741b09edf8b2f79ab9392b52416c4d022a01f225bf9d284204f3a73a1e8"
+      },
+      {
+        "path": "armor-system/data/model1_pipeline.py",
+        "bytes": 4822,
+        "sha256": "3c9a5a8d784c1d749bdc33ec1e2f002fd67cebd0b74784fceb31da683f9d7b44"
+      },
+      {
+        "path": "armor-system/data/prep/detection_calibration.py",
+        "bytes": 5563,
+        "sha256": "e951d8a35eff067a9c4876bebae45da6dba57a15607bb37ea517445908d6ef52"
+      },
+      {
+        "path": "armor-system/data/prep/m1_dataset.py",
+        "bytes": 12662,
+        "sha256": "02f217f2d4414ddb0bc6614d70ea07380bdeb13e2ce95fecc4ca1f9b12145831"
+      },
+      {
+        "path": "armor-system/data/prep/m1_evidence.py",
+        "bytes": 8881,
+        "sha256": "cc91f5d57bb71977384b032b64cfabec08709319ee32c3f46c3411b87b0eb42c"
+      },
+      {
+        "path": "armor-system/data/prep/m1_masks.py",
+        "bytes": 9027,
+        "sha256": "a8596bbf9be5c3efb00a90ac3f621bac5b0c2c3ed8eb9a16ed35fc97c4ece7b9"
+      },
+      {
+        "path": "armor-system/data/prep/m1_split.py",
+        "bytes": 33257,
+        "sha256": "0b85a25a56f6f65043f428ae203af892629d25f923de473a78f6dfbd52a51c56"
+      },
+      {
+        "path": "armor-system/models/model1_transformer/DATA_LAYER.md",
+        "bytes": 7832,
+        "sha256": "803f14515dbb6b40b35ce9f0127f9f7dd5a0faa7ec8f7f9294fdc14be2118a68"
+      },
+      {
+        "path": "armor-system/tests/prep/_m1_helpers.py",
+        "bytes": 3248,
+        "sha256": "bd341f6b96a7b4946dc6d4f21eee163edcc7c5b25412b93b3a4f43ebb7e5ebab"
+      },
+      {
+        "path": "armor-system/tests/prep/test_m1_dataset.py",
+        "bytes": 21784,
+        "sha256": "8597f84871d863e20c13ebab9119391fd703d12e14acc59f3fbd3a33a855737d"
+      },
+      {
+        "path": "armor-system/tests/prep/test_m1_detection_calibration.py",
+        "bytes": 7714,
+        "sha256": "b4ff382429c457d37394f13e5057924cf00ca2a3f32ccdb287864c57d380e1c0"
+      },
+      {
+        "path": "armor-system/tests/prep/test_m1_evidence.py",
+        "bytes": 5169,
+        "sha256": "d0497dcea1837d85ca1178ad211d60f0cd77a0240f7f9d4dcf3b6588839b510f"
+      },
+      {
+        "path": "armor-system/tests/prep/test_m1_masks.py",
+        "bytes": 9092,
+        "sha256": "9910f56d6e1f3c0b827d565d202b11ceb53b32fad5f295bbeb87250f47e3bb1b"
+      },
+      {
+        "path": "armor-system/tests/prep/test_m1_required_resources.py",
+        "bytes": 1713,
+        "sha256": "398f4845067df06d9cc6c0b58e73a1cae40ec6d77728f397f969cc54f2fc8d01"
+      },
+      {
+        "path": "armor-system/tests/prep/test_m1_split.py",
+        "bytes": 24639,
+        "sha256": "d772724f15ff8bc816d647c3f176f58193022a2f7b9834f53183fcff0af92c78"
+      }
+    ],
+    "final_merge_commit": null,
+    "final_merge_commit_recorded_in": "Linear 298-48 comment (added when the PR merges)"
+  }
+}

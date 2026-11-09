@@ -1,0 +1,33 @@
+{
+  "name": "xgb_control_v1",
+  "purpose": "Experimental control for Model 1 (Linear 298-49). Not one of the four proposed models and not the published ARMOR baseline.",
+  "xgboost_params": {
+    "objective": "multi:softprob",
+    "num_class": 5,
+    "tree_method": "hist",
+    "max_depth": 3,
+    "eta": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.5,
+    "min_child_weight": 1,
+    "lambda": 1,
+    "nthread": 1,
+    "verbosity": 0
+  },
+  "num_boost_round": 100,
+  "seeds": [0, 1, 2, 3, 4],
+  "early_stopping": null,
+  "hyperparameter_search": false,
+  "class_order": ["Container Hardware", "Container Network", "Node CPU", "Node Disk", "Node Memory"],
+  "class_weights": "inverse frequency N / (K * n_k) computed from the 88 fitting cases only; applied as per-case sample weights",
+  "features": {
+    "unit": "one vector per documented case (distinct minutes of its approved event_associated windows)",
+    "node_groups": ["vm", "pod"],
+    "statistics": ["mean", "std", "max_abs", "delta"],
+    "std_ddof": 0,
+    "n_features": 520
+  },
+  "partitions": {"fit_cases": 88, "validation_cases": 25, "calibration_cases_used": 0, "held_out_cases_used": 0},
+  "majority_control": "predicts the most frequent fitting class (ties: lowest class id)",
+  "seed_sd_meaning": "Standard deviation across seeds measures training randomness only. It is not uncertainty across independent incidents."
+}
