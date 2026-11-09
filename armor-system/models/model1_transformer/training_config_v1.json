@@ -1,0 +1,62 @@
+{
+  "version": "1",
+  "status": "FROZEN v0 (2026-10-28): every value below is an approved v0 decision; no hyper-parameter search will be run",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "optimizer": "AdamW (torch defaults: betas 0.9/0.999, eps 1e-8; weight decay on every parameter)",
+  "s1": {
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "batch_size": 64,
+    "clip_norm": 1.0,
+    "schedule": "cosine",
+    "epochs": 100,
+    "patience": 10,
+    "source": {
+      "lr": "frozen v0 decision",
+      "weight_decay": "frozen v0 decision",
+      "batch_size": "frozen v0 decision",
+      "clip_norm": "frozen v0 decision",
+      "schedule": "frozen v0 decision",
+      "epochs": "frozen v0 decision",
+      "patience": "frozen v0 decision"
+    },
+    "early_stopping": {
+      "metric": "validation normal_reference masked MSE (objective s1_early_stopping, exact dataset mean)",
+      "mode": "min",
+      "patience": 10
+    }
+  },
+  "s2": {
+    "lr": 0.0001,
+    "weight_decay": 0.01,
+    "batch_size": 64,
+    "clip_norm": 1.0,
+    "schedule": "constant",
+    "epochs": 100,
+    "patience": 10,
+    "source": {
+      "lr": "frozen v0 decision",
+      "weight_decay": "frozen v0 decision",
+      "batch_size": "frozen v0 decision",
+      "clip_norm": "frozen v0 decision",
+      "schedule": "frozen v0 decision",
+      "epochs": "frozen v0 decision",
+      "patience": "frozen v0 decision"
+    },
+    "early_stopping": {
+      "metric": "validation case-level negative log-likelihood: mean over the 25 cases of -log(mean window probability of the true class)",
+      "mode": "min",
+      "patience": 10
+    }
+  },
+  "weighting": "case_balanced: window_weight = case-derived class weight / eligible window count of the case (approved amendment A-1)",
+  "primary_reported_metric": "five-class validation macro-F1 (case level); never used for selection",
+  "validation_use": "checkpoint selection and metrics only; never a gradient update",
+  "selection": "best epoch per stage (lowest monitored metric); the selected S1 checkpoint initialises S2 of the same seed"
+}

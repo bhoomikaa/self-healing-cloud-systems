@@ -1,0 +1,345 @@
+{
+ "accessed": "validation and calibration windows only; no test-period window, test label or official ARMOR label",
+ "code_sha256": {
+  "detection_v1.py": "fcece09f9d416f62f5d4fba367cf51df8afacfe02f6e2c1cd75a2f2e585ccba4",
+  "ensemble.py": "78daf91737ee334932875144e8f45181cbf4d15b90d6a50b0f3af0716012edb1",
+  "rolling.py": "c56d919b2cb98e8c0f9bf01e95eadaadd469ed70a5d707717986e693efaf603f",
+  "run_test.py": "4200f99e31312ee3d6f32292436c139b4b4d29c07612b6fb69170c2edf287ddd",
+  "scoring_sets.py": "2b7d89afb3ba48d2ff8f3e5e0e01eee472e4caf643bd296a3d36fd77daf95f6a"
+ },
+ "dry_run": {
+  "command": ".venv/bin/python -I armor-system/models/model1_transformer/run_test.py --mode validation --out <outside the repo> --missing-check",
+  "meaning": "the one-shot runner run on the validation period reproduced every committed validation result byte for byte (v1 and v0 predictions, v1 detection and thresholds, D3, D4, XGBoost predictions, and 48 seed-0 missing-data cells), so the test run uses the validated code paths"
+ },
+ "dry_run_checks": {
+  "all_identical": true,
+  "missing_seed_0_mask_0": {
+   "all_identical": true,
+   "cells_compared": 48,
+   "differing": []
+  },
+  "seed_0": {
+   "d3_identical": true,
+   "d4_identical_to_detection_v0": true,
+   "v0_predictions_byte_identical": true,
+   "v1_predictions_byte_identical": true,
+   "v1_supervised_detection_identical": true,
+   "v1_thresholds_identical": true,
+   "xgboost_predictions_byte_identical": true
+  },
+  "seed_1": {
+   "d3_identical": true,
+   "d4_identical_to_detection_v0": true,
+   "v0_predictions_byte_identical": true,
+   "v1_predictions_byte_identical": true,
+   "v1_supervised_detection_identical": true,
+   "v1_thresholds_identical": true,
+   "xgboost_predictions_byte_identical": true
+  },
+  "seed_2": {
+   "d3_identical": true,
+   "d4_identical_to_detection_v0": true,
+   "v0_predictions_byte_identical": true,
+   "v1_predictions_byte_identical": true,
+   "v1_supervised_detection_identical": true,
+   "v1_thresholds_identical": true,
+   "xgboost_predictions_byte_identical": true
+  },
+  "seed_3": {
+   "d3_identical": true,
+   "d4_identical_to_detection_v0": true,
+   "v0_predictions_byte_identical": true,
+   "v1_predictions_byte_identical": true,
+   "v1_supervised_detection_identical": true,
+   "v1_thresholds_identical": true,
+   "xgboost_predictions_byte_identical": true
+  },
+  "seed_4": {
+   "d3_identical": true,
+   "d4_identical_to_detection_v0": true,
+   "v0_predictions_byte_identical": true,
+   "v1_predictions_byte_identical": true,
+   "v1_supervised_detection_identical": true,
+   "v1_thresholds_identical": true,
+   "xgboost_predictions_byte_identical": true
+  }
+ },
+ "ensemble": {
+  "calibration": {
+   "n_windows": 329,
+   "percentile": 90.0,
+   "rolled_fraction_above": 0.0972644376899696,
+   "threshold": 0.7831957951425433
+  },
+  "definition": "V1_PROTOCOL.md section 11.3 (secondary row; never chosen from)",
+  "detection": {
+   "ours": {
+    "FN": 7,
+    "FP": 6,
+    "TP": 18,
+    "alert_minutes_by_category": {
+     "event_associated": 85,
+     "ignore": 27,
+     "normal_reference": 22
+    },
+    "armor_false_positive_intervals": 6,
+    "coverage_padded_300s": 0.4234752589182969,
+    "coverage_raw": 0.17261219792865362,
+    "delay": {
+     "max_s": 148.0,
+     "mean_s": -54.44444444444444,
+     "median_s": 53.5,
+     "min_s": -1021.0,
+     "n_hits": 18,
+     "n_negative": 2
+    },
+    "f1": 0.7347,
+    "intervals": {
+     "hit": 16,
+     "ignore_overlap_not_hit": 0,
+     "normal_only_false_alarm": 6,
+     "overlapping_ignore_regions_total": 7
+    },
+    "n_alert_minutes": 134,
+    "n_intervals": 22,
+    "normal_reference": {
+     "alarm_rate": 0.0535279805352798,
+     "alarm_windows": 22,
+     "inside_interval_rate": 0.0535279805352798,
+     "inside_interval_windows": 22,
+     "windows": 411
+    },
+    "precision": 0.75,
+    "recall": 0.72,
+    "scored": true,
+    "singleton_alerts_dropped": 0,
+    "threshold": 0.7831957951425433
+   }
+  },
+  "fault": {
+   "accuracy": 0.96,
+   "case_nll": 0.2984633201278372,
+   "confusion_matrix": [
+    [
+     10,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     6,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     3,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     5,
+     0
+    ],
+    [
+     0,
+     1,
+     0,
+     0,
+     0
+    ]
+   ],
+   "family_diagnostic": {
+    "families": {
+     "container": {
+      "classes": [
+       "Container Hardware",
+       "Container Network"
+      ],
+      "column_labels": [
+       "Container Hardware",
+       "Container Network",
+       "Node CPU",
+       "Node Disk",
+       "Node Memory"
+      ],
+      "conditional_within_family_accuracy": {
+       "denominator": 16,
+       "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy",
+       "numerator": 16,
+       "value": 1.0
+      },
+      "confusion_true_rows_vs_all_predicted_columns": [
+       [
+        10,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        6,
+        0,
+        0,
+        0
+       ]
+      ],
+      "exactly_correct": 16,
+      "family_level_accuracy": {
+       "denominator": 16,
+       "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)",
+       "numerator": 16,
+       "value": 1.0
+      },
+      "n_cases": 16,
+      "row_labels": [
+       "Container Hardware",
+       "Container Network"
+      ],
+      "wrong_inside_family": 0,
+      "wrong_outside_family": 0
+     },
+     "node": {
+      "classes": [
+       "Node CPU",
+       "Node Disk",
+       "Node Memory"
+      ],
+      "column_labels": [
+       "Container Hardware",
+       "Container Network",
+       "Node CPU",
+       "Node Disk",
+       "Node Memory"
+      ],
+      "conditional_within_family_accuracy": {
+       "denominator": 8,
+       "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy",
+       "numerator": 8,
+       "value": 1.0
+      },
+      "confusion_true_rows_vs_all_predicted_columns": [
+       [
+        0,
+        0,
+        3,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        5,
+        0
+       ],
+       [
+        0,
+        1,
+        0,
+        0,
+        0
+       ]
+      ],
+      "exactly_correct": 8,
+      "family_level_accuracy": {
+       "denominator": 9,
+       "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)",
+       "numerator": 8,
+       "value": 0.8888888888888888
+      },
+      "n_cases": 9,
+      "row_labels": [
+       "Node CPU",
+       "Node Disk",
+       "Node Memory"
+      ],
+      "wrong_inside_family": 0,
+      "wrong_outside_family": 1
+     }
+    },
+    "family_confusion_true_rows_pred_cols": {
+     "labels": [
+      "container",
+      "node"
+     ],
+     "matrix": [
+      [
+       16,
+       0
+      ],
+      [
+       1,
+       8
+      ]
+     ]
+    },
+    "note": "Families follow the D1 category names. They do not prove a fault physically affects only pods or only VMs."
+   },
+   "macro_f1": 0.7846153846153846,
+   "macro_f1_excluding_node_memory": 0.9807692307692307,
+   "n_cases": 25,
+   "per_class": {
+    "f1": [
+     1.0,
+     0.923076923076923,
+     1.0,
+     1.0,
+     0.0
+    ],
+    "precision": [
+     1.0,
+     0.8571428571428571,
+     1.0,
+     1.0,
+     0.0
+    ],
+    "predicted": [
+     10,
+     7,
+     3,
+     5,
+     0
+    ],
+    "recall": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     0.0
+    ],
+    "support": [
+     10,
+     6,
+     3,
+     5,
+     1
+    ]
+   },
+   "weighted_f1": 0.9415384615384617
+  }
+ },
+ "experiment": "Model 1 v1 five-seed probability-averaged ensemble, validation only (secondary row, V1_PROTOCOL.md section 11.3; never chosen from)",
+ "scoring_set": {
+  "contiguous_target_minutes": true,
+  "counts": {
+   "event_associated": 150,
+   "ignore": 308,
+   "normal_reference": 411,
+   "windows": 869
+  },
+  "n_ambiguous_event_windows_dropped": 0,
+  "n_cases": 25,
+  "n_labels": {
+   "ours": 25
+  }
+ }
+}

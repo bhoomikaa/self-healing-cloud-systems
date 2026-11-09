@@ -1,0 +1,286 @@
+{
+ "calibration_summary": {
+  "0": {
+   "epsilon": 0.0013964696986740177,
+   "errors_sha256": "3e41b1f524ede45c9378257505bad6fde7d8742b42a48d0b7f2d88dc3974cae4",
+   "floor_affected_nodes": 0,
+   "thresholds_p99": {
+    "m1_raw_max": 27.543069020475333,
+    "m2_max_normalised": 164.7585369766787,
+    "m3_topk_mean_normalised": 111.18565207724616
+   }
+  },
+  "1": {
+   "epsilon": 0.0014389393169687975,
+   "errors_sha256": "91213b26ab46a4d32b0ea3a13023e9ca7c372934780d597a69ba1626bd095069",
+   "floor_affected_nodes": 0,
+   "thresholds_p99": {
+    "m1_raw_max": 27.17794695694016,
+    "m2_max_normalised": 162.56583530600264,
+    "m3_topk_mean_normalised": 91.25788371758627
+   }
+  },
+  "2": {
+   "epsilon": 0.0013748574022031767,
+   "errors_sha256": "e1c6b8e1f2d6c167ce64ade1e7cdf8672a700c874d8597533f03550900388e64",
+   "floor_affected_nodes": 0,
+   "thresholds_p99": {
+    "m1_raw_max": 28.324879993352,
+    "m2_max_normalised": 168.87441721388274,
+    "m3_topk_mean_normalised": 119.81950882312532
+   }
+  },
+  "3": {
+   "epsilon": 0.0013767445902522334,
+   "errors_sha256": "4685302dc23998612aecbfc873a58bc3a83d72296a56382caecd63a2826d59ce",
+   "floor_affected_nodes": 0,
+   "thresholds_p99": {
+    "m1_raw_max": 27.548755424722774,
+    "m2_max_normalised": 166.77346132954935,
+    "m3_topk_mean_normalised": 122.47306850906735
+   }
+  },
+  "4": {
+   "epsilon": 0.0014253212251728426,
+   "errors_sha256": "d38fcef18ba69efb46d950153949283ea536507f5d2cd32e2eaf437d634a157f",
+   "floor_affected_nodes": 0,
+   "thresholds_p99": {
+    "m1_raw_max": 27.3542720093939,
+    "m2_max_normalised": 165.60036858499495,
+    "m3_topk_mean_normalised": 106.10366266674907
+   }
+  }
+ },
+ "checkpoint_bindings": {
+  "0": {
+   "git_head_at_training": "e7b508d75b88a7360ca33b31b5f363e2c26fa4a6",
+   "pt_file_sha256": "507822c6c7e6c6b5f538106aade94da90d4537c5db5d3eb5e8a9088262e920ac",
+   "s1_selected_epoch": 95,
+   "state_sha256": "b65c6e9457a4d87aa6175f2003d1ba7302acb1e3effbff9d43543f93063a8962"
+  },
+  "1": {
+   "git_head_at_training": "e7b508d75b88a7360ca33b31b5f363e2c26fa4a6",
+   "pt_file_sha256": "85129f372d3e09bf6b545246aa4fa494a4e66a3e778c8ff665b97524e410d30e",
+   "s1_selected_epoch": 49,
+   "state_sha256": "876639b94a551ad252d86741c790aaf3b027247fc1140f47e4109e2a8dc445f8"
+  },
+  "2": {
+   "git_head_at_training": "e7b508d75b88a7360ca33b31b5f363e2c26fa4a6",
+   "pt_file_sha256": "c422ee01a62aca9cc33f0d042f053690fbfcc5acc5542d31076eff9705fd7e7e",
+   "s1_selected_epoch": 83,
+   "state_sha256": "1f2e5c3dab1076fa24c8a7db2a5741301d10353a38deab1130b139c6bd810593"
+  },
+  "3": {
+   "git_head_at_training": "e7b508d75b88a7360ca33b31b5f363e2c26fa4a6",
+   "pt_file_sha256": "26578ebeffc121af89c0e874dffa5afcb36ea06c0582fddced5acf24fd6d647b",
+   "s1_selected_epoch": 92,
+   "state_sha256": "1f38dfd2014e1b6b684381f4f9a5f9d2485e143709c4c81b100d16ef6fa2d0b5"
+  },
+  "4": {
+   "git_head_at_training": "e7b508d75b88a7360ca33b31b5f363e2c26fa4a6",
+   "pt_file_sha256": "f1e71a003d47fbc3438d74215c3a59911c0e3c42f817521619c6ee7a105c60a1",
+   "s1_selected_epoch": 87,
+   "state_sha256": "bdc3e983243ab18286a0460bf8c965ae30d58740bf4f1edd1b10848e1eccbaf4"
+  }
+ },
+ "checkpoints_modified": false,
+ "commit_reference": {
+  "branch": "khushidonda/298-51-model-1-two-stage-training-and-validation",
+  "evidence_base_commit": "66802bc7f1b677e43f8a42eb4b7889c5d6218f3e",
+  "scheme": "no self-referential hash; source_set_sha256 covers the code, protocol and tests that produced the results",
+  "source_files": [
+   {
+    "path": "armor-system/data/prep/detection_calibration.py",
+    "sha256": "e951d8a35eff067a9c4876bebae45da6dba57a15607bb37ea517445908d6ef52"
+   },
+   {
+    "path": "armor-system/evaluation/detection/V0_DETECTION_PREDECLARATION.md",
+    "sha256": "fa19ffaa047623a46cd2495f581e9b0759c6b67f00531b7bea2695f9efda4592"
+   },
+   {
+    "path": "armor-system/evaluation/detection/armor_scoring.py",
+    "sha256": "4c06a1562b46698339292f70e11d158c0e5bc879769667bca265820b76a66d64"
+   },
+   {
+    "path": "armor-system/evaluation/detection/interval_diagnostics.py",
+    "sha256": "304b93d1f0b9bd7b638693d1e36c47a9aba460b66f911a314d4386c5f34b3736"
+   },
+   {
+    "path": "armor-system/models/model1_transformer/run_detection_v0.py",
+    "sha256": "90d298578da7b9371d68f5fa1189bfa5ce1c0d17311bcd0d7401486ed4e6b2fb"
+   },
+   {
+    "path": "armor-system/models/model1_transformer/threshold_diagnostics.py",
+    "sha256": "c5938f6d1953d7f10786b3f95409542e33610cac2985732e00f131a5ed7e9ddd"
+   },
+   {
+    "path": "armor-system/models/model1_transformer/window_errors.py",
+    "sha256": "446165fd2d1d2101239b91e6d8408e2c88b01a826ae207d83a2739f106473db4"
+   },
+   {
+    "path": "armor-system/tests/prep/test_m1_detection_v0.py",
+    "sha256": "7867e93a7b4d61fcd0c2196d726c07202eb41bfaeb9544e2e5024cdb7d662d9c"
+   }
+  ],
+  "source_set_sha256": "c7d8004df2829cef721a462af4cb9f354c8be99a0dd17d4f61d20324e3ee0480",
+  "uncommitted_when_generated": [
+   "armor-system/evaluation/detection/interval_diagnostics.py",
+   "armor-system/models/model1_transformer/results/detection_v0/seed_0.json",
+   "armor-system/models/model1_transformer/results/detection_v0/seed_1.json",
+   "armor-system/models/model1_transformer/results/detection_v0/seed_2.json",
+   "armor-system/models/model1_transformer/results/detection_v0/seed_3.json",
+   "armor-system/models/model1_transformer/results/detection_v0/seed_4.json",
+   "armor-system/models/model1_transformer/results/detection_v0/summary.json",
+   "armor-system/models/model1_transformer/run_detection_v0.py",
+   "armor-system/models/model1_transformer/threshold_diagnostics.py",
+   "armor-system/tests/prep/test_m1_detection_v0.py"
+  ]
+ },
+ "configuration": {
+  "block_bootstrap": {
+   "block": 7,
+   "resamples": 1000,
+   "seed": "20261028 + seed"
+  },
+  "calibration_windows": 329,
+  "documented_validation_incidents": 25,
+  "impact_window_s": 300,
+  "interval_delay_s": 600,
+  "normal_reference_windows": 411,
+  "primary": {
+   "method": "m2_max_normalised",
+   "percentile": 99.0
+  },
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "sensitivity_percentiles": [
+   95.0,
+   97.0,
+   99.5
+  ],
+  "training_config_sha256": "6f55a13b5fd26d95e3c8a6c9354a58031f9a8c912db79d64cedd02cb2a2f2527",
+  "validation_minutes": 869
+ },
+ "dataset_hashes": {
+  "feature_cache_content_sha256": "87b34b0609509b8e0c98e2789e6cc995cf876e2c9639c8d36af87ac087b8997f",
+  "fit_only_scaler_file_sha256": "a9ec5981e28c506af2ff53a3a35b39ec2949949ec719c21cb20d5ea5654032cb",
+  "manifest_content_sha256": "797e2eb669feda07770544f9f70ca3c92dfea6494e83f43bf8c12b0f73ed737a",
+  "preprocessing_config_sha256": "e9aa3ccc776a8bc9940d151ba3feea3c79f502eff58e12c9946babe0aaefeb8c",
+  "spec_fingerprint": "24890dde17fc484c38662d9268cfec4646d0cde5170951f00af61b0de56a302f"
+ },
+ "environment": {
+  "device": "cpu",
+  "numpy": "2.5.3",
+  "python": "3.14.4",
+  "torch": "2.14.0",
+  "torch_num_threads": 4
+ },
+ "evidence_name": "evidence_model1_detection_v0",
+ "evidence_version": "1.0",
+ "historical_evidence_unchanged": {
+  "armor-system/data/artifacts/d1/evidence/evidence.json": {
+   "sha256": "4beeca7fe5ead73c8d5109d1b339725509314879e1421a58f95eb33fbbfbba7e",
+   "unchanged_vs_HEAD": true
+  },
+  "armor-system/data/artifacts/d1/evidence/evidence_m1_03.json": {
+   "sha256": "73a3bad2fb2f614c44636539b8519e6c6d3848bd09f7045ed9d4930fcd97bb23",
+   "unchanged_vs_HEAD": true
+  },
+  "armor-system/evaluation/detection/evidence_armor_scoring_harness_v1.json": {
+   "sha256": "5539e4b428526bfe0c2b094a32c21cb52ae541cc01c780374a128e219f6e419a",
+   "unchanged_vs_HEAD": true
+  },
+  "armor-system/models/model1_transformer/results/comparison_v0/bootstrap_validation_v1.json": {
+   "sha256": "6fb1ff9e31ec02d380816f63f8cf58b0f6e9019176ed0b911d5601372c7e2306",
+   "unchanged_vs_HEAD": true
+  },
+  "armor-system/models/model1_transformer/results/core_v0/evidence_model1_core_v0.json": {
+   "sha256": "675a45bda13b8dd42e4e9fa342a23d7a2bec77d76568cdf3aaf82914bf462c1d",
+   "unchanged_vs_HEAD": true
+  },
+  "armor-system/models/model1_transformer/results/experiment_v0/evidence_model1_experiment_v0.json": {
+   "sha256": "01e5d980e8a4bfd8ff30cc7506acefb9e220f2436ae89c0e8142fb0fc72de738",
+   "unchanged_vs_HEAD": true
+  },
+  "armor-system/models/model1_xgboost_control/results/xgb_control_v1/evidence_xgb_control_v1.json": {
+   "sha256": "b5576d29513a15965be41bf8289055af8a26a76266ab4e4332fa4912f086edf9",
+   "unchanged_vs_HEAD": true
+  }
+ },
+ "linear_issue": "298-51",
+ "objectives_used": [
+  "s3_calibration_reference",
+  "validation_all"
+ ],
+ "optimizer_steps_taken": 0,
+ "predeclaration": {
+  "file": "armor-system/evaluation/detection/V0_DETECTION_PREDECLARATION.md",
+  "sha256": "fa19ffaa047623a46cd2495f581e9b0759c6b67f00531b7bea2695f9efda4592",
+  "statement": "Model 1 v0 uses no simulated-missing training and is reported as the ablation. Model 1 v1 uses simulated-missing training and is the predeclared final model for held-out test evaluation, regardless of validation performance."
+ },
+ "results_file_sha256": {
+  "seed_0.json": "f76f559fe5d690539236cf42670b642c0a6392f780d455340194f0313b9e8524",
+  "seed_1.json": "c13e17d55bc648d6d1e02a8194133ebdf012a3944672bdf01a2ce3a698dfb9c9",
+  "seed_2.json": "6d87cbfeaf5f9811a681a6774cd21e5c22ee63a24bdc46e37ee0929a175e8210",
+  "seed_3.json": "d57f4902037c03ca7762bd5036325191fb6baa3c08807c424092d2ee8f08e32e",
+  "seed_4.json": "82acaf24a3156503ad3208a0c0a87183bce65033ee6d068a314949c30e5e1c80",
+  "summary.json": "ed4f2771cf35f5e7a391b6834e334f1e6dcc6648b33eef272a38f5b19de3fad3"
+ },
+ "scope": "Model 1 v0 (ablation, no simulated-missing training) calibration on the 329 calibration-reference windows and detection validation on the 869 validation minutes; no test data, no official ARMOR label or interval file, no retraining",
+ "scorable_roles": [
+  "calibration",
+  "validation"
+ ],
+ "tests": {
+  "files": {
+   "test_m1_detection_v0.py": {
+    "ok": true,
+    "ran": 22,
+    "skipped": 0
+   }
+  },
+  "m1_integration": {
+   "errors": 0,
+   "evidence_m1_03_verified": true,
+   "failures": 0,
+   "skipped": 0,
+   "suites": {
+    "data": {
+     "errors": 0,
+     "failures": 0,
+     "ran": 37,
+     "skipped": 0
+    },
+    "prep": {
+     "errors": 0,
+     "failures": 0,
+     "ran": 426,
+     "skipped": 0
+    }
+   },
+   "tests_ran": 463
+  }
+ },
+ "timestamp_alignment": {
+  "armor_rule": "create_dataloader_AR(window_size=6): series_len = 7 samples, window timestamp = series_sample[-1][0] (the target sample); SLD appends it to each score; AD passes eval_slds_sum[['timestamp']] to get_pre_interval",
+  "armor_source_sha256": {
+   "anomaly_detector.py": "5166023fd39aad6deb72ff528d2009631fae282373972adbec11adcda32414e3",
+   "armor_model.py": "194ebed6de36614f177bb8f95ac094b4617d05829a2462c592277428239b15ef",
+   "deviation.py": "27150245330ed54231d1dace6d7d6dab1bd911e8ceec79dba9fdfce80f7210dd"
+  },
+  "decision": "primary and only convention: alert time = target (seventh) sample timestamp; unambiguous in ARMOR's source, so no alternative offset was scored",
+  "model1_rule": "window_errors.TARGET_POSITION = 6 (timestamps[:, 6])"
+ },
+ "validation_errors_sha256": {
+  "0": "8169e11e30fd8a7e9da243648a1986552a8f2f2e99c4d11200147bf7266fba9c",
+  "1": "185d74da90ed210151ad0f6c5170dcb07b9cceba8bfcbc483d5b3d58202fd441",
+  "2": "17bd259b84873712e783e2a690732db0cf93b20799a40489d0ea7fa23717689b",
+  "3": "8b791541c547f28add905843c7b691bc99ab4e322d296a88fb576db075992b08",
+  "4": "e1b65c68322d30c0365b4132f6a894aae5c6fe13df23abf5083ebb62731c61be"
+ }
+}

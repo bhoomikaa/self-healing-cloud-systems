@@ -1,0 +1,78 @@
+{
+ "alignment": {
+  "cases": 25,
+  "minute_union_sha256": "004d53ea6f834f51ae571edb75c97ff6fd78a05b2cc98cdf7e7d87a7c9c6944d",
+  "validation_case_index_sha256": "b780bd9fb72b03f913e2821703786ec481b6a84ec794c1f21c0cdeaee5d6bbdb",
+  "windows": 150
+ },
+ "checkpoints": {
+  "dir": "/Users/khushidonda/298A_project/checkpoints/model1_v1/seed_0",
+  "parameters": 176521,
+  "s1_pt_sha256": "5ede5e2d55eeeb5abf20270e9e4bf09b9b05921ff86f14743c2add2f93f0c072",
+  "s2_pt_sha256": "01940bfb9cd3588e3f3da2f5862f4d9f470095d1f815669e31d827c047343e40",
+  "s2_state_sha256": "d36452a8f4525985afb88c21baac99decdc42c7ade2be32a1c4985f9be8951bc",
+  "s2_state_sha256_reloaded": "d36452a8f4525985afb88c21baac99decdc42c7ade2be32a1c4985f9be8951bc"
+ },
+ "class_weights": [
+  0.5333333333333333,
+  0.6068965517241379,
+  1.9555555555555555,
+  1.353846153846154,
+  4.4
+ ],
+ "elapsed_seconds": 3093.4,
+ "epochs_run": {
+  "s1": 83,
+  "s2": 44
+ },
+ "hardware": {
+  "cpu": "Apple M4",
+  "cuda_available": false,
+  "deterministic_algorithms": true,
+  "device": "cpu",
+  "numpy": "2.5.3",
+  "platform": "Darwin arm64 25.5.0",
+  "python": "3.14.4",
+  "torch": "2.14.0",
+  "torch_num_threads": 1
+ },
+ "objectives_used": [
+  "s1_pretrain",
+  "s2_fault_finetune",
+  "s1_early_stopping",
+  "validation_all",
+  "s3_calibration_reference"
+ ],
+ "predictions_csv_sha256": "b4f8d8d74f64e0ec8933d428659092c0e4c24a47733dbbd9437ddda99ba81cd0",
+ "provenance": {
+  "feature_cache_content_sha256": "87b34b0609509b8e0c98e2789e6cc995cf876e2c9639c8d36af87ac087b8997f",
+  "fit_only_scaler_file_sha256": "a9ec5981e28c506af2ff53a3a35b39ec2949949ec719c21cb20d5ea5654032cb",
+  "git_head": "569c5eb878e8ba8300eee227b64d133df5e22d62",
+  "manifest_content_sha256": "797e2eb669feda07770544f9f70ca3c92dfea6494e83f43bf8c12b0f73ed737a",
+  "model": "Model1V1",
+  "numpy": "2.5.3",
+  "preprocessing_config_sha256": "e9aa3ccc776a8bc9940d151ba3feea3c79f502eff58e12c9946babe0aaefeb8c",
+  "python": "3.14.4",
+  "simulated_missing": {
+   "generator": "numpy Philox keyed by (seed, stage, epoch, window start index)",
+   "rate": 0.2,
+   "targets_hidden": false,
+   "unit": "(window, input minute, node, modality)"
+  },
+  "spec_fingerprint": "24890dde17fc484c38662d9268cfec4646d0cde5170951f00af61b0de56a302f",
+  "torch": "2.14.0",
+  "train_config_sha256": "6f55a13b5fd26d95e3c8a6c9354a58031f9a8c912db79d64cedd02cb2a2f2527",
+  "v1_protocol_sha256": "15e460b7ea77d89b0e672999bf9477af1b3356d392b2d97fdfd4cfd99ff66f81"
+ },
+ "seed": 0,
+ "selected": {
+  "s1_epoch": 73,
+  "s1_val_masked_mse": 0.2171321862973986,
+  "s2_epoch": 34,
+  "s2_val_monitor": 0.951855629004642
+ },
+ "stopped_early": {
+  "s1": true,
+  "s2": true
+ }
+}

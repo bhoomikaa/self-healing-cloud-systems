@@ -1,0 +1,376 @@
+{
+ "armor_parameters": {
+  "fallback_on_exception": "sorted(scores)[int(len * level)]",
+  "initial_threshold_index": "S[int(level * n)] (ascending order statistic)",
+  "invalid_if": "threshold <= 0 (ARMOR AD)",
+  "level": 0.95,
+  "peaks": "scores strictly above t, minus t",
+  "q": 0.1,
+  "quantile": "t + (sigma/gamma) * ((n*q/Nt)^(-gamma) - 1)",
+  "streaming": "not used by ARMOR (SPOT.fit(init, []) then initialize only)"
+ },
+ "armor_regime_note": "with level 0.95 and q 0.1, r = n*q/Nt is about 2 whatever n is, so the extreme quantile lies BELOW the peaks-over-threshold cut t (about the 90th percentile)",
+ "provenance": {
+  "SPOT_class_source_sha256": "35567a4f5f7e8a1e3ca12b8e9499ee8f9dc7c7a47deb9dc811870dd026f4d087",
+  "anomaly_detector.py_sha256": "5166023fd39aad6deb72ff528d2009631fae282373972adbec11adcda32414e3",
+  "spot.py_sha256": "164cdad8b4f56fe8155d9b5cd4bfaf8f1495491a0f58497baf407e718fb52cc5"
+ },
+ "purpose": "feasibility of ARMOR SPOT thresholding on the 329 calibration-reference windows (v0 forecast-error M2 scores); no validation or test window read",
+ "seeds": {
+  "0": {
+   "armor_get_threshold": 18.35613889799947,
+   "autocorrelation_lag1_to_7": [
+    0.25858434839373373,
+    0.126384316602391,
+    0.13173194477120354,
+    0.06868949436010705,
+    0.1279373827614706,
+    0.018519947843214552,
+    -0.03934341779604717
+   ],
+   "calibration_windows_above_spot_threshold": 0.2127659574468085,
+   "effective_sample_size": 133.5392641668913,
+   "empirical_percentiles": {
+    "90": 38.52450296006339,
+    "95": 66.98494390242007,
+    "99": 164.7585369766787
+   },
+   "n_windows": 329,
+   "spot_on_real_scores": {
+    "Nt": 16,
+    "gamma": 0.0,
+    "n": 329,
+    "r": 2.05625,
+    "sigma": 68.06612744987633,
+    "t": 67.42391673045805,
+    "threshold": 18.35613889799947
+   },
+   "stability_block7": {
+    "Nt_min_median_max": [
+     12,
+     16.0,
+     16
+    ],
+    "block": 7,
+    "fits_raising_an_exception": 0,
+    "full_sample_empirical_p90": 38.52450296006339,
+    "gamma_exactly_zero_share": 1.0,
+    "gamma_median": 0.0,
+    "gamma_negative_share": 0.0,
+    "resamples": 500,
+    "threshold_below_initial_t_share": 1.0,
+    "threshold_iqr_over_median": 0.7431444656087033,
+    "threshold_median": 22.185964846762115,
+    "threshold_p2.5_p97.5": [
+     -6.098316996241735,
+     43.43971169848906
+    ]
+   },
+   "stability_independent": {
+    "Nt_min_median_max": [
+     13,
+     16.0,
+     16
+    ],
+    "block": 1,
+    "fits_raising_an_exception": 0,
+    "full_sample_empirical_p90": 38.52450296006339,
+    "gamma_exactly_zero_share": 1.0,
+    "gamma_median": 0.0,
+    "gamma_negative_share": 0.0,
+    "resamples": 500,
+    "threshold_below_initial_t_share": 1.0,
+    "threshold_iqr_over_median": 1.2725969849012242,
+    "threshold_median": 15.989836685643997,
+    "threshold_p2.5_p97.5": [
+     -16.74031481961669,
+     40.132068745250635
+    ]
+   }
+  },
+  "1": {
+   "armor_get_threshold": 18.899729448232932,
+   "autocorrelation_lag1_to_7": [
+    0.2303453796652977,
+    0.12724248587791112,
+    0.09898036247268566,
+    0.043707715637598045,
+    0.062162628359467204,
+    -0.0003762460255125979,
+    -0.042068406315579385
+   ],
+   "calibration_windows_above_spot_threshold": 0.2066869300911854,
+   "effective_sample_size": 154.8324809860098,
+   "empirical_percentiles": {
+    "90": 40.8230940269464,
+    "95": 63.89401812922367,
+    "99": 162.56583530600264
+   },
+   "n_windows": 329,
+   "spot_on_real_scores": {
+    "Nt": 16,
+    "gamma": 0.0,
+    "n": 329,
+    "r": 2.05625,
+    "sigma": 63.18441301033129,
+    "t": 64.4483577633711,
+    "threshold": 18.899729448232932
+   },
+   "stability_block7": {
+    "Nt_min_median_max": [
+     12,
+     16.0,
+     16
+    ],
+    "block": 7,
+    "fits_raising_an_exception": 0,
+    "full_sample_empirical_p90": 40.8230940269464,
+    "gamma_exactly_zero_share": 1.0,
+    "gamma_median": 0.0,
+    "gamma_negative_share": 0.0,
+    "resamples": 500,
+    "threshold_below_initial_t_share": 1.0,
+    "threshold_iqr_over_median": 0.6682950743196264,
+    "threshold_median": 24.455480446224307,
+    "threshold_p2.5_p97.5": [
+     -1.3491946541945319,
+     45.02078945226988
+    ]
+   },
+   "stability_independent": {
+    "Nt_min_median_max": [
+     11,
+     16.0,
+     16
+    ],
+    "block": 1,
+    "fits_raising_an_exception": 0,
+    "full_sample_empirical_p90": 40.8230940269464,
+    "gamma_exactly_zero_share": 1.0,
+    "gamma_median": 0.0,
+    "gamma_negative_share": 0.0,
+    "resamples": 500,
+    "threshold_below_initial_t_share": 1.0,
+    "threshold_iqr_over_median": 1.0283053887672318,
+    "threshold_median": 19.43289593348796,
+    "threshold_p2.5_p97.5": [
+     -18.41936107920921,
+     42.62387613476515
+    ]
+   }
+  },
+  "2": {
+   "armor_get_threshold": 12.516323417515125,
+   "autocorrelation_lag1_to_7": [
+    0.22988716176844962,
+    0.04946763843356176,
+    0.03617589942134749,
+    0.03356929199151693,
+    0.11820924530410012,
+    -0.0011436165152437414,
+    -0.02945438805992525
+   ],
+   "calibration_windows_above_spot_threshold": 0.3191489361702128,
+   "effective_sample_size": 170.05937059378965,
+   "empirical_percentiles": {
+    "90": 35.93926637452054,
+    "95": 65.18772071362949,
+    "99": 168.87441721388274
+   },
+   "n_windows": 329,
+   "spot_on_real_scores": {
+    "Nt": 16,
+    "gamma": 0.0,
+    "n": 329,
+    "r": 2.05625,
+    "sigma": 73.18111601706606,
+    "t": 65.27141433848828,
+    "threshold": 12.516323417515125
+   },
+   "stability_block7": {
+    "Nt_min_median_max": [
+     12,
+     16.0,
+     16
+    ],
+    "block": 7,
+    "fits_raising_an_exception": 0,
+    "full_sample_empirical_p90": 35.93926637452054,
+    "gamma_exactly_zero_share": 1.0,
+    "gamma_median": 0.0,
+    "gamma_negative_share": 0.0,
+    "resamples": 500,
+    "threshold_below_initial_t_share": 1.0,
+    "threshold_iqr_over_median": 1.1490981269935205,
+    "threshold_median": 15.034237836258384,
+    "threshold_p2.5_p97.5": [
+     -13.129247444860273,
+     37.86377593409595
+    ]
+   },
+   "stability_independent": {
+    "Nt_min_median_max": [
+     12,
+     16.0,
+     16
+    ],
+    "block": 1,
+    "fits_raising_an_exception": 0,
+    "full_sample_empirical_p90": 35.93926637452054,
+    "gamma_exactly_zero_share": 1.0,
+    "gamma_median": 0.0,
+    "gamma_negative_share": 0.0,
+    "resamples": 500,
+    "threshold_below_initial_t_share": 1.0,
+    "threshold_iqr_over_median": 2.9056152719889035,
+    "threshold_median": 7.197024957303068,
+    "threshold_p2.5_p97.5": [
+     -27.540290926855565,
+     36.577447948572924
+    ]
+   }
+  },
+  "3": {
+   "armor_get_threshold": 18.45829636444271,
+   "autocorrelation_lag1_to_7": [
+    0.2586774202661862,
+    0.0876921312023865,
+    0.06426479335981208,
+    0.051619258413669974,
+    0.11391731347580075,
+    0.06311379540894212,
+    -0.0394009083708346
+   ],
+   "calibration_windows_above_spot_threshold": 0.20972644376899696,
+   "effective_sample_size": 144.38884174344284,
+   "empirical_percentiles": {
+    "90": 38.62587278033899,
+    "95": 68.31811608508649,
+    "99": 166.77346132954935
+   },
+   "n_windows": 329,
+   "spot_on_real_scores": {
+    "Nt": 16,
+    "gamma": 0.0,
+    "n": 329,
+    "r": 2.05625,
+    "sigma": 69.83150090237805,
+    "t": 68.79870355902364,
+    "threshold": 18.45829636444271
+   },
+   "stability_block7": {
+    "Nt_min_median_max": [
+     12,
+     16.0,
+     16
+    ],
+    "block": 7,
+    "fits_raising_an_exception": 0,
+    "full_sample_empirical_p90": 38.62587278033899,
+    "gamma_exactly_zero_share": 1.0,
+    "gamma_median": 0.0,
+    "gamma_negative_share": 0.0,
+    "resamples": 500,
+    "threshold_below_initial_t_share": 1.0,
+    "threshold_iqr_over_median": 0.8010493201358675,
+    "threshold_median": 21.97783123999422,
+    "threshold_p2.5_p97.5": [
+     -4.660649504014999,
+     46.831022283103486
+    ]
+   },
+   "stability_independent": {
+    "Nt_min_median_max": [
+     11,
+     16.0,
+     16
+    ],
+    "block": 1,
+    "fits_raising_an_exception": 0,
+    "full_sample_empirical_p90": 38.62587278033899,
+    "gamma_exactly_zero_share": 1.0,
+    "gamma_median": 0.0,
+    "gamma_negative_share": 0.0,
+    "resamples": 500,
+    "threshold_below_initial_t_share": 1.0,
+    "threshold_iqr_over_median": 1.3742088982089953,
+    "threshold_median": 13.96689688169748,
+    "threshold_p2.5_p97.5": [
+     -17.063259949505873,
+     40.792206694500955
+    ]
+   }
+  },
+  "4": {
+   "armor_get_threshold": 13.427527896047593,
+   "autocorrelation_lag1_to_7": [
+    0.29115063493459864,
+    0.14292751073885582,
+    0.10696625161925359,
+    0.0723168757708984,
+    0.129657243791777,
+    0.041469598983062156,
+    -0.031892897237030544
+   ],
+   "calibration_windows_above_spot_threshold": 0.2857142857142857,
+   "effective_sample_size": 128.0665799641308,
+   "empirical_percentiles": {
+    "90": 42.633671862626194,
+    "95": 64.71097914360597,
+    "99": 165.60036858499495
+   },
+   "n_windows": 329,
+   "spot_on_real_scores": {
+    "Nt": 16,
+    "gamma": 0.0,
+    "n": 329,
+    "r": 2.05625,
+    "sigma": 71.82749474871306,
+    "t": 65.20681498987125,
+    "threshold": 13.427527896047593
+   },
+   "stability_block7": {
+    "Nt_min_median_max": [
+     12,
+     16.0,
+     16
+    ],
+    "block": 7,
+    "fits_raising_an_exception": 0,
+    "full_sample_empirical_p90": 42.633671862626194,
+    "gamma_exactly_zero_share": 1.0,
+    "gamma_median": 0.0,
+    "gamma_negative_share": 0.0,
+    "resamples": 500,
+    "threshold_below_initial_t_share": 1.0,
+    "threshold_iqr_over_median": 0.8163169803014017,
+    "threshold_median": 20.67476026202243,
+    "threshold_p2.5_p97.5": [
+     -5.960776552913088,
+     54.398186164997114
+    ]
+   },
+   "stability_independent": {
+    "Nt_min_median_max": [
+     12,
+     16.0,
+     16
+    ],
+    "block": 1,
+    "fits_raising_an_exception": 0,
+    "full_sample_empirical_p90": 42.633671862626194,
+    "gamma_exactly_zero_share": 1.0,
+    "gamma_median": 0.0,
+    "gamma_negative_share": 0.0,
+    "resamples": 500,
+    "threshold_below_initial_t_share": 1.0,
+    "threshold_iqr_over_median": 1.17297536239008,
+    "threshold_median": 16.612740003259646,
+    "threshold_p2.5_p97.5": [
+     -16.106146292643025,
+     43.74392638275859
+    ]
+   }
+  }
+ }
+}

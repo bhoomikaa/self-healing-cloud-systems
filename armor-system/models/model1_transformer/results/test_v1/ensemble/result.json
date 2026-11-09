@@ -1,0 +1,305 @@
+{
+ "calibration": {
+  "n_windows": 329,
+  "percentile": 90.0,
+  "rolled_fraction_above": 0.0972644376899696,
+  "threshold": 0.7831957951425433
+ },
+ "definition": "V1_PROTOCOL.md section 11.3 (secondary row; never chosen from)",
+ "detection": {
+  "official": {
+   "FN": 28,
+   "FP": 14,
+   "TP": 70,
+   "alert_minutes_by_category": {
+    "event_associated": 276,
+    "ignore": 123,
+    "normal_reference": 79
+   },
+   "armor_false_positive_intervals": 14,
+   "coverage_padded_300s": 0.4581589958158996,
+   "coverage_raw": 0.20188284518828453,
+   "delay": {
+    "max_s": 262.0,
+    "mean_s": -82.65714285714286,
+    "median_s": 44.5,
+    "min_s": -1271.0,
+    "n_hits": 70,
+    "n_negative": 17
+   },
+   "f1": 0.7692,
+   "intervals": {
+    "hit": 60,
+    "ignore_overlap_not_hit": 3,
+    "normal_only_false_alarm": 11,
+    "overlapping_ignore_regions_total": 35
+   },
+   "n_alert_minutes": 478,
+   "n_intervals": 74,
+   "normal_reference": {
+    "alarm_rate": 0.056428571428571425,
+    "alarm_windows": 79,
+    "inside_interval_rate": 0.06714285714285714,
+    "inside_interval_windows": 94,
+    "windows": 1400
+   },
+   "precision": 0.8333,
+   "recall": 0.7143,
+   "scored": true,
+   "singleton_alerts_dropped": 0,
+   "threshold": 0.7831957951425433
+  },
+  "ours": {
+   "FN": 19,
+   "FP": 17,
+   "TP": 65,
+   "alert_minutes_by_category": {
+    "event_associated": 276,
+    "ignore": 123,
+    "normal_reference": 79
+   },
+   "armor_false_positive_intervals": 17,
+   "coverage_padded_300s": 0.4581589958158996,
+   "coverage_raw": 0.20188284518828453,
+   "delay": {
+    "max_s": 285.0,
+    "mean_s": -75.73846153846154,
+    "median_s": 50.0,
+    "min_s": -1271.0,
+    "n_hits": 65,
+    "n_negative": 15
+   },
+   "f1": 0.7831,
+   "intervals": {
+    "hit": 57,
+    "ignore_overlap_not_hit": 2,
+    "normal_only_false_alarm": 15,
+    "overlapping_ignore_regions_total": 35
+   },
+   "n_alert_minutes": 478,
+   "n_intervals": 74,
+   "normal_reference": {
+    "alarm_rate": 0.056428571428571425,
+    "alarm_windows": 79,
+    "inside_interval_rate": 0.06714285714285714,
+    "inside_interval_windows": 94,
+    "windows": 1400
+   },
+   "precision": 0.7927,
+   "recall": 0.7738,
+   "scored": true,
+   "singleton_alerts_dropped": 0,
+   "threshold": 0.7831957951425433
+  }
+ },
+ "fault": {
+  "accuracy": 0.8333333333333334,
+  "case_nll": 0.45732800622515246,
+  "confusion_matrix": [
+   [
+    35,
+    0,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    20,
+    0,
+    1,
+    1
+   ],
+   [
+    1,
+    3,
+    3,
+    1,
+    0
+   ],
+   [
+    0,
+    2,
+    1,
+    10,
+    1
+   ],
+   [
+    0,
+    0,
+    0,
+    2,
+    2
+   ]
+  ],
+  "family_diagnostic": {
+   "families": {
+    "container": {
+     "classes": [
+      "Container Hardware",
+      "Container Network"
+     ],
+     "column_labels": [
+      "Container Hardware",
+      "Container Network",
+      "Node CPU",
+      "Node Disk",
+      "Node Memory"
+     ],
+     "conditional_within_family_accuracy": {
+      "denominator": 55,
+      "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy",
+      "numerator": 55,
+      "value": 1.0
+     },
+     "confusion_true_rows_vs_all_predicted_columns": [
+      [
+       35,
+       0,
+       0,
+       1,
+       0
+      ],
+      [
+       0,
+       20,
+       0,
+       1,
+       1
+      ]
+     ],
+     "exactly_correct": 55,
+     "family_level_accuracy": {
+      "denominator": 58,
+      "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)",
+      "numerator": 55,
+      "value": 0.9482758620689655
+     },
+     "n_cases": 58,
+     "row_labels": [
+      "Container Hardware",
+      "Container Network"
+     ],
+     "wrong_inside_family": 0,
+     "wrong_outside_family": 3
+    },
+    "node": {
+     "classes": [
+      "Node CPU",
+      "Node Disk",
+      "Node Memory"
+     ],
+     "column_labels": [
+      "Container Hardware",
+      "Container Network",
+      "Node CPU",
+      "Node Disk",
+      "Node Memory"
+     ],
+     "conditional_within_family_accuracy": {
+      "denominator": 20,
+      "meaning": "among this family's cases predicted inside the family, share with the exactly right class; cases predicted in the other family are not in the denominator, so this is not overall accuracy",
+      "numerator": 15,
+      "value": 0.75
+     },
+     "confusion_true_rows_vs_all_predicted_columns": [
+      [
+       1,
+       3,
+       3,
+       1,
+       0
+      ],
+      [
+       0,
+       2,
+       1,
+       10,
+       1
+      ],
+      [
+       0,
+       0,
+       0,
+       2,
+       2
+      ]
+     ],
+     "exactly_correct": 15,
+     "family_level_accuracy": {
+      "denominator": 26,
+      "meaning": "share of this family's cases whose predicted class is in the same family (ignores which class inside)",
+      "numerator": 20,
+      "value": 0.7692307692307693
+     },
+     "n_cases": 26,
+     "row_labels": [
+      "Node CPU",
+      "Node Disk",
+      "Node Memory"
+     ],
+     "wrong_inside_family": 5,
+     "wrong_outside_family": 6
+    }
+   },
+   "family_confusion_true_rows_pred_cols": {
+    "labels": [
+     "container",
+     "node"
+    ],
+    "matrix": [
+     [
+      55,
+      3
+     ],
+     [
+      6,
+      20
+     ]
+    ]
+   },
+   "note": "Families follow the D1 category names. They do not prove a fault physically affects only pods or only VMs."
+  },
+  "macro_f1": 0.7025882448846499,
+  "macro_f1_excluding_node_memory": 0.7532353061058124,
+  "n_cases": 84,
+  "per_class": {
+   "f1": [
+    0.9722222222222222,
+    0.8510638297872342,
+    0.5,
+    0.689655172413793,
+    0.5
+   ],
+   "precision": [
+    0.9722222222222222,
+    0.8,
+    0.75,
+    0.6666666666666666,
+    0.5
+   ],
+   "predicted": [
+    36,
+    25,
+    4,
+    15,
+    4
+   ],
+   "recall": [
+    0.9722222222222222,
+    0.9090909090909091,
+    0.375,
+    0.7142857142857143,
+    0.5
+   ],
+   "support": [
+    36,
+    22,
+    8,
+    14,
+    4
+   ]
+  },
+  "weighted_f1": 0.8259354365370506
+ }
+}

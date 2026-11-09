@@ -1,0 +1,96 @@
+{
+ "attempt1_consistency": {
+  "all_identical": true,
+  "file": "armor-system/models/model1_transformer/results/test_v1/attempt1_consistency.json",
+  "files_compared": 12
+ },
+ "console_log": [
+  "[test core] seed 0 done in 47s: v1 macro-F1 0.6991, primary F1 0.6755",
+  "[test core] seed 1 done in 45s: v1 macro-F1 0.7555, primary F1 0.7952",
+  "[test core] seed 2 done in 48s: v1 macro-F1 0.7573, primary F1 0.7308",
+  "[test core] seed 3 done in 52s: v1 macro-F1 0.7608, primary F1 0.7674",
+  "[test core] seed 4 done in 54s: v1 macro-F1 0.6343, primary F1 0.6666",
+  "seeds 0-3 identical to attempt 1: True",
+  "test run complete: /Users/khushidonda/298A_project/team-repo/armor-system/models/model1_transformer/results/test_v1"
+ ],
+ "evidence_name": "evidence_test_run_attempt2",
+ "evidence_version": "1.0",
+ "exit": "process exited normally; console ends with 'test run complete'",
+ "freeze_record_sha256": "b538175c4be0cb553b32e22e437ba8c440868eb462522d5e939e24c8acd24a7b",
+ "freeze_verification_after_run": "freeze verification: OK",
+ "frozen_files_modified": false,
+ "head": "8a4987fe36b6924a9a84dac75cf6f6309ca28663",
+ "launch": {
+  "command": "nohup perl -MPOSIX -e 'POSIX::setsid(); exec @ARGV' caffeinate -dims .venv/bin/python -I armor-system/models/model1_transformer/run_test.py --mode test > ~/298A_project/test_run_attempt2.log 2>&1 & disown",
+  "detached": "own session and process group (setsid), nohup, caffeinate -dims",
+  "pid": 55116,
+  "power": "battery (about 48% at launch); the user approved running on battery"
+ },
+ "linear_issue": "298-51",
+ "markers": {
+  "external": {
+   "path": "~/298A_project/checkpoints/model1_test_run_marker_attempt2.json",
+   "sha256": "426039eb902ab0d8bb16b3b448eb999e4186556563be916ca6dcda9370135a88"
+  },
+  "repository": {
+   "path": "armor-system/models/model1_transformer/results/test_v1/TEST_RUN_MARKER_attempt2.json",
+   "sha256": "426039eb902ab0d8bb16b3b448eb999e4186556563be916ca6dcda9370135a88"
+  }
+ },
+ "not_committed": {
+  "xgb_features/features.npz": "case feature matrices (fit and test), data rather than results; kept on disk, hash above"
+ },
+ "result_files_sha256": {
+  "TEST_RUN_MARKER_attempt2.json": "426039eb902ab0d8bb16b3b448eb999e4186556563be916ca6dcda9370135a88",
+  "attempt1_consistency.json": "91a0d3407b834270ec88a6d81e9ca86000ec310e0c0e05b3bdb897dea26803bd",
+  "core_meta.json": "4f932886342bd4de7fb2e5fc52e19d429fac7db0b81ce5e9406482a64b3d25f9",
+  "ensemble/predictions_v1_ensemble.csv": "82aa9dd88e757f6941ddce206d7fe4c6e9b368a3891af71f805abcab1a0e9eca",
+  "ensemble/result.json": "d7ba632bfc7c684b51f253009f3466036c3899a43bb575297eebf007cfcb31b3",
+  "logs/console_test_run_attempt2.log": "3bec5b11d44e6e36491fd94e61f9dc5531d179e065d1a13ad9fe1e72aa06cd26",
+  "logs/missing_0.log": "27ba9a226d7ae9c5b9b1699eef0ea1a13a8a58dda77a9eb7ee50070468f06a51",
+  "logs/missing_1.log": "23f88e57f909eaa3be0c013ace03c0d2c681c535459bb5548d402f71a5a29617",
+  "logs/missing_2.log": "b5f14ba8b68a61aef5343b70eebf8bf19df1e1cd64b40145dc10b69fd5e5bdc7",
+  "logs/missing_3.log": "86ee1a37df144f75676f89b83df6e0a7310e839d5a9f27fc3430ce22c0079d70",
+  "logs/missing_4.log": "ba842e85aea8a1c76247cab9030636ed4ca9a46dbac0e246c50cf3c9cd994562",
+  "logs/xgb_features.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "logs/xgb_train.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "missing/seed_0.json": "f1df2664f82081fa399472c81bb857a7bb82f6e7542e12198baea2471c7a4bf3",
+  "missing/seed_1.json": "170818e83aeb0bb33c3dc53409deb58b9715bafbe49cc2b74ab9f9d99b4620e5",
+  "missing/seed_2.json": "f3ae3a9268bccf7734a5ffde533b03f799207396d00011588d1eedfe08a7abd2",
+  "missing/seed_3.json": "557a1afe1d2102f519ef27573ca20fbf773ae4dc607433f9c045707fc794402f",
+  "missing/seed_4.json": "8a486f7383a4cbb4fbdb4e21a1be5aae4f481d586b5b1bb4f23dcaf1abd2c235",
+  "seed_0/predictions_v0.csv": "c7d08f56a55ad195ea6e172743b50357168388df87a2c86ad42eff6c26a23ccb",
+  "seed_0/predictions_v1.csv": "8ee8b8716ea52f6f6491eb0cbf8e1a7c22bd79aa34d0fd66ecfdf584838313ac",
+  "seed_0/result.json": "8bc6781df1d0545a46bb3d2563ba9b738f34b812bcedfca51f00cacb8ef89925",
+  "seed_1/predictions_v0.csv": "7c3acd37ee8fda60d072e16e90f631e9104dff9d99cc6279293315b951740799",
+  "seed_1/predictions_v1.csv": "abc70912cc6b5d9c880ac41addd8f7c6e57c7c5697b7832d0aa3adfd2ea9f9c9",
+  "seed_1/result.json": "c979fe8a1d2c5e200f47908ae3c35e0ba65b9bd86e0021c9156fdd29fe136ee5",
+  "seed_2/predictions_v0.csv": "0ae2d932076572d79171804506a78440911daaa8af2238f7f723c64632fe286c",
+  "seed_2/predictions_v1.csv": "b807115dc4144e70b01934a2de50c730e7bd7cf009014a2ca4233cc8c60268a2",
+  "seed_2/result.json": "1190745b93078262f7db1a97263d132dc3e3cca0b5ac4499c8b17f2ddc48a5a2",
+  "seed_3/predictions_v0.csv": "182e14c4b47354484bd01e6dbd7dafaba36c506ed2e3548fd3cf510d7f4b081e",
+  "seed_3/predictions_v1.csv": "0d37ee4430db52c7f009a08e57b2f17ea1dab37efde86b0262af335445a50e81",
+  "seed_3/result.json": "53e9ad16fb230e2d020a81da18ff1214b229bf70a3cc3d9baf6c3d1f68a6ee56",
+  "seed_4/predictions_v0.csv": "3816025f5a0077a119f7e079b00c10d5f53aa8516b442013d0431434a411d823",
+  "seed_4/predictions_v1.csv": "f495a90b0e28be2e2682acda49e9c4359fb801371d4bda5f02629ade70f6b57e",
+  "seed_4/result.json": "8566d9c029f12de53658677f79031b39f687466a07f3061bbd93481d6173daab",
+  "summary.json": "fa63538a0a55eac1dc1918defa1fcb45acff490e80817180695718fbc6cc26df",
+  "xgb_features/features.npz": "5541f4e5a59d55fab71ee5a0badd56fea5a94796e32172d557f7f7695f243baf",
+  "xgb_features/unions.json": "e417a069dae16d48a0cc32ed25962656df992a0af9830eec1e98521289570978",
+  "xgboost/result.json": "45a687e4aa0cc2d8aae4e98932e4c24e97c6574767b873cc830393fa33b65f8f",
+  "xgboost/seed_0_predictions.csv": "92e224e2525f411d12f8d8ac1b49c5842ab10f9661464aad208fbe25e5e9a7e5",
+  "xgboost/seed_1_predictions.csv": "4be7edb6d06c724b9aedfebf184bc1dcfd995c510d282ff696243fe91a75cf6f",
+  "xgboost/seed_2_predictions.csv": "94af9dbeeb8d58e7d930f2571d155882ed17f21c6f922c0a28c850add056950b",
+  "xgboost/seed_3_predictions.csv": "e2fc13f6fb85e3428825bac9c40cf58edebb1edcaedb9f877597f9111c934fa0",
+  "xgboost/seed_4_predictions.csv": "5759700e560d678674de74ece100759d3f4fdb2ada6b3691b6d0c1da57640ee5"
+ },
+ "run_id": "dabf6b59c185451e9b3e2a2f930eba30",
+ "runtime": {
+  "finished": "2026-10-28T21:25:28-0700",
+  "finished_unix": 1793247928,
+  "seconds": 2170,
+  "started": "2026-10-28T20:49:18-0700",
+  "started_unix": 1793245758
+ },
+ "scope": "One-shot test evaluation, attempt 2 (TEST_INCIDENT_attempt1.md): Model 1 v1, v0 and the XGBoost control on the 84 test cases / test period, every TEST_PLAN.md row."
+}

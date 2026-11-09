@@ -1,0 +1,386 @@
+{
+  "command": ".venv/bin/python -I armor-system/evaluation/detection/harness_evidence.py --write-evidence",
+  "commit_reference": {
+    "branch": "khushidonda/298-51-model-1-two-stage-training-and-validation",
+    "evidence_base_commit": "ad3587237f5e0dade48276779fe06ef291f88930",
+    "scheme": "no self-referential hash; source_set_sha256 covers the harness code, protocol and tests",
+    "source_files": [
+      {
+        "bytes": 7923,
+        "path": "armor-system/evaluation/detection/DETECTION_PROTOCOL.md",
+        "sha256": "750e3daaafebc52d0dba0587f5e1c98bdcb441185c5244587139bf0d3ab90ace"
+      },
+      {
+        "bytes": 3926,
+        "path": "armor-system/evaluation/detection/armor_scoring.py",
+        "sha256": "4c06a1562b46698339292f70e11d158c0e5bc879769667bca265820b76a66d64"
+      },
+      {
+        "bytes": 10321,
+        "path": "armor-system/evaluation/detection/equivalence.py",
+        "sha256": "9378f1aff5a74097f9f0683a9ee6afa7cead127d34b969f13025e97f027c9104"
+      },
+      {
+        "bytes": 9200,
+        "path": "armor-system/evaluation/detection/harness_evidence.py",
+        "sha256": "c818fa44d0440e62cf95e7e1ca9949ee141bbd311f5f1e8e679935de6cf889e9"
+      },
+      {
+        "bytes": 7553,
+        "path": "armor-system/evaluation/detection/verify_armor_published_ad.py",
+        "sha256": "f4eae0beb2e2710f5ee7c4ea6749ed621d01117528022ef36efed0a3a9a87bac"
+      },
+      {
+        "bytes": 4049,
+        "path": "armor-system/models/model1_transformer/window_errors.py",
+        "sha256": "446165fd2d1d2101239b91e6d8408e2c88b01a826ae207d83a2739f106473db4"
+      },
+      {
+        "bytes": 7254,
+        "path": "armor-system/tests/prep/test_m1_armor_baseline_verify.py",
+        "sha256": "8c4fe29623ce0e188822a89f04a02c8bc7b22758dcf7ef2a90f860776b0c392c"
+      },
+      {
+        "bytes": 9679,
+        "path": "armor-system/tests/prep/test_m1_armor_scoring.py",
+        "sha256": "3f7b6062bf1633394c8f234588b760812ba129cbf641eca5dad9fb13cfb685b3"
+      },
+      {
+        "bytes": 7856,
+        "path": "armor-system/tests/prep/test_m1_window_errors.py",
+        "sha256": "8b1bc219923e06e54626a49caa20a2d853be6bb814a13f183fbf7cc50330f765"
+      }
+    ],
+    "source_set_sha256": "ef3c6f3f5d6b0846c077fc8f8b3d54cf2791c41bea8cdda1e634e4f102756706"
+  },
+  "evidence_name": "evidence_armor_scoring_harness_v1",
+  "historical_evidence_unchanged": {
+    "armor-system/data/artifacts/d1/evidence/evidence.json": {
+      "sha256": "4beeca7fe5ead73c8d5109d1b339725509314879e1421a58f95eb33fbbfbba7e",
+      "unchanged_vs_HEAD": true
+    },
+    "armor-system/data/artifacts/d1/evidence/evidence_m1_03.json": {
+      "sha256": "73a3bad2fb2f614c44636539b8519e6c6d3848bd09f7045ed9d4930fcd97bb23",
+      "unchanged_vs_HEAD": true
+    },
+    "armor-system/models/model1_transformer/results/core_v0/evidence_model1_core_v0.json": {
+      "sha256": "675a45bda13b8dd42e4e9fa342a23d7a2bec77d76568cdf3aaf82914bf462c1d",
+      "unchanged_vs_HEAD": true
+    },
+    "armor-system/models/model1_transformer/results/experiment_v0/evidence_model1_experiment_v0.json": {
+      "sha256": "01e5d980e8a4bfd8ff30cc7506acefb9e220f2436ae89c0e8142fb0fc72de738",
+      "unchanged_vs_HEAD": true
+    },
+    "armor-system/models/model1_xgboost_control/results/xgb_control_v1/evidence_xgb_control_v1.json": {
+      "sha256": "b5576d29513a15965be41bf8289055af8a26a76266ab4e4332fa4912f086edf9",
+      "unchanged_vs_HEAD": true
+    }
+  },
+  "linear_issue": "298-51",
+  "ownership": "ARMOR baseline = baseline teammates (armor-system/baselines/armor); this harness needs their review before it is cited as the baseline reproduction",
+  "published_verification": {
+    "f1": 0.9608,
+    "matches_published": {
+      "f1": true,
+      "precision": true,
+      "recall": true
+    },
+    "original_eval_AD_agrees": true,
+    "precision": 0.9245,
+    "provenance": {
+      "ad_cases_pkl": {
+        "bytes": 1136,
+        "crc32": "defe8c73",
+        "pinned_bytes": 1136,
+        "pinned_crc32": "defe8c73",
+        "sha256": "cade0fbc72160f30ed1617e3f4db3f27b795649857473f135f8e0b973a9db5bf"
+      },
+      "armor_ad_split_timestamp": 1651852800,
+      "armor_scoring_py_sha256": "4c06a1562b46698339292f70e11d158c0e5bc879769667bca265820b76a66d64",
+      "armor_task_metrics_py_sha256": "1463c8de9d32e4aaeb1279193b8c8bf50ca0fd794b1e093945406cb27219cbc6",
+      "interval_file_sha256": "c8da7bfa44cf18c44403739b98de8e45e98d1f628ae500c3e0ccb57f46c0e9d7",
+      "interval_file_sha256_pinned": "c8da7bfa44cf18c44403739b98de8e45e98d1f628ae500c3e0ccb57f46c0e9d7",
+      "res_json_sha256": "7bfca3f5a0bf3dd1a5cc2d70f400fa52f20164cd1dbdce0b35f9cda36eae9748",
+      "script_sha256": "f4eae0beb2e2710f5ee7c4ea6749ed621d01117528022ef36efed0a3a9a87bac",
+      "split_file_content_sha256": "5376656ae5fc1a397149ebb02ae0c99b01b40d9dd47bf61f3d0f118f20e59ed6"
+    },
+    "published": {
+      "f1": 0.9608,
+      "precision": 0.9245,
+      "recall": 1.0
+    },
+    "reasons": [],
+    "recall": 1.0,
+    "scope": "baseline-harness verification of the scoring port; not a Model 1 evaluation; no test-period Model 1 output exists or is used",
+    "status": "PASS",
+    "verification": "ARMOR published anomaly-detection metrics reproduced from released alert intervals"
+  },
+  "scope": "scoring-harness verification only (ARMOR-equivalent interval construction and event scoring, per-window error extraction); no calibration, no Model 1 scoring, no validation or test evaluation; baseline-harness verification, not Model 1 test evidence",
+  "scoring_ambiguities": [
+    "ARMOR drops every alert interval with start == end: a single-minute alert (or repeated identical timestamps) is neither a hit nor a false alarm.",
+    "ARMOR's get_pre_interval never sorts; it relies on ascending timestamps (the port reproduces this, including on unsorted synthetic input).",
+    "A gap of exactly 600 s splits an interval; 599 s merges.",
+    "TP and FN count labels but FP counts intervals; duplicated labels and duplicated intervals collapse to one.",
+    "F1 is computed from precision and recall already rounded to 4 decimals; it can differ from the exact F1 in the fourth decimal.",
+    "TP + FP = 0 or TP + FN = 0 raises ZeroDivisionError (no score instead of a score of 0); density is NaN when no interval matches.",
+    "Interval lists must be tuples; ARMOR's own JSON gives lists, so the baseline script converts them explicitly.",
+    "ARMOR's split time is the 60% sample quantile of all sample times; this harness uses the committed official_armor_v1.json value 1651852800 (the validation|test boundary of Model 1).",
+    "The meaning of an ARMOR sample 'timestamp' (window start, end or sample time) is not stated in the released code; Model 1 alerts are placed at the window's target minute (an assumption).",
+    "The origin of ad_cases.pkl (21 events without a case record, 7 cases missing from it) is unexplained; it is ARMOR's official scoring label set, not clean ground truth.",
+    "ARMOR's detection threshold (SPOT on training-period scores) differs from Model 1's calibration percentile; only the interval/overlap scoring is shared.",
+    "A D2 result file (pre_interval.json) exists in an earlier research scratch folder; it was not used and the D2 dataset was never downloaded."
+  ],
+  "synthetic_equivalence": {
+    "all_identical": true,
+    "edge_cases": [
+      {
+        "case": "gap_660_between_alert_groups",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 2,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "gap_exactly_599",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 1,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "gap_exactly_600_splits",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 2,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "gap_601_splits",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 2,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "singleton_dropped",
+        "intervals_identical": true,
+        "n_intervals": 0,
+        "outcome": "raised",
+        "scores_identical": true
+      },
+      {
+        "case": "all_singletons_no_intervals",
+        "intervals_identical": true,
+        "n_intervals": 0,
+        "outcome": "raised",
+        "scores_identical": true
+      },
+      {
+        "case": "singleton_between_groups",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 2,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "two_consecutive_alerts_kept",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 1,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "one_interval_matches_many_labels",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 1,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "one_label_matched_by_two_intervals",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 2,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "repeated_timestamps_merge",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 1,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "identical_repeats_only_dropped",
+        "intervals_identical": true,
+        "n_intervals": 0,
+        "outcome": "raised",
+        "scores_identical": true
+      },
+      {
+        "case": "duplicate_labels_count_once",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 1,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "duplicate_intervals_count_once",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 1,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "label_touches_interval_end_inclusive",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 1,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "label_one_second_after_reach",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 1,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "label_touches_interval_start_inclusive",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 1,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "label_one_second_before_reach",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 1,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "no_alerts_zero_division",
+        "intervals_identical": true,
+        "n_intervals": 0,
+        "outcome": "raised",
+        "scores_identical": true
+      },
+      {
+        "case": "no_labels_zero_division",
+        "intervals_identical": true,
+        "n_intervals": 1,
+        "outcome": "raised",
+        "scores_identical": true
+      },
+      {
+        "case": "all_false_alarms_zero_recall",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 1,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "f1_from_rounded_precision_recall",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 6,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "custom_delay_120",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 2,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "custom_impact_60",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 1,
+        "outcome": "scored",
+        "scores_identical": true
+      },
+      {
+        "case": "alert_every_minute",
+        "detail_triple_identical": true,
+        "intervals_identical": true,
+        "n_intervals": 1,
+        "outcome": "scored",
+        "scores_identical": true
+      }
+    ],
+    "list_of_lists_intervals_identical_error": true,
+    "provenance": {
+      "anomaly_detector.py_sha256": "5166023fd39aad6deb72ff528d2009631fae282373972adbec11adcda32414e3",
+      "get_pre_interval_source_sha256": "0cc9c7cfc7345d61002f7cf9afca88d3b7bfa5196222254bd8a6e93e7f544b01",
+      "task_metrics.py_sha256": "1463c8de9d32e4aaeb1279193b8c8bf50ca0fd794b1e093945406cb27219cbc6"
+    },
+    "random_cases": 400,
+    "random_raised_same_exception": 150,
+    "random_scored": 250,
+    "random_seed": 20261028,
+    "unsorted_cases": 60,
+    "unsorted_identical": true
+  },
+  "tests": {
+    "harness_files": {
+      "test_m1_armor_baseline_verify.py": {
+        "ok": true,
+        "ran": 13,
+        "skipped": 0
+      },
+      "test_m1_armor_scoring.py": {
+        "ok": true,
+        "ran": 20,
+        "skipped": 0
+      },
+      "test_m1_window_errors.py": {
+        "ok": true,
+        "ran": 11,
+        "skipped": 0
+      }
+    },
+    "m1_integration": {
+      "command": ".venv/bin/python -I armor-system/data/m1_integration.py",
+      "errors": 0,
+      "evidence_m1_03_verified": true,
+      "failures": 0,
+      "skipped": 0,
+      "suites": {
+        "data": {
+          "errors": 0,
+          "failures": 0,
+          "ran": 37,
+          "skipped": 0
+        },
+        "prep": {
+          "errors": 0,
+          "failures": 0,
+          "ran": 404,
+          "skipped": 0
+        }
+      },
+      "tests_ran": 441
+    }
+  }
+}
