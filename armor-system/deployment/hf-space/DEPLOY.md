@@ -5,6 +5,24 @@ Target: a public URL the ISAs can open, with the trained weights kept private.
 Three things only you can do, because they involve creating an account and
 handling a token. Everything else is already built.
 
+## Already verified locally
+
+The Space image was built from this directory and smoke-tested before these
+instructions were written, so a failure on HF is a configuration problem rather
+than a broken image.
+
+| Check | Result |
+|---|---|
+| Image builds | yes, 332 MB, `torch 2.14.0+cpu` |
+| Starts with no `MODEL1_HF_REPO` | fails with the message naming the variable, rather than hanging |
+| Server healthy on port 7860 | `{"status": "ok", "model": "model1-v2-ensemble", "version": "2.0.0"}` |
+| Serves the frozen weights | all five `checkpoint_sha256` match the test freeze |
+| 875-minute replay | TP 18, FP 6, F1 0.7347, `incidents.jsonl` byte-identical to the `model1-serving` container |
+
+The one path that cannot be tested without your account is the checkpoint
+download itself, since it needs the private repo and the token. That is why the
+failure modes at the bottom of this file are worth reading before you start.
+
 ## 1. Put the checkpoints in a private model repo
 
 On https://huggingface.co, **New** → **Model**. Name it something like
