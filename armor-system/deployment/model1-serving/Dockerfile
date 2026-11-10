@@ -25,8 +25,18 @@ RUN useradd --create-home --uid 10001 serving
 WORKDIR /app
 
 # Dependencies first so a repository change does not reinstall torch.
+#
+# Installed from PyTorch's CPU index, at the versions requirements-serving.txt
+# pins. The default PyPI wheel for Linux bundles the CUDA runtime, which this
+# service can never use: SERVING.md specifies CPU only, and MODEL1_TORCH_THREADS
+# exists precisely because every published latency figure is single-threaded CPU.
+# Carrying the CUDA libraries took the image to 3.1 GB and bought nothing.
 COPY armor-system/models/model1_v2/serving/requirements-serving.txt /tmp/requirements-serving.txt
-RUN pip install --no-cache-dir -r /tmp/requirements-serving.txt
+RUN pip install --no-cache-dir \
+      --index-url https://download.pytorch.org/whl/cpu \
+      --extra-index-url https://pypi.org/simple \
+      -r /tmp/requirements-serving.txt \
+ && python -c "import torch; print('torch', torch.__version__, 'cuda build:', torch.version.cuda)"
 
 # The service imports data/prep, models/model1_transformer and
 # evaluation/detection, and reads three committed artefacts, so the whole

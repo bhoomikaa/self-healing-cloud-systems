@@ -19,6 +19,13 @@ curl localhost:8082/healthz     # {"status": "ok", "model": "model1-v2-ensemble"
 `docker compose down` stops it. The first build takes about 10 minutes, almost
 all of it installing torch.
 
+torch comes from PyTorch's CPU index at the version
+`requirements-serving.txt` pins. The default Linux wheel bundles the CUDA
+runtime, which this service can never use, and it took the image to 3.1 GB
+against 321 MB. Switching indexes left `incidents.jsonl` byte-identical across
+a full 875-minute replay, and the service loads faster, 2.7 s against 6.7 s,
+because there is less to read.
+
 ## Checkpoints
 
 The ten files in `model1_v1/seed_{0..4}/s2_best.{pt,json}` are **not** in Git
@@ -55,13 +62,15 @@ a documented case.
 **Latency.** `bench.py`, the same script and synthetic inputs as the native
 run, executed inside the container:
 
-| Segment | Windows | Container, server ms/window | Native reference (M4) |
-|---|---|---|---|
-| 7 minutes | 1 | 100.9 | 10.4 |
-| 66 minutes | 60 | 69.6 | 8.3 |
-| 240 minutes | 234 | 62.9 | 8.4 |
+| Segment | Windows | CPU wheel | CUDA wheel | Native reference (M4) |
+|---|---|---|---|---|
+| 7 minutes | 1 | 98.8 | 100.9 | 10.4 |
+| 66 minutes | 60 | 68.4 | 69.6 | 8.3 |
+| 240 minutes | 234 | 68.0 | 62.9 | 8.4 |
+| start-up (s) | | 2.74 | 6.66 | 0.35 |
 
-Start-up, including checkpoint hashing, is 6.7 s against 0.35 s native.
+Server milliseconds per window. The two wheels are indistinguishable on
+compute, which is the point: the 2.8 GB of CUDA libraries bought nothing.
 
 Six to ten times slower per window. The honest reading: the two runs differ in
 both CPU and virtualisation (WSL2 on x86 against macOS on an M4), so this does
@@ -83,10 +92,16 @@ build and anyone else building from the repository root alone.
 
 ## Not done yet
 
-- **Shared checkpoint storage.** The weights still travel by hand. SERVING.md
-  section 8 leaves this open and the readiness audit lists it as blocking.
-- **Cloud deployment.** Blocked on team decisions: provider, object storage,
-  how credentials are handled given the repository is public, and budget.
+- **Shared checkpoint storage.** SERVING.md section 8 leaves this open and the
+  readiness audit lists it as blocking. A private Hugging Face model repo is
+  used for the Space (`../hf-space/`), which is a demo answer, not the team's
+  answer.
+- **Cloud deployment.** `../hf-space/` packages this service as a free Hugging
+  Face Docker Space, which gives a public URL for a demo. That is not
+  deployment in the sense the project means: a free Space sleeps after 48 hours
+  idle, has no SLA and serves one request at a time. Real deployment is still
+  blocked on team decisions: provider, object storage, how credentials are
+  handled given the repository is public, and budget.
 - **Wiring into Airflow.** The compose file publishes the service on the
   `model1-net` network so the Airflow stack can join it and reach the service by
   hostname rather than through the host's published port. SERVING.md section 7

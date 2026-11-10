@@ -2,15 +2,18 @@
  "what": "Verification that the containerised Model 1 v2 service reproduces the committed native results.",
  "run_by": "bhoomika",
  "date": "2026-11-10",
- "repo_commit": "a696c46f8dbcec8126d1717fc0a7abea56c23615",
+ "repo_commit": "49450ddf6eb31dbe63d2564e720b978ee5ca599e",
  "image": {
   "tag": "model1-serving:v2",
-  "digest": "sha256:bf476155015ed6d542217916a296ec868c717561b26db1eea43351e8196423f8",
   "architecture": "amd64",
   "os": "linux",
-  "size_bytes": 3146550149,
   "base": "python:3.14-slim",
-  "note": "Checkpoints are mounted read-only at run time, never baked into a layer."
+  "size_bytes": 321328319,
+  "size_bytes_before_cpu_wheel": 3146550149,
+  "torch": "2.14.0+cpu",
+  "note": "torch is installed from PyTorch's CPU index at the version requirements-serving.txt pins. The default Linux wheel bundles the CUDA runtime, which this service can never use, and cost 2.8 GB. Switching indexes left every prediction byte-identical; see accuracy.cpu_wheel_equivalence.",
+  "checkpoints_in_image": false,
+  "checkpoints_note": "Mounted read-only at run time. Not baked into any layer."
  },
  "host": {
   "platform": "Windows 11, Docker Desktop, WSL2 backend",
@@ -54,11 +57,32 @@
   "fault_type": {
    "incidents_hitting_a_documented_case": 16,
    "pred_equals_documented_class": 16
+  },
+  "cpu_wheel_equivalence": {
+   "claim": "Switching torch from the CUDA-bundled wheel to the CPU wheel changed no prediction.",
+   "evidence": "incidents.jsonl from the two replay runs is byte-identical, and every non-timing field of replay_summary.json is equal."
   }
  },
  "latency": {
   "method": "bench.py run inside the container, same script and synthetic inputs as the native run",
-  "container": {
+  "cpu_wheel": {
+   "7": {
+    "windows": 1,
+    "server_ms_median": 98.8,
+    "server_ms_per_window": 98.8
+   },
+   "66": {
+    "windows": 60,
+    "server_ms_median": 4102.6,
+    "server_ms_per_window": 68.38
+   },
+   "240": {
+    "windows": 234,
+    "server_ms_median": 15900.0,
+    "server_ms_per_window": 67.95
+   }
+  },
+  "cuda_wheel": {
    "7": {
     "windows": 1,
     "server_ms_median": 100.9,
@@ -98,10 +122,11 @@
    "python": "3.14.4"
   },
   "service_load_s": {
-   "container": 6.66,
+   "cpu_wheel": 2.74,
+   "cuda_wheel": 6.66,
    "native": 0.35
   },
-  "finding": "Per-window server time is 6 to 10 times the native reference (62-101 ms against 8-10 ms). The two runs differ in both CPU and virtualisation, so this does not isolate container overhead from the hardware difference; it is an upper bound for this host. Still far inside budget: the service is called once a minute, so ~101 ms of a 60000 ms budget, under 0.2%."
+  "finding": "Per-window server time is six to ten times the native reference (68-99 ms against 8-10 ms). The two runs differ in both CPU and virtualisation, so this does not isolate container overhead from the hardware difference; it is an upper bound for this host. The CPU wheel is indistinguishable from the CUDA-bundled wheel on compute and loads faster, 2.7 s against 6.7 s, because there is far less to read. Still far inside budget: the service is called once a minute, so ~99 ms of a 60000 ms budget, under 0.2%."
  },
- "conclusion": "Containerised results are identical to the committed native results. Only latency differs, and it stays well inside the per-minute budget."
+ "conclusion": "Containerised results are identical to the committed native results, and remain identical after slimming the image tenfold. Only latency differs, and it stays well inside the per-minute budget."
 }

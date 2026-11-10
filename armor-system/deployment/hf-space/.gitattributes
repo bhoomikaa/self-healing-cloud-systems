@@ -1,0 +1,7 @@
+# These files are copied into a Linux container by build_space.sh. A CRLF
+# checkout on Windows turns the shebang into "#!/bin/sh\r", which fails inside
+# the container as a bare "not found" that points nowhere useful. Pin them to
+# LF regardless of core.autocrlf.
+*.sh text eol=lf
+Dockerfile text eol=lf
+entrypoint.sh text eol=lf
