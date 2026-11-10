@@ -1,0 +1,122 @@
+{
+ "generated_utc": "2026-11-10T07:38:02Z",
+ "source": {
+  "dataset": "ARMOR D1 (Zenodo 21744694, CC-BY-4.0)",
+  "feature_cache": "data/processed/d1_features_v1.npz",
+  "split_manifest": "model1_split_101_25_84_v1"
+ },
+ "layer": "transformed, pre-scaler",
+ "note": "Model 1 scaling is fitted on the training period only, so scaled values are not stored here; keeping them out stops one split's statistics leaking into shared storage.",
+ "format": {
+  "file_format": "parquet",
+  "compression": "zstd",
+  "compression_level": 3,
+  "partitioning": "fact_telemetry by utc_date (Hive style)"
+ },
+ "split_boundaries": {
+  "train_validation_ts": 1651713858,
+  "validation_test_ts": 1651852800
+ },
+ "tables": [
+  {
+   "path": "dim_node.parquet",
+   "rows": 46,
+   "bytes": 4009,
+   "sha256": "53703ec780b1e511d2039755f4aeba0e784d071d877bffb08507140ae23304ea"
+  },
+  {
+   "path": "dim_channel.parquet",
+   "rows": 130,
+   "bytes": 3911,
+   "sha256": "db69994329b43de0506fe710157d350a83a19cc0d162aa236290d5e869338ec8"
+  },
+  {
+   "path": "dim_split.parquet",
+   "rows": 3,
+   "bytes": 6061,
+   "sha256": "0d52a76aca882099ae48be5a2369c258b99afaf65b5a95907c0322b07c479cb8"
+  },
+  {
+   "path": "fact_case.parquet",
+   "rows": 210,
+   "bytes": 10141,
+   "sha256": "0ddd73f69fd63a37e265baac7eae5b80351256c40d806c60d314b587d8099d59"
+  }
+ ],
+ "fact_telemetry": {
+  "rows": 43056000,
+  "partitions": [
+   {
+    "path": "fact_telemetry/utc_date=2022-04-30/part-0.parquet",
+    "utc_date": "2022-04-30",
+    "rows": 2870400,
+    "bytes": 1945064,
+    "sha256": "9a2a336ae080aed698307fc0360ae4990225767fe8d9fda241a14e6b17a512ab"
+   },
+   {
+    "path": "fact_telemetry/utc_date=2022-05-01/part-0.parquet",
+    "utc_date": "2022-05-01",
+    "rows": 5740800,
+    "bytes": 3955044,
+    "sha256": "e1fce6c62c71656ee3d1825e2b34642b3e9120958fa2cae9f669c1bd33b5af2a"
+   },
+   {
+    "path": "fact_telemetry/utc_date=2022-05-02/part-0.parquet",
+    "utc_date": "2022-05-02",
+    "rows": 2870400,
+    "bytes": 2082234,
+    "sha256": "11120a95aa8948fcc849371a489485bbaba19b5b80779f4dfbd44d771466fa1e"
+   },
+   {
+    "path": "fact_telemetry/utc_date=2022-05-03/part-0.parquet",
+    "utc_date": "2022-05-03",
+    "rows": 5740800,
+    "bytes": 4243376,
+    "sha256": "53f1bb6c9fca63567152d91fa414f8d2197fff2d288c958539e73346a1626d55"
+   },
+   {
+    "path": "fact_telemetry/utc_date=2022-05-04/part-0.parquet",
+    "utc_date": "2022-05-04",
+    "rows": 2870400,
+    "bytes": 2064642,
+    "sha256": "161bcc64df5e17b8f3f0af479cd7b585615c3f142e20a714421078f1f276c408"
+   },
+   {
+    "path": "fact_telemetry/utc_date=2022-05-05/part-0.parquet",
+    "utc_date": "2022-05-05",
+    "rows": 5740800,
+    "bytes": 4165452,
+    "sha256": "f3c9112b450fe0454359ff111d0dd9e76201c2f5333ea64c552a12667cd9891f"
+   },
+   {
+    "path": "fact_telemetry/utc_date=2022-05-06/part-0.parquet",
+    "utc_date": "2022-05-06",
+    "rows": 2870400,
+    "bytes": 2016653,
+    "sha256": "f5b15f6c4b14c5a03cc8fd6199454bc0c9ea67d259c6b9721229542a82290197"
+   },
+   {
+    "path": "fact_telemetry/utc_date=2022-05-07/part-0.parquet",
+    "utc_date": "2022-05-07",
+    "rows": 5740800,
+    "bytes": 4241561,
+    "sha256": "2930fca17b172ee261c0288711fc9fe4aee83a6eaf3728628962a486b53404de"
+   },
+   {
+    "path": "fact_telemetry/utc_date=2022-05-08/part-0.parquet",
+    "utc_date": "2022-05-08",
+    "rows": 2870400,
+    "bytes": 1951363,
+    "sha256": "dd6a29f6fab31c49cead0f61b2e86d7caa05c62a68502e30a4c38649f3f8ef85"
+   },
+   {
+    "path": "fact_telemetry/utc_date=2022-05-09/part-0.parquet",
+    "utc_date": "2022-05-09",
+    "rows": 5740800,
+    "bytes": 3930063,
+    "sha256": "14568311bd2388ee712a72db17f59cba7765f5b645c64e19ed09e315cc7255d2"
+   }
+  ]
+ },
+ "total_bytes": 30619574
+}
