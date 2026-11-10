@@ -1,0 +1,94 @@
+{
+ "loaded_utc": "2026-11-10T08:04:45Z",
+ "project": "armor-d1",
+ "dataset": "armor_d1",
+ "location": "US",
+ "source_manifest_generated_utc": "2026-11-10T07:38:02Z",
+ "tables": [
+  "dim_node",
+  "dim_channel",
+  "dim_split",
+  "fact_case",
+  "fact_telemetry"
+ ],
+ "checks": {
+  "rows:dim_node": {
+   "expected": 46,
+   "observed": 46,
+   "ok": true
+  },
+  "rows:dim_channel": {
+   "expected": 130,
+   "observed": 130,
+   "ok": true
+  },
+  "rows:dim_split": {
+   "expected": 3,
+   "observed": 3,
+   "ok": true
+  },
+  "rows:fact_case": {
+   "expected": 210,
+   "observed": 210,
+   "ok": true
+  },
+  "rows:fact_telemetry": {
+   "expected": 43056000,
+   "observed": 43056000,
+   "ok": true
+  },
+  "partitions": {
+   "expected": {
+    "2022-04-30": 2870400,
+    "2022-05-01": 5740800,
+    "2022-05-02": 2870400,
+    "2022-05-03": 5740800,
+    "2022-05-04": 2870400,
+    "2022-05-05": 5740800,
+    "2022-05-06": 2870400,
+    "2022-05-07": 5740800,
+    "2022-05-08": 2870400,
+    "2022-05-09": 5740800
+   },
+   "observed": {
+    "2022-04-30": 2870400,
+    "2022-05-01": 5740800,
+    "2022-05-02": 2870400,
+    "2022-05-03": 5740800,
+    "2022-05-04": 2870400,
+    "2022-05-05": 5740800,
+    "2022-05-06": 2870400,
+    "2022-05-07": 5740800,
+    "2022-05-08": 2870400,
+    "2022-05-09": 5740800
+   },
+   "ok": true
+  },
+  "split_totals": {
+   "expected": {
+    "train": 20601100,
+    "validation": 5232500,
+    "test": 17222400
+   },
+   "observed": {
+    "train": 20601100,
+    "validation": 5232500,
+    "test": 17222400
+   },
+   "ok": true
+  },
+  "value_shape": {
+   "observed": {
+    "n_ts": 7200,
+    "n_nodes": 46,
+    "n_chan": 130,
+    "n_null": 0,
+    "value_sum": "325.399"
+   },
+   "ok": true
+  }
+ },
+ "all_checks_passed": true,
+ "problems": [],
+ "sandbox_note": "BigQuery sandbox applies a 60-day expiry to every table. Re-run this loader, or enable billing, before it lapses."
+}

@@ -296,3 +296,4 @@ armor-system/data/processed/
 armor-system/data/warehouse/**
 !armor-system/data/warehouse/
 !armor-system/data/warehouse/_manifest.json
+!armor-system/data/warehouse/_bigquery_load.json
