@@ -174,7 +174,12 @@ def build_fact_case(cases, tv, vt, schema):
 
 
 def telemetry_schema():
+    # utc_date is carried as a real DATE column, not only as the directory name.
+    # Hive partitioning tells a file reader which files to open, but a warehouse
+    # table loaded from those files has no such column unless it is in the data,
+    # and without it every time filter scans the whole table.
     return pa.schema([
+        pa.field("utc_date", pa.date32(), nullable=False),
         pa.field("timestamp", pa.int64(), nullable=False),
         pa.field("node_index", pa.int16(), nullable=False),
         pa.field("channel_index", pa.int16(), nullable=False),
@@ -203,7 +208,9 @@ def write_fact_telemetry(out_dir, cache, tv, vt, limit_days=None, log=print):
         block = X[sel]                                # (k, 46, 130)
         k = len(sel)
         rows = k * n_nodes * n_chan
+        day = dt.date.fromisoformat(d)
         table = pa.table({
+            "utc_date": pa.array([day] * rows, type=pa.date32()),
             "timestamp": pa.array(np.repeat(ts[sel], n_nodes * n_chan), type=pa.int64()),
             "node_index": pa.array(np.tile(node_idx, k), type=pa.int16()),
             "channel_index": pa.array(np.tile(chan_idx, k), type=pa.int16()),

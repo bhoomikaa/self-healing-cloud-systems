@@ -100,6 +100,12 @@ def load_fact(client, dataset_id, root, manifest, replace, log):
     wrong, because the row-count check below will catch it.
     """
     table_id = f"{client.project}.{dataset_id}.{FACT}"
+    # A load job cannot change an existing table's partitioning or clustering;
+    # it fails with "Incompatible table partitioning specification" instead of
+    # quietly keeping the old layout. Dropping first is the only way to apply a
+    # changed spec, so --replace means replace.
+    if replace:
+        client.delete_table(table_id, not_found_ok=True)
     parts = manifest["fact_telemetry"]["partitions"]
     log(f"  {FACT}, {len(parts)} partitions:")
     for i, p in enumerate(parts):
@@ -108,7 +114,19 @@ def load_fact(client, dataset_id, root, manifest, replace, log):
             source_format=bigquery.SourceFormat.PARQUET,
             write_disposition=(bigquery.WriteDisposition.WRITE_TRUNCATE if (replace and i == 0)
                                else bigquery.WriteDisposition.WRITE_APPEND),
-            clustering_fields=["node_index", "channel_index"],
+            # Clustered on timestamp, deliberately NOT date-partitioned.
+            #
+            # Partitioning by utc_date is the obvious design and it silently
+            # destroys the table here: the BigQuery sandbox forces a 60-day
+            # partition expiry that cannot be raised without billing, and D1 is
+            # recorded 2022 data, so every partition expires the instant it is
+            # written. The first attempt loaded all ten partitions without error
+            # and left a table with zero rows. Clustering gives the range
+            # pruning we actually wanted and has no expiry semantics.
+            #
+            # The Parquet files on disk stay Hive-partitioned by utc_date; that
+            # is the lakehouse layout and it is unaffected by this.
+            clustering_fields=["timestamp", "node_index"],
         )
         with open(src, "rb") as fh:
             client.load_table_from_file(fh, table_id, job_config=cfg).result()

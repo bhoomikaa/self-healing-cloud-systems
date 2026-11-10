@@ -1,0 +1,18 @@
+# Streamlit Community Cloud installs from this file.
+#
+# torch and numpy are the versions requirements-serving.txt pins, because the
+# published numbers were produced with them and a different build would make the
+# scores on screen incomparable with the ones in the report. The CPU wheel is
+# requested explicitly: the default Linux wheel carries the CUDA runtime, which
+# this app can never use and which alone exceeds the free tier's disk budget.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+streamlit==1.52.1
+torch==2.14.0
+numpy==2.5.3
+pandas==2.3.3
+huggingface_hub==0.36.0
+google-cloud-bigquery==3.40.0
+google-cloud-bigquery-storage==2.35.0
+db-dtypes==1.4.3
+pyarrow==23.0.0

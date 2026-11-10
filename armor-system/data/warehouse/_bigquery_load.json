@@ -1,9 +1,9 @@
 {
- "loaded_utc": "2026-11-10T08:04:45Z",
+ "loaded_utc": "2026-11-10T08:23:28Z",
  "project": "armor-d1",
  "dataset": "armor_d1",
  "location": "US",
- "source_manifest_generated_utc": "2026-11-10T07:38:02Z",
+ "source_manifest_generated_utc": "2026-11-10T08:17:11Z",
  "tables": [
   "dim_node",
   "dim_channel",
@@ -71,9 +71,9 @@
     "test": 17222400
    },
    "observed": {
-    "train": 20601100,
     "validation": 5232500,
-    "test": 17222400
+    "test": 17222400,
+    "train": 20601100
    },
    "ok": true
   },
