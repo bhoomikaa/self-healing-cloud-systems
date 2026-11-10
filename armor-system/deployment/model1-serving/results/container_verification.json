@@ -1,0 +1,107 @@
+{
+ "what": "Verification that the containerised Model 1 v2 service reproduces the committed native results.",
+ "run_by": "bhoomika",
+ "date": "2026-11-10",
+ "repo_commit": "a696c46f8dbcec8126d1717fc0a7abea56c23615",
+ "image": {
+  "tag": "model1-serving:v2",
+  "digest": "sha256:bf476155015ed6d542217916a296ec868c717561b26db1eea43351e8196423f8",
+  "architecture": "amd64",
+  "os": "linux",
+  "size_bytes": 3146550149,
+  "base": "python:3.14-slim",
+  "note": "Checkpoints are mounted read-only at run time, never baked into a layer."
+ },
+ "host": {
+  "platform": "Windows 11, Docker Desktop, WSL2 backend",
+  "container_platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "python": "3.14.10",
+  "torch_threads": 1
+ },
+ "checkpoint_verification": {
+  "method": "sha256 of each mounted file compared with armor-system/models/model1_transformer/results/test_freeze/evidence_test_freeze.json",
+  "files_checked": 10,
+  "files_matching": 10,
+  "mismatches": 0,
+  "served_checkpoint_sha256": [
+   "01940bfb9cd3588e3f3da2f5862f4d9f470095d1f815669e31d827c047343e40",
+   "671e0fb31f2c19ccff135360c4490c252fdd0eb89fb0955c1ea201758a135fb0",
+   "1c29d48b1e9e975af573f54a69c8b15e542d499b99e8adf08d05f0d5b7a956df",
+   "cb2c31a71571b15d89d43903fbea86e7637c1c45b03e08206456d7847f6e96fa",
+   "c25f2fa09b3a56275c9da3abfce00894cf30d296fa911f62e549131a55f11a02"
+  ],
+  "note": "The service also reports these over /v1/metadata, so a running container proves which weights it loaded."
+ },
+ "accuracy": {
+  "method": "replay_demo.py streamed 875 recorded D1 validation minutes through the container's HTTP API",
+  "observed": {
+   "precision": 0.75,
+   "recall": 0.72,
+   "f1": 0.7347,
+   "density": 1.12,
+   "TP": 18,
+   "FP": 6,
+   "FN": 7,
+   "n_intervals": 22,
+   "n_labels": 25
+  },
+  "expected_from_committed_v2_validation": {
+   "TP": 18,
+   "FP": 6,
+   "f1": 0.7347
+  },
+  "matches_committed": true,
+  "fault_type": {
+   "incidents_hitting_a_documented_case": 16,
+   "pred_equals_documented_class": 16
+  }
+ },
+ "latency": {
+  "method": "bench.py run inside the container, same script and synthetic inputs as the native run",
+  "container": {
+   "7": {
+    "windows": 1,
+    "server_ms_median": 100.9,
+    "server_ms_per_window": 100.9
+   },
+   "66": {
+    "windows": 60,
+    "server_ms_median": 4177.6,
+    "server_ms_per_window": 69.63
+   },
+   "240": {
+    "windows": 234,
+    "server_ms_median": 14718.7,
+    "server_ms_per_window": 62.9
+   }
+  },
+  "native_reference": {
+   "7": {
+    "windows": 1,
+    "server_ms_median": 10.4,
+    "server_ms_per_window": 10.4
+   },
+   "66": {
+    "windows": 60,
+    "server_ms_median": 499.7,
+    "server_ms_per_window": 8.33
+   },
+   "240": {
+    "windows": 234,
+    "server_ms_median": 1961.0,
+    "server_ms_per_window": 8.38
+   }
+  },
+  "native_reference_machine": {
+   "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+   "processor": "arm",
+   "python": "3.14.4"
+  },
+  "service_load_s": {
+   "container": 6.66,
+   "native": 0.35
+  },
+  "finding": "Per-window server time is 6 to 10 times the native reference (62-101 ms against 8-10 ms). The two runs differ in both CPU and virtualisation, so this does not isolate container overhead from the hardware difference; it is an upper bound for this host. Still far inside budget: the service is called once a minute, so ~101 ms of a 60000 ms budget, under 0.2%."
+ },
+ "conclusion": "Containerised results are identical to the committed native results. Only latency differs, and it stays well inside the per-minute budget."
+}

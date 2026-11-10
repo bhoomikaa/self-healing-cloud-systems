@@ -3,7 +3,7 @@
 #   cd armor-system/deployment/model1-serving
 #   cp .env.example .env            # then point MODEL1_CHECKPOINT_DIR at the checkpoints
 #   docker compose up -d --build
-#   curl localhost:8081/healthz
+#   curl localhost:8082/healthz
 #
 # The checkpoints are mounted read-only from the host. They are not in Git and
 # not in the image; see the Dockerfile for why.
@@ -18,7 +18,7 @@ services:
       dockerfile: armor-system/deployment/model1-serving/Dockerfile
     image: model1-serving:v2
     ports:
-      - "${MODEL1_PUBLISHED_PORT:-8081}:8081"
+      - "${MODEL1_PUBLISHED_PORT:-8082}:8081"
     volumes:
       # Ten files, 3.5 MB. Read-only: the service only hashes and loads them.
       - "${MODEL1_CHECKPOINT_DIR:?set MODEL1_CHECKPOINT_DIR in .env}:/checkpoints:ro"

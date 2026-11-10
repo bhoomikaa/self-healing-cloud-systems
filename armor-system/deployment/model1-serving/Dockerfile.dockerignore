@@ -1,0 +1,32 @@
+# Build context for this image is the repository root, because the image needs
+# the whole armor-system tree. Without this file Docker ships all 500 MB of it,
+# including data/raw, and chokes on the broken Windows symlink Airflow leaves in
+# armor-system/airflow/logs/scheduler/latest.
+#
+# BuildKit reads <dockerfile>.dockerignore in preference to the context root's
+# .dockerignore, so this applies to this image only and leaves the Airflow build
+# and anyone else building from the root alone.
+
+# Start from nothing, then add back only what the Dockerfile copies.
+*
+!armor-system
+
+# Raw and processed D1 data: 494 MB, Git-ignored, and the service never reads
+# them. It serves one window at a time from the request body.
+armor-system/data/raw
+armor-system/data/processed
+
+# Airflow's runtime output. `logs/scheduler/latest` is a symlink created inside
+# the container that Windows cannot open, which fails the context upload.
+armor-system/airflow/logs
+
+# Local Airflow config and dependency state; nothing the service imports.
+armor-system/airflow/plugins
+
+# Never let a local env file reach an image layer.
+**/.env
+
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/.DS_Store
