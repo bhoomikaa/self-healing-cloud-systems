@@ -18,23 +18,80 @@ not a preference.
 `dags/armor_d1_pipeline.py`, DAG id `armor_d1_data_pipeline`.
 
 ```
-start → fetch_source → verify_source → build_feature_cache → inspect → splits
-      → preprocess → eda → figures → augmentation → quality_gate
-      → ├─ run_tests        ─┐
-        └─ corruption_gate  ─┴→ publish_evidence → end
+start → sync_workspace → fetch_source → verify_source → build_feature_cache
+      → inspect → splits → preprocess → eda → figures → augmentation
+      → quality_gate
+      → ├─ run_tests                        ─┐
+        ├─ assert_model_tests_out_of_scope  ─┤
+        └─ corruption_gate                  ─┴→ publish_evidence
+      → compare_artifacts → end
 ```
 
 | Task | What it does |
 |---|---|
-| `fetch_source` | Idempotent fetch of the D1 release from Zenodo. Re-downloads only missing bytes. Writes its manifests to a scratch directory so a scheduled run cannot rewrite the committed ones. |
+| `sync_workspace` | rsyncs the read-only checkout into the writable run workspace. Preserves `data/raw` and `data/processed`; replaces everything else. |
+| `fetch_source` | Idempotent fetch of the D1 release from Zenodo into the workspace. Re-downloads only missing bytes. Writes its manifests to a scratch directory so a run cannot rewrite the committed ones. |
 | `verify_source` | Re-hashes every extracted file against `file_inventory.csv`. Non-zero exit on any mismatch, so a corrupted release stops the run here. |
 | `build_feature_cache` … `quality_gate` | One task per `pipeline.py --stage`. Same commands a developer runs by hand. |
-| `run_tests` | The committed suites (data acquisition, preparation, dashboard). |
+| `run_tests` | The 72 tests this DAG owns. Runs `unittest` directly and fails on its exit code. |
+| `assert_model_tests_out_of_scope` | Asserts torch and xgboost are absent, which is why the 245 Model 1 tests do not run here. Goes red if that changes. |
 | `corruption_gate` | Negative control. Corrupts a **scratch copy** and asserts the checksum gate rejects it. Succeeds only when validation fails. |
-| `publish_evidence` | Reproducibility check and evidence JSON. |
+| `publish_evidence` | Writes the run's evidence JSON in the workspace. |
+| `compare_artifacts` | Byte-compares every regenerated artifact against the committed copy and fails on any drift. |
 
 The DAG contains no preparation logic. Every task shells out to a committed
 script, so the DAG and a manual run cannot drift apart.
+
+## The checkout is read-only
+
+The repository is mounted at `/opt/airflow/repo` with `:ro`. Each run copies it
+into the `airflow-workspace` volume, regenerates everything there, and then
+diffs the result against the read-only original.
+
+This is not caution for its own sake. The first version of this DAG mounted the
+repository read-write and ran the pipeline in it. `pipeline.py` writes its output
+back into `armor-system/data/artifacts/`, so **every scheduled run overwrote the
+team's reviewed artifacts**, and one did: a run on 2026-11-09 replaced 33
+committed files, including the approved split manifests. They were restored from
+Git.
+
+It also made the schedule pointless. The run's purpose is to prove the pipeline
+still reproduces its committed artifacts; overwriting them with the run's own
+output proves nothing, because afterwards they always agree. `compare_artifacts`
+is the check that was missing.
+
+`data/raw` and `data/processed` live in the workspace and persist between runs,
+so the 466 MB release is not re-downloaded weekly. On the first run
+`sync_workspace` seeds `data/raw` from the checkout if it has one, and
+`fetch_source` re-checks CRC32 and size either way, so the seed is a shortcut
+rather than a trust decision.
+
+## What `run_tests` gates, and what it does not
+
+`pipeline.py --stage tests` collects results, prints them and returns normally
+**even when suites fail**. The first version of this DAG shelled out to it, so
+`run_tests` could never go red. On the 2026-11-09 run it reported success while
+the evidence it published recorded 2 failures and 17 errors.
+
+`run_tests` now invokes `unittest` directly and fails on its exit code. It
+covers the 72 tests this DAG owns:
+
+| Suite | Tests |
+|---|---|
+| `tests/data`, D1 acquisition tools | 37 |
+| `tests/prep`: `test_artifacts`, `test_preprocess`, `test_quality_detectors`, `test_splits` | 30 |
+| `tests/dashboard`, Streamlit smoke tests | 5, all skipped without Streamlit |
+
+`tests/prep` also holds 29 `test_m1_*.py` files, 245 tests, which belong to
+Model 1 rather than to data preparation. They need torch and xgboost, which the
+pipeline virtualenv does not install, so they error rather than run. They are
+covered by the Model 1 serving container instead
+(`../deployment/model1-serving/`). Those 19 problems on the 2026-11-09 run were
+all of this kind; no data-preparation test failed.
+
+Rather than leave that as a comment that rots,
+`assert_model_tests_out_of_scope` checks the two packages really are absent and
+goes red if either appears, which is the signal to widen `OWNED_SUITES`.
 
 ## Known cost: tasks recompute their upstream stages
 
@@ -88,9 +145,11 @@ docker compose down -v                      # stop and drop the metadata DB
 
 ### The data has to be there
 
-`fetch_source` downloads D1 into `armor-system/data/raw/`, which is Git-ignored
-and mounted into the container. The first run takes a few minutes on a cold
-cache. Later runs skip bytes already present.
+`fetch_source` downloads D1 into the workspace volume, not into the checkout.
+If the checkout already has `armor-system/data/raw/` (Git-ignored local data),
+`sync_workspace` seeds the workspace from it on the first run and the download
+is skipped. Otherwise the first run takes a few minutes on a cold cache. Later
+runs skip bytes already present.
 
 ## Tests
 
@@ -138,7 +197,7 @@ time the image was rebuilt. Hence the exact pins in
 published release, so there is nothing new to ingest. The schedule exists to
 prove the pipeline still reproduces its committed artifacts, not to pick up new
 data. `catchup` is off and `max_active_runs` is 1, because concurrent runs would
-write the same artifact paths.
+write the same workspace paths.
 
 **Alerts.** Failures surface in the UI and the task logs. Email delivery needs
 the SMTP variables in `.env`; without them nothing is sent and nothing breaks.
@@ -148,9 +207,7 @@ the SMTP variables in `.env`; without them nothing is sent and nothing breaks.
 - No cloud deployment, no managed Airflow, no object storage or warehouse. Those
   need the decisions in the readiness audit, section 7.
 - No ingestion of anything other than D1. D2 and raw telemetry stay deferred.
-- No model training, inference or serving. Model 1 does not exist yet, so there
-  is no inference task to schedule.
+- No model training in the DAG. Model 1 inference is containerised separately
+  (`../deployment/model1-serving/`) and is not yet wired in as a task; the
+  compose file puts it on the `model1-net` network so Airflow can join it.
 - Not run on Linux, and not run against a GPU.
-- The DAG has been parsed and structurally tested, and every wrapped command has
-  been run by hand on this dataset, but a full scheduled run inside Docker has
-  not been executed end to end yet.

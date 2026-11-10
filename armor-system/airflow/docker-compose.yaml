@@ -11,9 +11,12 @@
 #   docker compose down         stop
 #   docker compose down -v      stop and delete the metadata database
 #
-# The whole repository is mounted read-write at /opt/airflow/repo because the
-# pipeline writes its artifacts back into armor-system/data/. Tasks run as the
-# host user (see AIRFLOW_UID in .env) so generated files are not owned by root.
+# The repository is mounted READ-ONLY at /opt/airflow/repo. The pipeline writes
+# its artifacts back into armor-system/data/, so running it against the checkout
+# would overwrite the team's reviewed artifacts on every run. Instead the DAG
+# rsyncs the repository into the writable `airflow-workspace` volume, runs there,
+# and diffs the result against the read-only original. Tasks run as the host user
+# (see AIRFLOW_UID in .env) so generated files are not owned by root.
 
 x-airflow-common: &airflow-common
   build:
@@ -36,9 +39,15 @@ x-airflow-common: &airflow-common
     - ./dags:/opt/airflow/dags
     - ./plugins:/opt/airflow/plugins
     - ./logs:/opt/airflow/logs
-    # The repository itself: pipeline code, committed artifacts, and the
-    # Git-ignored data/raw + data/processed directories the pipeline needs.
-    - ../..:/opt/airflow/repo
+    # The repository, READ-ONLY. It is the source of truth the DAG compares
+    # against, so no task may write to it. An earlier version mounted this
+    # read-write and the pipeline overwrote the team's reviewed artifacts on
+    # every scheduled run.
+    - ../..:/opt/airflow/repo:ro
+    # The disposable run workspace. The DAG rsyncs the repository here and runs
+    # the pipeline against this copy. Holds the fetched release and the feature
+    # cache between runs, so it is a named volume rather than a tmpdir.
+    - airflow-workspace:/opt/airflow/workspace
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     postgres:
@@ -60,6 +69,20 @@ services:
       start_period: 5s
     restart: always
 
+  # Docker creates a named volume owned by root, but every Airflow container
+  # runs as AIRFLOW_UID with group 0, so the workspace would be unwritable.
+  # This is the one service that needs root, and it does nothing else.
+  workspace-init:
+    image: busybox:1.37
+    user: root
+    command: >
+      sh -c "mkdir -p /opt/airflow/workspace &&
+             chown -R ${AIRFLOW_UID:-50000}:0 /opt/airflow/workspace &&
+             chmod -R g+rwX /opt/airflow/workspace &&
+             echo 'workspace ready'"
+    volumes:
+      - airflow-workspace:/opt/airflow/workspace
+
   airflow-init:
     <<: *airflow-common
     entrypoint: /bin/bash
@@ -75,6 +98,8 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+      workspace-init:
+        condition: service_completed_successfully
     restart: on-failure
 
   airflow-webserver:
@@ -112,3 +137,6 @@ services:
 
 volumes:
   postgres-db-volume:
+  # Survives `docker compose down` so the 466 MB release is fetched once.
+  # `docker compose down -v` removes it along with the metadata database.
+  airflow-workspace:

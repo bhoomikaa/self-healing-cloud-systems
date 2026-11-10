@@ -8,8 +8,11 @@
 FROM apache/airflow:2.10.5-python3.12
 
 USER root
+# rsync: the DAG copies the read-only repository into its run workspace with it.
+# The base image happens to ship it, but the DAG would fail confusingly if a
+# future base image dropped it, so it is requested explicitly.
 RUN apt-get update \
- && apt-get install -y --no-install-recommends build-essential \
+ && apt-get install -y --no-install-recommends build-essential rsync \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 # /opt is root-owned, so the venv directory has to be created and handed over
