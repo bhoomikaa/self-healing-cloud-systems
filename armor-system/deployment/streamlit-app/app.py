@@ -71,6 +71,14 @@ def load_service():
     return Model1Service.load(ckpt_root=CKPT_DIR)
 
 
+def secret_names():
+    """Top-level secret keys that are set. Names only; values are never shown."""
+    try:
+        return sorted(st.secrets.keys())
+    except Exception:                                             # noqa: BLE001
+        return []
+
+
 @st.cache_resource(show_spinner="Connecting to BigQuery…")
 def bq():
     from google.cloud import bigquery
@@ -78,11 +86,33 @@ def bq():
 
     if "gcp_service_account" in st.secrets:
         info = dict(st.secrets["gcp_service_account"])
+        missing = [k for k in ("project_id", "private_key", "client_email") if not info.get(k)]
+        if missing:
+            raise RuntimeError(
+                "The [gcp_service_account] secret is present but incomplete; missing: "
+                + ", ".join(missing)
+                + ". Regenerate the block with make_secrets.py and paste all of it.")
         creds = service_account.Credentials.from_service_account_info(
             info, scopes=["https://www.googleapis.com/auth/cloud-platform"])
         return bigquery.Client(credentials=creds, project=info["project_id"])
-    # Local development falls back to whatever `gcloud auth application-default
-    # login` left behind, so the app runs on a laptop without a key file.
+
+    if os.environ.get("STREAMLIT_RUNTIME_ENV") or not os.environ.get("GOOGLE_APPLICATION_CREDENTIALS", ""):
+        # Say which secret is missing rather than letting the client fail later
+        # with "Project was not passed", which points at the wrong thing.
+        raise RuntimeError(
+            "No [gcp_service_account] section in this app's secrets, so there is no way to "
+            "reach BigQuery.
+
+"
+            f"Secrets currently set: {secret_names() or 'none at all'}
+
+"
+            "Fix it in Manage app -> Settings -> Secrets: paste the whole block that "
+            "make_secrets.py prints, including the [gcp_service_account] header and every "
+            "line under it, then save and reboot the app. Streamlit takes about a minute "
+            "to propagate a secrets change.")
+
+    # Local development uses whatever `gcloud auth application-default login` left.
     return bigquery.Client()
 
 
