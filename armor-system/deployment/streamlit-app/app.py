@@ -62,6 +62,35 @@ def load_service():
     if not repo:
         raise RuntimeError("MODEL1_HF_REPO is not set in the app secrets.")
 
+    # A bad token and a missing repo both surface as 401/404 from
+    # snapshot_download, with a message that says "Repository Not Found ...
+    # Invalid username or password". That is two very different fixes behind one
+    # error, so establish which it is first.
+    from huggingface_hub import HfApi
+    api = HfApi(token=token)
+    try:
+        who = api.whoami()["name"]
+    except Exception as exc:                                      # noqa: BLE001
+        raise RuntimeError(
+            "The HF_TOKEN secret is not a valid Hugging Face token "
+            f"({type(exc).__name__}). Create one at huggingface.co/settings/tokens "
+            "with type Read, then replace the HF_TOKEN line in the app secrets. "
+            "Check the value sits inside the quotes and has no stray spaces."
+        ) from exc
+
+    try:
+        api.repo_info(repo, repo_type="model")
+    except Exception as exc:                                      # noqa: BLE001
+        raise RuntimeError(
+            f"The token authenticates as '{who}', but it cannot see the model repo "
+            f"'{repo}'.\n\n"
+            "If that repo is private and owned by another account, the token has no "
+            "access to it. If it is yours, the token is probably fine-grained without "
+            "this repository selected: a fine-grained token only reaches repos you tick "
+            "when creating it. A token of type Read reaches all of your own repos, "
+            "including private ones, and is the simpler fix."
+        ) from exc
+
     patterns = [f"model1_v1/seed_{s}/s2_best.{e}" for s in range(5) for e in ("pt", "json")]
     os.makedirs(CKPT_DIR, exist_ok=True)
     snapshot_download(repo_id=repo, repo_type="model", token=token,
