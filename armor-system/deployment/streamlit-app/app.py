@@ -112,18 +112,23 @@ def bq():
     return bigquery.Client()
 
 
+# to_dataframe() reaches for the BigQuery Storage Read API by default, which
+# needs bigquery.readsessions.create on top of dataViewer and jobUser. The
+# volumes here are small, tens of thousands of rows, so the REST path is fast
+# enough and the service account stays on two read-only roles rather than
+# three. Hence create_bqstorage_client=False on every call.
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_cases(project):
     return bq().query(f"""
         SELECT case_index, timestamp, utc, node_name, failure_type, failure_class, split
-        FROM `{project}.{DATASET}.fact_case` ORDER BY timestamp""").to_dataframe()
+        FROM `{project}.{DATASET}.fact_case` ORDER BY timestamp""").to_dataframe(create_bqstorage_client=False)
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_dims(project):
-    nodes = bq().query(f"SELECT node_index, node_name, node_kind FROM `{project}.{DATASET}.dim_node` ORDER BY node_index").to_dataframe()
-    chans = bq().query(f"SELECT channel_index, channel_name, modality FROM `{project}.{DATASET}.dim_channel` ORDER BY channel_index").to_dataframe()
-    span = bq().query(f"SELECT MIN(timestamp) AS lo, MAX(timestamp) AS hi FROM `{project}.{DATASET}.fact_telemetry`").to_dataframe()
+    nodes = bq().query(f"SELECT node_index, node_name, node_kind FROM `{project}.{DATASET}.dim_node` ORDER BY node_index").to_dataframe(create_bqstorage_client=False)
+    chans = bq().query(f"SELECT channel_index, channel_name, modality FROM `{project}.{DATASET}.dim_channel` ORDER BY channel_index").to_dataframe(create_bqstorage_client=False)
+    span = bq().query(f"SELECT MIN(timestamp) AS lo, MAX(timestamp) AS hi FROM `{project}.{DATASET}.fact_telemetry`").to_dataframe(create_bqstorage_client=False)
     return nodes, chans, span.iloc[0]
 
 
@@ -140,7 +145,7 @@ def fetch_window(project, start_ts, n_minutes):
         bigquery.ScalarQueryParameter("lo", "INT64", int(start_ts)),
         bigquery.ScalarQueryParameter("hi", "INT64", int(end_ts)),
     ]))
-    df = job.to_dataframe()
+    df = job.to_dataframe(create_bqstorage_client=False)
     if df.empty:
         raise RuntimeError(f"the warehouse returned no rows between {start_ts} and {end_ts}")
 
