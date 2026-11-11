@@ -50,7 +50,7 @@ flowchart TD
 
     subgraph serve["Serving"]
         API["model1-serving container<br/>/healthz /v1/metadata /v1/predict<br/>321 MB, CPU only"]
-        UI["Streamlit app<br/>armor-d1-model1.streamlit.app<br/>public, audience picks the input"]
+        UI["Streamlit app<br/>armor-model1.streamlit.app<br/>public, audience picks the input"]
         SVC --> API
         SVC --> UI
     end
