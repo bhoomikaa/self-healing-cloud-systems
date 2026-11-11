@@ -1,0 +1,210 @@
+{
+ "what": "Model 1 v1 training record and learning curves.",
+ "source": {
+  "histories": "armor-system/models/model1_transformer/results/experiment_v1/seed_*/histories.json",
+  "selection": "the five frozen Stage 2 checkpoints",
+  "note": "Written outside model1_transformer/ because that tree is frozen: its tracked file set is hashed into evidence_test_freeze.json, so writing anything there fails the freeze check."
+ },
+ "learning_curves": {
+  "available": true,
+  "figure": "results/figures/learning_curves.png",
+  "epochs_recorded": {
+   "seed_0": {
+    "stage1": 83,
+    "stage2": 44
+   },
+   "seed_1": {
+    "stage1": 100,
+    "stage2": 41
+   },
+   "seed_2": {
+    "stage1": 87,
+    "stage2": 60
+   },
+   "seed_3": {
+    "stage1": 90,
+    "stage2": 61
+   },
+   "seed_4": {
+    "stage1": 67,
+    "stage2": 45
+   }
+  }
+ },
+ "per_seed": [
+  {
+   "seed": 0,
+   "stage1_epochs": 83,
+   "stage2_epochs": 44,
+   "s1_loss_first": 0.480632,
+   "s1_loss_last": 0.235969,
+   "s1_loss_min": 0.235969,
+   "s1_val_masked_mse_first": 0.333336,
+   "s1_val_masked_mse_last": 0.217483,
+   "s1_val_masked_mse_min": 0.217132,
+   "s2_loss_first": 2.320989,
+   "s2_loss_last": 0.507326,
+   "s2_loss_min": 0.507326,
+   "s2_val_monitor_first": 2.272905,
+   "s2_val_monitor_last": 1.115168,
+   "s2_val_monitor_min": 0.951856,
+   "s2_val_balanced_bce_first": 0.69963,
+   "s2_val_balanced_bce_last": 0.681116,
+   "s2_val_balanced_bce_min": 0.537049,
+   "s2_val_case_nll_first": 1.573275,
+   "s2_val_case_nll_last": 0.434051,
+   "s2_val_case_nll_min": 0.370373
+  },
+  {
+   "seed": 1,
+   "stage1_epochs": 100,
+   "stage2_epochs": 41,
+   "s1_loss_first": 0.482214,
+   "s1_loss_last": 0.237613,
+   "s1_loss_min": 0.236099,
+   "s1_val_masked_mse_first": 0.336822,
+   "s1_val_masked_mse_last": 0.218431,
+   "s1_val_masked_mse_min": 0.218351,
+   "s2_loss_first": 2.289066,
+   "s2_loss_last": 0.553676,
+   "s2_loss_min": 0.553676,
+   "s2_val_monitor_first": 2.242536,
+   "s2_val_monitor_last": 0.965689,
+   "s2_val_monitor_min": 0.882953,
+   "s2_val_balanced_bce_first": 0.690668,
+   "s2_val_balanced_bce_last": 0.586828,
+   "s2_val_balanced_bce_min": 0.487444,
+   "s2_val_case_nll_first": 1.551867,
+   "s2_val_case_nll_last": 0.378861,
+   "s2_val_case_nll_min": 0.357554
+  },
+  {
+   "seed": 2,
+   "stage1_epochs": 87,
+   "stage2_epochs": 60,
+   "s1_loss_first": 0.478724,
+   "s1_loss_last": 0.237492,
+   "s1_loss_min": 0.237492,
+   "s1_val_masked_mse_first": 0.335391,
+   "s1_val_masked_mse_last": 0.219075,
+   "s1_val_masked_mse_min": 0.218677,
+   "s2_loss_first": 2.320339,
+   "s2_loss_last": 0.376978,
+   "s2_loss_min": 0.376978,
+   "s2_val_monitor_first": 2.284312,
+   "s2_val_monitor_last": 0.810227,
+   "s2_val_monitor_min": 0.723037,
+   "s2_val_balanced_bce_first": 0.68645,
+   "s2_val_balanced_bce_last": 0.574085,
+   "s2_val_balanced_bce_min": 0.483677,
+   "s2_val_case_nll_first": 1.597863,
+   "s2_val_case_nll_last": 0.236142,
+   "s2_val_case_nll_min": 0.205519
+  },
+  {
+   "seed": 3,
+   "stage1_epochs": 90,
+   "stage2_epochs": 61,
+   "s1_loss_first": 0.48747,
+   "s1_loss_last": 0.237615,
+   "s1_loss_min": 0.236305,
+   "s1_val_masked_mse_first": 0.332995,
+   "s1_val_masked_mse_last": 0.217863,
+   "s1_val_masked_mse_min": 0.217577,
+   "s2_loss_first": 2.290782,
+   "s2_loss_last": 0.383486,
+   "s2_loss_min": 0.383486,
+   "s2_val_monitor_first": 2.271533,
+   "s2_val_monitor_last": 0.790684,
+   "s2_val_monitor_min": 0.703003,
+   "s2_val_balanced_bce_first": 0.687485,
+   "s2_val_balanced_bce_last": 0.537986,
+   "s2_val_balanced_bce_min": 0.470211,
+   "s2_val_case_nll_first": 1.584048,
+   "s2_val_case_nll_last": 0.252697,
+   "s2_val_case_nll_min": 0.226132
+  },
+  {
+   "seed": 4,
+   "stage1_epochs": 67,
+   "stage2_epochs": 45,
+   "s1_loss_first": 0.471567,
+   "s1_loss_last": 0.241985,
+   "s1_loss_min": 0.240095,
+   "s1_val_masked_mse_first": 0.334268,
+   "s1_val_masked_mse_last": 0.220444,
+   "s1_val_masked_mse_min": 0.219474,
+   "s2_loss_first": 2.298868,
+   "s2_loss_last": 0.489067,
+   "s2_loss_min": 0.475454,
+   "s2_val_monitor_first": 2.27014,
+   "s2_val_monitor_last": 0.925057,
+   "s2_val_monitor_min": 0.897214,
+   "s2_val_balanced_bce_first": 0.684484,
+   "s2_val_balanced_bce_last": 0.532991,
+   "s2_val_balanced_bce_min": 0.504101,
+   "s2_val_case_nll_first": 1.585657,
+   "s2_val_case_nll_last": 0.392066,
+   "s2_val_case_nll_min": 0.371574
+  }
+ ],
+ "selection": [
+  {
+   "seed": 0,
+   "stage1_selected_epoch": 73,
+   "stage2_selected_epoch": 34,
+   "selected_by": "lowest validation case-level fault NLL + balanced window BCE",
+   "val_monitor": 0.951855629004642,
+   "val_balanced_bce": 0.548768241465968,
+   "val_case_nll": 0.40308738753867407,
+   "parameters": 176521
+  },
+  {
+   "seed": 1,
+   "stage1_selected_epoch": 91,
+   "stage2_selected_epoch": 31,
+   "selected_by": "lowest validation case-level fault NLL + balanced window BCE",
+   "val_monitor": 0.8829526741330518,
+   "val_balanced_bce": 0.5139249624983891,
+   "val_case_nll": 0.3690277116346627,
+   "parameters": 176521
+  },
+  {
+   "seed": 2,
+   "stage1_selected_epoch": 77,
+   "stage2_selected_epoch": 50,
+   "selected_by": "lowest validation case-level fault NLL + balanced window BCE",
+   "val_monitor": 0.7230373666310854,
+   "val_balanced_bce": 0.499759609941806,
+   "val_case_nll": 0.22327775668927935,
+   "parameters": 176521
+  },
+  {
+   "seed": 3,
+   "stage1_selected_epoch": 80,
+   "stage2_selected_epoch": 51,
+   "selected_by": "lowest validation case-level fault NLL + balanced window BCE",
+   "val_monitor": 0.7030032802274185,
+   "val_balanced_bce": 0.47687172160792196,
+   "val_case_nll": 0.2261315586194966,
+   "parameters": 176521
+  },
+  {
+   "seed": 4,
+   "stage1_selected_epoch": 57,
+   "stage2_selected_epoch": 35,
+   "selected_by": "lowest validation case-level fault NLL + balanced window BCE",
+   "val_monitor": 0.8972135605702323,
+   "val_balanced_bce": 0.5170523974246939,
+   "val_case_nll": 0.38016116314553833,
+   "parameters": 176521
+  }
+ ],
+ "compute": {
+  "hardware": "Apple M4, CPU only, 1 torch thread, deterministic algorithms on",
+  "python": "3.14.4",
+  "torch": "2.14.0",
+  "total_cpu_hours_recorded": 14.01,
+  "source": "elapsed_seconds across 20 runs in models/model1_transformer/results/"
+ }
+}
