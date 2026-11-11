@@ -1,0 +1,98 @@
+{
+ "what": "Model 1 v1 training record, read from the five frozen Stage 2 checkpoints.",
+ "learning_curves": {
+  "available": false,
+  "history_entries_found": 0,
+  "note": "Per-epoch history was not written to the checkpoints, so learning curves cannot be produced from the frozen artifacts. Recovering them means retraining, which would break the freeze the reported test results rest on. The selection points below are what survives."
+ },
+ "architecture": {
+  "parameters": 176521
+ },
+ "selection_criterion": "lowest validation case-level fault NLL + balanced window BCE",
+ "per_seed": [
+  {
+   "seed": 0,
+   "stage1_selected_epoch": 73,
+   "stage2_selected_epoch": 34,
+   "selected_by": "lowest validation case-level fault NLL + balanced window BCE",
+   "val_monitor": 0.951855629004642,
+   "val_balanced_bce": 0.548768241465968,
+   "val_case_nll": 0.40308738753867407,
+   "parameters": 176521,
+   "history_entries": 0
+  },
+  {
+   "seed": 1,
+   "stage1_selected_epoch": 91,
+   "stage2_selected_epoch": 31,
+   "selected_by": "lowest validation case-level fault NLL + balanced window BCE",
+   "val_monitor": 0.8829526741330518,
+   "val_balanced_bce": 0.5139249624983891,
+   "val_case_nll": 0.3690277116346627,
+   "parameters": 176521,
+   "history_entries": 0
+  },
+  {
+   "seed": 2,
+   "stage1_selected_epoch": 77,
+   "stage2_selected_epoch": 50,
+   "selected_by": "lowest validation case-level fault NLL + balanced window BCE",
+   "val_monitor": 0.7230373666310854,
+   "val_balanced_bce": 0.499759609941806,
+   "val_case_nll": 0.22327775668927935,
+   "parameters": 176521,
+   "history_entries": 0
+  },
+  {
+   "seed": 3,
+   "stage1_selected_epoch": 80,
+   "stage2_selected_epoch": 51,
+   "selected_by": "lowest validation case-level fault NLL + balanced window BCE",
+   "val_monitor": 0.7030032802274185,
+   "val_balanced_bce": 0.47687172160792196,
+   "val_case_nll": 0.2261315586194966,
+   "parameters": 176521,
+   "history_entries": 0
+  },
+  {
+   "seed": 4,
+   "stage1_selected_epoch": 57,
+   "stage2_selected_epoch": 35,
+   "selected_by": "lowest validation case-level fault NLL + balanced window BCE",
+   "val_monitor": 0.8972135605702323,
+   "val_balanced_bce": 0.5170523974246939,
+   "val_case_nll": 0.38016116314553833,
+   "parameters": 176521,
+   "history_entries": 0
+  }
+ ],
+ "summary": {
+  "stage1_selected_epoch": {
+   "min": 57,
+   "max": 91,
+   "mean": 75.6
+  },
+  "stage2_selected_epoch": {
+   "min": 31,
+   "max": 51,
+   "mean": 40.2
+  },
+  "val_balanced_bce": {
+   "min": 0.47687172160792196,
+   "max": 0.548768241465968,
+   "mean": 0.511275
+  },
+  "val_case_nll": {
+   "min": 0.22327775668927935,
+   "max": 0.40308738753867407,
+   "mean": 0.320337
+  }
+ },
+ "compute": {
+  "hardware": "Apple M4, CPU only, 1 torch thread, deterministic algorithms on",
+  "python": "3.14.4",
+  "torch": "2.14.0",
+  "total_cpu_hours_recorded": 14.01,
+  "source": "elapsed_seconds across 20 runs in models/model1_transformer/results/"
+ }
+}
