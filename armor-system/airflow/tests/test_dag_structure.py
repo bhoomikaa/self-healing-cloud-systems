@@ -135,6 +135,14 @@ class TestArmorD1Dag(unittest.TestCase):
         self.assertIn("mktemp -d", cmd)
         self.assertNotIn("printf 'CORRUPTED' >> $SRC", cmd)
 
+    def test_corruption_gate_does_not_overwrite_the_validation_report(self):
+        """validate_d1.py writes d1_validation.json into --manifest-dir on every run,
+        pass or fail. Without a scratch manifest directory the corrupted verdict lands
+        on the real report, which then reads as genuine corruption of the
+        alphabetically first file, cases/ad_cases.pkl."""
+        cmd = self.bag.dags[DAG_ID].get_task("corruption_gate").bash_command
+        self.assertIn("--manifest-dir $WORK/manifests", cmd)
+
     def test_fetch_does_not_rewrite_committed_manifests(self):
         """fetch_d1.py rewrites the committed manifests when run with defaults."""
         cmd = self.bag.dags[DAG_ID].get_task("fetch_source").bash_command

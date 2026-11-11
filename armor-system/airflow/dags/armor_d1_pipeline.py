@@ -251,10 +251,19 @@ with DAG(
             f"set -e; "
             f"WORK=$(mktemp -d); "
             f"cp -r {RAW} $WORK/D1; "
+            # validate_d1.py WRITES d1_validation.json into its --manifest-dir,
+            # and that happens whether the release passed or failed. Without
+            # this scratch copy it writes the corrupted verdict over the real
+            # report, which then looks like genuine corruption of
+            # cases/ad_cases.pkl: the alphabetically first file, so the one the
+            # victim search below always picks.
+            f"mkdir -p $WORK/manifests; "
+            f"cp {WS_ARMOR}/data/manifests/armor_d1/d1_inspection.json "
+            f"   {WS_ARMOR}/data/manifests/armor_d1/file_inventory.csv $WORK/manifests/; "
             f"VICTIM=$(find $WORK/D1 -type f | sort | head -1); "
             f'echo "corrupting: $VICTIM"; '
             f"printf 'CORRUPTED' >> $VICTIM; "
-            f"if {PY} -I {TOOLS}/validate_d1.py --raw $WORK/D1; then "
+            f"if {PY} -I {TOOLS}/validate_d1.py --manifest-dir $WORK/manifests --raw $WORK/D1; then "
             f'  echo "FAIL: the validator accepted a corrupted release"; rm -rf $WORK; exit 1; '
             f"else "
             f'  echo "PASS: corrupted release rejected, as required"; rm -rf $WORK; exit 0; '
@@ -263,8 +272,9 @@ with DAG(
         retries=0,  # a negative control must not be retried into passing
         doc_md=(
             "Deliberate-corruption negative control. Succeeds only if the checksum "
-            "gate **rejects** a corrupted copy. Operates on a scratch copy; the "
-            "release is never modified."
+            "gate **rejects** a corrupted copy. Both the release and the manifest "
+            "directory are scratch copies, because `validate_d1.py` writes its "
+            "report into `--manifest-dir` on every run, pass or fail."
         ),
     )
 
