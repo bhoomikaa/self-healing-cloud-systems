@@ -101,12 +101,8 @@ def bq():
         # with "Project was not passed", which points at the wrong thing.
         raise RuntimeError(
             "No [gcp_service_account] section in this app's secrets, so there is no way to "
-            "reach BigQuery.
-
-"
-            f"Secrets currently set: {secret_names() or 'none at all'}
-
-"
+            "reach BigQuery.\n\n"
+            f"Secrets currently set: {secret_names() or 'none at all'}\n\n"
             "Fix it in Manage app -> Settings -> Secrets: paste the whole block that "
             "make_secrets.py prints, including the [gcp_service_account] header and every "
             "line under it, then save and reboot the app. Streamlit takes about a minute "
