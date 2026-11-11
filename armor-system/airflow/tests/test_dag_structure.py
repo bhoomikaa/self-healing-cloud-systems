@@ -120,6 +120,45 @@ class TestArmorD1Dag(unittest.TestCase):
         self.assertIn("--generated", cmd)
         self.assertIn("compare_artifacts", dag.get_task("publish_evidence").downstream_task_ids)
 
+    # ------------------------------------------------------------- alerting
+    # The DAG previously set AIRFLOW__EMAIL__EMAIL_BACKEND and left SMTP at
+    # localhost:25, so a failure sent nothing and nobody could tell.
+
+    def test_every_task_alerts_on_failure(self):
+        dag = self.bag.dags[DAG_ID]
+        for tid in dag.task_ids:
+            self.assertIsNotNone(dag.get_task(tid).on_failure_callback,
+                                 f"{tid} has no on_failure_callback")
+
+    def test_alerting_does_not_rely_on_airflow_email(self):
+        """Airflow's email_on_failure fails silently without SMTP, which is the bug."""
+        dag = self.bag.dags[DAG_ID]
+        for tid in dag.task_ids:
+            self.assertFalse(getattr(dag.get_task(tid), "email_on_failure", False),
+                             f"{tid} still relies on email_on_failure")
+
+    def test_alert_sinks_never_raise(self):
+        """An alerting path that can fail the task turns one problem into two."""
+        import armor_alerts
+        alert = {"schema": "armor.alert.v1", "severity": "error", "raised_utc": "now",
+                 "host": "test", "dag_id": DAG_ID, "task_id": "t", "run_id": "r",
+                 "try_number": 1, "max_tries": 1, "log_url": None,
+                 "exception_type": "X", "exception": "y", "final": True}
+        quiet = lambda *a, **k: None          # noqa: E731
+        for sink in (armor_alerts.sink_log, armor_alerts.sink_webhook, armor_alerts.sink_email):
+            sink(alert, quiet)                # must not raise
+        armor_alerts.on_failure({})           # a context with nothing in it
+        armor_alerts.on_retry({})
+
+    def test_localhost_smtp_counts_as_unconfigured(self):
+        """localhost:25 is the Airflow default and means no mail server."""
+        import importlib, os, armor_alerts
+        os.environ["SMTP_HOST"] = "localhost"
+        os.environ["ALERT_EMAIL_TO"] = "someone@example.com"
+        mod = importlib.reload(armor_alerts)
+        self.assertIsNone(mod.sink_email({"severity": "error", "dag_id": "d", "task_id": "t"},
+                                         lambda *a, **k: None))
+
     def test_drift_is_not_retried(self):
         """Artifact drift is a finding. Retrying it just hides it behind a green tick."""
         self.assertEqual(self.bag.dags[DAG_ID].get_task("compare_artifacts").retries, 0)

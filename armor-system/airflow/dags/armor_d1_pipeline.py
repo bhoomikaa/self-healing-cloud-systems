@@ -44,6 +44,10 @@ from airflow.models.dag import DAG
 from airflow.operators.bash import BashOperator
 from airflow.operators.empty import EmptyOperator
 
+# plugins/ is on sys.path inside the image. Alerting lives there rather than in
+# this file so it can be exercised on its own with --selftest.
+import armor_alerts
+
 # The committed repository, mounted read-only. Never written to.
 REPO = "/opt/airflow/repo"
 REPO_ARMOR = f"{REPO}/armor-system"
@@ -96,6 +100,15 @@ default_args = {
     "retries": 2,
     "retry_delay": pendulum.duration(minutes=2),
     "depends_on_past": False,
+    # Airflow's own email_on_failure is deliberately not used: it fails silently
+    # when SMTP is unconfigured, which is how this DAG ran for days looking like
+    # it had alerting while sending nothing. These callbacks always write a log
+    # block and a JSON record, and additionally post to a webhook or send mail
+    # when those are configured. See plugins/armor_alerts.py.
+    "on_failure_callback": armor_alerts.on_failure,
+    "on_retry_callback": armor_alerts.on_retry,
+    "email_on_failure": False,
+    "email_on_retry": False,
 }
 
 with DAG(
@@ -107,6 +120,7 @@ with DAG(
     catchup=False,
     max_active_runs=1,
     tags=["armor", "d1", "data-prep", "298a"],
+    sla_miss_callback=armor_alerts.on_sla_miss,
     doc_md=__doc__,
 ) as dag:
 

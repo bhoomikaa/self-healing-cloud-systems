@@ -35,6 +35,17 @@ x-airflow-common: &airflow-common
     AIRFLOW__SMTP__SMTP_HOST: ${SMTP_HOST:-localhost}
     AIRFLOW__SMTP__SMTP_PORT: ${SMTP_PORT:-25}
     AIRFLOW__SMTP__SMTP_MAIL_FROM: ${SMTP_FROM:-airflow@localhost}
+    # Alerting (plugins/armor_alerts.py). The log and file sinks always work;
+    # the webhook and email sinks switch themselves on when configured, and say
+    # in the task log when they are not, rather than failing silently.
+    ARMOR_ALERT_DIR: /opt/airflow/workspace/alerts
+    ALERT_WEBHOOK_URL: ${ALERT_WEBHOOK_URL:-}
+    ALERT_EMAIL_TO: ${ALERT_EMAIL_TO:-}
+    SMTP_HOST: ${SMTP_HOST:-}
+    SMTP_PORT: ${SMTP_PORT:-25}
+    SMTP_FROM: ${SMTP_FROM:-airflow@localhost}
+    SMTP_USER: ${SMTP_USER:-}
+    SMTP_PASSWORD: ${SMTP_PASSWORD:-}
   volumes:
     - ./dags:/opt/airflow/dags
     - ./plugins:/opt/airflow/plugins
